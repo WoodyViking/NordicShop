@@ -193,7 +193,6 @@ Detta dokument utgör det första underlaget för testarbetet i utvecklingen av 
 
 **Varför är denna stakeholder viktig för testarbetet?**
 - Projektledaren behöver ha information om testläget för att kunna följa projektets tidsplan och planera inför den kommande releasen.
->>>>>>> refs/remotes/origin/main
 ---
 
 ## 5. Riskmatris
