@@ -87,14 +87,21 @@ Detta dokument utgör det första underlaget för testarbetet i utvecklingen av 
 ## 4. Stakeholders & Beroenden
 
 * **Product Owner (PO)**
-  * *Testledaren behöver:* Tydliga acceptanskriterier och prioritering av buggar.
+  * *Testledaren behöver:* Tydliga krav.
   * *De behöver från testledaren:* Löpande teststatus, riskrapporter och beslutsunderlag inför Go/No-Go.
+Testledaren kommer att behöva vet vad kund faktiskt vill ha, denna information kommer från PO. 
+Tetstledaren kommer att få tydliga Krav och kan skapa acceptanskriterier utifrån dessa.
 * **De 3 utvecklingsteamen**
   * *Testledaren behöver:* Stabila byggen i testmiljön, enhetstestning samt teknisk dokumentation om API:er.
   * *De behöver från testledaren:* Tydliga felrapporter (buggar) med reproduktionssteg och loggar.
+Testledaren..............
 * **Externa leverantörer (Betalning & Leverans)**
   * *Testledaren behöver:* Tillgång till deras testmiljöer, testdata (t.ex. testkortnummer) och support vid integrationstestning.
   * *De behöver från testledaren:* Information om planerade belastningstester eller större uppdateringar i integrationen.
+* **Test Teamet
+  * *hdhdh
+  * *jfjfjfj
+Testledaren kommer att behöva dokumentation på utförda tester, eventuella Errors och dokumentation angående projektets framgång. Med denna information kan testledaren framföra planering och handlingsplaner för framtida sprintar.
 
 ---
 
