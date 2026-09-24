@@ -86,27 +86,113 @@ Detta dokument utgör det första underlaget för testarbetet i utvecklingen av 
 
 ## 4. Stakeholders & Beroenden
 
-* **Product Owner (PO)**
-  * *Testledaren behöver:* Tydliga krav.
-  * *De behöver från testledaren:* Löpande teststatus, riskrapporter och beslutsunderlag inför Go/No-Go.
-Testledaren kommer att behöva vet vad kund faktiskt vill ha, denna information kommer från PO. 
-Tetstledaren kommer att få tydliga Krav och kan skapa acceptanskriterier utifrån dessa.
-* **De 3 utvecklingsteamen**
-  * *Testledaren behöver:* Stabila byggen i testmiljön, enhetstestning samt teknisk dokumentation om API:er.
-  * *De behöver från testledaren:* Tydliga felrapporter (buggar) med reproduktionssteg och loggar.
-Testledaren..............
-* **Externa leverantörer (Betalning & Leverans)**
-  * *Testledaren behöver:* Tillgång till deras testmiljöer, testdata (t.ex. testkortnummer) och support vid integrationstestning.
-  * *De behöver från testledaren:* Information om planerade belastningstester eller större uppdateringar i integrationen.
-<<<<<<< HEAD
-* **Test Teamet
-  * *hdhdh
-  * *jfjfjfj
-Testledaren kommer att behöva dokumentation på utförda tester, eventuella Errors och dokumentation angående projektets framgång. Med denna information kan testledaren framföra planering och handlingsplaner för framtida sprintar.
+### Product Owner (PO)
 
-=======
-* ** Kundservice** 
-  * *Testledaren behöver:* inforation från kunder om det är något som inte fungerar i "Live" miljön dvs buggar att fixa.
+**Vad behöver testledaren från dem?**
+- Tydliga krav.
+- Information om vad kunden faktiskt vill ha.
+- Tydliga acceptanskriterier utifrån kraven.
+- Prioritering av vilka funktioner och krav som är viktigast.
+
+**Vad behöver de från testledaren?**
+- Löpande teststatus, riskrapporter och beslutsunderlag inför Go/No-Go.
+- Testledaren kommer att behöva veta vad kunden faktiskt vill ha, denna information kommer från PO.
+- Testledaren kommer att få tydliga krav och kan skapa acceptanskriterier utifrån dessa.
+
+**Varför är denna stakeholder viktig för testarbetet?**
+- Product Owner representerar verksamhetens behov och hjälper testledaren att förstå vilka krav och funktioner som är viktigast att verifiera.
+
+
+---
+
+### De 3 utvecklingsteamen
+
+**Vad behöver testledaren från dem?**
+- Stabila byggen i testmiljön, enhetstestning samt teknisk dokumentation om API:er.
+- Information om tekniska förändringar som påverkar testerna.
+- Information om kända tekniska problem eller begränsningar.
+
+**Vad behöver de från testledaren?**
+- Tydliga felrapporter (buggar) med reproduktionssteg och loggar.
+- Testledaren behöver kommunicera vilka områden som är prioriterade att testa och vilka risker som har identifierats.
+- Information om testresultat och vilka fel som behöver åtgärdas.
+
+**Varför är denna stakeholder viktig för testarbetet?**
+- Utvecklingsteamen utvecklar och förändrar systemet. Testledaren behöver därför samarbeta med utvecklingsteamen för att förstå förändringar, rapportera fel och säkerställa att nya versioner kan testas.
+
+
+---
+
+### Externa leverantörer (Betalning & Leverans)
+
+**Vad behöver testledaren från dem?**
+- Tillgång till deras testmiljöer, testdata (t.ex. testkortnummer) och support vid integrationstestning.
+- Information om förändringar i deras tjänster eller API:er.
+- Teknisk information om integrationerna.
+
+**Vad behöver de från testledaren?**
+- Information om planerade belastningstester eller större uppdateringar i integrationen.
+- Information om identifierade integrationsfel.
+- Information om när tester kommer att genomföras.
+
+**Varför är denna stakeholder viktig för testarbetet?**
+- Betalnings- och leveranstjänsterna hanteras av externa leverantörer. NordicShop är därför beroende av att integrationerna mellan systemen fungerar.
+
+
+---
+
+### Test Teamet
+
+**Vad behöver testledaren från dem?**
+- Dokumentation på utförda tester.
+- Information om identifierade fel och problem.
+- Testresultat och information om projektets framgång.
+- Med denna information kan testledaren framföra planering och handlingsplaner för framtida sprintar.
+
+**Vad behöver de från testledaren?**
+- Tydliga testuppgifter och prioriteringar.
+- Information om vilka områden som är viktigast att testa.
+- Planering inför kommande sprintar.
+- Återkoppling på testresultat och identifierade risker.
+
+**Varför är denna stakeholder viktig för testarbetet?**
+- Testteamet genomför testerna och ger testledaren information om testresultat, fel och återstående testarbete. Informationen används för att planera och följa upp testarbetet.
+
+
+---
+
+### Kundservice
+
+**Vad behöver testledaren från dem?**
+- Information från kunder om det är något som inte fungerar i "Live"-miljön, dvs. buggar att fixa.
+- Information om återkommande problem som kunder upplever.
+- Information om funktioner som orsakar problem för kunderna.
+
+**Vad behöver de från testledaren?**
+- Information om kända buggar och problem.
+- Information om förändringar som påverkar kundservice.
+- Information om vilka problem som är identifierade och hur de hanteras.
+
+**Varför är denna stakeholder viktig för testarbetet?**
+- Kundservice har kontakt med kunderna och kan därför ge testledaren information om verkliga problem som upptäcks i produktion. Informationen kan användas för att identifiera områden som behöver testas.
+
+
+---
+
+### Projektledare
+
+**Vad behöver testledaren från dem?**
+- Information om projektets tidplan.
+- Information om kommande releaser och deadlines.
+- Information om eventuella förändringar som påverkar testarbetet.
+
+**Vad behöver de från testledaren?**
+- Teststatus.
+- Information om identifierade risker och kritiska fel.
+- Information om återstående testarbete inför release.
+
+**Varför är denna stakeholder viktig för testarbetet?**
+- Projektledaren behöver ha information om testläget för att kunna följa projektets tidsplan och planera inför den kommande releasen.
 >>>>>>> refs/remotes/origin/main
 ---
 
