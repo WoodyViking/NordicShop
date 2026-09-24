@@ -1,3 +1,4 @@
+
 # Testanalys och Underlag – Projekt NordicShop
 
 Detta dokument utgör det första underlaget för testarbetet i utvecklingen av den nya e-handelsplattformen. Syftet är att etablera en gemensam bild av testobjekt, kritiska flöden, risker och integrationer inför lanseringsmålet om 4 månader.
@@ -39,6 +40,13 @@ Detta dokument utgör det första underlaget för testarbetet i utvecklingen av 
 * **Verksamhetsmål:** Automatisera lageruppdateringar, minska manuellt arbete (felköp).
 * **System som ingår:** Webb/App, Backend, Lagersystem.
 * **Konsekvens vid fel:** NordicShop säljer produkter som inte finns i lager, vilket leder till restorder och hög belastning på kundservice.
+* **Kritikalitet:** **Hög**
+
+### Flöde 4: Inloggning och kontolåsning
+* **Sekvens:** Kund → Webb/Mobilapp → Backend → Kontroll av inloggningsuppgifter → Inloggning eller kontolåsning
+* **Verksamhetsmål:** Kunden ska kunna logga in säkert samtidigt som kontot skyddas mot upprepade felaktiga inloggningsförsök.
+* **System som ingår:** Webb/APP,backend,E-post/SMS Service,databas
+* **Konsekvens vid fel:** Kunden kan inte komma åt sitt konto, angripare kan försöka gissa lösenord, konton kan låsas felaktigt, kundservice får fler supportärenden.
 * **Kritikalitet:** **Hög**
 
 ---
