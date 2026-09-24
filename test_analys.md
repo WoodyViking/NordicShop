@@ -18,6 +18,27 @@ Detta dokument utgör det första underlaget för testarbetet i utvecklingen av 
 | **E-post / SMS Service (Integration)** | Utskick av order- och avbeställningsbekräftelser med korrekt information. | **Medel** |
 | **Administrationsverktyg** | Behörigheter, produkthantering, prisändringar och skapande av rabattkoder. | **Medel** |
 
+### Testobjekt baserad då KravListan
+
+| **Testobjekt** | **Vad verifieras** | **Prioritet** | **Relaterat** |
+|---|---|---|---|
+| Inloggning | Kunden ska kunna skapa konto och logga in med e-post och lösenord | HÖG | K1 |
+| Kontolåsning | Efter 3 felaktiga inloggningsförsök ska kontot låsas i 30 minuter | HÖG | K1 |
+| Butiksnavigering | Kunden ska kunna söka produkter, filtrera, se pris, lagerstatus och produktinformation | HÖG | K2 |
+| Kundvagn | Kunden ska kunna lägga produkter i kundvagnen, ändra antal och ta bort produkter | HÖG | K3 |
+| Rabattkod | Kunden ska kunna använda rabattkod. Rabattkoden ska kontrolleras mot giltighetsdatum och minsta ordervärde | HÖG | K4 |
+| Rabattkod – användning | En rabattkod ska endast kunna användas en gång per kund | HÖG | K4 |
+| Betalning | Kunden ska kunna betala med Visa, Mastercard eller Swish. Order ska endast skapas om betalningen godkänns och kunden får inte debiteras två gånger | HÖG | K5 |
+| Lager | När en order genomförs ska lagersaldot ändras automatiskt. En produkt som inte längre finns i lager ska inte kunna köpas | HÖG | K6 |
+| Leverans | Kunden ska kunna välja hemleverans eller ombud. Leveransalternativ och pris ska hämtas från den externa leveranstjänsten | HÖG | K7 |
+| Orderbekräftelse | Efter genomfört köp ska kunden få orderbekräftelse via e-post med ordernummer, betalningsinformation och leveransinformation | MEDEL | K8 |
+| Avbeställning | Kunden ska kunna avbeställa en order innan den skickats | HÖG | K9 |
+| Återbetalning | Vid avbeställning ska betalningen återbetalas | HÖG | K9 |
+| Lageråterställning | Vid avbeställning ska lagersaldot återställas | HÖG | K9 |
+| Avbeställningsbekräftelse | Kunden ska få en bekräftelse när ordern har avbeställts | MEDEL | K9 |
+| Kundservice – behörighet | Kundservice ska kunna se kundens order och betalningsstatus | HÖG | K10 |
+| Administratör – behörighet | Endast administratörer ska kunna ändra produktpriser och användarbehörigheter | HÖG | K10 |
+| Behörighetsbegränsning | Kundservice ska inte kunna ändra produktpriser eller användarbehörigheter | HÖG | K10 |
 ---
 
 ## 2. Kritiska Affärsflöden (End-to-End)
