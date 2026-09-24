@@ -98,11 +98,16 @@ Testledaren..............
 * **Externa leverantörer (Betalning & Leverans)**
   * *Testledaren behöver:* Tillgång till deras testmiljöer, testdata (t.ex. testkortnummer) och support vid integrationstestning.
   * *De behöver från testledaren:* Information om planerade belastningstester eller större uppdateringar i integrationen.
+<<<<<<< HEAD
 * **Test Teamet
   * *hdhdh
   * *jfjfjfj
 Testledaren kommer att behöva dokumentation på utförda tester, eventuella Errors och dokumentation angående projektets framgång. Med denna information kan testledaren framföra planering och handlingsplaner för framtida sprintar.
 
+=======
+* ** Kundservice** 
+  * *Testledaren behöver:* inforation från kunder om det är något som inte fungerar i "Live" miljön dvs buggar att fixa.
+>>>>>>> refs/remotes/origin/main
 ---
 
 ## 5. Riskmatris
