@@ -58,9 +58,9 @@ Detta dokument utgör det första underlaget för testarbetet i utvecklingen av 
 | :--- | :--- | :--- | :--- |
 | **Backend / Order Service** | **Lagersystem (15 år gammalt)** | Reservera/återställa artiklar, hämta lagerstatus. | Timeout p.g.a. gammal hårdvara; felaktigt saldo skickas; systemet kraschar vid hög belastning. |
 | **Backend / Order Service** | **Payment Provider** | Transaktionsbelopp, betalningsmetod, order-ID. | Avbruten anslutning mitt i köp (kunden betalar men ingen order skapas); dubbeldebitering. |
-| **Backend / Order Service** | **Delivery Provider** | Adress, paketvikt, fraktalternativ. | Externa API:et är nere vilket gör att kassan låser sig och kunden inte kan slutföra köpet. |
+| **Backend / Order Service** | **Delivery Provider** | Adress, paketvikt, fraktalternativ. | Externa API:et är nere vilket gör att kassan låser sig och kunden inte kan slutföra köpet.Jag skulle argumentera för att detta inte håller till Deliviry Provider och istället Payment provider |
 | **Backend / Order Service** | **E-post / SMS Service** | Kunduppgifter, orderdetaljer, mall-ID. | Köpet slutförs men inga bekräftelser skickas ut, vilket leder till att kunder försöker köpa igen. |
-
+| **Backend / Order Service** | **Delivery Provider** | Adress, Paketvikt, Fraktalternativ. | Integrationen mellan ordersystem och delivery provider kraschar(kund har betalat och slufört orderd) men finns ingen information om att kund ska få paket hos Postnord |
 ---
 
 ## 4. Stakeholders & Beroenden
@@ -86,9 +86,6 @@ Detta dokument utgör det första underlaget för testarbetet i utvecklingen av 
 | **3. Betalningsleverantörens testmiljö är instabil eller nere**. | **Medel** | **Hög** | **Hög** | Bygg "mockar" (simulatorer) för betalningsflödet så att interna tester kan fortsätta oberoende av extern part. |
 | **4. Kunder debiteras dubbelt vid nätverksavbrott (K5)**. | **Låg** | **Hög** | **Hög** | Negativa tester: Bryt nätverksanslutningen exakt under betalningsögonblicket och verifiera hanteringen. |
 | **5. Rabattkoder kombineras felaktigt så att varor blir gratis (K4)**. | **Medel** | **Medel** | **Medel** | Etablera en testmatris baserad på ekvivalensklassindelning för alla typer av rabattkombinationer. |
-| **6. Kontolåsningen (K1) låser inte kontot efter 3 felaktiga försök, vilket öppnar för brute-force-attacker (K1 / Säkerhetsrisk)**. | **Medel** | **Hög** | **Hög** | Automatisera ett säkerhetstest som gör 3+ felaktiga inloggningar och verifierar att kontot förblir låst i exakt 30 minuter. |
-| **7. Kundservice kan av misstag ändra priser eller behörigheter p.g.a. felaktig rollstyrning (K10 / Säkerhetsrisk)**. | **Låg** | **Hög** | **Hög** | Skapa separata testkonton för Kundservice respektive Admin för att verifiera rättighetsspärrar och 403-svar. |
-| **8. Gamla eller saknade data i kassan gör att priser/leveransalternativ inte kan hämtas (K7 / Integrationsrisk)**. | **Medel** | **Medel** | **Medel** | Funktionella integrationstester med fiktiva adresser och tunga/skrymmande testprodukter för att trigga externa API-fel. |
 
 ---
 
@@ -99,6 +96,4 @@ Detta dokument utgör det första underlaget för testarbetet i utvecklingen av 
 3. **Säkerhet:** Ska en extern säkerhetsgranskning (penetrationstest) genomföras av kassan och kunddatabasen?
 4. **Lagersystemet:** Finns det något tillgängligt API-gränssnitt till det 15 år gamla lagersystemet, eller kommunicerar det via filöverföring/databastabeller?
 5. **Browser/OS-scope:** Vilka specifika webbläsare, operativsystem och mobila enheter ska plattformen stödja och testas på?
-6. **Testmiljö:** Vem ansvarar för den gemensamma testmiljön, och hur ska bokning, versionshantering, deployment och miljöproblem samordnas mellan teamen?
-7. **Teamansvar:** Vilka delar av plattformen ansvarar de tre utvecklingsteamen för, och vem ansvarar för tvärgående E2E- och integrationstestning?
-8. **Scope:** Vilka funktioner och system ingår i den första releasen, och vad är uttryckligen Out of scope?
+
