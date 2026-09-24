@@ -9,7 +9,8 @@ Detta dokument utgör det första underlaget för testarbetet i utvecklingen av 
 
 | Testobjekt | Vad behöver verifieras? | Prioritet |
 | :--- | :--- | :--- |
-| **NordicShop Webb / Mobilapp** | Gränssnitt (UI/UX) samt användarflöden för registrering, sök, varukorg och betalning. | **Hög** |
+| **NordicShop Webb / Mobilapp** | (Funktionalitet)Kritiska användarflöden: att registrering, sök, varukorg och betalning fungerar tekniskt från start till slut. | **Hög** |
+| **NordicShop Webb / Mobilapp** | (UI/UX & Design)Kosmetiskt utseende, layout, färger, typsnitt samt att designen följer Figma-skisser och grafisk profil. | **Låg / Medel** |
 | **Backend / Order Service** | Affärslogik, orderhantering, statusuppdateringar, api-anrop och e-post/sms-triggers. | **Hög** |
 | **Lagersystem (Integration)** | Att det 15 år gamla systemet synkar lagersaldo korrekt vid köp och avbeställning. | **Hög** |
 | **Payment Provider (Integration)** | Säker överföring av betalningsdata, hantering av godkänd/nekad betalning samt kontroll mot dubbeldebitering. | **Hög** |
@@ -36,7 +37,7 @@ Detta dokument utgör det första underlaget för testarbetet i utvecklingen av 
 * **Kritikalitet:** **Hög**
 
 ### Flöde 3: Köp av sista produkten i lager (Gränsfall)
-* **Sekvens:** Kund A & B lägger sista varan i kundvagnen samtidigt → Lagersaldo blir 0 → Kund B nekas att lägga vara i varukorgen → Kund B befrågas om den vill få veta om proudukten är i lager igen.
+* **Sekvens:** Kund A & B lägger sista varan i kundvagnen samtidigt → Lagersaldo blir 0 → Kund B nekas att lägga vara i varukorgen → Kund B befrågas om den vill få veta om proudukten är i lager igen → Produkten hamnar som "tomt i lagger" och stoppas från att läggas i varukorger.
 * **Verksamhetsmål:** Automatisera lageruppdateringar, minska manuellt arbete (felköp).
 * **System som ingår:** Webb/App, Backend, Lagersystem.
 * **Konsekvens vid fel:** NordicShop säljer produkter som inte finns i lager, vilket leder till restorder och hög belastning på kundservice.
