@@ -8,7 +8,8 @@ Detta dokument utgör det första underlaget för testarbetet i utvecklingen av 
 
 | Testobjekt | Vad behöver verifieras? | Prioritet |
 | :--- | :--- | :--- |
-| **NordicShop Webb / Mobilapp** | Gränssnitt (UI/UX) samt användarflöden för registrering, sök, varukorg och betalning. | **Hög** |
+| **NordicShop Webb / Mobilapp** | (Funktionalitet)Kritiska användarflöden: att registrering, sök, varukorg och betalning fungerar tekniskt från start till slut. | **Hög** |
+| **NordicShop Webb / Mobilapp** | (UI/UX & Design)Kosmetiskt utseende, layout, färger, typsnitt samt att designen följer Figma-skisser och grafisk profil. | **Låg / Medel** |
 | **Backend / Order Service** | Affärslogik, orderhantering, statusuppdateringar, api-anrop och e-post/sms-triggers. | **Hög** |
 | **Lagersystem (Integration)** | Att det 15 år gamla systemet synkar lagersaldo korrekt vid köp och avbeställning. | **Hög** |
 | **Payment Provider (Integration)** | Säker överföring av betalningsdata, hantering av godkänd/nekad betalning samt kontroll mot dubbeldebitering. | **Hög** |
