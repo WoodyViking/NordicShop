@@ -74,7 +74,8 @@ Detta dokument utgör det första underlaget för testarbetet i utvecklingen av 
 * **Externa leverantörer (Betalning & Leverans)**
   * *Testledaren behöver:* Tillgång till deras testmiljöer, testdata (t.ex. testkortnummer) och support vid integrationstestning.
   * *De behöver från testledaren:* Information om planerade belastningstester eller större uppdateringar i integrationen.
-
+* ** Kundservice** 
+  * *Testledaren behöver:* inforation från kunder om det är något som inte fungerar i "Live" miljön dvs buggar att fixa.
 ---
 
 ## 5. Riskmatris
