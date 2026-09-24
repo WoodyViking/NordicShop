@@ -35,10 +35,10 @@ Detta dokument utgör det första underlaget för testarbetet i utvecklingen av 
 * **Kritikalitet:** **Hög**
 
 ### Flöde 3: Köp av sista produkten i lager (Gränsfall)
-* **Sekvens:** Kund A & B lägger sista varan i kundvagnen → Kund A betalar först → Lagersaldo blir 0 → Kund B nekas köp vid kassan → Produkten döljs/spärras för köp.
+* **Sekvens:** Kund A & B lägger sista varan i kundvagnen samtidigt → Lagersaldo blir 0 → Kund B nekas att lägga vara i varukorgen → Kund B befrågas om den vill få veta om proudukten är i lager igen.
 * **Verksamhetsmål:** Automatisera lageruppdateringar, minska manuellt arbete (felköp).
 * **System som ingår:** Webb/App, Backend, Lagersystem.
-* **Konsekvens vid fel:** NordicShop säljer produkter som inte finns, vilket leder till restorder och hög belastning på kundservice.
+* **Konsekvens vid fel:** NordicShop säljer produkter som inte finns i lager, vilket leder till restorder och hög belastning på kundservice.
 * **Kritikalitet:** **Hög**
 
 ---
