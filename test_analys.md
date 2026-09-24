@@ -96,4 +96,6 @@ Detta dokument utgör det första underlaget för testarbetet i utvecklingen av 
 3. **Säkerhet:** Ska en extern säkerhetsgranskning (penetrationstest) genomföras av kassan och kunddatabasen?
 4. **Lagersystemet:** Finns det något tillgängligt API-gränssnitt till det 15 år gamla lagersystemet, eller kommunicerar det via filöverföring/databastabeller?
 5. **Browser/OS-scope:** Vilka specifika webbläsare, operativsystem och mobila enheter ska plattformen stödja och testas på?
-
+6. **Testmiljö:** Vem ansvarar för den gemensamma testmiljön, och hur ska bokning, versionshantering, deployment och miljöproblem samordnas mellan teamen?
+7. **Teamansvar:** Vilka delar av plattformen ansvarar de tre utvecklingsteamen för, och vem ansvarar för tvärgående E2E- och integrationstestning?
+8. **Scope:** Vilka funktioner och system ingår i den första releasen, och vad är uttryckligen Out of scope?
