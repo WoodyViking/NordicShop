@@ -20,8 +20,6 @@ Detta dokument utgör det första underlaget för testarbetet i utvecklingen av 
 
 ### Testobjekt baserad då KravListan
 
-# Testobjekt – NordicShop
-
 | **Testobjekt** | **Vad verifieras** | **Prioritet** | **Relaterat** |
 |---|---|---|---|
 | Inloggning | Kunden ska kunna skapa konto och logga in med e-post och lösenord | HÖG | K1 |
