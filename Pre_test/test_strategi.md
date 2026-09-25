@@ -59,6 +59,11 @@ Teststrategin beskriver hur \<systemets namn\> normalt testas. Vid varje release
 | Felrapport | Ett registrerat ärende för ett identifierat fel. |
 | Testverktyg | Verktyg som används för krav-, test- och felhantering. |
 | \<Term\> | \<Förklaring\> |
+| E2E | Ett testflöde som verifierar en hel kedja av steg, från kundens handling till att alla inblandade system har reagerat korrekt. |
+| API | Application Programming Interface. Gränssnitt som system använder för att kommunicera med varandra, t.ex. mellan order service och externa leverantörer. |
+| Regression | Testning som säkerställer att ny eller ändrad kod inte har förstört tidigare fungerande funktionalitet. |
+| Testmiljö | En miljö avsedd för test, separat från produktion, där system och integrationer kan verifieras utan att påverka riktiga kunder eller data. |
+| Mock | En förenklad, konstgjord verision av ett system (t.ex. en betalningsleverantör) som används i test när det riktiga systemet inte är tillgängligt eller lämpligt eller att testa mot. |
 
 ## 1.3  Hänvisningar till andra dokument
 
