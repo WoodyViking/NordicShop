@@ -17,7 +17,7 @@ Följande dokumentegenskaper ska uppdateras:
 | Ämne | Projektets eller systemets namn |
 | Författare | Författarens för- och efternamn |
 | Organisation | Organisationens namn |
-| Version | Dokumentets versionsnummer I formatet 1.2 |
+| Version | Dokumentets versionsnummer i formatet 1.2 |
 
 # Dokumenthistorik
 
