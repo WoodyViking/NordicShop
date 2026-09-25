@@ -1,8 +1,8 @@
-**\<grupp 2\>**
+# **<grupp 2>**
 
-\<Nordic Shop\>
+# Nordic Shop
 
-Teststrategi för \<namn på systemet eller motsvarande\>
+## Teststrategi för Nordic Shop
 
 **Version \<2.0\>**
 
@@ -14,8 +14,8 @@ Följande dokumentegenskaper ska uppdateras:
 
 | **Fält** | **Ange** |
 |---|---|
-| Ämne | Projektets eller systemets namn |
-| Författare | Författarens för- och efternamn |
+| Ämne | NordicShop, ny e-handelsplattform |
+| Författare | Grupp 2 |
 | Organisation | Organisationens namn |
 | Version | Dokumentets versionsnummer i formatet 1.2 |
 
@@ -23,8 +23,8 @@ Följande dokumentegenskaper ska uppdateras:
 
 | **Datum** | **Version** | **Beskrivning** | **Författare** |
 |---|---|---|---|
-| \<åååå-mm-dd\> | \<x.x\> | \<detaljer\> | \<namn\> |
-|  |  |  |  |
+| <2026-09-24> | <1.0> | <Start, test_analys.md> | <Grupp 2> |
+| <2026-09-25> | <1.1> | <Ifyllning utav test_strategi.md med mall verktyg att börja ifrån> | G2 |
 |  |  |  |  |
 
 # Innehållsförteckning
@@ -35,10 +35,18 @@ Följande dokumentegenskaper ska uppdateras:
   - 1.3  Hänvisningar till andra dokument
   - 1.4  Öppna frågor
 - 2  Testnivåer
-  - 2.1  \<Benämning på testnivå 1\>
+  - 2.1  Enhetstest
+  - 2.2 Integrationstest
+  - 2.3 Systemtest
+  - 2.4 Acceptanstest
 - 3  Testmiljö
 - 4  Testobjekt
-  - 4.1  \<Benämning på testobjekt 1\>
+  - 4.1  Webb/Mobilapp kärnflöden
+  - 4.2 Backend / Order Service
+  - 4.3 Lagersystemintegration
+  - 4.4 Betalningsintegration
+  - 4.5 Leveransintegration
+  - 4.6 Behörighet och åtkomstkontroll
 
 # 1  Teststrategi för \<namn på systemet eller motsvarande\>
 
