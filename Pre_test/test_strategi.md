@@ -21,7 +21,7 @@ Följande dokumentegenskaper ska uppdateras:
 |---|---|---|---|
 | <2026-09-24> | <1.0> | <Start, test_analys.md> | <Grupp 2> |
 | <2026-09-25> | <1.1> | <Ifyllning utav test_strategi.md med mall verktyg att börja ifrån> | <Grupp 2> |
-| <2026-09-28> | <1.2> | <En kortfattad beskrivning > | <Grupp 2> |
+| <2026-09-28> | <1.2> | <En kortfattad beskrivning, några öppna frågor, 3 Testmiljöer> | <Grupp 2> |
 
 # Innehållsförteckning
 
@@ -80,7 +80,8 @@ NordicShop är ett e-handelsföretag som säljer kläder, elektronik och heminre
 | Testplan | \<Länk eller sökväg till testplan\> |
 | Fil med testdata | \<Länk eller sökväg till testdata\> |
 | SQL-skript | \<Länk eller sökväg till skript\> |
-| Testfall | |
+| Testfall | <test_fall.md> |
+| Testrapport | <test_rapport.md> |
 
 ## 1.4  Öppna frågor
 
@@ -89,6 +90,13 @@ NordicShop är ett e-handelsföretag som säljer kläder, elektronik och heminre
 | **Öppen fråga** | **Ansvarig** | **Måldatum** | **Status** |
 |---|---|---|---|
 | \<Fråga\> | \<Namn\> | \<åååå-mm-dd\> | \<Öppen/Stängd\> |
+| Hur säkerställer vi realistisk och konsekvent testdata (produkter, priser, lagersaldon) i den gemensamma testmiljön, med tre team som delar på den? | Testledare / Utvecklingsteam | <åååå-mm-dd> | Öppen |
+| Vilka konkreta prestandamål gäller för "snabbare orderhantering" (svarstider, antal samtidiga användare)? | Product Owner | <åååå-mm-dd> | Öppen |
+| Ska en extern säkerhetsgranskning/penetrationstest genomföras av kassan och kunddatabasen innan release? | Product Owner / Säkerhetsansvarig | <åååå-mm-dd> | Öppen |
+| Har det 15 år gamla lagersystemet ett tillgängligt API, eller sker kommunikationen via filöverföring/databas? | Utvecklingsteam (lagersystem) | <åååå-mm-dd> | Öppen |
+| Vilka webbläsare, operativsystem och mobila enheter ska plattformen stödja och testas på? | Product Owner | <åååå-mm-dd> | Öppen |
+| Hur hanteras versionshantering och släppschema i den delade testmiljön så att de tre teamen inte stör varandras tester? | Testledare / Utvecklingsteam | <åååå-mm-dd> | Öppen |
+| Vilken testdata och åtkomst kan vi få till betalningsleverantörens separata testmiljö? | Testledare / Extern leverantör (betalning) | <åååå-mm-dd> | Öppen |
 |  |  |  |  |
 
 # 2  Testnivåer
@@ -105,8 +113,9 @@ NordicShop är ett e-handelsföretag som säljer kläder, elektronik och heminre
 
 | **Miljö** | **Syfte** | **Viktiga skillnader mot produktion** |
 |---|---|---|
-| \<Testmiljö 1\> | \<Beskriv\> | \<Beskriv\> |
-| \<Testmiljö 2\> | \<Beskriv\> | \<Beskriv\> |
+| Gemensam testmiljö (delad av de tre utvecklingsteamen) | Integrationstest och systemtest av webb/app, backend och interna flöden. | Delas av tre team, risk för att förändringar krockar; sannolikt lägre kapacitet än produktion. |
+| Betalningsleverantörens separata testmiljö | Integrationstest av betalningsflöden (Visa, Mastercard, Swish) med testkort/testdata. | Egen, isolerad miljö hos extern part; kräver separat åtkomst och testdata. |
+| Acceptans-/stagingmiljö (så nära produktion som möjligt) | Acceptanstest och slutlig verifiering av kompletta flöden inför release. | Bör efterlikna produktion, men med begränsad/anonymiserad testdata och utan skarpa betalningar. |
 
 # 4  Testobjekt
 
