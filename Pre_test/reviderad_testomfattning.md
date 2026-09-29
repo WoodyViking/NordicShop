@@ -1,32 +1,3 @@
-# Workshop – 50 % mindre testtid
-
-## Scenario
-
-NordicShop närmar sig release.
-
-Ursprungligen hade testteamet **4 veckor** för den huvudsakliga testperioden.
-
-Utvecklingen har blivit försenad.
-
-Projektledaren meddelar:
-
-Releasedatumet ligger kvar. Testteamet får nu endast två veckor.
-
-Testteamet består fortfarande av:
-
-- 1 testledare
-- 4 testare
-
-Det finns ingen möjlighet att genomföra den ursprungliga testomfattningen fullt ut.
-
-Ni är testledningsteamet.
-
----
-
-# Uppgift
-
-Ni ska skapa en **reviderad testomfattning**.
-
 ## Steg 1 – Prioritera testobjekten
 
 Kategorisera NordicShops områden som:
