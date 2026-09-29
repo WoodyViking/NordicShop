@@ -52,14 +52,10 @@ Motivera.
 
 # Steg 3 – Regression
 
-Bestäm:
-
-- vad som kan få reducerad regression
-- vad som eventuellt kan utgå
 ## Behövs
 - Köpflödet
 - Betalning
-- Order
+- Order service
 - Avbeställning och återbetalning
 - Inloggning och behörigheter
 
