@@ -13,19 +13,19 @@ Följande dokumentegenskaper ska uppdateras:
 | Ämne | NordicShop, ny e-handelsplattform |
 | Författare | Grupp 2 |
 | Organisation | Organisationens namn |
-| Version | Dokumentets versionsnummer i formatet 1.2 |
+| Version | Dokumentets versionsnummer i formatet 0.03 |
 
 # Dokumenthistorik
 
 | **Datum** | **Version** | **Beskrivning** | **Författare** |
 |---|---|---|---|
-| <2026-09-24> | <1.0> | <Start, test_analys.md> | <Grupp 2> |
-| <2026-09-25> | <1.1> | <Ifyllning utav test_strategi.md med mall verktyg att börja ifrån> | <Grupp 2> |
-| <2026-09-28> | <1.2> | <En kortfattad beskrivning, några öppna frågor, 3 Testmiljöer> | <Grupp 2> |
+| <2026-09-24> | <0.01> | <Start, test_analys.md> | <Grupp 2> |
+| <2026-09-25> | <0.02> | <Ifyllning utav test_strategi.md med mall verktyg att börja ifrån> | <Grupp 2> |
+| <2026-09-28> | <0.03> | <En kortfattad beskrivning, några öppna frågor, 3 Testmiljöer> | <Grupp 2> |
 
 # Innehållsförteckning
 
-- 1  Teststrategi för \<namn på systemet eller motsvarande\>
+- 1  Teststrategi för NordicShop
   - 1.1 Kortfattad beskrivning
   - 1.2 Termer och förkortningar
   - 1.3 Hänvisningar till andra dokument
@@ -52,7 +52,7 @@ Följande dokumentegenskaper ska uppdateras:
 
 *[Beskriv kortfattat vad teststrategin avser. Ange systemets namn.]*
 
-Teststrategin beskriver hur \<systemets namn\> normalt testas. Vid varje release genomförs testplanering. Testplaneringen kan dokumenteras i en testplan som kompletterar teststrategin och beskriver eventuella avsteg från strategin.
+Teststrategin beskriver hur NordicShop normalt testas. Vid varje release genomförs testplanering. Testplaneringen kan dokumenteras i en testplan som kompletterar teststrategin och beskriver eventuella avsteg från strategin.
 
 NordicShop är ett e-handelsföretag som säljer kläder, elektronik och heminredning. Företaget utvecklar en ny e-handelsplattform som ska ersätta den befintliga lösningen, med målet att göra det enklare för kunder att handla, minska antalet avbrutna köp, ge snabbare orderhantering, automatisera lageruppdateringar, stödja fler betalningsalternativ och minska manuellt arbete för kundservice. Lösningen består av en webb- och mobilapp, en backend/Order Service samt integrationer mot ett äldre internt lagersystem och tre externa leverantörer: betalning, leverans och e-post/SMS. Utvecklingen sker agilt av tre parallella team i tvåveckorssprintar, med produktionsrelease planerad om cirka fyra månader. Denna teststrategi beskriver hur NordicShop ska testas på en övergripande nivå: vilka testnivåer som behövs, vilka testobjekt som ska verifieras, vilka testmiljöer som krävs och vilka frågor som fortfarande måste besvaras. Vid varje release genomförs testplanering utifrån denna strategi, vilken kan dokumenteras i en separat testplan som beskriver eventuella avsteg.
 
@@ -81,7 +81,6 @@ NordicShop är ett e-handelsföretag som säljer kläder, elektronik och heminre
 | Fil med testdata | \<Länk eller sökväg till testdata\> |
 | SQL-skript | \<Länk eller sökväg till skript\> |
 | Testfall | <test_fall.md> |
-| Testrapport | <test_rapport.md> |
 
 ## 1.4  Öppna frågor
 
@@ -103,9 +102,12 @@ NordicShop är ett e-handelsföretag som säljer kläder, elektronik och heminre
 
 *[Beskriv samtliga testnivåer som ska tillämpas vid test av systemet, exempelvis komponenttest, integrationstest, systemtest och acceptanstest. Tydliggör skillnaden mellan nivåerna för att minska risken för luckor och onödig dubblering.]*
 
-## 2.1  \<Benämning på testnivå 1\>
+## 2.1  komponent-/enhetstest
 
 *[Beskriv vilka roller som genomför testerna, testnivåns syfte och mål, mottagare av resultat samt omfattning och avgränsning.]*
+
+## 2.2 integrationstest
+
 
 # 3  Testmiljö
 
