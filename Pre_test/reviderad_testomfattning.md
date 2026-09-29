@@ -29,7 +29,7 @@ Använd följande tabell:
 | Leverans | Could | Påverkar kundupplevelse men stopar inte som ett betalningsfel. |
 | Orderbekräftelse | Should | Viktigt för förtroende, men kan göras manuellt. |
 | Rabattkod | Could | Det är inget som är affärskrittiskt och kund kan återbetallas om något går fel. |
-| Administrationsvertyg | Could | Inte så många användare och påverkar inte kund. |
+| Administrationsvertyg | Must | Utan administration kan inte kunden få hjälp när saker går fel. |
 | Grundläggande sök| Could | Det ska gå att hitta varor utan att behöva sökverktyget så påverkar användare men behövs inte för kundflödet. |
 | UI/UX-utseende | Could | Inte viktigt att hemsidan har ett perfekt utseende och har redan låg priritet i från testanalysen. |
 
@@ -38,7 +38,14 @@ Använd följande tabell:
 # Steg 2 – Kritiska affärsflöden
 
 Identifiera vilka **tre E2E-flöden** ni absolut inte skulle vilja gå live utan att verifiera.
+## Köpflöde
+Det viktigaste för att affärsflödet ska fungera, utan köpflöde så fungerar inte butiken och NordicShop tjänar inga pengar.
 
+## Avbeställning och återbetalning
+Om kunden ändrat sig så måste det gå för kunden att ändra sin beställning annars blir kunden riktigt arg.
+
+## Slutsåld produkt och lager
+Att kunden förlorar förtroende om det inte finns produkten de försöker köpa i affären eller inte kan köpa en produkt som affären tror fins tillgängligt.
 Motivera.
 
 ---
