@@ -124,10 +124,7 @@ NordicShop är ett e-handelsföretag som säljer kläder, elektronik och heminre
 
 *[Beskriv på övergripande detaljnivå vad som ska testas. Det kan vara testområden, testomfattning, systemdelar, program, integrationer eller ett mindre antal konkreta testfall.]*
 
-## 4.1  \<Benämning på testobjekt 1\>
 
-| **Testobjekt / område** | **Vad ska verifieras?** | **Kommentar / avgränsning** |
-|---|---|---|
 ## 4.1  Webb/Mobilapp – kärnflöden
  
 | **Testobjekt / område** | **Vad ska verifieras?** | **Kommentar / avgränsning** |
