@@ -111,7 +111,7 @@ Exempel:
 
 | Reducerad testning | Kvarstående risk |
 |---|---|
-| Rabattkoder testas bara med standardfall | En kod kan användas flera gånger eller ge fel belopp, vilket ger ekonomisk förlust. |
+|  Rabattkoder testas inte före release | En kod kan användas flera gånger, ge fel belopp eller fungera trots att den har gått ut. Det ger ekonomisk förlust. Kunder som inte får utlovad rabatt kontaktar kundservice. |
 | Begränsat prestandatest | Plattformen kan bli långsam eller gå ner vid en kampanj med oväntat hög trafik. |
 | Äldre webbläsare och enheter testas inte | Vissa kunder kan inte slutföra köp, vilket ger fler avbrutna köp. |
 | Kortare acceptanstest | Kundservice kan upptäcka problem i sitt arbetsflöde först efter release, vilket ger mer manuellt arbete. |
