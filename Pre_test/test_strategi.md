@@ -81,6 +81,7 @@ NordicShop är ett e-handelsföretag som säljer kläder, elektronik och heminre
 | Fil med testdata | \<Länk eller sökväg till testdata\> |
 | SQL-skript | \<Länk eller sökväg till skript\> |
 | Testfall | <test_fall.md> |
+| Krav | krav.md |
 
 ## 1.4  Öppna frågor
 
@@ -121,12 +122,26 @@ NordicShop är ett e-handelsföretag som säljer kläder, elektronik och heminre
 
 # 4  Testobjekt
 
-*[Beskriv på övergripande detaljnivå vad som ska testas. Det kan vara testområden, systemdelar, program, integrationer eller ett mindre antal konkreta testfall.]*
+*[Beskriv på övergripande detaljnivå vad som ska testas. Det kan vara testområden, testomfattning, systemdelar, program, integrationer eller ett mindre antal konkreta testfall.]*
 
 ## 4.1  \<Benämning på testobjekt 1\>
 
 | **Testobjekt / område** | **Vad ska verifieras?** | **Kommentar / avgränsning** |
 |---|---|---|
-| \<Objekt 1\> | \<Beskriv\> | \<Beskriv\> |
-| \<Objekt 2\> | \<Beskriv\> | \<Beskriv\> |
-| \<Objekt 3\> | \<Beskriv\> | \<Beskriv\> |
+## 4.1  Webb/Mobilapp – kärnflöden
+ 
+| **Testobjekt / område** | **Vad ska verifieras?** | **Kommentar / avgränsning** |
+|---|---|---|
+| Registrering, inloggning, sök, kundvagn, rabattkod, betalning, orderöversikt | Att flödena fungerar tekniskt korrekt end-to-end. | UI/UX-utseende (layout, grafisk profil) avgränsas från denna strategi. |
+ 
+## 4.2  Backend / Order Service
+ 
+| **Testobjekt / område** | **Vad ska verifieras?** | **Kommentar / avgränsning** |
+|---|---|---|
+| Orderhantering, statusuppdateringar, triggers | Att korrekta anrop/triggers går till lagersystem, betalning, leverans och e-post/SMS. | Den tekniska implementationen hos externa system testas inte. |
+ 
+## 4.3  Lagersystemintegration
+ 
+| **Testobjekt / område** | **Vad ska verifieras?** | **Kommentar / avgränsning** |
+|---|---|---|
+| Lagersaldo vid köp och avbeställning | Att saldo uppdateras/återställs korrekt, samt beteende vid hög belastning eller timeout. | Själva lagersystemets kod testas inte – fokus på gränssnittet. Hög risk pga systemets ålder. |
