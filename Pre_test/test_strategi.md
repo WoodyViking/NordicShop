@@ -13,15 +13,15 @@ Följande dokumentegenskaper ska uppdateras:
 | Ämne | NordicShop, ny e-handelsplattform |
 | Författare | Grupp 2 |
 | Organisation | Organisationens namn |
-| Version | Dokumentets versionsnummer i formatet 0.03 |
+| Version | Dokumentets versionsnummer i formatet 0.3 |
 
 # Dokumenthistorik
 
 | **Datum** | **Version** | **Beskrivning** | **Författare** |
 |---|---|---|---|
-| <2026-09-24> | <0.01> | <Start, test_analys.md> | <Grupp 2> |
-| <2026-09-25> | <0.02> | <Ifyllning utav test_strategi.md med mall verktyg att börja ifrån> | <Grupp 2> |
-| <2026-09-28> | <0.03> | <En kortfattad beskrivning, några öppna frågor, 3 Testmiljöer> | <Grupp 2> |
+| <2026-09-24> | <0.1> | <Start, test_analys.md> | <Grupp 2> |
+| <2026-09-25> | <0.2> | <Ifyllning utav test_strategi.md med mall verktyg att börja ifrån> | <Grupp 2> |
+| <2026-09-28> | <0.3> | <En kortfattad beskrivning, några öppna frågor, 3 Testmiljöer> | <Grupp 2> |
 
 # Innehållsförteckning
 
