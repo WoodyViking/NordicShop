@@ -57,7 +57,14 @@ Bestäm:
 - vad som måste regressionstestas
 - vad som kan få reducerad regression
 - vad som eventuellt kan utgå
+## Kan utgå
+- Regression av sök och filter.
+- Regression av UI/UX-utseende och layout.
+- Regression i äldre webbläsare och enheter.
 
+Motivering: Fel här stoppar inte köp, och kunden kan hitta produkter på andra sätt.
+
+---
 ---
 
 # Steg 4 – Testnivåer
