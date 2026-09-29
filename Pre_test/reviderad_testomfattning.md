@@ -108,6 +108,9 @@ Använbarhet är inte lika viktigt att det finns i produktion.
 Identifiera vad som nu aktivt tas bort eller reduceras från testomfattningen.
 
 Det ska vara tydligt dokumenterat.
+Det vi tar bort är UI/UX-utseende som inte är viktigt för systemets funktion.
+Webbläsare som inte är så använda av dem flest användare behöver inte testas.
+Sökfunktioner är inte viktiga systemets funktion och kan göras efter systemet är färdigt.
 
 ---
 
