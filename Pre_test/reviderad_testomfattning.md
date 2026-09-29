@@ -108,6 +108,20 @@ Exempel:
 |  |  |
 |  |  |
 
+
+| Reducerad testning | Kvarstående risk |
+|---|---|
+| Rabattkoder testas bara med standardfall | En kod kan användas flera gånger eller ge fel belopp, vilket ger ekonomisk förlust. |
+| Begränsat prestandatest | Plattformen kan bli långsam eller gå ner vid en kampanj med oväntat hög trafik. |
+| Äldre webbläsare och enheter testas inte | Vissa kunder kan inte slutföra köp, vilket ger fler avbrutna köp. |
+| Kortare acceptanstest | Kundservice kan upptäcka problem i sitt arbetsflöde först efter release, vilket ger mer manuellt arbete. |
+| Reducerad regression | En sen buggfix kan förstöra något i ett område vi inte testar om. |
+| Leverans testas bara i standardfallet | Fel pris eller saknade alternativ för ombud kan leda till missnöjda kunder. |
+| Fördjupad tillgänglighetstest tas bort | Risk att lagkraven på tillgänglighet inte uppfylls. |
+
+Åtgärder för att minska risken: förstärkt övervakning efter release, en beredskapsgrupp de första dagarna, möjlighet att snabbt stänga av rabattkoder och en tydlig rollback-plan.
+
+
 ---
 
 # Steg 8 – Kommunicera till projektledaren
