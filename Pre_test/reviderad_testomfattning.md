@@ -59,7 +59,7 @@ Motivera.
 - Avbeställning och återbetalning
 - Inloggning och behörigheter
 
-## Kan utgå
+## Reducerad regression
 - Rabattkod
 - Leverans
 
@@ -79,7 +79,12 @@ Får någon nivå:
 - reducerad omfattning?
 - ändrad prioritering?
 
-Motivera.
+| Testnivå | Förändring | Motivering |
+| --- | --- | --- |
+| E2E | Hög pritritering | Happy path för kundflödet måste funka och säkerhet |
+| Integrationer |  ||
+| Enhetstest |||
+
 
 ---
 
@@ -87,15 +92,14 @@ Motivera.
 
 Ta ställning till:
 
-- funktionell testning
-- säkerhet
-- prestanda
-- kompatibilitet
-- användbarhet
 
-Vad måste behållas?
-
-Vad kan reduceras?
+## Vad måste behållas?
+Funktionell testning är viktig eftersom happy path måste testas för att se till att produkten fungerar.
+Säkerhet viktigt för att allt som är viktigt kan påverkas om säkerheten falleras.
+## Vad kan reduceras?
+Prestanda är endast viktigt att systemet snurrar och att det inte påverkar säkerheten om det går för dåligt
+Kompatibilitet är viktigt men kan minskas till dem webbläsare/enheter som flesta av användare använder.
+Använbarhet är inte lika viktigt att det finns i produktion.
 
 ---
 
