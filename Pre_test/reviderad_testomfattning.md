@@ -24,7 +24,7 @@ Använd följande tabell:
 | Lagersaldo | Must | Måste fungera för att affärsflödet ska kunna fungera. |
 | Order service | Must | Är viktigt för att företaget ska kunna ha kol på kundens beställningar och påverkar hela affärs flödet |
 | Betallning | Must | Måste fungera för att försäljning ska fungera och kostar pengar om det inte fungerar. |
-| Avbeställning | Could | Kund blir påverkad, men kund kan kontakta oss för att ändra manuellt. |
+| Avbeställning | Must | Kund blir påverkad, men kund kan kontakta oss för att ändra manuellt. |
 | Behörighet (kundservice och administratör)| Should | Säkerhetsrelevant, men inte lika hög risk som betallning. |
 | Leverans | Could | Påverkar kundupplevelse men stopar inte som ett betalningsfel. |
 | Orderbekräftelse | Should | Viktigt för förtroende, men kan göras manuellt. |
