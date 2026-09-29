@@ -147,8 +147,8 @@ Formulera en kort testledarrapport på max **5–7 meningar**.
 
 Den ska beskriva:
 
-- vad som har förändrats
-- vad ni prioriterar
-- vad ni reducerar
-- vilka risker detta innebär
-- eventuell rekommendation
+Nu när vi har mindre tid för att testa, så har vi behövt reducera och prioritera för att systemet forfarande ska kunna upnå viktiga happy path 
+Vi har ändrat prioriteringen för att se till att dem kritiska flödena kan fungera (happypath)
+Vi har reducerat testandet utav utseendet av hemsidan, prestandan duger med att köra personbil för hemsidan och olika enheter/webläsare kan reduceras till dem viktiga som dem fleta användare använder.
+Risker blir att kunder inte vill stanna på en långsam eller en icke användar vänlig (sökfunktioner, kronglig UI/UX) hemsida.
+En rekomendation är AI för verifiering utav test/kod så vi kan fokusera på validering.
