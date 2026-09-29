@@ -54,9 +54,23 @@ Motivera.
 
 Bestäm:
 
-- vad som måste regressionstestas
 - vad som kan få reducerad regression
 - vad som eventuellt kan utgå
+## Behövs
+- Köpflödet
+- Betalning
+- Order
+- Avbeställning och återbetalning
+- Inloggning och behörigheter
+
+## Kan utgå
+- Rabattkod
+- Leverans
+
+## Kan utgå
+- Sökfunktioner
+- UI/UX-utseende och layout
+- Regression i älde webläsare och enheter
 
 ---
 
