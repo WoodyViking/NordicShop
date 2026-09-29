@@ -120,11 +120,6 @@ Identifiera minst **5 risker** som uppstår på grund av den reducerade testomfa
 
 Exempel:
 
-| Reducerad testning | Kvarstående risk |
-| --- | --- |
-|  |  |
-|  |  |
-
 
 | Reducerad testning | Kvarstående risk |
 |---|---|
