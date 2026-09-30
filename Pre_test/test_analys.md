@@ -7,38 +7,39 @@ Detta dokument utgör det första underlaget för testarbetet i utvecklingen av 
 
 ## 1. Testobjekt & Verifieringsbehov
 
-| Testobjekt | Vad behöver verifieras? | Prioritet |
-| :--- | :--- | :--- |
-| **NordicShop Webb / Mobilapp** (Funktionalitet) | Kritiska användarflöden: att registrering, sök, varukorg och betalning fungerar tekniskt från start till slut. | **Hög** |
-| **NordicShop Webb / Mobilapp** (UI/UX & Design) | Kosmetiskt utseende, layout, färger, typsnitt samt att designen följer Figma-skisser och grafisk profil. | **Låg / Medel** |
-| **Backend / Order Service** | Affärslogik, orderhantering, statusuppdateringar, api-anrop och e-post/sms-triggers. | **Hög** |
-| **Lagersystem (Integration)** | Att det 15 år gamla systemet synkar lagersaldo korrekt vid köp och avbeställning. | **Hög** |
-| **Payment Provider (Integration)** | Säker överföring av betalningsdata, hantering av godkänd/nekad betalning samt kontroll mot dubbeldebitering. | **Hög** |
-| **Delivery Provider (Integration)** | Hämtning av korrekta leveransalternativ (hem/ombud) och priser. | **Medel** |
-| **E-post / SMS Service (Integration)** | Utskick av order- och avbeställningsbekräftelser med korrekt information. | **Medel** |
-| **Administrationsverktyg** | Behörigheter, produkthantering, prisändringar och skapande av rabattkoder. | **Medel** |
+| Testobjekt | Vad behöver verifieras? | Prioritet | Risk Nivå |
+| :--- | :--- | :--- | :--- |
+| **NordicShop Webb / Mobilapp** (Funktionalitet) | Kritiska användarflöden: att registrering, sök, varukorg och betalning fungerar tekniskt från start till slut. | **Critisk** | 5 |
+| **NordicShop Webb / Mobilapp** (UI/UX & Design) | Kosmetiskt utseende, layout, färger, typsnitt samt att designen följer Figma-skisser och grafisk profil. | **Låg** | 2 |
+| **Backend / Order Service** | Affärslogik, orderhantering, statusuppdateringar, api-anrop och e-post/sms-triggers. | **Hög** | 4 |
+| **Lagersystem (Integration)** | Att det 15 år gamla systemet synkar lagersaldo korrekt vid köp och avbeställning. | **Hög** | 4 |
+| **Payment Provider (Integration)** | Säker överföring av betalningsdata, hantering av godkänd/nekad betalning samt kontroll mot dubbeldebitering. | **Hög** | 4 |
+| **Delivery Provider (Integration)** | Hämtning av korrekta leveransalternativ (hem/ombud) och priser. | **Medel** | 3 |
+| **E-post / SMS Service (Integration)** | Utskick av order- och avbeställningsbekräftelser med korrekt information. | **Medel** | 3 |
+| **Administrationsverktyg** | Behörigheter, produkthantering, prisändringar och skapande av rabattkoder. | **Medel** | 3 |
 
 ### Testobjekt baserad då KravListan
 
-| **Testobjekt** | **Vad verifieras** | **Prioritet** | **Relaterat** |
-|---|---|---|---|
-| Inloggning | Kunden ska kunna skapa konto och logga in med e-post och lösenord | HÖG | K1 |
-| Kontolåsning | Efter 3 felaktiga inloggningsförsök ska kontot låsas i 30 minuter | HÖG | K1 |
-| Butiksnavigering | Kunden ska kunna söka produkter, filtrera, se pris, lagerstatus och produktinformation | HÖG | K2 |
-| Kundvagn | Kunden ska kunna lägga produkter i kundvagnen, ändra antal och ta bort produkter | HÖG | K3 |
-| Rabattkod | Kunden ska kunna använda rabattkod. Rabattkoden ska kontrolleras mot giltighetsdatum och minsta ordervärde | HÖG | K4 |
-| Rabattkod – användning | En rabattkod ska endast kunna användas en gång per kund | HÖG | K4 |
-| Betalning | Kunden ska kunna betala med Visa, Mastercard eller Swish. Order ska endast skapas om betalningen godkänns och kunden får inte debiteras två gånger | HÖG | K5 |
-| Lager | När en order genomförs ska lagersaldot ändras automatiskt. En produkt som inte längre finns i lager ska inte kunna köpas | HÖG | K6 |
-| Leverans | Kunden ska kunna välja hemleverans eller ombud. Leveransalternativ och pris ska hämtas från den externa leveranstjänsten | HÖG | K7 |
-| Orderbekräftelse | Efter genomfört köp ska kunden få orderbekräftelse via e-post med ordernummer, betalningsinformation och leveransinformation | MEDEL | K8 |
-| Avbeställning | Kunden ska kunna avbeställa en order innan den skickats | HÖG | K9 |
-| Återbetalning | Vid avbeställning ska betalningen återbetalas | HÖG | K9 |
-| Lageråterställning | Vid avbeställning ska lagersaldot återställas | HÖG | K9 |
-| Avbeställningsbekräftelse | Kunden ska få en bekräftelse när ordern har avbeställts | MEDEL | K9 |
-| Kundservice – behörighet | Kundservice ska kunna se kundens order och betalningsstatus | HÖG | K10 |
-| Administratör – behörighet | Endast administratörer ska kunna ändra produktpriser och användarbehörigheter | HÖG | K10 |
-| Behörighetsbegränsning | Kundservice ska inte kunna ändra produktpriser eller användarbehörigheter | HÖG | K10 |
+| **Testobjekt** | **Vad verifieras** | **Prioritet** | **Relaterat** | Risk Nivå |
+|---|---|---|---|---|
+| Inloggning | Kunden ska kunna skapa konto och logga in med e-post och lösenord | HÖG | K1 | 4 |
+| Kontolåsning | Efter 3 felaktiga inloggningsförsök ska kontot låsas i 30 minuter | HÖG | K1 | 4 |
+| Butiksnavigering | Kunden ska kunna söka produkter, filtrera, se pris, lagerstatus och produktinformation | HÖG | K2 | 4 |
+| Kundvagn | Kunden ska kunna lägga produkter i kundvagnen, ändra antal och ta bort produkter | HÖG | K3 | 4 |
+| Rabattkod | Kunden ska kunna använda rabattkod. Rabattkoden ska kontrolleras mot giltighetsdatum och minsta ordervärde | HÖG | K4 | 4 |
+| Rabattkod – användning | En rabattkod ska endast kunna användas en gång per kund | HÖG | K4 | 4 |
+| Betalning | Kunden ska kunna betala med Visa, Mastercard eller Swish. Order ska endast skapas om betalningen godkänns och kunden får inte debiteras två gånger | HÖG | K5 | 4 |
+| Lager | När en order genomförs ska lagersaldot ändras automatiskt. En produkt som inte längre finns i lager ska inte kunna köpas | HÖG | K6 | 4 |
+| Leverans | Kunden ska kunna välja hemleverans eller ombud. Leveransalternativ och pris ska hämtas från den externa leveranstjänsten | HÖG | K7 | 4 |
+| Orderbekräftelse | Efter genomfört köp ska kunden få orderbekräftelse via e-post med ordernummer, betalningsinformation och leveransinformation | MEDEL | K8 | 3 |
+| Avbeställning | Kunden ska kunna avbeställa en order innan den skickats | HÖG | K9 | 4 |
+| Återbetalning | Vid avbeställning ska betalningen återbetalas | HÖG | K9 | 4 |
+| Lageråterställning | Vid avbeställning ska lagersaldot återställas | HÖG | K9 | 4 |
+| Avbeställningsbekräftelse | Kunden ska få en bekräftelse när ordern har avbeställts | MEDEL | K9 | 3 |
+| Kundservice – behörighet | Kundservice ska kunna se kundens order och betalningsstatus | HÖG | K10 | 4 |
+| Administratör – behörighet | Endast administratörer ska kunna ändra produktpriser och användarbehörigheter | HÖG | K10 | 4 |
+| Behörighetsbegränsning | Kundservice ska inte kunna ändra produktpriser eller användarbehörigheter | HÖG | K10 | 4 |
+
 ---
 
 ## 2. Kritiska Affärsflöden (End-to-End)
@@ -199,15 +200,15 @@ Detta dokument utgör det första underlaget för testarbetet i utvecklingen av 
 
 | Risk | Sannolikhet | Konsekvens | Risknivå | Möjlig teståtgärd |
 | :--- | :--- | :--- | :--- | :--- |
-| **1. Det 15 år gamla lagersystemet klarar inte integrationen eller prestandan**. | **Hög** | **Hög** | **Kritisk** | Tidiga integrationstester (API/meddelandeköer) och dedikerade prestandatester mot lagersystemet. |
+| **1. Det 15 år gamla lagersystemet klarar inte integrationen eller prestandan**. | **5** | **Hög** | **Kritisk** | Tidiga integrationstester (API/meddelandeköer) och dedikerade prestandatester mot lagersystemet. |
 | **2. Tre utvecklingsteam krockar i den gemensamma testmiljön**. | **Hög** | **Medel** | **Hög** | Sätt upp ett tydligt releaseschema för miljön, inför CI/CD och röktest (smoke tests) vid varje driftsättning. |
 | **3. Betalningsleverantörens testmiljö är instabil eller nere**. | **Medel** | **Hög** | **Hög** | Bygg "mockar" (simulatorer) för betalningsflödet så att interna tester kan fortsätta oberoende av extern part. |
 | **4. Kunder debiteras dubbelt vid nätverksavbrott (K5)**. | **Låg** | **Hög** | **Hög** | Negativa tester: Bryt nätverksanslutningen exakt under betalningsögonblicket och verifiera hanteringen. |
 | **5. Rabattkoder kombineras felaktigt så att varor blir gratis (K4)**. | **Medel** | **Medel** | **Medel** | Etablera en testmatris baserad på ekvivalensklassindelning för alla typer av rabattkombinationer. |
 | **6. Kontolåsningen (K1) låser inte kontot efter 3 felaktiga försök, vilket öppnar för brute-force-attacker (K1 / Säkerhetsrisk)**. | **Medel** | **Hög** | **Hög** | Automatisera ett säkerhetstest som gör 3+ felaktiga inloggningar och verifierar att kontot förblir låst i exakt 30 minuter. |
 | **7. Kundservice kan av misstag ändra priser eller behörigheter p.g.a. felaktig rollstyrning (K10 / Säkerhetsrisk)**. | **Låg** | **Hög** | **Hög** | Skapa separata testkonton för Kundservice respektive Admin för att verifiera rättighetsspärrar och 403-svar. |
-| **8. Gamla eller saknade data i kassan gör att priser/leveransalternativ inte kan hämtas (K7 / Integrationsrisk)**. | **Medel** | **Medel** | **Medel** | Funktionella integrationstester med fiktiva adresser och tunga/skrymmande testprodukter för att trigga externa API-fel. |
-
+| **8. Gamla eller saknade data i kassan gör att priser/leveransalternativ inte kan hämtas (K7 / Integrationsrisk)**. | **2** | **Medel** | **Medel** | Funktionella integrationstester med fiktiva adresser och tunga/skrymmande testprodukter för att trigga externa API-fel. |
+| **9. Vid avbeställning avbrytts order men återbetalning genomförs inte**. | **2** | **
 
 ---
 
