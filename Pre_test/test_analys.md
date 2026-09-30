@@ -233,11 +233,19 @@ Detta dokument utgör det första underlaget för testarbetet i utvecklingen av 
 1. Vilken risk har reducerats?
 R1
 2. Vad har testningen gett oss information om?
-Testningen har gett oss information som att det går att göra en check mot lagersaldor för att kontrollera
+Testningen har gett oss information som att det går att göra en check mot lagersaldor för att kontrollera. Hur lagersystemet reagerar på anrop från Order Service, hur lång fördröjningen är vid normal och hög belastning, och att flödet "slutsåld produkt" fungerar i de scenarier vi har testat. Workshopen med förvaltaren har också gett oss kunskap om systemet som inte fanns i dokumentationen.
+
 3. Finns någon risk fortfarande kvar?
-En risk är att lagersaldo kan bli korrupt när datan överförs.
+Ja. Vid mycket hög belastning, till exempel en stor kampanj, kan fördröjningen bli längre än i testerna. Om lagersystemet går ner kan saldot fortfarande bli fel.
+
 4. Varför kan vi inte eliminera risken helt?
+Testmiljön har inte samma mängd data och trafik som produktion. Lagersystemet är gammalt och dåligt dokumenterat, så det kan finnas beteenden som varken vi eller förvaltaren känner till. Vi kan inte heller testa alla möjliga kombinationer av samtidiga köp.
+
 5. Behöver den kvarstående risken kommuniceras inför release?
+Ja. Projektledaren och ledningen bör känna till den. Vi rekommenderar att lagersaldot övervakas särskilt efter release, och att kundservice har en färdig rutin för att kontakta kunder om en slutsåld vara ändå har sålts.
+
+En risk är att lagersaldo kan bli korrupt när datan överförs.
+
 
 
 
