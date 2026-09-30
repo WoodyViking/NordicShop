@@ -215,16 +215,36 @@ Detta dokument utgör det första underlaget för testarbetet i utvecklingen av 
 
 | ID | Risk | Product/Projekt | Affär/Teknisk | Sannolikhet | Konsekvens | Risknivå | Prio | Möjlig teståtgärd |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| R1 | **1. Det 15 år gamla lagersystemet klarar inte integrationen eller prestandan**. | **Produkt** | **Tekniskt** | **5** | **5** | **25** | Tidiga integrationstester (API/meddelandeköer) och dedikerade prestandatester mot lagersystemet. |
-| R2 | **2. Tre utvecklingsteam krockar i den gemensamma testmiljön**. | **Projekt** | **Tekniskt** | **4** | **5** | **20** | Sätt upp ett tydligt releaseschema för miljön, inför CI/CD och röktest (smoke tests) vid varje driftsättning. |
-| R3 |**3. Betalningsleverantörens testmiljö är instabil eller nere**. | **Project** | **Teknisk** | **3** | **4** | **12** | Bygg "mockar" (simulatorer) för betalningsflödet så att interna tester kan fortsätta oberoende av extern part. |
-| R4 | **6. Kontolåsningen (K1) låser inte kontot efter 3 felaktiga försök, vilket öppnar för brute-force-attacker (K1 / Säkerhetsrisk)**. | **Produkten** | **Affär/Teknisk** | **3** | **4** | **12** | Automatisera ett säkerhetstest som gör 3+ felaktiga inloggningar och verifierar att kontot förblir låst i exakt 30 minuter. |
-| R5 | **9. Vid avbeställning avbrytts order men återbetalning genomförs inte**. | **Produkt** | **Affär** | **2** | **5** | **10** |
-| R6 | **5. Rabattkoder kombineras felaktigt så att varor blir gratis (K4)**. | **Produkt** | **Affär** | **3** | **3** | **9** | Etablera en testmatris baserad på ekvivalensklassindelning för alla typer av rabattkombinationer. |
-| R7 | **4. Kunder debiteras dubbelt vid nätverksavbrott (K5)**. | **Produkt** | **Affär/Teknisk** | **2** | **4** | **8** | Negativa tester: Bryt nätverksanslutningen exakt under betalningsögonblicket och verifiera hanteringen. |
-| R8 | **7. Kundservice kan av misstag ändra priser eller behörigheter p.g.a. felaktig rollstyrning (K10 / Säkerhetsrisk)**. | **Produkt** | **Teknisk** | **2** | **4** | **8** | Skapa separata testkonton för Kundservice respektive Admin för att verifiera rättighetsspärrar och 403-svar. |
-| R9 | **8. Gamla eller saknade data i kassan gör att priser/leveransalternativ inte kan hämtas (K7 / Integrationsrisk)**. | **Produkt** | **Teknisk/Affär** | **2** | **4** | **8** | Funktionella integrationstester med fiktiva adresser och tunga/skrymmande testprodukter för att trigga externa API-fel. |
-| R10 | **10. Kundservice har inte tid att delta i acceptanstest**. | **Project** | **Affär** | **1** | **2** | **2** |
+| R1 | **1. Det 15 år gamla lagersystemet klarar inte integrationen eller prestandan**. | **Produkt** | **Tekniskt** | **5** | **5** | **25** | **Kritisk** | Tidiga integrationstester (API/meddelandeköer) och dedikerade prestandatester mot lagersystemet. |
+| R2 | **2. Tre utvecklingsteam krockar i den gemensamma testmiljön**. | **Projekt** | **Tekniskt** | **4** | **5** | **20** | **Kritisk** | Sätt upp ett tydligt releaseschema för miljön, inför CI/CD och röktest (smoke tests) vid varje driftsättning. |
+| R3 |**3. Betalningsleverantörens testmiljö är instabil eller nere**. | **Project** | **Teknisk** | **3** | **4** | **12** | **Hög** | Bygg "mockar" (simulatorer) för betalningsflödet så att interna tester kan fortsätta oberoende av extern part. |
+| R4 | **6. Kontolåsningen (K1) låser inte kontot efter 3 felaktiga försök, vilket öppnar för brute-force-attacker (K1 / Säkerhetsrisk)**. | **Produkten** | **Affär/Teknisk** | **3** | **4** | **12** | **Hög** | Automatisera ett säkerhetstest som gör 3+ felaktiga inloggningar och verifierar att kontot förblir låst i exakt 30 minuter. |
+| R5 | **9. Vid avbeställning avbrytts order men återbetalning genomförs inte**. | **Produkt** | **Affär** | **2** | **5** | **10** | **Medel** |
+| R6 | **5. Rabattkoder kombineras felaktigt så att varor blir gratis (K4)**. | **Produkt** | **Affär** | **3** | **3** | **9** | **Medel** | Etablera en testmatris baserad på ekvivalensklassindelning för alla typer av rabattkombinationer. |
+| R7 | **4. Kunder debiteras dubbelt vid nätverksavbrott (K5)**. | **Produkt** | **Affär/Teknisk** | **2** | **4** | **8** | **Medel** | Negativa tester: Bryt nätverksanslutningen exakt under betalningsögonblicket och verifiera hanteringen. |
+| R8 | **7. Kundservice kan av misstag ändra priser eller behörigheter p.g.a. felaktig rollstyrning (K10 / Säkerhetsrisk)**. | **Produkt** | **Teknisk** | **2** | **4** | **8** | **Medel** | Skapa separata testkonton för Kundservice respektive Admin för att verifiera rättighetsspärrar och 403-svar. |
+| R9 | **8. Gamla eller saknade data i kassan gör att priser/leveransalternativ inte kan hämtas (K7 / Integrationsrisk)**. | **Produkt** | **Teknisk/Affär** | **2** | **4** | **8** | **Medel** | Funktionella integrationstester med fiktiva adresser och tunga/skrymmande testprodukter för att trigga externa API-fel. |
+| R10 | **10. Kundservice har inte tid att delta i acceptanstest**. | **Project** | **Affär** | **1** | **2** | **2** | Låg |
+
+---
+
+## Risk reducering
+| R1 | **Det 15 år gamla lagersystemet klarar inte integrationen eller prestandan**. | Tidiga integrationstester (API/meddelandeköer) och dedikerade prestandatester mot lagersystemet. |
+1. Vilken risk har reducerats?
+R1
+2. Vad har testningen gett oss information om?
+Testningen har gett oss information som att det går att göra en check mot lagersaldor för att kontrollera
+3. Finns någon risk fortfarande kvar?
+En risk är att lagersaldo kan bli korrupt när datan överförs.
+4. Varför kan vi inte eliminera risken helt?
+5. Behöver den kvarstående risken kommuniceras inför release?
+
+
+
+
+
+| R2 | **2. Tre utvecklingsteam krockar i den gemensamma testmiljön**. | **Projekt** | **Tekniskt** | **4** | **5** | **20** | **Kritisk** | Sätt upp ett tydligt releaseschema för miljön, inför CI/CD och röktest (smoke tests) vid varje driftsättning. |
+| R3 |**3. Betalningsleverantörens testmiljö är instabil eller nere**. | **Project** | **Teknisk** | **3** | **4** | **12** | **Hög** | Bygg "mockar" (simulatorer) för betalningsflödet så att interna tester kan fortsätta oberoende av extern part. |
 
 
 
