@@ -213,8 +213,8 @@ Detta dokument utgör det första underlaget för testarbetet i utvecklingen av 
 
 ---
 
-| ID | Risk | Sannolikhet | Konsekvens | Risknivå | Möjlig teståtgärd |
-| :--- | :--- | :--- | :--- | :--- | :--- |
+| ID | Risk | Product/Projekt | Affär/Teknisk | Sannolikhet | Konsekvens | Risknivå | Prio | Möjlig teståtgärd |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | R1 | **1. Det 15 år gamla lagersystemet klarar inte integrationen eller prestandan**. | **5** | **5** | **25** | Tidiga integrationstester (API/meddelandeköer) och dedikerade prestandatester mot lagersystemet. |
 | R2 | **2. Tre utvecklingsteam krockar i den gemensamma testmiljön**. | **4** | **5** | **20** | Sätt upp ett tydligt releaseschema för miljön, inför CI/CD och röktest (smoke tests) vid varje driftsättning. |
 | R3 |**3. Betalningsleverantörens testmiljö är instabil eller nere**. | **3** | **4** | **12** | Bygg "mockar" (simulatorer) för betalningsflödet så att interna tester kan fortsätta oberoende av extern part. |
