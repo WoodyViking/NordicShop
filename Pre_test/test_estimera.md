@@ -153,4 +153,87 @@ Nej eftersom vi är oerfarna så kommer det att gå långsammare
 Att ingen blir sjuk, att lärarna har förberet oss för alla problem som vi kommer stöta på i arbetet.
 Att testmiljön fungerar som förväntat. 
 
+---
+
+## Uppgit 7 - Planer om
+
+1. 364+buffert=480h
+2. 480-109=371h
+3. 371-364=7h så 7h extra har vi, om vi klarar av utan buffert tiden
+
+---
+
+## Uppgift 8 - Prioritera om
+
+Använd riskanalysen.
+
+Dela in funktionerna i:
+
+- **MUST** – Måste testas enligt plan.
+- **SHOULD** – Bör testas men omfattningen kan reduceras.
+- **COULD** – Kan reduceras kraftigt eller tas bort från denna testperiod.
+
+| Funktion | Risk | MUST/SHOULD/COULD | Ny testomfattning | Motivering |
+|---|---|---|---|---|
+| Registrera konto |  | | | |
+| Login | | | | |
+| Lås konto | | | | |
+| Återställ lösenord | | | | |
+| Produktsökning | | | | |
+| Produktfilter | | | | |
+| Produktinformation | | | | |
+| Kundvagn | | | | |
+| Rabattkod | | | | |
+| Checkout | | | | |
+| Kortbetalning | | | | |
+| Swishbetalning | | | | |
+| Orderskapande | | | | |
+| Lageruppdatering | | | | |
+| Leveransalternativ | | | | |
+| Orderbekräftelse | | | | |
+| Orderhistorik | | | | |
+| Avbeställning | | | | |
+| Återbetalning | | | | |
+| Behörigheter | | | | |
+
+## Uppgift 9 – Vad reducerar ni?
+
+Ni måste nu bestämma om ni reducerar:
+
+- analys
+- testdesign
+- testdata
+- testgenomförande
+- regression
+- felomtest
+Var försiktiga.
+
+Exempel:
+
+Att säga:
+
+> "Vi tar bort allt felomtest."
+
+kan skapa mycket hög risk eftersom rättade kritiska defekter då inte verifieras.
+
+Diskutera därför:
+
+Vad kan faktiskt reduceras utan att skapa oacceptabel risk?
+
+## Uppgift 10 – Presentera för projektledaren
+
+Ni ska nu agera testledare.
+
+Projektledaren säger:
+
+> "Releasedatumet ligger fast. Kan ni fortfarande hinna?"
+
+Förbered ett svar på 2–3 minuter.
+
+Svaret ska innehålla:
+
+1. Vad har förändrats?
+2. Hur påverkas kapaciteten?
+
+
 
