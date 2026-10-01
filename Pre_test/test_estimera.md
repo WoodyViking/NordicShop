@@ -160,7 +160,28 @@ Att testmiljön fungerar som förväntat.
 1. 364+buffert=480h
 2. 480-109=371h
 3. 371-364=7h så 7h extra har vi, om vi klarar av utan buffert tiden
+En av de fyra testarna försvinner med omedelbar verkan. Releasedatumet är oförändrat.
 
+**1. Hur mycket kapacitet hade ni tidigare?**
+4 testare × 30 timmar × 4 veckor = **480 timmar**
+
+**2. Hur mycket kapacitet har ni nu?**
+3 testare × 30 timmar × 4 veckor = **360 timmar**
+Vi har förlorat 120 timmar, alltså 25 % av kapaciteten.
+
+**3. Hur många timmar saknas för att genomföra ursprunglig plan?**
+Ursprunglig plan inklusive buffert: 439 timmar
+Ny kapacitet: 360 timmar
+**Saknas: 439 − 360 = 79 timmar**
+
+Även utan buffert räcker kapaciteten inte: 366 − 360 = 6 timmar saknas. Vi skulle då dessutom inte ha någon buffert alls, trots att projektet har stora osäkerheter.
+
+**4. Hur påverkas tidsplanen?**
+Med 3 testare har vi 90 timmar per vecka. Den ursprungliga planen skulle då ta 439 / 90 = **4,9 veckor**, alltså nästan 5 veckor i stället för 4. Vi skulle bli ungefär en vecka sena. Eftersom releasedatumet ligger fast måste vi i stället minska testomfattningen.
+
+**Vårt mål:** Minska testarbetet till cirka 300 timmar, så att vi har ungefär 20 % buffert kvar inom 360 timmar.
+
+---
 ---
 
 ## Uppgift 8 - Prioritera om
