@@ -5,7 +5,6 @@
 
 | De 20 funktionerna | Risk | Motivation |
 |---|---|---|
-
 | 1. Registrera konto | Medium | Är viktigt men inte är något som behövs för att kunden ska kuna handla |
 | 2. Login | Hög | Är säkerhets relaterat och viktigt att det inte går fel med inloggning |
 | 3. Lås konto efter tre felaktiga loginförsök | Hög | | Är säkerhets relaterat och viktigt att det inte går att bruteforca |
