@@ -232,6 +232,29 @@ Diskutera därför:
 
 Vad kan faktiskt reduceras utan att skapa oacceptabel risk?
 
+**Analys – reduceras lite.**
+För SHOULD- och COULD-funktioner återanvänder vi analysen från vår tidigare riskanalys och kravgenomgång. MUST-funktionerna analyseras fullt ut.
+
+**Testdesign – reduceras för SHOULD och COULD.**
+För COULD-funktioner skriver vi inga detaljerade testfall, utan använder checklistor och utforskande testning. För SHOULD-funktioner designar vi färre varianter.
+
+**Testdata – reduceras något.**
+Vi använder en gemensam uppsättning testdata för flera funktioner i stället för separat testdata per funktion. Testdata för lager och betalning, till exempel saldo 0 och 1, testkort och Swish-nummer, behålls fullt ut.
+
+**Testgenomförande – reduceras för SHOULD och COULD.**
+SHOULD-funktioner testas med huvudscenario och de viktigaste felfallen. COULD-funktioner testas i korta utforskande sessioner. MUST-funktioner testas enligt plan.
+
+**Regression – reduceras för SHOULD och COULD, men aldrig för MUST.**
+MUST-funktionerna regressionstestas fullt ut, helst automatiserat. SHOULD-funktionerna får ett kort röktest. COULD-funktionerna regressionstestas inte.
+
+**Felomtest – reduceras inte för allvarliga fel.**
+Alla rättade kritiska och allvarliga defekter måste omtestas. Annars vet vi inte om felet faktiskt är rättat, och vi riskerar att släppa ett system med kända kritiska fel. Det enda vi kan reducera är omtest av mindre kosmetiska fel, som kan samlas och omtestas tillsammans om tid finns.
+
+**Det vi inte kan reducera utan oacceptabel risk:**
+Testgenomförande, regression och felomtest för MUST-funktionerna. Det är där pengar, säkerhet och kundförtroende står på spel.
+
+---
+
 ## Uppgift 10 – Presentera för projektledaren
 
 Ni ska nu agera testledare.
