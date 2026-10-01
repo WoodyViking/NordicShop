@@ -84,6 +84,7 @@ För varje funktion uppskattar ni:
 - Optimistic
 - Most Likely
 - Pessimistic
+
 | Funktion | O | M | P | Viktat estimat |
 |---|---|---|---|---|
 | Lageruppdatering | 25 | 33 | 40 | 33 |
@@ -143,7 +144,7 @@ Beräkna:
 120 per vecka
 
 - **B.** Hur många veckor krävs för ert estimerade testarbete?
-3,03 veckor
+3,64 veckor
 
 - **C.** Är planen realistisk?
 Nej eftersom vi är oerfarna så kommer det att gå långsammare
