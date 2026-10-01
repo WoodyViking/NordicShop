@@ -270,5 +270,29 @@ Svaret ska innehålla:
 1. Vad har förändrats?
 2. Hur påverkas kapaciteten?
 
+> "Releasedatumet ligger fast. Kan ni fortfarande hinna?"
+
+**Förändring**
+"En av våra fyra testare har lämnat projektet med omedelbar verkan, och releasedatumet ligger fast. Vår kapacitet minskar från 480 till 360 timmar under testperioden, alltså med 25 procent."
+
+**Konsekvens**
+"Vår ursprungliga plan krävde 439 timmar inklusive buffert. Nu saknas 79 timmar. Om vi försöker genomföra allt som planerat skulle vi behöva nästan fem veckor i stället för fyra. Även utan buffert räcker tiden inte. Med det gamla lagersystemet, de externa integrationerna och den gemensamma testmiljön är det inte realistiskt."
+
+**Vad vi prioriterar och reducerar**
+"Vi har därför prioriterat om utifrån riskanalysen. Tio funktioner testas fullt ut enligt plan: kundvagn, checkout, kortbetalning, Swish, orderskapande, lageruppdatering, avbeställning, återbetalning, kontolåsning och behörigheter. Login, återställ lösenord, orderbekräftelse, registrering och leveransalternativ testas med huvudscenario och viktigaste felfall. Sök, filter, produktinformation, rabattkoder och orderhistorik testas bara i korta utforskande sessioner. Felomtest av allvarliga fel behåller vi helt. Den nya planen är 302 timmar, och vi har 58 timmar buffert kvar."
+
+**Alternativ**
+"Det finns fyra alternativ:
+1. Vi genomför den reducerade planen och håller releasedatumet.
+2. Projektet tar in en ersättare. Det kräver introduktion, så det ger full effekt först efter ungefär en vecka.
+3. Utvecklarna tar över mer av den automatiserade regressionen och komponenttesterna, vilket frigör tid för testarna.
+4. Releasen flyttas ungefär en vecka, så att vi kan genomföra den ursprungliga planen."
+
+**Risk**
+"Den reducerade planen innebär att fel i sök, filter, produktinformation, orderhistorik och rabattkoder kan nå produktion. Det påverkar kundupplevelsen men stoppar inte försäljningen. Om vi dessutom hittar fler fel än förväntat i lagersystemet eller betalningen räcker bufferten inte, och då behöver vi ta ett nytt beslut."
+
+**Rekommendation**
+"Vi rekommenderar att vi håller releasedatumet med den reducerade planen, kombinerat med att utvecklarna tar mer av regressionen. Vi rekommenderar också att rabattkoder inte aktiveras vid lansering. Om vi hittar kritiska fel i någon MUST-funktion som inte hinner rättas och omtestas, rekommenderar vi att releasedatumet omprövas. Vi följer upp kapaciteten varje vecka och meddelar direkt om läget förändras."
+
 
 
