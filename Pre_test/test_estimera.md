@@ -165,37 +165,28 @@ Att testmiljön fungerar som förväntat.
 
 ## Uppgift 8 - Prioritera om
 
-Använd riskanalysen.
-
-Dela in funktionerna i:
-
-- **MUST** – Måste testas enligt plan.
-- **SHOULD** – Bör testas men omfattningen kan reduceras.
-- **COULD** – Kan reduceras kraftigt eller tas bort från denna testperiod.
-
 | Funktion | Risk | MUST/SHOULD/COULD | Ny testomfattning | Motivering |
 |---|---|---|---|---|
-| Registrera konto |  | | | |
-| Login | | | | |
-| Lås konto | | | | |
-| Återställ lösenord | | | | |
-| Produktsökning | | | | |
-| Produktfilter | | | | |
-| Produktinformation | | | | |
-| Kundvagn | | | | |
-| Rabattkod | | | | |
-| Checkout | | | | |
-| Kortbetalning | | | | |
-| Swishbetalning | | | | |
-| Orderskapande | | | | |
-| Lageruppdatering | | | | |
-| Leveransalternativ | | | | |
-| Orderbekräftelse | | | | |
-| Orderhistorik | | | | |
-| Avbeställning | | | | |
-| Återbetalning | | | | |
-| Behörigheter | | | | |
-
+| Lås konto | Hög | MUST | 9 h (oförändrat) | Säkerhetsrisk. Brute force-attacker kan inte rättas i efterhand. |
+| Kundvagn | Hög | MUST | 29 h (oförändrat) | Del av happy path för köp. |
+| Checkout | Hög | MUST | 26 h (oförändrat) | Utan checkout ingen försäljning. |
+| Kortbetalning | Hög | MUST | 28 h (oförändrat) | De flesta kunder betalar med kort, och fel kostar pengar direkt. |
+| Swishbetalning | Hög | MUST | 18 h (oförändrat) | Extern integration med hög osäkerhet. |
+| Orderskapande | Hög | MUST | 22 h (oförändrat) | Risk att kunden betalar men ingen order skapas. |
+| Lageruppdatering | Hög | MUST | 33 h (oförändrat) | Gammalt system med störst teknisk osäkerhet. |
+| Avbeställning | Hög | MUST | 29 h (oförändrat) | Flera steg i flera system måste lyckas. |
+| Återbetalning | Hög | MUST | 29 h (oförändrat) | Gäller kundens pengar. |
+| Behörigheter | Hög | MUST | 29 h (oförändrat) | Säkerhetsrisk om kundservice kan ändra priser eller behörigheter. |
+| Login | Hög | SHOULD | 8 h (från 12) | Testas även indirekt i alla E2E-flöden, eftersom kunden loggar in i varje köp. |
+| Återställ lösenord | Hög | SHOULD | 9 h (från 18) | Huvudscenario och test av att återställningslänken slutar gälla. Kundservice kan hjälpa till i nödläge. |
+| Orderbekräftelse | Hög | SHOULD | 8 h (från 14) | Kontroll av att e-post skickas med rätt innehåll. Kan skickas manuellt i nödläge. |
+| Registrera konto | Medium | SHOULD | 7 h (från 13) | Huvudscenario och viktigaste felfall. Testas även via E2E. |
+| Leveransalternativ | Medium | SHOULD | 7 h (från 11) | Hemleverans och ombud i standardfall. Färre varianter. |
+| Produktsökning | Låg | COULD | 3 h (från 11) | Kort utforskande testsession. |
+| Produktfilter | Låg | COULD | 2 h (från 12) | Snabb kontroll av de vanligaste filtren. |
+| Produktinformation | Låg | COULD | 2 h (från 7) | Kontrolleras indirekt via köpflödet. |
+| Rabattkod | Låg | COULD | 2 h (från 7) | Snabb kontroll av en giltig och en ogiltig kod. Rabattkoder bör inte aktiveras vid lansering. |
+| Orderhistorik | Låg | COULD | 2 h (från 9) | Kort kontroll av att kundens ordrar visas. |
 ## Uppgift 9 – Vad reducerar ni?
 
 Ni måste nu bestämma om ni reducerar:
