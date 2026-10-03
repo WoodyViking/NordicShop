@@ -113,3 +113,47 @@ Ett av projektets verksamhetsmål är att minska kundservicens manuella arbete. 
 ### 3. EX5 – Skriftligt godkännande (sign-off)
 
 Det är verksamheten som äger beslutet om lösningen är tillräckligt bra. Ett skriftligt godkännande visar att Product Owner och verksamheten har accepterat både lösningen och de kvarstående riskerna. Det är ett nödvändigt underlag för Go/No-Go-beslutet.
+
+## Uppgift 5 – Kategorisera
+
+| Kategori | Entry | Exit |
+|---|---|---|
+| **MUST** | EN1, EN2, EN3, EN4, EN5 | EX1, EX2, EX3, EX4, EX5 |
+| **SHOULD** | EN6 | EX6, EX7 |
+
+**Motivering:**
+- **MUST** är de kriterier som gäller verksamhetens deltagande, de kritiska verksamhetsflödena och det formella godkännandet. Om något av dem inte är uppfyllt kan verksamheten inte genomföra testet, eller så finns det inget giltigt underlag för releasebeslutet.
+- **SHOULD** är kriterier som gör testet effektivare och ger underlag för förbättringar. En avvikelse kan accepteras efter riskbedömning. Ett exempel: om introduktionen (EN6) inte hinner hållas kan en testare i stället stödja deltagarna på plats under testet.
+
+## Uppgift 6 – Kontrollera kvaliteten
+
+Varje kriterium har kontrollerats mot de fem frågorna:
+**T** = Tydligt? **M** = Mätbart? **A** = Går att avgöra om det är uppfyllt? **R** = Relevant för acceptanstest? **K** = Kopplat till risk?
+
+| # | T | M | A | R | K | Kommentar |
+|---|---|---|---|---|---|---|
+| EN1 | Ja | Ja | Ja | Ja | Ja | Verksamheten ska inte hitta fel som systemtestet borde ha hittat. |
+| EN2 | Ja | Ja | Ja | Ja | Ja | Utan acceptanskriterier går det inte att avgöra om testet är godkänt. |
+| EN3 | Ja | Ja | Ja | Ja | Ja | Verksamheten måste kunna köra scenarierna själva. |
+| EN4 | Nej → Ja | Nej → Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. Risk 10. |
+| EN5 | Nej → Ja | Nej → Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. Risk 1 och 7. |
+| EN6 | Ja | Ja | Ja | Ja | Ja | Gör testet effektivare. |
+| EX1 | Ja | Ja | Ja | Ja | Ja | Täcker de tre E2E-flödena och verksamhetens egna flöden. Risk 1, 7 och 9. |
+| EX2 | Ja | Ja | Ja | Ja | Ja | Samma prioritetsnivåer som i SIT. |
+| EX3 | Nej → Ja | Nej → Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. Risk 9 och 10. |
+| EX4 | Nej → Ja | Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. |
+| EX5 | Nej → Ja | Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. |
+| EX6 | Ja | Ja | Ja | Ja | Ja | Mindre viktiga scenarier kan accepteras efter riskbedömning. |
+| EX7 | Ja | Nej | Ja | Ja | Ja | Synpunkter på användbarhet är svåra att mäta, men kravet på dokumentation och en ansvarig gör det möjligt att avgöra. |
+
+### Förbättrade formuleringar
+
+Tabellerna i Uppgift 3 innehåller redan de förbättrade formuleringarna.
+
+| # | Före | Problem | Efter |
+|---|---|---|---|
+| EN4 | Verksamheten är tillgänglig för acceptanstest. | Det framgick inte vilka personer eller hur länge, så det gick inte att avgöra om kriteriet var uppfyllt. | ...bokade med namn för hela testveckan: minst två från kundservice och en administratör. |
+| EN5 | Det finns bra testdata i testmiljön. | "Bra" går inte att kontrollera. | ...minst 20 produkter, testkunder med orderhistorik och ordrar i status betald, skickad och avbeställd... |
+| EX3 | Kundservice är nöjd med systemet. | "Nöjd" är subjektivt och går inte att mäta. | Kundservice har själva verifierat att de kan söka kund, se order och betalningsstatus, avbryta order och initiera återbetalning utan manuella extrasteg. |
+| EX4 | Kvarstående fel är hanterade. | Det framgick inte vad "hanterade" betyder eller vem som beslutar. | Varje kvarstående fel har ett dokumenterat beslut som är godkänt av Product Owner: rättas före release, rättas efter release eller accepteras. |
+| EX5 | Verksamheten har godkänt testet. | Det framgick inte vem som godkänner eller hur. | Product Owner och verksamhetsansvarig har skriftligt godkänt acceptanstestet (sign-off). |
