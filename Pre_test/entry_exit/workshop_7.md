@@ -67,7 +67,7 @@ Här slår vi ihop gruppens svar på Uppgift 1–3. Varje testnivå har en egen 
 |---|---|---|
 | EN1 | Systemtestets obligatoriska exit-kriterier är uppfyllda: kritiska testfall, behörighetstest och betalningsflöden har passerat, och det finns inga öppna fel med prioritet Kritisk. | Obligatoriskt (MUST) |
 | EN2 | Acceptanskriterierna för kraven K1–K10 är dokumenterade och godkända av Product Owner. | Obligatoriskt (MUST) |
-| EN3 | Acceptansscenarierna för de tre E2E-flödena och kundservicens arbetsflöde är skrivna i verksamhetens språk och godkända av Product Owner. | Obligatoriskt (MUST) |
+| EN3 | Acceptansscenarierna för de tre E2E-flödena och kundservicens arbetsflöde är godkända av Product Owner, och minst en person från kundservice har läst dem och bekräftat att de kan följa stegen utan hjälp. | Obligatoriskt (MUST) |
 | EN4 | Verksamhetsrepresentanterna är bokade med namn för hela testveckan: minst två från kundservice och en administratör. | Obligatoriskt (MUST) |
 | EN5 | Testmiljön har produktionslik testdata: minst 20 produkter, testkunder med orderhistorik och ordrar i status betald, skickad och avbeställd, samt inloggningskonton för kundservice och administratör. | Obligatoriskt (MUST) |
 | EN6 | Deltagarna har fått en introduktion på högst en timme om testmanuskripten och om hur fel rapporteras, och har fått listan över kända fel från systemtestet. | Önskvärt (SHOULD) |
@@ -77,15 +77,13 @@ Här slår vi ihop gruppens svar på Uppgift 1–3. Varje testnivå har en egen 
 
 | # | Acceptanstest Exit Criteria | Obligatoriskt/Önskvärt |
 |---|---|---|
-| # | Acceptanstest Exit Criteria | Obligatoriskt/Önskvärt |
-|---|---|---|
 | EX1 | 100 % av acceptansscenarierna för de kritiska verksamhetsflödena är körda: köp, avbeställning/återbetalning, sista produkten i lager, kundservice hanterar ett ärende samt administratör ändrar pris och skapar rabattkod. | Obligatoriskt (MUST) |
-| EX2 | Det finns inga öppna fel med prioritet Kritisk, och inga öppna fel med prioritet Hög som saknar workaround. | Obligatoriskt (MUST) |
+| EX2 | Det finns inga öppna fel med prioritet Kritisk. Varje öppet fel med prioritet Hög har en workaround som är dokumenterad och godkänd av Product Owner. | Obligatoriskt (MUST) |
 | EX3 | Kundservice har själva verifierat att de kan söka kund, se order och betalningsstatus, avbryta order och initiera återbetalning utan manuella extrasteg utanför systemet. | Obligatoriskt (MUST) |
 | EX4 | Varje kvarstående fel har ett dokumenterat beslut som är godkänt av Product Owner: rättas före release, rättas efter release eller accepteras. | Obligatoriskt (MUST) |
 | EX5 | Product Owner och verksamhetsansvarig har skriftligt godkänt acceptanstestet (sign-off). | Obligatoriskt (MUST) |
 | EX6 | Minst 90 % av alla acceptansscenarier har passerat. | Önskvärt (SHOULD) |
-| EX7 | Verksamhetens synpunkter på användbarhet är dokumenterade och har en ansvarig för uppföljning efter release. | Önskvärt (SHOULD) |
+| EX7 | Alla deltagare har lämnat sina synpunkter på användbarhet i ett gemensamt formulär, och varje synpunkt har en ansvarig och ett beslut: åtgärdas före release, åtgärdas efter release eller åtgärdas inte. | Önskvärt (SHOULD) |
 
 ### Koppling till risker
 
@@ -130,30 +128,33 @@ Det är verksamheten som äger beslutet om lösningen är tillräckligt bra. Ett
 Varje kriterium har kontrollerats mot de fem frågorna:
 **T** = Tydligt? **M** = Mätbart? **A** = Går att avgöra om det är uppfyllt? **R** = Relevant för acceptanstest? **K** = Kopplat till risk?
 
-| # | T | M | A | R | K | Kommentar |
+Om svaret var nej på någon fråga har formuleringen förbättrats. Tabellerna i Uppgift 3 innehåller redan de förbättrade formuleringarna.
+
+| # | T | M | A | R | K | Kopplad risk / kommentar |
 |---|---|---|---|---|---|---|
-| EN1 | Ja | Ja | Ja | Ja | Ja | Verksamheten ska inte hitta fel som systemtestet borde ha hittat. |
-| EN2 | Ja | Ja | Ja | Ja | Ja | Utan acceptanskriterier går det inte att avgöra om testet är godkänt. |
-| EN3 | Ja | Ja | Ja | Ja | Ja | Verksamheten måste kunna köra scenarierna själva. |
-| EN4 | Nej → Ja | Nej → Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. Risk 10. |
-| EN5 | Nej → Ja | Nej → Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. Risk 1 och 7. |
-| EN6 | Ja | Ja | Ja | Ja | Ja | Gör testet effektivare. |
-| EX1 | Ja | Ja | Ja | Ja | Ja | Täcker de tre E2E-flödena och verksamhetens egna flöden. Risk 1, 7 och 9. |
-| EX2 | Ja | Ja | Ja | Ja | Ja | Samma prioritetsnivåer som i SIT. |
-| EX3 | Nej → Ja | Nej → Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. Risk 9 och 10. |
-| EX4 | Nej → Ja | Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. |
-| EX5 | Nej → Ja | Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. |
-| EX6 | Ja | Ja | Ja | Ja | Ja | Mindre viktiga scenarier kan accepteras efter riskbedömning. |
-| EX7 | Ja | Nej | Ja | Ja | Ja | Synpunkter på användbarhet är svåra att mäta, men kravet på dokumentation och en ansvarig gör det möjligt att avgöra. |
+| EN1 | Ja | Ja | Ja | Ja | Ja | Risk att verksamheten hittar kritiska fel som systemtestet borde ha hittat, och att deras begränsade tid går åt till det. |
+| EN2 | Ja | Ja | Ja | Ja | Ja | Risk att ingen kan avgöra om testet är godkänt, och att releasebeslutet fattas på oklara grunder. |
+| EN3 | Nej → Ja | Nej → Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. Risk 10: om scenarierna är för tekniska hinner kundservice inte genomföra dem under testveckan. |
+| EN4 | Nej → Ja | Nej → Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. Risk 10: kundservice har inte tid att delta. |
+| EN5 | Nej → Ja | Nej → Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. Risk 1 och 7: lager och behörigheter kan inte testas utan rätt data och konton. |
+| EN6 | Ja | Ja | Ja | Ja | Ja | Risk 10: utan introduktion går testtiden åt till frågor om verktyget i stället för till testning. |
+| EX1 | Ja | Ja | Ja | Ja | Ja | Risk 1, 7 och 9: lager, behörighet och avbeställning är verksamhetens mest kritiska flöden. |
+| EX2 | Ja | Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. Risk att systemet släpps med fel som stoppar verksamheten. |
+| EX3 | Nej → Ja | Nej → Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. Risk 9 och 10: kundservice får mer manuellt arbete i stället för mindre. |
+| EX4 | Nej → Ja | Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. Risk att ledningen inte vet vilka fel som finns kvar vid release. |
+| EX5 | Nej → Ja | Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. Risk att releasen sker utan att verksamheten har accepterat lösningen och de kvarstående riskerna. |
+| EX6 | Ja | Ja | Ja | Ja | Ja | Risk att många mindre fel tillsammans försämrar kundupplevelsen. |
+| EX7 | Ja | Nej → Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. Risk att problem med användbarheten glöms bort och leder till fler avbrutna köp efter release. |
 
 ### Förbättrade formuleringar
 
-Tabellerna i Uppgift 3 innehåller redan de förbättrade formuleringarna.
-
 | # | Före | Problem | Efter |
 |---|---|---|---|
+| EN3 | Acceptansscenarierna är skrivna i verksamhetens språk. | "Verksamhetens språk" går inte att mäta, och det framgick inte hur man avgör om kriteriet är uppfyllt. | ...godkända av Product Owner, och minst en person från kundservice har läst dem och bekräftat att de kan följa stegen utan hjälp. |
 | EN4 | Verksamheten är tillgänglig för acceptanstest. | Det framgick inte vilka personer eller hur länge, så det gick inte att avgöra om kriteriet var uppfyllt. | ...bokade med namn för hela testveckan: minst två från kundservice och en administratör. |
 | EN5 | Det finns bra testdata i testmiljön. | "Bra" går inte att kontrollera. | ...minst 20 produkter, testkunder med orderhistorik och ordrar i status betald, skickad och avbeställd... |
+| EX2 | Inga kritiska fel, och höga fel har en workaround. | Det framgick inte vem som avgör om en workaround är godtagbar. | ...Varje öppet fel med prioritet Hög har en workaround som är dokumenterad och godkänd av Product Owner. |
 | EX3 | Kundservice är nöjd med systemet. | "Nöjd" är subjektivt och går inte att mäta. | Kundservice har själva verifierat att de kan söka kund, se order och betalningsstatus, avbryta order och initiera återbetalning utan manuella extrasteg. |
 | EX4 | Kvarstående fel är hanterade. | Det framgick inte vad "hanterade" betyder eller vem som beslutar. | Varje kvarstående fel har ett dokumenterat beslut som är godkänt av Product Owner: rättas före release, rättas efter release eller accepteras. |
 | EX5 | Verksamheten har godkänt testet. | Det framgick inte vem som godkänner eller hur. | Product Owner och verksamhetsansvarig har skriftligt godkänt acceptanstestet (sign-off). |
+| EX7 | Verksamhetens synpunkter på användbarhet är dokumenterade. | Synpunkter är subjektiva, och det gick inte att mäta när kriteriet var uppfyllt. | Alla deltagare har lämnat sina synpunkter i ett gemensamt formulär, och varje synpunkt har en ansvarig och ett beslut. |
