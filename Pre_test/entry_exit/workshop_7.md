@@ -65,12 +65,13 @@ Här slår vi ihop gruppens svar på Uppgift 1–3. Varje testnivå har en egen 
 
 | # | Acceptanstest Entry Criteria | Obligatoriskt/Önskvärt |
 |---|---|---|
-| EN1 | | |
-| EN2 | | |
-| EN3 | | |
-| EN4 | | |
-| EN5 | | |
-| EN6 | | |
+| EN1 | Systemtestets obligatoriska exit-kriterier är uppfyllda: kritiska testfall, behörighetstest och betalningsflöden har passerat, och det finns inga öppna fel med prioritet Kritisk. | Obligatoriskt (MUST) |
+| EN2 | Acceptanskriterierna för kraven K1–K10 är dokumenterade och godkända av Product Owner. | Obligatoriskt (MUST) |
+| EN3 | Acceptansscenarierna för de tre E2E-flödena och kundservicens arbetsflöde är skrivna i verksamhetens språk och godkända av Product Owner. | Obligatoriskt (MUST) |
+| EN4 | Verksamhetsrepresentanterna är bokade med namn för hela testveckan: minst två från kundservice och en administratör. | Obligatoriskt (MUST) |
+| EN5 | Testmiljön har produktionslik testdata: minst 20 produkter, testkunder med orderhistorik och ordrar i status betald, skickad och avbeställd, samt inloggningskonton för kundservice och administratör. | Obligatoriskt (MUST) |
+| EN6 | Deltagarna har fått en introduktion på högst en timme om testmanuskripten och om hur fel rapporteras, och har fått listan över kända fel från systemtestet. | Önskvärt (SHOULD) |
+
 
 ### Acceptanstest Exit Criteria
 
