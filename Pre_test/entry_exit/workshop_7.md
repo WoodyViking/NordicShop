@@ -77,9 +77,39 @@ Här slår vi ihop gruppens svar på Uppgift 1–3. Varje testnivå har en egen 
 
 | # | Acceptanstest Exit Criteria | Obligatoriskt/Önskvärt |
 |---|---|---|
-| EX1 | | |
-| EX2 | | |
-| EX3 | | |
-| EX4 | | |
-| EX5 | | |
-| EX6 | | |
+| # | Acceptanstest Exit Criteria | Obligatoriskt/Önskvärt |
+|---|---|---|
+| EX1 | 100 % av acceptansscenarierna för de kritiska verksamhetsflödena är körda: köp, avbeställning/återbetalning, sista produkten i lager, kundservice hanterar ett ärende samt administratör ändrar pris och skapar rabattkod. | Obligatoriskt (MUST) |
+| EX2 | Det finns inga öppna fel med prioritet Kritisk, och inga öppna fel med prioritet Hög som saknar workaround. | Obligatoriskt (MUST) |
+| EX3 | Kundservice har själva verifierat att de kan söka kund, se order och betalningsstatus, avbryta order och initiera återbetalning utan manuella extrasteg utanför systemet. | Obligatoriskt (MUST) |
+| EX4 | Varje kvarstående fel har ett dokumenterat beslut som är godkänt av Product Owner: rättas före release, rättas efter release eller accepteras. | Obligatoriskt (MUST) |
+| EX5 | Product Owner och verksamhetsansvarig har skriftligt godkänt acceptanstestet (sign-off). | Obligatoriskt (MUST) |
+| EX6 | Minst 90 % av alla acceptansscenarier har passerat. | Önskvärt (SHOULD) |
+| EX7 | Verksamhetens synpunkter på användbarhet är dokumenterade och har en ansvarig för uppföljning efter release. | Önskvärt (SHOULD) |
+
+### Koppling till risker
+
+Kriterierna hänger ihop med riskerna i [test_analys.md](../test_analys.md):
+
+| Risk | Kriterier |
+|---|---|
+| 1. Det 15 år gamla lagersystemet klarar inte integrationen eller prestandan | EN5, EX1 |
+| 7. Kundservice kan av misstag ändra priser eller behörigheter | EN5, EX1 |
+| 9. Vid avbeställning avbryts ordern men återbetalning genomförs inte | EX1, EX3 |
+| 10. Kundservice har inte tid att delta i acceptanstest | EN4, EX3, EX5 |
+
+## Uppgift 4 – Motivera
+
+De tre viktigaste kriterierna för acceptanstest:
+
+### 1. EN4 – Verksamhetsrepresentanterna är bokade med namn
+
+Utan verksamheten finns det inget acceptanstest. Kundservice har mycket ordinarie arbete, och risken att de inte har tid är verklig (risk 10). Genom att kräva namn och tid i förväg går det att kontrollera att kriteriet är uppfyllt innan testet startar.
+
+### 2. EX3 – Kundservice har själva verifierat sina arbetsflöden
+
+Ett av projektets verksamhetsmål är att minska kundservicens manuella arbete. Bara kundservice själva kan avgöra om plattformen stödjer deras sätt att arbeta. Om de behöver manuella extrasteg, till exempel vid avbeställning och återbetalning (risk 9), har plattformen inte uppnått målet, även om alla testfall har passerat.
+
+### 3. EX5 – Skriftligt godkännande (sign-off)
+
+Det är verksamheten som äger beslutet om lösningen är tillräckligt bra. Ett skriftligt godkännande visar att Product Owner och verksamheten har accepterat både lösningen och de kvarstående riskerna. Det är ett nödvändigt underlag för Go/No-Go-beslutet.
