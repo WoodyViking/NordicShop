@@ -45,9 +45,9 @@ Frågor: Är det tydligt? Är det mätbart? Går det att avgöra om det är uppf
 | E2 | Nej | Nej | Ja | Ja | Ja | Vilken version? Hur vet vi att miljön fungerar? | Lägg till version och röktest. |
 | E3 | Nej | Nej | Nej | Ja | Ja | "Redo" går inte att mäta. | Ange vilka flöden, hur mycket och vem kontrollerar. |
 | E4 | Nej | Ja | Nej | Ja | Ja | Godkänd av vem? Testplanen för vilken nivå? | Ange godkännare och att det är systemtestets plan. |
-| E5 | Ja | Ja | Ja | Ja | Ja | Fungerar, men var och för vem listas de? | Förtydliga var och när (i defektverktyget, före teststart). |
+| E5 | Ja | Ja | Ja | Ja | Ja | Fungerar, men var och för vem listas de? | Förtydliga var och när. |
 | E6 | Ja | Ja | Nej | Ja | Ja | Ett löfte, inte verifierat. | Kräv att rutinen finns och har provats. |
-| X1 | Nej | Nej | Nej | Ja | Ja | Vilka är kritiska? Alla eller de flesta? | Namnge de kritiska flödena och kräv 100 %. |
+| X1 | Nej | Nej | Nej | Ja | Ja | Vilka är kritiska? Alla eller de flesta? | Namnge de kritiska flödena och kräv lösta. |
 | X2 | Nej | Nej | Nej | Ja | Ja | För vilka roller? Vilka testfall? | Ange alla roller och att alla behörighetstestfall passerat. |
 | X3 | Nej | Nej | Nej | Ja | Ja | Vilka flöden? Vad är "kritiska"? | Ange betalsätt, avbruten betalning och felflöden, och att alla testfall passerat. |
 | X4 | Nej | Ja | Nej | Ja | Ja | "Mindre" är odefinierat. | Beskriv effekten: defekter som inte blockerar något affärsflöde. Kräv skriftligt PO-godkännande. |
@@ -61,8 +61,8 @@ Frågor: Är det tydligt? Är det mätbart? Går det att avgöra om det är uppf
 | Nr | Förbättrat kriterium | Obligatoriskt/Önskvärt | Risk som kriteriet hanterar |
 |---|---|---|---|
 | E1 | Inga öppna defekter från SIT som blockerar ett affärsflöde eller saknar workaround. Undantag kräver testledarens skriftliga godkännande. | Obligatoriskt | Blockerade testfall och felsökning av integrationer. |
-| E2 | Systemtestmiljön är deployad med den avsedda versionen (versionsnummer dokumenterat) och röktest är passerat till 100 %. | Obligatoriskt | Testresultat blir ogiltiga på grund av fel version eller instabil miljö. |
-| E3 | Testdata för huvudflödena (konto, produkt, kundvagn, order, lager, leverans) är laddad och stickprovskontrollerad (minst 10 poster per flöde). | Obligatoriskt | Falska resultat eller blockerade flöden på grund av data. |
+| E2 | Systemtestmiljön är deployad med den avsedda versionen och röktest är passerat till godkändnivå. | Obligatoriskt | Testresultat blir ogiltiga på grund av fel version eller instabil miljö. |
+| E3 | Testdata för huvudflödena (konto, produkt, kundvagn, order, lager, leverans) är laddad och stickprovskontrollerad. | Obligatoriskt | Falska resultat eller blockerade flöden på grund av data. |
 | E4 | Teststrategi och systemtestets testplan är godkända av testledaren och Product Owner. | Önskvärt | Testarna arbetar utan gemensam plan. |
 | E5 | Alla öppna defekter från SIT är listade i defektverktyget och delade med testarna före teststart. | Önskvärt | Dubbelrapportering av kända fel. |
 | E6 | Rutin för att återställa testdata till utgångsläget finns och har provats, och återställningen tar högst en arbetsdag. | Önskvärt | Förstörd testdata stoppar retest och omkörning. |
