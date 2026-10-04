@@ -1,7 +1,7 @@
 
 ## Systemtest
 
-| Nr| Entry Criteria | Obligatorisk/Önskevärt |
+| Nr | Entry Criteria | Obligatorisk/Önskevärt |
 |---|---|---|
 | E1 | Inga kritiska eller affärsblockerande defekter från tidigare testnivå | Obligatorisk |
 | E2 | Systemtestmiljön är deployad. | Obligatorisk |
