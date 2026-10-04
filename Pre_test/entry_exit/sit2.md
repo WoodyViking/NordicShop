@@ -11,6 +11,7 @@
 | E6 | Testdata kan återställas till utgångsläget på en dag. | Önskevärt |
 
 | Nr | Exit Criteria | Obligatorisk/Önskevärt |
+|---|---|---|
 | X1 | Kritiska testfall är passerade | Obligatorisk. |
 | X2 | Behörighetstest har genomförts och passerat. | Obligatorisk |
 | X3 | Betalingsflöden är testade mot leverantörens testmiljö och kritiska testfall passerade. | Obligatorisk |
