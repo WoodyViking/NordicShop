@@ -112,9 +112,7 @@ Acceptanstestet är den sista testnivån före release. Ett kritiskt fel som fin
 
 Verksamheten har begränsad tid, och kundservice måste sköta sitt ordinarie arbete samtidigt (risk 10). Om acceptanstestet startar med kritiska fel kvar från systemtestet går testtiden åt till att hitta fel som testarna borde ha hittat, i stället för att verifiera verksamhetens arbetsflöden. Kriteriet är billigt att kontrollera men skyddar hela testveckan.
 
-### 3. EX5 – Skriftligt godkännande (sign-off)
 
-Det är verksamheten som äger beslutet om lösningen är tillräckligt bra. Ett skriftligt godkännande visar att Product Owner och verksamheten har accepterat både lösningen och de kvarstående riskerna. Det är ett nödvändigt underlag för Go/No-Go-beslutet.
 
 ## Uppgift 5 – Kategorisera
 
