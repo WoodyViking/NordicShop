@@ -100,13 +100,17 @@ Kriterierna hänger ihop med riskerna i [test_analys.md](../test_analys.md):
 
 De tre viktigaste kriterierna för acceptanstest:
 
-### 1. EN4 – Verksamhetsrepresentanterna är bokade med namn
+### 1. EX1 – De kritiska verksamhetsflödena är körda
 
-Utan verksamheten finns det inget acceptanstest. Kundservice har mycket ordinarie arbete, och risken att de inte har tid är verklig (risk 10). Genom att kräva namn och tid i förväg går det att kontrollera att kriteriet är uppfyllt innan testet startar.
+Köp, avbeställning/återbetalning och sista produkten i lager är de flöden där kunden betalar, får pengar tillbaka eller riskerar att köpa en vara som inte finns. Det är också i de flödena kundservice behöver kunna hjälpa kunden när något går fel. Om verksamheten inte har kört dem vet vi inte om plattformen fungerar i verkliga situationer, bara att den fungerar i testarnas testfall. Kriteriet är kopplat till risk 1 (lagersystemet) och risk 9 (avbeställning utan återbetalning).
 
-### 2. EX3 – Kundservice har själva verifierat sina arbetsflöden
+### 2. EX2 – Inga kritiska fel och inga höga fel utan godkänd workaround
 
-Ett av projektets verksamhetsmål är att minska kundservicens manuella arbete. Bara kundservice själva kan avgöra om plattformen stödjer deras sätt att arbeta. Om de behöver manuella extrasteg, till exempel vid avbeställning och återbetalning (risk 9), har plattformen inte uppnått målet, även om alla testfall har passerat.
+Acceptanstestet är den sista testnivån före release. Ett kritiskt fel som finns kvar här går direkt ut till kunderna, till exempel att en kund debiteras utan att få någon order, eller att en återbetalning aldrig genomförs. Fel med prioritet Hög kan accepteras bara om det finns en workaround som Product Owner har godkänt, så att kundservice vet hur de ska hantera felet efter release.
+
+### 3. EN1 – Systemtestets obligatoriska exit-kriterier är uppfyllda
+
+Verksamheten har begränsad tid, och kundservice måste sköta sitt ordinarie arbete samtidigt (risk 10). Om acceptanstestet startar med kritiska fel kvar från systemtestet går testtiden åt till att hitta fel som testarna borde ha hittat, i stället för att verifiera verksamhetens arbetsflöden. Kriteriet är billigt att kontrollera men skyddar hela testveckan.
 
 ### 3. EX5 – Skriftligt godkännande (sign-off)
 
