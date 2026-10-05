@@ -82,7 +82,7 @@ Här slår vi ihop gruppens svar på Uppgift 1–3. Varje testnivå har en egen 
 | EX3 | Kundservice har själva verifierat att de kan söka kund, se order och betalningsstatus, avbryta order och initiera återbetalning utan manuella extrasteg utanför systemet. | Obligatoriskt (MUST) |
 | EX4 | Varje kvarstående fel har ett dokumenterat beslut som är godkänt av Product Owner: rättas före release, rättas efter release eller accepteras. | Obligatoriskt (MUST) |
 | EX5 | Product Owner och verksamhetsansvarig har skriftligt godkänt acceptanstestet (sign-off). | Obligatoriskt (MUST) |
-| EX6 | Alla övriga acceptansscenarier är körda och minst 90 % har passerat. Varje scenario som inte har passerat är kopplat till ett registrerat fel med prioritet Medel eller Låg. | Önskvärt (SHOULD) |
+| EX6 | Senast sista testdagen är alla acceptansscenarier som inte ingår i EX1 körda, och minst 90 % av dem har passerat. Varje scenario som inte har passerat har ett fel registrerat i defektverktyget med prioritet Medel eller Låg. | Önskvärt (SHOULD) |
 | EX7 | Alla deltagare har lämnat sina synpunkter på användbarhet i ett gemensamt formulär, och varje synpunkt har en ansvarig och ett beslut: åtgärdas före release, åtgärdas efter release eller åtgärdas inte. | Önskvärt (SHOULD) |
 
 ### Koppling till risker
