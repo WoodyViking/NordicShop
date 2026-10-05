@@ -152,18 +152,20 @@ Verksamheten har begränsad tid, och kundservice måste sköta sitt ordinarie ar
 - **SHOULD** är kriterier som gäller granskning, planering och dokumentation. De gör testet bättre, men en avvikelse kan accepteras efter en riskbedömning. Ett exempel: om testfallen inte hunnit granskas (EN6) kan testet ändå starta, och granskningen görs parallellt.
 
 
-| Kategori | Entry | Exit |
-|---|---|---|
-| **MUST** | EN1, EN2, EN3, EN4, EN5 | EX1, EX2, EX3, EX4, EX5 |
-| **SHOULD** | EN6 | EX6, EX7 |
-
-
 ### System:
 
 | Kategori | Entry | Exit |
 |---|---|---|
 | **MUST** | EN1, EN2, EN3 | EX1, EX2, EX3 |
 | **SHOULD** | EN4, EN5, EN6 | EX4, EX5, EX6 |
+
+
+### Acceptanstest
+
+| Kategori | Entry | Exit |
+|---|---|---|
+| **MUST** | EN1, EN2, EN3, EN4, EN5 | EX1, EX2, EX3, EX4, EX5 |
+| **SHOULD** | EN6 | EX6, EX7 |
 
 **Motivering:**
 - **MUST** är de kriterier som gäller verksamhetens deltagande, de kritiska verksamhetsflödena och det formella godkännandet. Om något av dem inte är uppfyllt kan verksamheten inte genomföra testet, eller så finns det inget giltigt underlag för releasebeslutet.
@@ -223,7 +225,7 @@ Varje kriterium har kontrollerats mot de fem frågorna:
 | EX7 | Ja | Nej → Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. |
 
 
-### Förbättrade formuleringar
+## Förbättrade formuleringar Acceptanstest
 
 Tabellerna i Uppgift 3 innehåller redan de förbättrade formuleringarna.
 
