@@ -210,19 +210,19 @@ Varje kriterium har kontrollerats mot de fem frågorna:
 
 | # | T | M | A | R | K | Kommentar |
 |---|---|---|---|---|---|---|
-| EN1 | Ja | Ja | Ja | Ja | Ja | Verksamheten ska inte hitta kritiska fel som systemtestet borde ha hittat. |
-| EN2 | Ja | Ja | Ja | Ja | Ja | Utan acceptanskriterier går det inte att avgöra om testet är godkänt. |
-| EN3 | Ja | Ja | Ja | Ja | Ja | Kundservice bekräftar själva att de kan följa scenarierna. Risk 10. |
-| EN4 | Nej → Ja | Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. Risk 10. |
-| EN5 | Ja | Ja | Ja | Ja | Ja | Lager och behörigheter kan inte testas utan rätt data och konton. Risk 1 och 7. |
-| EN6 | Ja | Ja | Ja | Ja | Ja | Gör att testtiden används till testning i stället för frågor om verktyget. |
-| EX1 | Ja | Ja | Ja | Ja | Ja | Täcker de tre E2E-flödena och verksamhetens egna flöden. Risk 1, 7 och 9. |
-| EX2 | Ja | Ja | Ja | Ja | Ja | Samma prioritetsnivåer som i SIT. |
-| EX3 | Ja | Nej → Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. Risk 9 och 10. |
-| EX4 | Ja | Ja | Ja | Ja | Ja | Ledningen vet vilka fel som finns kvar vid release. |
-| EX5 | Ja | Ja | Ja | Ja | Ja | Ger underlag för Go/No-Go-beslutet. |
-| EX6 |Nej → Ja | Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. |
-| EX7 | Ja | Nej → Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. |
+| AT-EN1 | Ja | Ja | Ja | Ja | Ja | Verksamheten ska inte hitta kritiska fel som systemtestet borde ha hittat. |
+| AT-EN2 | Ja | Ja | Ja | Ja | Ja | Utan acceptanskriterier går det inte att avgöra om testet är godkänt. |
+| AT-EN3 | Ja | Ja | Ja | Ja | Ja | Kundservice bekräftar själva att de kan följa scenarierna. Risk 10. |
+| AT-EN4 | Nej → Ja | Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. Risk 10. |
+| AT-EN5 | Ja | Ja | Ja | Ja | Ja | Lager och behörigheter kan inte testas utan rätt data och konton. Risk 1 och 7. |
+| AT-EN6 | Ja | Ja | Ja | Ja | Ja | Gör att testtiden används till testning i stället för frågor om verktyget. |
+| AT-EX1 | Ja | Ja | Ja | Ja | Ja | Täcker de tre E2E-flödena och verksamhetens egna flöden. Risk 1, 7 och 9. |
+| AT-EX2 | Ja | Ja | Ja | Ja | Ja | Samma prioritetsnivåer som i SIT. |
+| AT-EX3 | Ja | Nej → Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. Risk 9 och 10. |
+| AT-EX4 | Ja | Ja | Ja | Ja | Ja | Ledningen vet vilka fel som finns kvar vid release. |
+| AT-EX5 | Ja | Ja | Ja | Ja | Ja | Ger underlag för Go/No-Go-beslutet. |
+| AT-EX6 |Nej → Ja | Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. |
+| AT-EX7 | Ja | Nej → Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. |
 
 
 ## Förbättrade formuleringar Acceptanstest
@@ -231,10 +231,10 @@ Tabellerna i Uppgift 3 innehåller redan de förbättrade formuleringarna.
 
 | # | Före | Problem | Efter |
 |---|---|---|---|
-| EN4 | Verksamheten är tillgänglig för acceptanstest. | Det framgick inte vilka personer eller hur länge, så det gick inte att avgöra om kriteriet var uppfyllt. | ...bokade med namn för hela testveckan: minst två från kundservice och en administratör. |
-| EX3 | Kundservice är nöjd med systemet. | "Nöjd" är subjektivt och går inte att mäta. | Kundservice har själva verifierat att de kan söka kund, se order och betalningsstatus, avbryta order och initiera återbetalning utan manuella extrasteg. |
-| EX7 | Verksamhetens synpunkter på användbarhet är dokumenterade. | Synpunkter är subjektiva, och det gick inte att avgöra när kriteriet var uppfyllt. | Alla deltagare har lämnat sina synpunkter i ett gemensamt formulär, och varje synpunkt har en ansvarig och ett beslut. |
-| EX6 | Minst 90 % av alla acceptansscenarier har passerat. | Det framgick inte vilka scenarier som avses, när de ska vara körda eller vad som gäller för de scenarier som inte passerar. | Senast sista testdagen är alla acceptansscenarier som inte ingår i EX1 körda, och minst 90 % av dem har passerat. Varje scenario som inte har passerat har ett fel registrerat i defektverktyget med prioritet Medel eller Låg. |
+| AT-EN4 | Verksamheten är tillgänglig för acceptanstest. | Det framgick inte vilka personer eller hur länge, så det gick inte att avgöra om kriteriet var uppfyllt. | ...bokade med namn för hela testveckan: minst två från kundservice och en administratör. |
+| AT-EX3 | Kundservice är nöjd med systemet. | "Nöjd" är subjektivt och går inte att mäta. | Kundservice har själva verifierat att de kan söka kund, se order och betalningsstatus, avbryta order och initiera återbetalning utan manuella extrasteg. |
+| AT-EX7 | Verksamhetens synpunkter på användbarhet är dokumenterade. | Synpunkter är subjektiva, och det gick inte att avgöra när kriteriet var uppfyllt. | Alla deltagare har lämnat sina synpunkter i ett gemensamt formulär, och varje synpunkt har en ansvarig och ett beslut. |
+| AT-EX6 | Minst 90 % av alla acceptansscenarier har passerat. | Det framgick inte vilka scenarier som avses, när de ska vara körda eller vad som gäller för de scenarier som inte passerar. | Senast sista testdagen är alla acceptansscenarier som inte ingår i EX1 körda, och minst 90 % av dem har passerat. Varje scenario som inte har passerat har ett fel registrerat i defektverktyget med prioritet Medel eller Låg. |
 
 
 
