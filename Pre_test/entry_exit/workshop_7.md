@@ -257,7 +257,7 @@ Frågor: Är det tydligt? Är det mätbart? Går det att avgöra om det är uppf
 
 
 
-### Förbättrade kriterier
+### Förbättrade kriterier Systemtest
 
 | Nr | Förbättrat kriterium | Obligatoriskt/Önskvärt | Risk som kriteriet hanterar |
 |---|---|---|---|
@@ -274,7 +274,7 @@ Frågor: Är det tydligt? Är det mätbart? Går det att avgöra om det är uppf
 | X5 | Inga nya defekter som blockerar ett affärsflöde eller saknar workaround har hittats under de senaste 3 testdagarna. | Önskvärt | Systemet är fortfarande instabilt. |
 | X6 | Testresultat, testfallsstatus och defektlista är uppdaterade i testverktyget senast sista testdagen, och testrapporten är arkiverad. | Önskvärt | Resultat går inte att spåra eller återanvända. |
  
-### Kontroll efter förbättring
+### Kontroll efter förbättring Systemtest
  
 | Nr | Tydligt | Mätbart | Avgörbart | Relevant | Risk |
 |---|---|---|---|---|---|
