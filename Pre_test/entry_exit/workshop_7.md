@@ -164,7 +164,7 @@ Varje kriterium har kontrollerats mot de fem frågorna:
 | EX3 | Ja | Nej → Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. Risk 9 och 10. |
 | EX4 | Ja | Ja | Ja | Ja | Ja | Ledningen vet vilka fel som finns kvar vid release. |
 | EX5 | Ja | Ja | Ja | Ja | Ja | Ger underlag för Go/No-Go-beslutet. |
-| EX6 || EX6 | Nej → Ja | Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. |
+| EX6 |Nej → Ja | Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. |
 | EX7 | Ja | Nej → Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. |
 
 
