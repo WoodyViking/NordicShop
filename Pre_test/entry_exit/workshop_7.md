@@ -112,7 +112,7 @@ Acceptanstestet är den sista testnivån före release. Ett kritiskt fel som fin
 
 Verksamheten har begränsad tid, och kundservice måste sköta sitt ordinarie arbete samtidigt (risk 10). Om acceptanstestet startar med kritiska fel kvar från systemtestet går testtiden åt till att hitta fel som testarna borde ha hittat, i stället för att verifiera verksamhetens arbetsflöden. Kriteriet är billigt att kontrollera men skyddar hela testveckan.
 
-Systemtest:
+**Systemtest:**
 
 ### 1. EN1 – Inga kritiska eller affärsblockerande defekter från tidigare testnivå
 Systemtest ska verifiera hela systemet från början till slut, och det går bara om integrationerna fungerar. Om kritiska defekter från SIT finns kvar blir testfall blockerade, och testarnas begränsade tid går åt till att felsöka integrationer i stället för att verifiera funktionalitet. Kriteriet hindrar att problem flyttas vidare till en dyrare nivå och skyddar tidsplanen.
