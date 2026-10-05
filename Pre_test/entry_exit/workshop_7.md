@@ -41,23 +41,23 @@ Här slår vi ihop gruppens svar på Uppgift 1–3. Varje testnivå har en egen 
 
 | # | Systemtest Entry Criteria | Obligatoriskt/Önskvärt |
 |---|---|---|
-| EN1 | | |
-| EN2 | | |
-| EN3 | | |
-| EN4 | | |
-| EN5 | | |
-| EN6 | | |
+| EN1 | Inga öppna defekter från SIT som blockerar ett affärsflöde eller saknar workaround. Undantag kräver testledarens skriftliga godkännande. | Obligatoriskt (MUST) |
+| EN2 | Systemtestmiljön är deployad med den avsedda versionen och röktest är passerat till godkändnivå. | Obligatoriskt (MUST) |
+| EN3 | Testdata för huvudflödena (konto, produkt, kundvagn, order, lager, leverans) är laddad och stickprovskontrollerad. | Obligatoriskt (MUST) |
+| EN4 | Teststrategi och systemtestets testplan är godkända av testledaren och Product Owner. | Önskvärt (SHOULD) |
+| EN5 | Alla öppna defekter från SIT är listade i defektverktyget och delade med testarna före teststart. | Önskvärt (SHOULD) |
+| EN6 | Rutin för att återställa testdata till utgångsläget finns och har provats, och återställningen tar högst en arbetsdag. | Önskvärt (SHOULD) |
 
 ### Systemtest Exit Criteria
 
 | # | Systemtest Exit Criteria | Obligatoriskt/Önskvärt |
 |---|---|---|
-| EX1 | | |
-| EX2 | | |
-| EX3 | | |
-| EX4 | | |
-| EX5 | | |
-| EX6 | | |
+| EX1 | Alla testfall för kritiska affärsflöden (inloggning, kundvagn, checkout, order) är exekverade och till 100 % passerade. | Obligatoriskt (MUST) |
+| EX2 | Behörighetstest är genomfört för alla roller (kund, administratör, kundtjänst) och alla behörighetstestfall är passerade. | Obligatoriskt (MUST) |
+| EX3 | Betalningsflödena (alla betalsätt, avbruten betalning och felflöden) är testade mot leverantörens testmiljö och alla betalningstestfall är passerade. | Obligatoriskt (MUST) |
+| EX4 | Alla öppna defekter som inte blockerar något affärsflöde har en beslutad hantering (fixas före eller efter release), skriftligt godkänd av Product Owner. | Önskvärt (SHOULD) |
+| EX5 | Inga nya defekter som blockerar ett affärsflöde eller saknar workaround har hittats under de senaste 3 testdagarna. | Önskvärt (SHOULD) |
+| EX6 | Testresultat, testfallsstatus och defektlista är uppdaterade i testverktyget senast sista testdagen, och testrapporten är arkiverad. | Önskvärt (SHOULD) |
 
 ## Uppgift 3 – Acceptanstest
 
@@ -112,14 +112,35 @@ Acceptanstestet är den sista testnivån före release. Ett kritiskt fel som fin
 
 Verksamheten har begränsad tid, och kundservice måste sköta sitt ordinarie arbete samtidigt (risk 10). Om acceptanstestet startar med kritiska fel kvar från systemtestet går testtiden åt till att hitta fel som testarna borde ha hittat, i stället för att verifiera verksamhetens arbetsflöden. Kriteriet är billigt att kontrollera men skyddar hela testveckan.
 
+Systemtest:
+
+### 1. EN1 – Inga kritiska eller affärsblockerande defekter från tidigare testnivå
+Systemtest ska verifiera hela systemet från början till slut, och det går bara om integrationerna fungerar. Om kritiska defekter från SIT finns kvar blir testfall blockerade, och testarnas begränsade tid går åt till att felsöka integrationer i stället för att verifiera funktionalitet. Kriteriet hindrar att problem flyttas vidare till en dyrare nivå och skyddar tidsplanen.
+ 
+### 2. EX1 – Kritiska testfall är passerade
+Kritiska testfall täcker de flöden som webbshopen inte kan fungera utan, till exempel inloggning, kundvagn, checkout och order. Om de inte är passerade vet vi inte om systemet fungerar, och verksamheten skulle få testa en version där huvudflöden brister i acceptanstestet. Det kan göra att kritiska fel upptäcks för sent för att hinna åtgärdas före release.
+ 
+### 3. EX3 – Betalningsflöden testade mot leverantörens testmiljö
+Betalning är webbshopens mest affärskritiska flöde: ett fel stoppar intäkterna direkt. Risken är dessutom stor, eftersom det beror på en extern leverantör vars testmiljö kan bli försenad. Stubbar täcker inte allt (till exempel callbacks, autentisering och återbetalning), så de kan inte ersätta test mot den riktiga miljön. Kriteriet gör att betalningstestet inte kan gå förbi Go/No-Go utan ett medvetet beslut.
+
+
 
 
 ## Uppgift 5 – Kategorisera
+
 
 | Kategori | Entry | Exit |
 |---|---|---|
 | **MUST** | EN1, EN2, EN3, EN4, EN5 | EX1, EX2, EX3, EX4, EX5 |
 | **SHOULD** | EN6 | EX6, EX7 |
+
+
+### System:
+
+| Kategori | Entry | Exit |
+|---|---|---|
+| **MUST** | EN1, EN2, EN3 | EX1, EX2, EX3 |
+| **SHOULD** | EN4, EN5, EN6 | EX4, EX5, EX6 |
 
 **Motivering:**
 - **MUST** är de kriterier som gäller verksamhetens deltagande, de kritiska verksamhetsflödena och det formella godkännandet. Om något av dem inte är uppfyllt kan verksamheten inte genomföra testet, eller så finns det inget giltigt underlag för releasebeslutet.
@@ -146,6 +167,7 @@ Varje kriterium har kontrollerats mot de fem frågorna:
 | EX6 | Ja | Ja | Ja | Ja | Ja | Mindre viktiga scenarier kan accepteras efter riskbedömning. |
 | EX7 | Ja | Nej → Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. |
 
+
 ### Förbättrade formuleringar
 
 Tabellerna i Uppgift 3 innehåller redan de förbättrade formuleringarna.
@@ -155,3 +177,66 @@ Tabellerna i Uppgift 3 innehåller redan de förbättrade formuleringarna.
 | EN4 | Verksamheten är tillgänglig för acceptanstest. | Det framgick inte vilka personer eller hur länge, så det gick inte att avgöra om kriteriet var uppfyllt. | ...bokade med namn för hela testveckan: minst två från kundservice och en administratör. |
 | EX3 | Kundservice är nöjd med systemet. | "Nöjd" är subjektivt och går inte att mäta. | Kundservice har själva verifierat att de kan söka kund, se order och betalningsstatus, avbryta order och initiera återbetalning utan manuella extrasteg. |
 | EX7 | Verksamhetens synpunkter på användbarhet är dokumenterade. | Synpunkter är subjektiva, och det gick inte att avgöra när kriteriet var uppfyllt. | Alla deltagare har lämnat sina synpunkter i ett gemensamt formulär, och varje synpunkt har en ansvarig och ett beslut. |
+
+
+
+## Systemtest
+
+Frågor: Är det tydligt? Är det mätbart? Går det att avgöra om det är uppfyllt? Är det relevant för systemtest? Är det kopplat till risk?
+
+| Nr | Tydligt | Mätbart | Avgörbart | Relevant | Risk | Problem | Åtgärd |
+|---|---|---|---|---|---|---|---|
+| E1 | Nej | Nej | Nej | Ja | Ja | "Kritisk" och "affärsblockerande" är odefinierade. | Beskriv effekten direkt: blockerar ett affärsflöde eller saknar workaround. Lägg till undantagsregel. |
+| E2 | Nej | Nej | Ja | Ja | Ja | Vilken version? Hur vet vi att miljön fungerar? | Lägg till version och röktest. |
+| E3 | Nej | Nej | Nej | Ja | Ja | "Redo" går inte att mäta. | Ange vilka flöden, hur mycket och vem kontrollerar. |
+| E4 | Nej | Ja | Nej | Ja | Ja | Godkänd av vem? Testplanen för vilken nivå? | Ange godkännare och att det är systemtestets plan. |
+| E5 | Ja | Ja | Ja | Ja | Ja | Fungerar, men var och för vem listas de? | Förtydliga var och när. |
+| E6 | Ja | Ja | Nej | Ja | Ja | Ett löfte, inte verifierat. | Kräv att rutinen finns och har provats. |
+| X1 | Nej | Nej | Nej | Ja | Ja | Vilka är kritiska? Alla eller de flesta? | Namnge de kritiska flödena och kräv lösta. |
+| X2 | Nej | Nej | Nej | Ja | Ja | För vilka roller? Vilka testfall? | Ange alla roller och att alla behörighetstestfall passerat. |
+| X3 | Nej | Nej | Nej | Ja | Ja | Vilka flöden? Vad är "kritiska"? | Ange betalsätt, avbruten betalning och felflöden, och att alla testfall passerat. |
+| X4 | Nej | Ja | Nej | Ja | Ja | "Mindre" är odefinierat. | Beskriv effekten: defekter som inte blockerar något affärsflöde. Kräv skriftligt PO-godkännande. |
+| X5 | Nej | Ja | Nej | Ja | Ja | "Större" är odefinierat. | Beskriv effekten: blockerar ett affärsflöde eller saknar workaround. |
+| X6 | Nej | Nej | Nej | Ja | Ja | Vilken dokumentation, var och när? | Ange vad, var och senast när. |
+
+
+
+### Förbättrade kriterier
+
+| Nr | Förbättrat kriterium | Obligatoriskt/Önskvärt | Risk som kriteriet hanterar |
+|---|---|---|---|
+| E1 | Inga öppna defekter från SIT som blockerar ett affärsflöde eller saknar workaround. Undantag kräver testledarens skriftliga godkännande. | Obligatoriskt | Blockerade testfall och felsökning av integrationer. |
+| E2 | Systemtestmiljön är deployad med den avsedda versionen och röktest är passerat till godkändnivå. | Obligatoriskt | Testresultat blir ogiltiga på grund av fel version eller instabil miljö. |
+| E3 | Testdata för huvudflödena (konto, produkt, kundvagn, order, lager, leverans) är laddad och stickprovskontrollerad. | Obligatoriskt | Falska resultat eller blockerade flöden på grund av data. |
+| E4 | Teststrategi och systemtestets testplan är godkända av testledaren och Product Owner. | Önskvärt | Testarna arbetar utan gemensam plan. |
+| E5 | Alla öppna defekter från SIT är listade i defektverktyget och delade med testarna före teststart. | Önskvärt | Dubbelrapportering av kända fel. |
+| E6 | Rutin för att återställa testdata till utgångsläget finns och har provats, och återställningen tar högst en arbetsdag. | Önskvärt | Förstörd testdata stoppar retest och omkörning. |
+| X1 | Alla testfall för kritiska affärsflöden (inloggning, kundvagn, checkout, order) är exekverade och till 100 % passerade. | Obligatoriskt | Kritiska fel går vidare till acceptanstest. |
+| X2 | Behörighetstest är genomfört för alla roller (kund, administratör, kundtjänst) och alla behörighetstestfall är passerade. | Obligatoriskt | Obehöriga får åtkomst eller behöriga nekas. |
+| X3 | Betalningsflödena (alla betalsätt, avbruten betalning och felflöden) är testade mot leverantörens testmiljö och alla betalningstestfall är passerade. | Obligatoriskt | Fel i betalning upptäcks först i produktion. |
+| X4 | Alla öppna defekter som inte blockerar något affärsflöde har en beslutad hantering (fixas före eller efter release), skriftligt godkänd av Product Owner. | Önskvärt | Okända kvarstående defekter. |
+| X5 | Inga nya defekter som blockerar ett affärsflöde eller saknar workaround har hittats under de senaste 3 testdagarna. | Önskvärt | Systemet är fortfarande instabilt. |
+| X6 | Testresultat, testfallsstatus och defektlista är uppdaterade i testverktyget senast sista testdagen, och testrapporten är arkiverad. | Önskvärt | Resultat går inte att spåra eller återanvända. |
+ 
+### Kontroll efter förbättring
+ 
+| Nr | Tydligt | Mätbart | Avgörbart | Relevant | Risk |
+|---|---|---|---|---|---|
+| E1 | Ja | Ja | Ja | Ja | Ja |
+| E2 | Ja | Ja | Ja | Ja | Ja |
+| E3 | Ja | Ja | Ja | Ja | Ja |
+| E4 | Ja | Ja | Ja | Ja | Ja |
+| E5 | Ja | Ja | Ja | Ja | Ja |
+| E6 | Ja | Ja | Ja | Ja | Ja |
+| X1 | Ja | Ja | Ja | Ja | Ja |
+| X2 | Ja | Ja | Ja | Ja | Ja |
+| X3 | Ja | Ja | Ja | Ja | Ja |
+| X4 | Ja | Ja | Ja | Ja | Ja |
+| X5 | Ja | Ja | Ja | Ja | Ja |
+| X6 | Ja | Ja | Ja | Ja | Ja |
+
+
+
+
+
+
