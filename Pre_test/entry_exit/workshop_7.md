@@ -180,7 +180,7 @@ Tabellerna i Uppgift 3 innehåller redan de förbättrade formuleringarna.
 
 
 
-## Systemtest
+## Kontrollera kvaliten Systemtest
 
 Frågor: Är det tydligt? Är det mätbart? Går det att avgöra om det är uppfyllt? Är det relevant för systemtest? Är det kopplat till risk?
 
