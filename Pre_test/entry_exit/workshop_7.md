@@ -164,7 +164,7 @@ Varje kriterium har kontrollerats mot de fem frågorna:
 | EX3 | Ja | Nej → Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. Risk 9 och 10. |
 | EX4 | Ja | Ja | Ja | Ja | Ja | Ledningen vet vilka fel som finns kvar vid release. |
 | EX5 | Ja | Ja | Ja | Ja | Ja | Ger underlag för Go/No-Go-beslutet. |
-| EX6 | Ja | Ja | Ja | Ja | Ja | Mindre viktiga scenarier kan accepteras efter riskbedömning. |
+| EX6 || EX6 | Nej → Ja | Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. |
 | EX7 | Ja | Nej → Ja | Nej → Ja | Ja | Ja | Förbättrad, se nedan. |
 
 
@@ -177,6 +177,7 @@ Tabellerna i Uppgift 3 innehåller redan de förbättrade formuleringarna.
 | EN4 | Verksamheten är tillgänglig för acceptanstest. | Det framgick inte vilka personer eller hur länge, så det gick inte att avgöra om kriteriet var uppfyllt. | ...bokade med namn för hela testveckan: minst två från kundservice och en administratör. |
 | EX3 | Kundservice är nöjd med systemet. | "Nöjd" är subjektivt och går inte att mäta. | Kundservice har själva verifierat att de kan söka kund, se order och betalningsstatus, avbryta order och initiera återbetalning utan manuella extrasteg. |
 | EX7 | Verksamhetens synpunkter på användbarhet är dokumenterade. | Synpunkter är subjektiva, och det gick inte att avgöra när kriteriet var uppfyllt. | Alla deltagare har lämnat sina synpunkter i ett gemensamt formulär, och varje synpunkt har en ansvarig och ett beslut. |
+| EX6 | Minst 90 % av alla acceptansscenarier har passerat. | Det framgick inte vilka scenarier som avses, när de ska vara körda eller vad som gäller för de scenarier som inte passerar. | Senast sista testdagen är alla acceptansscenarier som inte ingår i EX1 körda, och minst 90 % av dem har passerat. Varje scenario som inte har passerat har ett fel registrerat i defektverktyget med prioritet Medel eller Låg. |
 
 
 
