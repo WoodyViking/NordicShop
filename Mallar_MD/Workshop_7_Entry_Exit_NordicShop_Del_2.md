@@ -9,9 +9,9 @@ Status inför systemtest:
 - Testdata finns för 80 % av testerna.
 - Betalningsintegrationen fungerar.
 - Lagerintegrationen är instabil.
-- Två High-defekter från SIT är fortfarande öppna.
+- Två high-defekter från SIT är fortfarande öppna.
 - Ingen Critical-defekt är öppen.
-- Systemtest är planerat att börja imorgon.
+- Systemtestet är planerat att börja imorgon.
 
 ---
 
@@ -20,10 +20,15 @@ Status inför systemtest:
 Besvara:
 
 1. Är Entry Criteria uppfyllda?
+  Nej.
 2. Vilka är inte uppfyllda?
+  ST-EN1, 
 3. Kan systemtest starta delvis?
+  Om det finns en workaround.
 4. Vilka tester bör vänta?
+
 5. Vilken risk finns?
+
 6. Vad kommunicerar ni till projektledaren?
 
 ---
