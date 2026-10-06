@@ -174,7 +174,31 @@ Testplan för  NordicShop
 
 *Beskriv hur testningen ska genomföras, exempelvis riskbaserat, kravbaserat, utforskande eller iterativt. Beskriv prioritering, felhantering, omtest, regression, rapportering och eventuell automatisering.*
 
-\<Beskriv här>
+**Riskbaserat.** Prioriteringen följer MUST/SHOULD/COULD i kapitel 4 och riskerna i `test_analys.md`. De största riskerna är det gamla lagersystemet (risk 1), den delade testmiljön (risk 2), betalningsleverantörens testmiljö (risk 3), kontolåsningen (risk 6) och den minskade testkapaciteten (risk 11).
+
+**Testnivåer.** Komponent-/enhetstest görs av utvecklingsteamen. Testteamet genomför SIT och systemtest. Verksamheten genomför acceptanstest med stöd av testteamet. Varje nivå har entry- och exit-kriterier (kapitel 7).
+
+**Testtyper.** Funktionell test och säkerhetstest behålls fullt ut. Prestanda, kompatibilitet och användbarhet reduceras (kapitel 5).
+
+**Testdesign.**
+- MUST: fullständiga testfall med positiva och negativa fall. Integrationerna testas alltid för nedtid, timeout, felaktig data och dubbla meddelanden.
+- SHOULD: huvudscenario och de viktigaste felfallen.
+- COULD: checklistor och utforskande test.
+- Testtekniker: ekvivalensklasser och gränsvärden (rabattkod, kontolåsning, lagersaldo 0 och 1) samt tillståndsbaserade test för orderstatus.
+
+**Testdata.** En gemensam uppsättning används för flera funktioner: minst 20 produkter med olika saldon (minst en med saldo 1), testkunder med orderhistorik, ordrar i status betald, skickad och avbeställd, samt konton för kundservice och administratör. Testkort och Swish-testnummer kommer från Payment Provider. Ingen riktig kunddata används (öppen fråga #14).
+
+**Betalning.** I SIT används Payment Providers testmiljö, och en mock om den är otillgänglig. I systemtest krävs den riktiga testmiljön, eftersom en mock inte täcker återanrop, autentisering och återbetalning.
+
+**Felhantering.** Fel registreras i defektverktyget med steg, förväntat och faktiskt resultat, build och loggar. Prioritet: Kritisk (blockerar ett affärsflöde, ingen workaround), Hög, Medel, Låg. Daglig defect triage leds av testledaren tillsammans med utvecklingsteamen.
+
+**Omtest.** Alla rättade fel med prioritet Kritisk och Hög omtestas innan de stängs. Mindre kosmetiska fel kan samlas och omtestas tillsammans.
+
+**Regression.** MUST-områden regressionstestas fullt ut, i första hand automatiserat. SHOULD-områden får ett kort röktest. COULD-områden regressionstestas inte.
+
+**Automation (Förslag).** Utvecklingsteamen tar över mer av komponenttesterna och den automatiserade regressionen av MUST-flödena, så att testarna frigör tid. Röktest körs automatiskt vid varje driftsättning i den delade miljön.
+
+**Rapportering.** Veckovis teststatus till projektledaren och Product Owner (körda, passerade och blockerade testfall, öppna fel per prioritet, risker). Testrapport efter SIT och systemtest. Slutrapport och Go/No-Go-underlag i V11.
 
 ## 6.1  Iterationer
 
@@ -182,9 +206,13 @@ Testplan för  NordicShop
 
 | **Fas** | **Syfte** | **Genomförande** |
 | --- | --- | --- |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
+| SIT | Verifiera integrationerna (lager, betalning, leverans, e-post/SMS) och de tre E2E-flödena. | V4–V6. Omtest löpande. |
+| Systemtest | Verifiera hela systemet funktionellt och säkerhetsmässigt, inklusive behörigheter och betalning mot den riktiga testmiljön. | V6–V8. Omtest löpande. |
+| Omtest | Verifiera rättade fel. | Löpande V5–V9, styrt av defect triage. |
+| Regression | Säkerställa att rättningar inte förstört befintlig funktionalitet. | V8–V10. MUST fullt ut, SHOULD som röktest. |
+| Acceptanstest | Verksamheten verifierar mot K1–K10 och sina egna arbetsflöden. | V9–V10. Koden fryses efter V9, därefter endast kritiska rättningar. |
+| Release readiness och Go/No-Go | Slutrapport och beslutsunderlag. | V10–V11. |
+| Release och sanity test | Produktionssättning och kontroll av de kritiska flödena i produktion. | V12. |
 
 # 7  Start- och slutkriterier
 
