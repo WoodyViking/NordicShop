@@ -110,17 +110,37 @@ Testplan för  NordicShop
 
 | **Dokument** | **Beskrivning / sökväg / länk** |
 | --- | --- |
-| \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> |
-| Testplan | \<Länk eller sökväg till testplan\> |
+| Teststrategi | `test_strategi.md` – testnivåer, testmiljöer och testobjekt. (Filen innehåller olösta merge-konflikter som måste rättas.) |
+| Testanalys | `test_analys.md` v2.0 – testobjekt, kritiska flöden, integrationer, stakeholders, risker 1–13, öppna frågor. |
+| Krav | `krav.md` – kraven K1–K10. (Filen är tom i dag. Kraven finns i case-beskrivningen och refereras i `test_analys.md`.) |
+| Entry/Exit-kriterier | `workshop_7.md` (SIT, systemtest, acceptanstest) och `sit.md`. |
+| Reviderad testomfattning | `reviderad_testomfattning.md` – prioritering, regression, out of scope, kvarstående risk. |
+| Estimering | `test_estimera.md` – estimat, kapacitet, omprioritering (302 h). |
+| Tidplan | `testplan_12_veckor.md` – aktiviteter, beroenden, RACI, milstolpar. |
+| Testfall | `test_fall.md` – ska tas fram i testdesignen (V2–V3). |
+| Testdata | `testdata.md` – beskrivning av testdatauppsättningen och återställningsrutinen. Tas fram V3–V4. |
+| SQL-skript | Skript för att ladda och återställa testdata. Tas fram av utvecklingsteamen tillsammans med testarna. |
+| Felhanteringsprocess | Beskrivs i kapitel 6 i denna plan tills en separat process finns. |
+
+## 2.6  Öppna frågor| Testplan | \<Länk eller sökväg till testplan\> |
 | Fil med testdata | \<Länk eller sökväg till testdata\> |
 | SQL-skript | \<Länk eller sökväg till skript\> |
 | Testfall | <test_fall.md> |
 | Krav | krav.md |
-
+| 1 | Har lagersystemet ett API, eller sker kommunikationen via fil eller databas? Uppdateras saldot direkt eller i batch? | Lagersystemets förvaltare | V1 | Öppen |
+| 2 | Vilka testkort och Swish-testnummer får vi till Payment Providers testmiljö, och hur förhindras dubbeldebitering tekniskt? | Payment Provider / Utvecklingsteam | V2 | Öppen |
+| 3 | Hur fördelas den delade testmiljön mellan de tre teamen? Vem är miljöansvarig? | Utvecklingsteamen / Projektledare | V2 | Öppen |
+| 4 | Vilka konkreta prestandamål gäller (svarstider, antal samtidiga användare, kampanjtoppar)? | Product Owner | V3 | Öppen |
+| 5 | Vilka webbläsare, operativsystem och mobila enheter ska testas? | Product Owner | V2 | Öppen |
+| 6 | Ska ett penetrationstest av kassan och kunddatabasen göras före release? | Product Owner / Säkerhetsansvarig | V3 | Öppen |
+| 7 | Ska rabattkoder aktiveras vid lansering? (Testledarens rekommendation: nej.) | Product Owner | V4 | Öppen |
+| 8 | Vem fattar Go/No-Go-beslutet? | Projektledare | V2 | Öppen |
+| 9 | Vilka kalenderdatum gäller för V1–V12 och för releasen? | Projektledare | V1 | Öppen |
+| 10 | Vilken testare har lämnat projektet, och är den reducerade planen (302 h) godkänd av projektledaren? | Projektledare / Testledare | V1 | Öppen |
+| 11 | Vilket testverktyg och vilket defektverktyg ska användas? | Testledare | V1 | Öppen |
+| 12 | Har Delivery Provider och E-post/SMS-leverantören testmiljöer, eller används mock? | Externa leverantörer | V3 | Öppen |
+| 13 | Ska köpet blockeras när Delivery Provider är nere, eller används ett standardalternativ? | Product Owner | V3 | Öppen |
+| 14 | Vilka krav gäller för personuppgifter i testmiljön (GDPR) och för tillgänglighet? | Product Owner / Säkerhetsansvarig | V3 | Öppen |
 
 
 ## 2.6  Öppna frågor
@@ -188,6 +208,16 @@ Testplan för  NordicShop
 | \<Fyll i> | \<Fyll i> | \<Fyll i> |
 | \<Fyll i> | \<Fyll i> | \<Fyll i> |
 | \<Fyll i> | \<Fyll i> | \<Fyll i> |
+| UI/UX-utseende (layout, färger, typsnitt) | Påverkar inte systemets funktion. Låg prioritet i testanalysen. | Utvecklingsteamen och design granskar mot skisserna i sprintarna. |
+| Äldre webbläsare och enheter | Endast de som flest kunder använder testas. Vilka det är avgörs i öppen fråga #5. | Product Owner beslutar listan. |
+| Fördjupad test av sök och filter | Inte kritiskt för köpflödet. Endast kort utforskande test. | Testteamet efter release. |
+| Fördjupad tillgänglighetstest | Tas bort på grund av minskad testtid. Risk att lagkrav inte uppfylls (öppen fråga #14). | Product Owner beslutar om extern granskning. |
+| Fullständigt prestanda-/lasttest | Begränsas till att systemet klarar normal last. Kampanjtrafik verifieras inte fullt ut (risk 13). | Drift övervakar efter release. Utvecklingsteamen vid behov. |
+| Leverans utöver standardfallen | Endast hemleverans och ombud i standardfall testas. | Utvecklingsteamen och Delivery Provider. |
+| Externa leverantörers interna funktion | Vi testar bara vår sida av integrationen. | Payment Provider, Delivery Provider och E-post/SMS-leverantören. |
+| Bank, kortnätverk och Swish | Nås via Payment Provider. | Payment Provider. |
+| Lagersystemets egen kod | Fokus ligger på gränssnittet mot Order Service. | Lagersystemets förvaltare. |
+| Komponent-/enhetstest | Görs av utvecklingsteamen. SIT startar först när entry-kriterierna är uppfyllda (kapitel 7). | Utvecklingsteamen. |
 
 # 6  Tillvägagångssätt
 
