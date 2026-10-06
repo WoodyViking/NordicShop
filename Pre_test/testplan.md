@@ -2,14 +2,14 @@
 
 **\<Företagsnamn>**  
 \<Projektnamn>  
-Testplan för \<system/release/version>  
-**Version \<x.y>**
+Testplan för  NordicShop  
+**Version 0.1**
 
 ## Dokumenthistorik
 
 | **Version** | **Datum** | **Författare** | **Kommentar** |
 | --- | --- | --- | --- |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
+| \<0.1> | \<2026-09-24> | \<Grupp 2> | \<Fyll i> |
 | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
 | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
 | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
@@ -57,6 +57,9 @@ Testplan för \<system/release/version>
 
 \<Beskriv här>
 
+
+
+
 # 2  Inledning
 
 *Beskriv sammanhanget för testplanen och vad dokumentet ska styra.*
@@ -91,6 +94,15 @@ Testplan för \<system/release/version>
 | \<Fyll i> | \<Fyll i> |
 | \<Fyll i> | \<Fyll i> |
 | \<Fyll i> | \<Fyll i> |
+| Felrapport | Ett registrerat ärende för ett identifierat fel. |
+| Testverktyg | Verktyg som används för krav-, test- och felhantering. |
+| \<Term\> | \<Förklaring\> |
+| E2E | Ett testflöde som verifierar en hel kedja av steg, från kundens handling till att alla inblandade system har reagerat korrekt. |
+| API | Application Programming Interface. Gränssnitt som system använder för att kommunicera med varandra, t.ex. mellan order service och externa leverantörer. |
+| Regression | Testning som säkerställer att ny eller ändrad kod inte har förstört tidigare fungerande funktionalitet. |
+| Testmiljö | En miljö avsedd för test, separat från produktion, där system och integrationer kan verifieras utan att påverka riktiga kunder eller data. |
+| Mock | En förenklad, konstgjord verision av ett system (t.ex. en betalningsleverantör) som används i test när det riktiga systemet inte är tillgängligt eller lämpligt eller att testa mot. |
+
 
 ## 2.5  Hänvisningar till andra dokument
 
@@ -103,6 +115,13 @@ Testplan för \<system/release/version>
 | \<Fyll i> | \<Fyll i> |
 | \<Fyll i> | \<Fyll i> |
 | \<Fyll i> | \<Fyll i> |
+| Testplan | \<Länk eller sökväg till testplan\> |
+| Fil med testdata | \<Länk eller sökväg till testdata\> |
+| SQL-skript | \<Länk eller sökväg till skript\> |
+| Testfall | <test_fall.md> |
+| Krav | krav.md |
+
+
 
 ## 2.6  Öppna frågor
 
