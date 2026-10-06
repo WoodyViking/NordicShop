@@ -4,61 +4,68 @@
 Testplan för NordicShop – ny e-handelsplattform
 **Version 0.2**
 
-
-
 ## Dokumenthistorik
 
 | **Version** | **Datum** | **Författare** | **Kommentar** |
 | --- | --- | --- | --- |
 | 0.1 | 2026-09-24 | Grupp 2 | Mall skapad |
-| 0.2 | 2026-10-06 | Grupp 2 | test_analys, test_strategi, sit, workshop_7, reviderad_testomfattning, test_estimera och testplan_12_veckor |
+| 0.2 | 2026-10-06 | Grupp 2 | Förifylld från test_analys, test_strategi, sit, workshop_7, reviderad_testomfattning, test_estimera och testplan_12_veckor |
 | | | | |
 
 # Innehåll
 
-- [1 Unik identifiering](#1--unik-identifiering)
-- [2 Inledning](#2--inledning)
-  - [2.1 Kortfattad beskrivning](#21--kortfattad-beskrivning)
-  - [2.2 Bakgrund](#22--bakgrund)
-  - [2.3 Syfte och mål](#23--syfte-och-mål)
-  - [2.4 Termer och förkortningar](#24--termer-och-förkortningar)
-  - [2.5 Hänvisningar till andra dokument](#25--hänvisningar-till-andra-dokument)
-  - [2.6 Öppna frågor](#26--öppna-frågor)
+- [Unik identifiering](#unik-identifiering)
+- [1 Inledning](#1--inledning)
+  - [1.1 Kortfattad beskrivning](#11--kortfattad-beskrivning)
+  - [1.2 Bakgrund](#12--bakgrund)
+  - [1.3 Syfte och mål](#13--syfte-och-mål)
+  - [1.4 Termer och förkortningar](#14--termer-och-förkortningar)
+  - [1.5 Hänvisningar till andra dokument](#15--hänvisningar-till-andra-dokument)
+- [2 Öppna frågor](#2--öppna-frågor)
 - [3 Testobjekt](#3--testobjekt)
 - [4 Omfattning](#4--omfattning)
 - [5 Avgränsning](#5--avgränsning)
 - [6 Tillvägagångssätt](#6--tillvägagångssätt)
-  - [6.1 Iterationer](#61--iterationer)
-- [7 Start- och slutkriterier](#7--start--och-slutkriterier)
-- [8 Avbrytande- och återupptagandekriterier](#8--avbrytande--och-återupptagandekriterier)
-- [9 Testdokumentation](#9--testdokumentation)
-- [10 Testaktiviteter](#10--testaktiviteter)
-- [11 Testmiljö](#11--testmiljö)
-- [12 Ansvar](#12--ansvar)
-- [13 Resurs- och utbildningsbehov](#13--resurs--och-utbildningsbehov)
-- [14 Tidplan](#14--tidplan)
-- [15 Risker och oförutsedda händelser](#15--risker-och-oförutsedda-händelser)
-- [16 Godkännande av testplanen](#16--godkännande-av-testplanen)
+- [7 Iterationer](#7--iterationer)
+- [8 Start- och slutkriterier](#8--start--och-slutkriterier)
+  - [8.1 Kriterier för att inleda testarbetet](#81--kriterier-för-att-inleda-testarbetet)
+  - [8.2 Kriterier för att avsluta testarbetet](#82--kriterier-för-att-avsluta-testarbetet)
+- [9 Avbrytande- och återupptagandekriterier](#9--avbrytande--och-återupptagandekriterier)
+  - [9.1 Kriterier för att avbryta testerna](#91--kriterier-för-att-avbryta-testerna)
+  - [9.2 Kriterier för att återuppta testarbetet](#92--kriterier-för-att-återuppta-testarbetet)
+- [10 Testdokumentation](#10--testdokumentation)
+- [11 Testaktiviteter](#11--testaktiviteter)
+- [12 Testmiljö](#12--testmiljö)
+  - [12.1 Hård- och mjukvara](#121--hård--och-mjukvara)
+  - [12.2 Testverktyg](#122--testverktyg)
+  - [12.3 Lokaler](#123--lokaler)
+- [13 Ansvar](#13--ansvar)
+- [14 Resurs- och utbildningsbehov](#14--resurs--och-utbildningsbehov)
+- [15 Tidplan](#15--tidplan)
+  - [15.1 Första testomgången](#151--första-testomgången)
+  - [15.2 Påföljande testomgångar](#152--påföljande-testomgångar)
+- [16 Risker och oförutsedda händelser](#16--risker-och-oförutsedda-händelser)
+- [17 Godkännande av testplanen](#17--godkännande-av-testplanen)
 
-# 1  Unik identifiering
+# Unik identifiering
 
 **TP-NS-001** v0.2 **[FÖRSLAG]** – byt ut om ni har en annan ID-konvention.
 
-# 2  Inledning
+# 1  Inledning
 
 Testplanen styr testarbetet inför produktionsreleasen av NordicShops nya e-handelsplattform. Den bygger på teststrategin för NordicShop (`test_strategi.md`) och beskriver vad som testas, hur, av vem och när, samt eventuella avsteg från strategin. Planen innehåller den **reviderade, riskbaserade testomfattningen** som tagits fram när testkapaciteten minskade (se kapitel 4 och 5).
 
-## 2.1  Kortfattad beskrivning
+## 1.1  Kortfattad beskrivning
 
 NordicShop är ett e-handelsföretag som säljer kläder, elektronik och heminredning. Testplanen avser första produktionsreleasen av den nya plattformen, som består av webb- och mobilapp, Backend/Order Service samt integrationer mot ett 15 år gammalt internt lagersystem och tre externa leverantörer (betalning, leverans, e-post/SMS). Utvecklingen sker agilt av tre team i tvåveckorssprintar. Dokumentet ansvaras av testledaren (Grupp 2) och riktar sig till testteamet, utvecklingsteamen, Product Owner och projektledaren.
 
 **Release/version som testas:** **[SAKNAS]**
 
-## 2.2  Bakgrund
+## 1.2  Bakgrund
 
 NordicShop ersätter sin befintliga e-handelslösning. Målen med den nya plattformen är att göra det enklare för kunder att handla, minska antalet avbrutna köp, ge snabbare orderhantering, automatisera lageruppdateringar, stödja fler betalningsalternativ och minska kundservicens manuella arbete. Produktionsrelease är planerad om cirka fyra månader från projektstart. De största testutmaningarna är ett gammalt lagersystem, en gemensam testmiljö som delas av tre team samt externa leverantörers testmiljöer.
 
-## 2.3  Syfte och mål
+## 1.3  Syfte och mål
 
 Testningen ska verifiera att NordicShops affärskritiska flöden fungerar tillsammans med de integrerade systemen, och ge projektledaren och Product Owner ett underlag för Go/No-Go.
 
@@ -70,7 +77,7 @@ Mål efter avslutad testperiod:
 - Inga öppna kritiska fel finns, och kvarstående fel och risker är dokumenterade och godkända av Product Owner.
 - Acceptanstestet är signerat av Product Owner och verksamhetsansvarig.
 
-## 2.4  Termer och förkortningar
+## 1.4  Termer och förkortningar
 
 | **Term** | **Förklaring** |
 | --- | --- |
@@ -90,7 +97,7 @@ Mål efter avslutad testperiod:
 | Rollback | Återgång till föregående version i produktion om releasen misslyckas. |
 | Workaround | Tillfällig lösning som gör att ett fel inte blockerar ett affärsflöde. |
 
-## 2.5  Hänvisningar till andra dokument
+## 1.5  Hänvisningar till andra dokument
 
 | **Dokument** | **Beskrivning / sökväg / länk** |
 | --- | --- |
@@ -106,7 +113,7 @@ Mål efter avslutad testperiod:
 | SQL-skript | **[SAKNAS]** |
 | Felhanteringsprocess | **[SAKNAS]** |
 
-## 2.6  Öppna frågor
+# 2  Öppna frågor
 
 | **Fråga** | **Ansvarig** | **Senast datum** | **Status** |
 | --- | --- | --- | --- |
@@ -174,30 +181,30 @@ Testningen är **riskbaserad** och bygger på den reviderade omfattningen efter 
 | UI/UX-utseende, layout, färger och typsnitt | Inte avgörande för systemets funktion. Låg prioritet i testanalysen. | [SAKNAS] |
 | Äldre webbläsare och enheter | Testas endast på de som flest användare har (vilka är en öppen fråga). | [SAKNAS] |
 | Fördjupad sök-testning | Inte kritisk för köpflödet, endast kort utforskande session. Kan göras efter release. | [SAKNAS] |
-| Fördjupad tillgänglighetstestning | Tas bort pga minskad testtid. Risk att lagkrav inte uppfylls (se kapitel 15). | [SAKNAS] |
+| Fördjupad tillgänglighetstestning | Tas bort pga minskad testtid. Risk att lagkrav inte uppfylls (se kapitel 16). | [SAKNAS] |
 | Prestandatest (reducerat) | Begränsat till att systemet "snurrar" och inte påverkar säkerhet. Kampanjtrafik är inte fullt verifierad. | [SAKNAS] |
 | Leverans: endast standardfall | Fel pris eller saknade ombudsalternativ kan förekomma. | [SAKNAS] |
 | Acceptanstest (kortare) | Kundservice kan upptäcka problem i sitt arbetsflöde först efter release. | Product Owner / Verksamhet |
 | Intern implementation hos externa system (betalning, leverans, e-post/SMS) | Testas inte, endast gränssnittet/integrationen. | Externa leverantörer |
 | Lagersystemets egen kod | Fokus ligger på gränssnittet mot Order Service. | Lagersystemets förvaltare |
-| Komponent-/enhetstest | Genomförs av utvecklingsteamen. SIT startar först när kriterierna i kapitel 7 är uppfyllda. | Utvecklingsteamen |
+| Komponent-/enhetstest | Genomförs av utvecklingsteamen. SIT startar först när kriterierna i kapitel 8 är uppfyllda. | Utvecklingsteamen |
 
 # 6  Tillvägagångssätt
 
 Testningen är **riskbaserad**. Prioriteringen följer MUST/SHOULD/COULD i kapitel 4 och riskmatrisen i `test_analys.md`, där de största riskerna är det gamla lagersystemet (R1, risknivå 25), tre team i en gemensam testmiljö (R2, 20) och instabil betalningsmiljö (R3, 12).
 
-- **Testnivåer:** Komponent-/enhetstest (utvecklingsteamen), SIT, systemtest och acceptanstest. Varje nivå har entry- och exit-kriterier (kapitel 7).
+- **Testnivåer:** Komponent-/enhetstest (utvecklingsteamen), SIT, systemtest och acceptanstest. Varje nivå har entry- och exit-kriterier (kapitel 8).
 - **Testtyper som behålls:** Funktionell testning (happy path för E2E-flödena) och säkerhet (inloggning, kontolåsning, behörigheter).
 - **Testtyper som reduceras:** Prestanda, kompatibilitet (webbläsare/enheter) och användbarhet.
 - **Testdesign:** MUST-funktioner får fullständiga testfall. SHOULD-funktioner färre varianter (huvudscenario och viktigaste felfall). COULD-funktioner testas med checklistor och utforskande test.
 - **Testdata:** En gemensam uppsättning används för flera funktioner. Testdata för lager (saldo 0 och 1) och betalning (testkort, Swish) behålls fullt ut.
 - **Betalning:** Testas mot leverantörens testmiljö. Om den är otillgänglig används en mock (endast SIT, systemtest kräver riktig testmiljö).
 - **Felhantering:** Dagliga defect triage-möten. Fel rapporteras med reproduktionssteg och loggar. Prioritet: Kritisk, Hög, Medel, Låg.
-- **Omtest och regression:** Se kapitel 4 och 6.1.
+- **Omtest och regression:** Se kapitel 4 och 7.
 - **Automation:** Regression för MUST-funktioner automatiseras helst. Utvecklarna kan ta över mer av regressionen och komponenttesterna (rekommenderat alternativ i `test_estimera.md`).
 - **Rapportering:** Teststatus löpande till projektledaren. SIT-testrapport, systemtestrapport och underlag för Go/No-Go.
 
-## 6.1  Iterationer
+# 7  Iterationer
 
 | **Fas** | **Syfte** | **Genomförande** |
 | --- | --- | --- |
@@ -208,11 +215,11 @@ Testningen är **riskbaserad**. Prioriteringen följer MUST/SHOULD/COULD i kapit
 | Release readiness / Go/No-Go | Slutrapport och beslutsunderlag. | V10–V11. |
 | Release och sanity test | Produktionssättning och verifiering. | V12. |
 
-# 7  Start- och slutkriterier
+# 8  Start- och slutkriterier
 
 Fullständiga kriterier finns i `workshop_7.md` och `sit.md`. Sammanfattning nedan. **MUST** måste uppfyllas, **SHOULD** kan avvika efter riskbedömning.
 
-## 7.1  Kriterier för att inleda testarbetet
+## 8.1  Kriterier för att inleda testarbetet
 
 **SIT**
 - (MUST) Komponenttest klart, minst 80 % av enhetstesterna passerar, inga öppna Kritiska fel.
@@ -239,7 +246,7 @@ Fullständiga kriterier finns i `workshop_7.md` och `sit.md`. Sammanfattning ned
 - (MUST) Produktionslik testdata (minst 20 produkter, testkunder med orderhistorik, ordrar i status betald/skickad/avbeställd, konton för kundservice och admin).
 - (SHOULD) Deltagarna har fått introduktion (högst 1 timme) och listan över kända fel.
 
-## 7.2  Kriterier för att avsluta testarbetet
+## 8.2  Kriterier för att avsluta testarbetet
 
 **SIT**
 - (MUST) 100 % av planerade testfall körda, minst 95 % passerade.
@@ -263,26 +270,26 @@ Fullständiga kriterier finns i `workshop_7.md` och `sit.md`. Sammanfattning ned
 - (SHOULD) Övriga acceptansscenarier körda och minst 90 % passerade. Synpunkter på användbarhet dokumenterade med ansvarig och beslut.
 
 **Gemensamt för hela testarbetet**
-- Kvarstående risker är dokumenterade och accepterade av Product Owner (se kapitel 15).
+- Kvarstående risker är dokumenterade och accepterade av Product Owner (se kapitel 16).
 
-# 8  Avbrytande- och återupptagandekriterier
+# 9  Avbrytande- och återupptagandekriterier
 
 > **[FÖRSLAG]** – dessa är härledda från riskerna i `test_analys.md` och entry-kriterierna. Underlaget innehåller inga uttryckligen beslutade avbrytandekriterier, så granska och justera.
 
-## 8.1  Kriterier för att avbryta testerna
+## 9.1  Kriterier för att avbryta testerna
 
 - Testmiljön är instabil eller otillgänglig, t.ex. när de tre teamens driftsättningar krockar (risk R2) eller röktestet misslyckas.
 - Lagersystemet eller betalningsleverantörens testmiljö är nere och ingen mock finns (risk R1, R3).
 - Öppna defekter blockerar ett affärsflöde och saknar workaround, så att fortsatt testning inte ger information.
 - Nödvändiga testdata, testare eller verksamhetsrepresentanter saknas. Antal blockerande/kritiska fel som utlöser avbrott: **[SAKNAS: ange tröskel]**.
 
-## 8.2  Kriterier för att återuppta testarbetet
+## 9.2  Kriterier för att återuppta testarbetet
 
 - Blockerande problem är åtgärdade och verifierade, och röktest är godkänt i miljön.
 - Miljön och externa beroenden är åter stabila (eller mock är på plats).
 - Testledaren har fattat beslut om återstart och informerat projektledaren.
 
-# 9  Testdokumentation
+# 10  Testdokumentation
 
 | **Dokument / artefakt** | **Beskrivning** | **Ansvarig** |
 | --- | --- | --- |
@@ -298,7 +305,7 @@ Fullständiga kriterier finns i `workshop_7.md` och `sit.md`. Sammanfattning ned
 | Teststatusrapport | Löpande till projektledaren. | Testledare |
 | Go/No-Go-underlag | Slutrapport, kvalitetsmetriker och kvarstående risker. | Testledare |
 
-# 10  Testaktiviteter
+# 11  Testaktiviteter
 
 | **ID** | **Aktivitet** | **Ägare** |
 | --- | --- | --- |
@@ -316,9 +323,9 @@ Fullständiga kriterier finns i `workshop_7.md` och `sit.md`. Sammanfattning ned
 | A12 | Go/No-Go-underlag | Testledare |
 | A13 | Release och sanity test | Testledare / Utveckling **[FÖRSLAG]** |
 
-# 11  Testmiljö
+# 12  Testmiljö
 
-## 11.1  Hård- och mjukvara
+## 12.1  Hård- och mjukvara
 
 | **Komponent** | **Version / konfiguration** | **Skillnad mot produktion** | **Ansvarig** |
 | --- | --- | --- | --- |
@@ -328,7 +335,7 @@ Fullständiga kriterier finns i `workshop_7.md` och `sit.md`. Sammanfattning ned
 | Delivery Provider / E-post-SMS (testmiljö eller mock) | [SAKNAS] | [SAKNAS] | [SAKNAS] |
 | Acceptans-/stagingmiljö | [SAKNAS] | Ska efterlikna produktion, men med begränsad/anonymiserad data och utan skarpa betalningar. | [SAKNAS] |
 
-## 11.2  Testverktyg
+## 12.2  Testverktyg
 
 | **Verktyg** | **Användningsområde** | **Ansvarig** |
 | --- | --- | --- |
@@ -337,11 +344,11 @@ Fullständiga kriterier finns i `workshop_7.md` och `sit.md`. Sammanfattning ned
 | [SAKNAS] | Automatiserad regression (CI/CD och röktest vid varje driftsättning) | Utveckling / Testare |
 | Mock/simulator för betalning | Intern testning oberoende av extern part | [SAKNAS] |
 
-## 11.3  Lokaler
+## 12.3  Lokaler
 
 Ej applicerbart (inga särskilda lokaler, enheter eller fysisk utrustning har identifierats). **[SAKNAS: bekräfta]**
 
-# 12  Ansvar
+# 13  Ansvar
 
 | **Roll** | **Ansvar / mandat** | **Namn / funktion** |
 | --- | --- | --- |
@@ -357,7 +364,7 @@ Ej applicerbart (inga särskilda lokaler, enheter eller fysisk utrustning har id
 
 **RACI (sammanfattning, från `testplan_12_veckor.md`):** Testledaren är *Accountable* för alla aktiviteter. Testare är *Responsible* för testdesign, testdata, SIT, systemtest och regression. Product Owner och verksamhet är *Responsible* för acceptanstest. Utveckling är Responsible tillsammans med testare för defect triage.
 
-# 13  Resurs- och utbildningsbehov
+# 14  Resurs- och utbildningsbehov
 
 | **Namn / resurs** | **Omfattning** | **Funktion** | **Organisation / team** |
 | --- | --- | --- | --- |
@@ -374,7 +381,7 @@ Ej applicerbart (inga särskilda lokaler, enheter eller fysisk utrustning har id
 
 **Utbildning/onboarding:** Deltagare i acceptanstest får en introduktion på högst en timme om testmanus och felrapportering. Eventuell ersättare behöver introduktion (full effekt efter ca en vecka). Gruppen har uppgett att de är oerfarna testare, vilket ingår i bufferten.
 
-# 14  Tidplan
+# 15  Tidplan
 
 > **OBS:** Tidplanen nedan kommer från `testplan_12_veckor.md` och bygger på **fyra testare**. Omplaneringen efter att en testare försvann (Uppgift 9 i den filen) är inte gjord. Veckor är relativa (V1–V12). Kalenderdatum **[SAKNAS]**.
 
@@ -398,7 +405,7 @@ Ej applicerbart (inga särskilda lokaler, enheter eller fysisk utrustning har id
 | Release | V12 | V12 | Alla | |
 | **M6** Framgångsrik driftsättning | V12 | V12 | | |
 
-## 14.1  Första testomgången
+## 15.1  Första testomgången
 
 | **Fas** | **Varaktighet / datum** |
 | --- | --- |
@@ -406,11 +413,11 @@ Ej applicerbart (inga särskilda lokaler, enheter eller fysisk utrustning har id
 | Systemtest | V6–V8 (3 veckor) |
 | Acceptanstest | V9–V10 (2 veckor) |
 
-## 14.2  Påföljande testomgångar
+## 15.2  Påföljande testomgångar
 
 Retest av rättade fel sker löpande under V5–V9. Regression körs V8–V10 och styrs av risk: MUST-områden fullt ut, SHOULD-områden som kort röktest, COULD-områden regressionstestas inte. Alla rättade kritiska och allvarliga fel omtestas. Efter kodfrysning (efter V9) tillåts endast kritiska buggfixar. Antalet omgångar styrs av felutfallet. Är fler fel än väntat funna i lagersystemet eller betalningen räcker bufferten (58 h) inte, och ett nytt beslut behövs.
 
-# 15  Risker och oförutsedda händelser
+# 16  Risker och oförutsedda händelser
 
 | **Risk** | **Konsekvens / kommentar** | **Åtgärd** | **Ägare** | **Prioritet** |
 | --- | --- | --- | --- | --- |
@@ -428,7 +435,7 @@ Retest av rättade fel sker löpande under V5–V9. Regression körs V8–V10 oc
 | Reducerad testomfattning (kvarstående risker) | Fel i sök, filter, produktinformation, orderhistorik och rabattkoder kan nå produktion. Äldre webbläsare ger avbrutna köp. Reducerad regression kan missa följdfel. Tillgänglighetslagkrav kanske inte uppfylls. | Förstärkt övervakning efter release, beredskapsgrupp de första dagarna, möjlighet att stänga av rabattkoder, tydlig rollback-plan. | Testledare / Projektledare | Hög |
 | Verksamhet/externa beroenden försenas | UAT och SIT blir försenade. | Se kritiska beroenden i `testplan_12_veckor.md`. | [SAKNAS] | Medel |
 
-# 16  Godkännande av testplanen
+# 17  Godkännande av testplanen
 
 | **Namn / roll** | **Beslut** | **Datum** | **Kommentar** |
 | --- | --- | --- | --- |
@@ -436,6 +443,3 @@ Retest av rättade fel sker löpande under V5–V9. Regression körs V8–V10 oc
 | Product Owner | [SAKNAS] | [SAKNAS] | Ska godkänna enligt ST-EN4. |
 | Projektledare | [SAKNAS] | [SAKNAS] | |
 | Utvecklingsteamens representant | [SAKNAS] | [SAKNAS] | |
-
-
-
