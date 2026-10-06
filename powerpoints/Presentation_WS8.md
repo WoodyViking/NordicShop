@@ -28,5 +28,5 @@ Presentera framför allt:
 
 
 7. Vilka tre risker oroar er mest?  
-
+15 år gammala lagersystemet, 3 team krockar i gemensamma testmiljön och om någon blir sjuk då vi förlorat tid.
 8. Vilka öppna frågor måste lösas?
