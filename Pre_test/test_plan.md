@@ -4,8 +4,6 @@
 Testplan för NordicShop – ny e-handelsplattform
 **Version 0.2**
 
-> **Hur du läser dokumentet:** Text märkt **[SAKNAS]** finns inte i gruppens övriga dokument och måste fyllas i av er. Text märkt **[FÖRSLAG]** är härledd från underlaget men inte uttryckligen beslutad. Källfil anges inom parentes där det är relevant.
-
 ## Dokumenthistorik
 
 | **Version** | **Datum** | **Författare** | **Kommentar** |
