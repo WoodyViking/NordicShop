@@ -26,11 +26,11 @@ Besvara:
 3. Kan systemtest starta delvis?
   Om det finns en workaround.
 4. Vilka tester bör vänta?
-
+  De tester som inte har testdata.
 5. Vilken risk finns?
-
+  Att man inte uppnår exit p.g.a. de 2 defekterna.
 6. Vad kommunicerar ni till projektledaren?
-
+   Att vi inte uppfyller kriterierna, så om det finns en workaround för ST-EN.
 ---
 
 # Scenario 2 – Avsluta systemtest?
@@ -52,9 +52,15 @@ Status:
 
 Diskutera:
 
-1. Kan systemtest avslutas?
-2. Vilken information behöver ni om de tre High-defekterna?
+1. Kan systemtestet avslutas?  
+  Ja.
+2. Vilken information behöver ni om de tre High-defekterna? 
+  Påverkar de betalningsflödena? Att det inte hittades/upptäcktes något affärsflöde de    senaste dagarna.
 3. Är 97 % Passed tillräckligt?
+  Ja
 4. Vilken roll spelar återbetalningsfelet?
-5. Finns residual risk?
+   Att vi får lösa det manuellt via kundservice.
+5. Finns det residual risk?
+  
 6. Vad rekommenderar ni?
+  
