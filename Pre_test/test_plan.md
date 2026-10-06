@@ -4,14 +4,14 @@
 Testplan för NordicShop – ny e-handelsplattform
 **Version 0.2**
 
-> **Hur du läser dokumentet:** Text märkt **[SAKNAS]** finns inte i gruppens övriga dokument och måste fyllas i av er. Text märkt **[FÖRSLAG]** är härledd från underlaget men inte uttryckligen beslutad. Källfil anges inom parentes där det är relevant.
+
 
 ## Dokumenthistorik
 
 | **Version** | **Datum** | **Författare** | **Kommentar** |
 | --- | --- | --- | --- |
 | 0.1 | 2026-09-24 | Grupp 2 | Mall skapad |
-| 0.2 | 2026-10-06 | Grupp 2 | Förifylld från test_analys, test_strategi, sit, workshop_7, reviderad_testomfattning, test_estimera och testplan_12_veckor |
+| 0.2 | 2026-10-06 | Grupp 2 | test_analys, test_strategi, sit, workshop_7, reviderad_testomfattning, test_estimera och testplan_12_veckor |
 | | | | |
 
 # Innehåll
