@@ -139,11 +139,15 @@ Testplan för  NordicShop
 
 | **Testobjekt** | **Beskrivning** | **Version / build** |
 | --- | --- | --- |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
+| Webb / Mobilapp – kärnflöden | Registrering, inloggning, kontolåsning, sök, kundvagn, rabattkod, kassa, betalning, orderöversikt och avbeställning. UI/UX-utseende ingår inte. Ägare: utvecklingsteamen. | Release 1.0, build enligt driftsättningslogg |
+| Backend / Order Service | Orderhantering, orderstatus och anrop till lager, betalning, leverans och e-post/SMS. Ägare: utvecklingsteamen. | Release 1.0, build enligt driftsättningslogg |
+| Kundservicens arbetsverktyg | Söka kund, se order och betalningsstatus, avbryta order, initiera återbetalning. | Release 1.0 |
+| Administrationsverktyg och behörigheter | Produkter, priser, rabattkoder och användarbehörigheter. Rollerna kund, kundservice och administratör. | Release 1.0 |
+| Integration: Lagersystem | Gränssnittet mot det 15 år gamla lagersystemet: saldo vid köp och avbeställning, timeout och belastning. Ägare: lagersystemets förvaltare. | Befintlig produktionsversion (öppen fråga #1) |
+| Integration: Payment Provider | Visa, Mastercard och Swish: godkänd, nekad och avbruten betalning, dubbeldebitering, återbetalning. | Leverantörens testmiljö (version enligt leverantören) |
+| Integration: Delivery Provider | Leveransalternativ (hem/ombud), pris och leveransbokning. | Leverantörens testmiljö eller mock (öppen fråga #12) |
+| Integration: E-post / SMS Service | Order- och avbeställningsbekräftelser. | Leverantörens testmiljö eller mock (öppen fråga #12) |
+
 
 # 4  Omfattning
 
@@ -153,12 +157,27 @@ Testplan för  NordicShop
 
 | **Område / flöde** | **Testnivå / testtyp** | **Prioritet** | **Kommentar** |
 | --- | --- | --- | --- |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-
+| Kundvagn | SIT, systemtest, regression / funktionell | MUST (29 h) | Del av köpflödet (K3). |
+| Checkout | SIT, systemtest, regression / funktionell | MUST (26 h) | Utan kassa ingen försäljning. |
+| Kortbetalning | SIT, systemtest, regression / funktionell, säkerhet | MUST (28 h) | De flesta kunder betalar med kort. Fel kostar pengar direkt (K5, risk 3, 4). |
+| Swishbetalning | SIT, systemtest, regression / funktionell | MUST (18 h) | Extern integration med hög osäkerhet (K5, risk 3). |
+| Orderskapande | SIT, systemtest, regression / funktionell | MUST (22 h) | Order får bara skapas vid godkänd betalning (K5). |
+| Lageruppdatering | SIT, systemtest, regression / funktionell, prestanda | MUST (33 h) | Det gamla lagersystemet, störst teknisk osäkerhet (K6, risk 1, 12). |
+| Avbeställning | SIT, systemtest, regression / funktionell | MUST (29 h) | Fyra steg i tre system måste lyckas (K9). |
+| Återbetalning | SIT, systemtest, regression / funktionell | MUST (29 h) | Gäller kundens pengar (K9, risk 9). |
+| Kontolåsning | Systemtest / säkerhet | MUST (9 h) | Skydd mot brute force (K1, risk 6). |
+| Behörigheter (kund, kundservice, admin) | Systemtest, acceptanstest / säkerhet | MUST (29 h) | Testas både i gränssnittet och direkt mot API:et (K10, risk 7). |
+| Inloggning | Systemtest, indirekt via E2E | SHOULD (8 h) | Testas även i alla E2E-flöden. |
+| Återställ lösenord | Systemtest | SHOULD (9 h) | Huvudscenario och att länken slutar gälla. |
+| Orderbekräftelse | SIT, systemtest | SHOULD (8 h) | Kan skickas manuellt i nödläge (K8). |
+| Registrera konto | Systemtest, indirekt via E2E | SHOULD (7 h) | Huvudscenario och viktigaste felfall (K1). |
+| Leveransalternativ | SIT, systemtest | SHOULD (7 h) | Hemleverans och ombud i standardfall (K7, risk 8). |
+| Produktsökning | Utforskande test | COULD (3 h) | Kort utforskande session (K2). |
+| Produktfilter | Utforskande test | COULD (2 h) | Vanligaste filtren (K2). |
+| Produktinformation | Utforskande test | COULD (2 h) | Kontrolleras indirekt via köpflödet (K2). |
+| Rabattkod | Utforskande test | COULD (2 h) | En giltig och en ogiltig kod. Bör inte aktiveras vid lansering (K4, risk 5, öppen fråga #7). |
+| Orderhistorik | Utforskande test | COULD (2 h) | Att kundens ordrar visas. |
+| **Summa** | | **302 h** | MUST 252 h + SHOULD 39 h + COULD 11 h. Buffert 58 h. |
 # 5  Avgränsning
 
 *Beskriv uttryckligen vad som inte ska testas i denna testinsats och varför. Ange vid behov vem som ansvarar för testningen utanför denna plan.*
