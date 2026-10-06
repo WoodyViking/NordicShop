@@ -115,10 +115,6 @@ Testningen behövs eftersom de största riskerna ligger i integrationerna: lager
 
 | **Term** | **Förklaring** |
 | --- | --- |
-| \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> |
 | Felrapport | Ett registrerat ärende för ett identifierat fel. |
 | Testverktyg | Verktyg som används för krav-, test- och felhantering. |
 | \<Term\> | \<Förklaring\> |
@@ -190,11 +186,6 @@ Målen anges i relativa veckor eftersom kalenderdatum för projektstart inte är
 | 13 | Ska köpet blockeras när Delivery Provider är nere, eller används ett standardalternativ? | Product Owner | V3 | Öppen |
 | 14 | Vilka krav gäller för personuppgifter i testmiljön (GDPR) och för tillgänglighet? | Product Owner / Säkerhetsansvarig | V3 | Öppen |
 
-| **Fråga** | **Ansvarig** | **Senast datum** | **Status** |
-| --- | --- | --- | --- |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
 
 # 3  Testobjekt
 
@@ -247,10 +238,6 @@ Målen anges i relativa veckor eftersom kalenderdatum för projektstart inte är
 
 | **Avgränsning** | **Motivering** | **Ansvar utanför planen** |
 | --- | --- | --- |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
 | UI/UX-utseende (layout, färger, typsnitt) | Påverkar inte systemets funktion. Låg prioritet i testanalysen. | Utvecklingsteamen och design granskar mot skisserna i sprintarna. |
 | Äldre webbläsare och enheter | Endast de som flest kunder använder testas. Vilka det är avgörs i öppen fråga #5. | Product Owner beslutar listan. |
 | Fördjupad test av sök och filter | Inte kritiskt för köpflödet. Endast kort utforskande test. | Testteamet efter release. |
@@ -420,12 +407,6 @@ Testledaren pausar testningen på en nivå, eller i ett flöde, när något av f
 | Acceptanssignering | Skriftligt godkännande från PO och verksamhetsansvarig. | Product Owner |
 | Go/No-Go-underlag och slutrapport | Testresultat, öppna fel och kvarstående risker. | Testledare |
 
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
 
 # 10  Testaktiviteter
 
@@ -447,16 +428,6 @@ Testledaren pausar testningen på en nivå, eller i ett flöde, när något av f
 | A12 | Go/No-Go-underlag | Testledare |
 | A13 | Release och sanity test i produktion | Utvecklingsteam, drift, testare |
 
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-
 # 11  Testmiljö
 
 *Beskriv testmiljön och viktiga skillnader mot produktion. Dokumentera integrationer, beroenden, testdata, åtkomst och ansvar.*
@@ -472,11 +443,6 @@ Testledaren pausar testningen på en nivå, eller i ett flöde, när något av f
 | Acceptans-/stagingmiljö | Samma build som är tänkt för release | Ska likna produktion, men med anonymiserad data och utan skarpa betalningar. | Miljöansvarig |
 | Mobila enheter och webbläsare | Enligt öppen fråga #5 | Begränsat antal enheter jämfört med kundernas. | Testledare |
 
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
 
 ## 11.2  Testverktyg
 
@@ -487,9 +453,6 @@ Testledaren pausar testningen på en nivå, eller i ett flöde, när något av f
 | CI/CD-pipeline med automatiserade tester | Röktest vid varje driftsättning och automatiserad regression av MUST-flödena. | Utvecklingsteam, testare |
 | Mock/simulator för betalning, leverans och e-post/SMS | Test oberoende av externa parter, och simulering av timeout och nedtid. | Utvecklingsteam |
 | API-testverktyg (Förslag: Postman eller liknande) | Test av integrationer, dubbla anrop och behörighet direkt mot API:et. | Testare || \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
 
 ## 11.3  Lokaler
 
@@ -519,14 +482,6 @@ Ej applicerbart. Inga särskilda lokaler behövs. Under acceptanstestveckan boka
 - Eskalering: testare → testledare → projektledare. Frågor om prioritering och kvarstående fel går till Product Owner.
 - Go/No-Go: testledaren tar fram underlaget. Vem som fattar beslutet är öppen fråga #8 (förslag: projektledare och Product Owner tillsammans).
 
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-
-# 13  Resurs- och utbildningsbehov
 
 *Ange resurser, omfattning/tillgänglighet, funktion och eventuella utbildnings- eller onboardingbehov.*
 | **Namn / resurs** | **Omfattning** | **Funktion** | **Organisation / team** |
@@ -548,14 +503,6 @@ Ej applicerbart. Inga särskilda lokaler behövs. Under acceptanstestveckan boka
 - Introduktion för deltagarna i acceptanstestet (högst en timme) om testmanus och felrapportering.
 - En eventuell ersättare behöver introduktion och ger full effekt först efter ungefär en vecka.
 
-| **Namn / resurs** | **Omfattning** | **Funktion** | **Organisation / team** |
-| --- | --- | --- | --- |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
 
 # 14  Tidplan
 
@@ -582,14 +529,6 @@ Veckorna är relativa till testperiodens start (V1–V12). Kalenderdatum sätts 
 | Release och sanity test | V12 | V12 | Utvecklingsteam, drift, testare | |
 | **M6** Driftsättning genomförd | V12 | V12 | Projektledare | |
 
-| **Aktivitet / milstolpe** | **Start** | **Slut** | **Ansvarig** | **Kommentar** |
-| --- | --- | --- | --- | --- |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
 
 ## 14.1  Första testomgången
 
@@ -633,15 +572,6 @@ Numreringen följer `test_analys.md` v2.0.
 | 13. Plattformen klarar inte toppbelastning, till exempel vid en kampanj. | Långsamma svar eller nedtid när försäljningen är som störst. | Lasttest av köpflödet när prestandamålen är kända (öppen fråga #4). Övervakning efter release. | Product Owner, drift | Hög |
 | Kvarstående risk från den reducerade omfattningen | Fel i sök, filter, produktinformation, orderhistorik och rabattkoder kan nå produktion. Kunder med äldre webbläsare kan avbryta köp. Den reducerade regressionen kan missa följdfel. Tillgänglighetskraven uppfylls kanske inte. | Förstärkt övervakning efter release, beredskapsgrupp de första dagarna, möjlighet att stänga av rabattkoder, tydlig rollback-plan. | Testledare, projektledare | Hög |
 
-| **Risk** | **Konsekvens / kommentar** | **Åtgärd** | **Ägare** | **Prioritet** |
-| --- | --- | --- | --- | --- |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
 
 # 16  Godkännande av testplanen
 
@@ -653,7 +583,3 @@ Numreringen följer `test_analys.md` v2.0.
 | Product Owner | Ej beslutat | – | Ska godkänna planen (systemtestets entry-kriterium ST-EN4) och besluta om rabattkoder (öppen fråga #7). |
 | Projektledare | Ej beslutat | – | Ska godkänna den reducerade planen och tidplanen (öppen fråga #10). |
 | Representant för utvecklingsteamen | Ej beslutat | – | Ska godkänna ansvar för komponenttest, mockar, miljö och automatiserad regression. |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
