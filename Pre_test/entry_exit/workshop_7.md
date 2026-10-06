@@ -294,6 +294,27 @@ Frågor: Är det tydligt? Är det mätbart? Går det att avgöra om det är uppf
 | X6 | Ja | Ja | Ja | Ja | Ja |
 
 
+## Uppgift 7 Starta eller inte?
+
+
+1. Är Entry Criteria uppfyllda?
+Nej
+
+2. Vilka är inte uppfyllda?
+ST-EN1
+
+
+3. Kan systemtest starta delvi?
+
+4. Vilkar tester bör vänta?
+
+5. Vilken risk finns?
+
+6. Vad kommunicerar ni till projectledaren?
+
+
+
+
 
 
 
