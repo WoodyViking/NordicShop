@@ -24,7 +24,7 @@ Använd följande tabell:
 | Lagersaldo | Must | Måste fungera för att affärsflödet ska kunna fungera. |
 | Order service | Must | Är viktigt för att företaget ska kunna ha kol på kundens beställningar och påverkar hela affärs flödet |
 | Betallning | Must | Måste fungera för att försäljning ska fungera och kostar pengar om det inte fungerar. |
-| Avbeställning | Could | Kund blir påverkad, men kund kan kontakta oss för att ändra manuellt. |
+| Avbeställning | Must | Kund blir påverkad, men kund kan kontakta oss för att ändra manuellt. |
 | Behörighet (kundservice och administratör)| Should | Säkerhetsrelevant, men inte lika hög risk som betallning. |
 | Leverans | Could | Påverkar kundupplevelse men stopar inte som ett betalningsfel. |
 | Orderbekräftelse | Should | Viktigt för förtroende, men kan göras manuellt. |
@@ -52,8 +52,14 @@ Motivera.
 
 # Steg 3 – Regression
 
-Bestäm:
+## Behövs
+- Köpflödet
+- Betalning
+- Order service
+- Avbeställning och återbetalning
+- Inloggning och behörigheter
 
+<<<<<<< HEAD
 - vad som måste regressionstestas
 - vad som kan få reducerad regression
 - vad som eventuellt kan utgå
@@ -61,6 +67,16 @@ Bestäm:
 - Regression av sök och filter.
 - Regression av UI/UX-utseende och layout.
 - Regression i äldre webbläsare och enheter.
+=======
+## Reducerad regression
+- Rabattkod
+- Leverans
+
+## Kan utgå
+- Sökfunktioner
+- UI/UX-utseende och layout
+- Regression i älde webläsare och enheter
+>>>>>>> bbb9bea3c74d38c21ecef6439f86d83c4f7428cc
 
 Motivering: Fel här stoppar inte köp, och kunden kan hitta produkter på andra sätt.
 
@@ -76,7 +92,12 @@ Får någon nivå:
 - reducerad omfattning?
 - ändrad prioritering?
 
-Motivera.
+| Testnivå | Förändring | Motivering |
+| --- | --- | --- |
+| E2E | Hög prioritering | Happy path för kundflödet måste funka och säkerhet |
+| Integrationer |  ||
+| Enhetstest |||
+
 
 ---
 
@@ -84,15 +105,14 @@ Motivera.
 
 Ta ställning till:
 
-- funktionell testning
-- säkerhet
-- prestanda
-- kompatibilitet
-- användbarhet
 
-Vad måste behållas?
-
-Vad kan reduceras?
+## Vad måste behållas?
+Funktionell testning är viktig eftersom happy path måste testas för att se till att produkten fungerar.
+Säkerhet viktigt för att allt som är viktigt kan påverkas om säkerheten falleras.
+## Vad kan reduceras?
+Prestanda är endast viktigt att systemet snurrar och att det inte påverkar säkerheten om det går för dåligt
+Kompatibilitet är viktigt men kan minskas till dem webbläsare/enheter som flesta av användare använder.
+Använbarhet är inte lika viktigt att det finns i produktion.
 
 ---
 
@@ -101,6 +121,9 @@ Vad kan reduceras?
 Identifiera vad som nu aktivt tas bort eller reduceras från testomfattningen.
 
 Det ska vara tydligt dokumenterat.
+Det vi tar bort är UI/UX-utseende som inte är viktigt för systemets funktion.
+Webbläsare som inte är så använda av dem flest användare behöver inte testas.
+Sökfunktioner är inte viktiga systemets funktion och kan göras efter systemet är färdigt.
 
 ---
 
@@ -110,15 +133,10 @@ Identifiera minst **5 risker** som uppstår på grund av den reducerade testomfa
 
 Exempel:
 
-| Reducerad testning | Kvarstående risk |
-| --- | --- |
-|  |  |
-|  |  |
-
 
 | Reducerad testning | Kvarstående risk |
 |---|---|
-| Rabattkoder testas bara med standardfall | En kod kan användas flera gånger eller ge fel belopp, vilket ger ekonomisk förlust. |
+|  Rabattkoder testas inte före release | En kod kan användas flera gånger, ge fel belopp eller fungera trots att den har gått ut. Det ger ekonomisk förlust. Kunder som inte får utlovad rabatt kontaktar kundservice. |
 | Begränsat prestandatest | Plattformen kan bli långsam eller gå ner vid en kampanj med oväntat hög trafik. |
 | Äldre webbläsare och enheter testas inte | Vissa kunder kan inte slutföra köp, vilket ger fler avbrutna köp. |
 | Kortare acceptanstest | Kundservice kan upptäcka problem i sitt arbetsflöde först efter release, vilket ger mer manuellt arbete. |
@@ -135,10 +153,9 @@ Exempel:
 
 Formulera en kort testledarrapport på max **5–7 meningar**.
 
-Den ska beskriva:
-
-- vad som har förändrats
-- vad ni prioriterar
-- vad ni reducerar
-- vilka risker detta innebär
-- eventuell rekommendation
+På grund av minskad testtid har vi reviderat testomfattningen och fokuserar nu på det som är affärskritiskt.
+Vi prioriterar tre E2E-flöden – köpflöde inklusive betalning, avbeställning/återbetalning samt slutsåld produkt och lagersaldo – tillsammans med säkerhet kring inloggning.
+Vi reducerar testning av rabattkoder, leverans (endast standardfall), prestanda, äldre webbläsare/enheter och acceptanstest, medan UI/UX-utseende, sök och fördjupad tillgänglighetstest tas bort.
+De största riskerna är ekonomisk förlust via felaktiga rabattkoder, att plattformen går ner vid hög kampanjtrafik och avbrutna köp i ej testade webbläsare.
+Vi riskerar också att inte uppfylla lagkraven på tillgänglighet.
+Vi rekommenderar förstärkt övervakning och en beredskapsgrupp de första dagarna efter release, möjlighet att snabbt stänga av rabattkoder samt en tydlig rollback-plan.
