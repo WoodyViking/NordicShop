@@ -71,11 +71,11 @@ Ett viktigt förbehåll: i siffrorna räknas Blocked (10) som genomförda (90 + 
 
 **Vilken siffra oroar mest, och varför?**
 
-Det finns 80 tester (40 %) som är okörda. Det är den största mängden, och vi vet ingenting om hur de ser ut. Den som inte är körd kan dölja fler fel, särskilt om de ligger i betalning, order eller refund, där flest produktionsproblem funnits historiskt.
+**Not Run (80)** oroar oss mest. Det finns 80 tester (40 %) som är okörda. Det är den största mängden, och vi vet ingenting om hur de ser ut. Den som inte är körd kan dölja fler fel, särskilt om de ligger i betalning, order eller refund, där flest produktionsproblem funnits historiskt.
 
-Failed (20) tillsammans med Blocked (10). Det är viktigt att veta om dem är kritiska och hur snabbt dem blockerade kan åtgärdas så att testning kan påbörjas på dem.
+Näst mest oroar **Failed (20) tillsammans med Blocked (10)**. Det är viktigt att veta om de är kritiska och hur snabbt de blockerade kan åtgärdas så att testning kan påbörjas på dem.
 
-Passed på 75 % ser acceptabelt ut, men siffran säger lite när 40 % av testerna inte körts och det fins kritiska problem.
+Passed på 75 % ser acceptabelt ut, men siffran säger lite när 40 % av testerna inte körts och det finns kritiska problem.
 
 ---
 

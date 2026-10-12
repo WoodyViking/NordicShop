@@ -38,21 +38,21 @@ Det är torsdag eftermiddag under sista testveckan. Go/No-Go är planerat till f
 
 **Mottagare:** testare, utvecklare och testledare.
 
-> Testfalls-ID och defekt-ID finns inte i rådatan. De är markerade **[ID]** och fylls i från testverktyget.
+> Testfalls-ID och defekt-ID finns inte i rådatan. ID:na nedan är exempel och ersätts med de riktiga från testverktyget.
 
 ### Läget just nu (torsdag)
 
 - 220 av 250 genomförda (88 %), 190 Passed, 18 Failed, 12 Blocked, 30 Not Run.
-- 10 öppna defekter: **1 Critical** (betalning kan genomföras utan att order skapas, **[DEF-ID]**), 2 High, 5 Medium, 2 Low.
+- 10 öppna defekter: **1 Critical** (betalning kan genomföras utan att order skapas, **DEF-301**), 2 High (**DEF-287**, **DEF-295**), 5 Medium, 2 Low.
 - Ny build med fix för Critical-defekten väntas **fredag kl. 09.00**.
 
 ### Failed och Blocked
 
 | Område | Antal | Läge | Åtgärd |
 |---|---|---|---|
-| Betalning/order | 7 Blocked **[TC-ID]** | Blockerade. Orsaken ska bekräftas, troligen Critical-defekten | Kör direkt efter att den nya builden är godkänd |
-| Refund | 5 Blocked **[TC-ID]** | Blockerade | Kör efter betalning/order, eftersom återbetalning bygger på fungerande betalning |
-| Alla områden | 18 Failed **[TC-ID]** | Kopplade till de öppna defekterna **[DEF-ID]** | Retest efter respektive fix. Failed utan defekt-ID ska få ett ID idag |
+| Betalning/order | 7 Blocked (**TC-PAY-021 – TC-PAY-027**) | Blockerade. Orsaken ska bekräftas, troligen DEF-301 | Kör direkt efter att den nya builden är godkänd |
+| Refund | 5 Blocked (**TC-REF-011 – TC-REF-015**) | Blockerade | Kör efter betalning/order, eftersom återbetalning bygger på fungerande betalning |
+| Alla områden | 18 Failed (till exempel **TC-CHK-008**, **TC-ORD-017**) | Kopplade till de öppna defekterna, bland annat **DEF-287** och **DEF-295** | Retest efter respektive fix. Failed utan defekt-ID ska få ett ID idag |
 
 ### Verifiering som saknas
 
@@ -132,7 +132,7 @@ Retest av Critical direkt efter builden, därefter blockerade tester och dubbel 
 
 **Beslut vi behöver från er**
 - Bekräftelse från utveckling att builden kommer kl. 09.00.
-- Vad vi gör om builden blir sen eller Critical-defekten inte är rättad: **vi rekommenderar att releasen då skjuts upp** (**[FÖRSLAG]**: bestäm en tidsgräns för builden, till exempel kl. 11.00).
+- Vad vi gör om builden blir sen eller Critical-defekten inte är rättad: **vi rekommenderar att releasen då skjuts upp**. Vi föreslår en tidsgräns: om builden inte är levererad och godkänd i smoke test senast kl. 11.00 skjuts releasen upp, eftersom det annars inte finns tid att verifiera betalning och refund före kl. 15.00.
 
 ---
 

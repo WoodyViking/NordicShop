@@ -78,11 +78,13 @@ Projektledaren frågar: *"Hur ser kvaliteten ut och är vi redo för release?"*
 | **Reopen Rate** | 7 / 48 × 100 | **14,6 %** |
 | **Defect Leakage (föregående release)** | 8 / (72 + 8) × 100 = 8 / 80 × 100 | **10 %** |
 
+**Förbehåll:** de 220 genomförda innehåller även de 12 blockerade testerna (190 + 18 + 12 = 220). Ett blockerat test har inte körts klart, så i praktiken har 208 tester gett ett resultat, vilket är 83,2 % av alla 250. Räknat på dem är Pass Rate 190 / 208 = 91,3 %.
+
 ---
 
 ## Uppgift 2 – Analysera Defect Trend
 
-| Dag | Nya | Stängda | nya − stängda) |
+| Dag | Nya | Stängda | Netto (nya − stängda) |
 |---|---|---|---|
 | Mån | 12 | 5 | +7 |
 | Tis | 9 | 7 | +2 |
