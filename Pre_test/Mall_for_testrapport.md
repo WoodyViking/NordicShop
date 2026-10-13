@@ -4,11 +4,11 @@
 
 | **Projekt / system** | \<Namn> |
 | --- | --- |
-| **Release / version** | \<Version> |
-| **Testperiod** | \<Datum - datum> |
-| **Dokumentägare** | \<Namn / roll> |
-| **Datum** | \<Datum> |
-| **Status** | \<Utkast / Slutlig> |
+| **Release / version** | 4.0 |
+| **Testperiod** | 2026-10-13-??? |
+| **Dokumentägare** | Testledare & Grupp2 |
+| **Datum** | 2026-10-13 |
+| **Status** | Slutlig testrapport |
 
 *Använd mallen för att sammanfatta genomfört testarbete, resultat, avvikelser och kvarstående risker. Ersätt text inom \<hakparenteser> och anpassa omfattningen efter projektets behov.*
 
@@ -103,12 +103,12 @@ Testningen omfattade 250 planerade tester inom områdena login, kundvagn, checko
 
 | **Risk** | **Konsekvens** | **Åtgärd** | **Status** |
 | --- | --- | --- | --- |
-| Payment Provider SYS otillgänglig | **Inträffade.** Betalningstester försenades en dag. |  |  |
-| Resursbortfall (sjukdom) | **Inträffade.** Lågprioriterade tester omplanerades. |  |  |
-| Saknad testdata för refund | **Inträffade.** 8 tester blockerades. | Manuell workaround |  |
-| Tidsbrist för full regression | **Inträffade.** 95 % genomfördes med riskbaserad prioritering. | Riskbaserad prioritering |  |
-| SYS skiljer sig från Payment Providers produktionsmiljö | **Kvarstår.** Fel kan visa sig först i produktion. |  |  |
-| Belastningsproblem | **Kvarstår.** Inget fullständigt belastningstest. |  |  |
+| Payment Provider SYS otillgänglig | Betalningstester försenades en dag. |  | **Inträffade.** |
+| Resursbortfall (sjukdom) |  Lågprioriterade tester omplanerades. |  | **Inträffade.** |
+| Saknad testdata för refund |  8 tester blockerades. | Manuell workaround | **Inträffade.** |
+| Tidsbrist för full regression | 95 % genomfördes med riskbaserad prioritering. | Riskbaserad prioritering | **Inträffade.** |
+| SYS skiljer sig från Payment Providers produktionsmiljö | Fel kan visa sig först i produktion. |  | **Kvarstår.** |
+| Belastningsproblem |  Inget fullständigt belastningstest. |  | **Kvarstår.** |
 
 # 8. Kvarstående risk
 
@@ -173,13 +173,12 @@ Kvaliteten är alltså god nog för release om riskerna hanteras, men inte riskf
 6. **Efter release:** belastningstest och resterande 5 % av regressionen körs, och de fyra High-defekterna rättas i nästa release.
 
 
-
-
 # 11. Godkännande / mottagare
 
 *Dokumentera vid behov vilka roller som har tagit del av eller godkänt testrapporten.*
 
 | **Roll** | **Namn** | **Datum** | **Kommentar** |
 | --- | --- | --- | --- |
-| \<...> | \<...> | \<...> | \<...> |
-| \<...> | \<...> | \<...> | \<...> |
+| PO | Nisse | \<...> | \<...> |
+| Testledare | Bella | 2025/10/13 | ... |
+| Konverterare utav dokument | Claude | 2026/10/13 | 001 |
