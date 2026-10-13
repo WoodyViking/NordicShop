@@ -45,9 +45,18 @@ Testningen omfattade 250 planerade tester inom områdena login, kundvagn, checko
 
 | **Testområde** | **Planerat** | **Genomfört** | **Status / kommentar** |
 | --- | --- | --- | --- |
-| \<...> | \<...> | \<...> | \<...> |
-| \<...> | \<...> | \<...> | \<...> |
-| \<...> | \<...> | \<...> | \<...> |
+| Login | | |  |
+| Kundvagn | | |  |
+| Checkout |  |  |  |
+| betalning |  |  |  |
+| order |  |  |  |
+| lager | |  |  |
+| leverans | |  |  |
+| refund |  |  |  |
+| behörigheter |  |  |  |
+| kritiska E2E-flöden | |  |  |
+| regression | |  |  |
+| UAT |  |  |  |
 
 # 4. Resultat
 
@@ -55,9 +64,16 @@ Testningen omfattade 250 planerade tester inom områdena login, kundvagn, checko
 
 | **Mätetal** | **Resultat** | **Kommentar** |
 | --- | --- | --- |
-| \<...> | \<...> | \<...> |
-| \<...> | \<...> | \<...> |
-| \<...> | \<...> | \<...> |
+| Planerade tester |	250 |	Fullständig testplan |
+| Executed |	240 |	96 % av planerade tester genomfördes |
+| Passed	| 225 |	93,75 % av executed tester passerade |
+| Failed |	7 |	2,9 % av executed tester misslyckades |
+| Blocked |	8 |	3,3 % av executed tester blockerades |
+| Not Run |	10 |	4 % av planerade tester kördes inte |
+| P1-tester |	100 % |	Samtliga genomförda |
+| Kritiska E2E-flöden |	3/3 |	Efter genomförda rättningar |
+| Regression |	95 % |	Riskbaserad prioritering |
+| UAT |	Godkänd |	Verksamheten accepterar kvarstående risker |
 
 # 5. Defekter
 
@@ -87,9 +103,12 @@ Testningen omfattade 250 planerade tester inom områdena login, kundvagn, checko
 
 | **Risk** | **Konsekvens** | **Åtgärd** | **Status** |
 | --- | --- | --- | --- |
-| \<...> | \<...> | \<...> | \<...> |
-| \<...> | \<...> | \<...> | \<...> |
-| \<...> | \<...> | \<...> | \<...> |
+| Payment Provider SYS otillgänglig | **Inträffade.** Betalningstester försenades en dag. |  |  |
+| Resursbortfall (sjukdom) | **Inträffade.** Lågprioriterade tester omplanerades. |  |  |
+| Saknad testdata för refund | **Inträffade.** 8 tester blockerades. |  |  |
+| Tidsbrist för full regression | **Inträffade.** 95 % genomfördes med riskbaserad prioritering. |  |  |
+| SYS skiljer sig från Payment Providers produktionsmiljö | **Kvarstår.** Fel kan visa sig först i produktion. |  |  |
+| Belastningsproblem | **Kvarstår.** Inget fullständigt belastningstest. |  |  |
 
 # 8. Kvarstående risk
 
