@@ -2,7 +2,7 @@
 
 *Mall för sammanställning och avslut av testarbete*
 
-| **Projekt / system** | \<Namn> |
+| **Projekt / system** | NordicShop |
 | --- | --- |
 | **Release / version** | 4.0 |
 | **Testperiod** | 2026-10-13-??? |
