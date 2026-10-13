@@ -75,10 +75,11 @@ Testningen omfattade 250 planerade tester inom områdena login, kundvagn, checko
 *Beskriv betydande avvikelser från testplanen, exempelvis ändrat scope, försenad miljö, saknad testdata, resursförändringar eller reducerad regression.*
 
 | **Avvikelse** | **Påverkan på testningen** | **Åtgärd / hantering** |
-| --- | --- | --- |
-| \<...> | \<...> | \<...> |
-| \<...> | \<...> | \<...> |
-| \<...> | \<...> | \<...> |
+|---|---|---|
+| Payment Provider SYS var otillgänglig en dag | Betalningstester försenades. Mindre tid för betalning och retest, vilket är ett högriskområde |  |
+| En testare var sjuk i tre dagar | Vissa lågprioriterade tester omplanerades. Troligen en del av de 10 ej körda testerna |  |
+| Testdata saknades för vissa refundscenarier | 8 tester blockerades. Refund är inte fullt verifierad |  |
+| Full regression kunde inte genomföras | 95 % genomfördes med riskbaserad prioritering. 5 % ej körd, vilket är en kvarstående risk |  |
 
 # 7. Risker
 
