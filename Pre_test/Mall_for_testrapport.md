@@ -116,17 +116,12 @@ Testningen omfattade 250 planerade tester inom områdena login, kundvagn, checko
 
 | **Kvarstående risk** | **Konsekvens** | **Risknivå** | **Riskägare / accepterad av** |
 | --- | --- | --- | --- |
-| # | Risk | Orsak | Konsekvens | Risknivå | Åtgärd |
-|---|---|---|---|---|---|
-| 1 | **Refundscenarier inte fullt verifierade** (8 blockerade tester) | Saknad testdata | Fel eller utebliven återbetalning till kund, tillsammans med den kända High-defekten | **Hög** | Skaffa testdata och kör testerna om möjligt före release, manuell refundprocess och daglig avstämning, övervakning |
-| 2 | **Fyra High-defekter är öppna** | Hann inte rättas | Fel i refund och andra funktioner. Hanteras med workarounds | **Medel** | Dokumenterade workarounds, supportinstruktion, rättning i nästa release |
-| 3 | **Fullständigt belastningstest genomfördes inte** | Utanför scope | Långsamt eller nere vid hög trafik | **Medel** (Hög om hög trafik väntas) | Övervakning av belastning de första dagarna, möjlighet att skala upp, belastningstest efter release |
-| 4 | **SYS skiljer sig från Payment Providers produktionsmiljö** | Testmiljön är inte identisk | Betalningsfel som bara syns i produktion | **Medel** | Smoke test med betalning direkt efter driftsättning, monitorering, rollback |
-| 5 | **5 % av regressionen ej körd** | Tidsbrist, riskbaserat urval | Fel i ej testade oförändrade områden | **Låg** | Prioriterade områden är körda, körs efter release om tid finns |
+| **Refundscenarier inte fullt verifierade** (8 blockerade tester) | Saknad testdata. Fel eller utebliven återbetalning till kund, tillsammans med den kända High-defekten | **Hög** |  |
+| **Fyra High-defekter är öppna** | Hann inte rättas. Fel i refund och andra funktioner. Hanteras med workarounds | **Medel** | |
+| **Fullständigt belastningstest genomfördes inte** | Utanför scope. Långsamt eller nere vid hög trafik | **Medel** (Hög om hög trafik väntas) | |
+| **SYS skiljer sig från Payment Providers produktionsmiljö** | Testmiljön är inte identisk. Betalningsfel som bara syns i produktion | **Medel** | |
+| **5 % av regressionen ej körd** | Tidsbrist, riskbaserat urval. Fel i ej testade oförändrade områden | **Låg** | |
 
-| \<...> | \<...> | \<...> | \<...> |
-| \<...> | \<...> | \<...> | \<...> |
-| \<...> | \<...> | \<...> | \<...> |
 
 
 
