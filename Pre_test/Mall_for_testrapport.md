@@ -5,7 +5,7 @@
 | **Projekt / system** | NordicShop |
 | --- | --- |
 | **Release / version** | 4.0 |
-| **Testperiod** | 2026-10-13-??? |
+| **Testperiod** | 2026-10-13 - +15veckor |
 | **Dokumentägare** | Testledare & Grupp2 |
 | **Datum** | 2026-10-13 |
 | **Status** | Slutlig testrapport |
