@@ -34,7 +34,7 @@ Testningen omfattade 250 planerade tester inom områdena login, kundvagn, checko
 | lager | Funktionalitet/systemtest |  |  |
 | leverans | Funktionalitet/systemtest |  |  |
 | refund | Funktionalitet/systemtest |  |  |
-| behörigheter | Funktionalitet/systemtest |  |  |
+| behörigheter | Funktionalitet/säkerhet |  |  |
 | kritiska E2E-flöden | E2E |  |  |
 | regression | regresion |  |  |
 | UAT | Acceptanstest |  |  |
