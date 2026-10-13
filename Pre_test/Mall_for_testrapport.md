@@ -18,15 +18,27 @@
 
 \<Sammanfattning>
 
+Testningen omfattade 250 planerade tester inom områdena login, kundvagn, checkout, betalning, order, lager, leverans, refund, behörigheter, kritiska E2E-flöden, regression samt UAT. Av dessa genomfördes 240 tester, varav 225 passerade, 7 misslyckades och 8 blockerades. Samtliga P1-tester genomfördes och de tre kritiska E2E-flödena passerade efter rättningar. Två Critical-defekter identifierades – betalning utan order samt dubbel debitering – och båda är rättade, retestade och verifierade. Fyra High-defekter kvarstår, varav den viktigaste gäller ett ovanligt refundscenario med manuell workaround som verksamheten accepterat. Regression genomfördes till 95 % med riskbaserad prioritering. UAT är godkänd och verksamheten accepterar de dokumenterade kvarstående riskerna. Technical Readiness är uppfylld med produktionsbuild, deploymentplan, verifierad rollback, aktiv monitoring och supportberedskap. Sammantaget bedöms Release 4.0 ha god kvalitet med hanterbara kvarstående risker.
+
 # 2. Scope
 
 *Beskriv vad som ingick i testarbetet och eventuella avgränsningar. Koppla gärna till kritiska affärsflöden, testnivåer och testtyper.*
 
 | **Område / flöde** | **Testnivå / testtyp** | **Prioritet** | **Kommentar** |
 | --- | --- | --- | --- |
-| \<...> | \<...> | \<...> | \<...> |
-| \<...> | \<...> | \<...> | \<...> |
-| \<...> | \<...> | \<...> | \<...> |
+| Login | Funktionalitet | Hög |  |
+| Kundvagn | Funktionalitet | Hög |  |
+| Checkout | Funktionalitet |  |  |
+| betalning | Funktionalitet |  |  |
+| order | Funktionalitet |  |  |
+| lager | Funktionalitet |  |  |
+| leverans | Funktionalitet |  |  |
+| refund | Funktionalitet |  |  |
+| behörigheter | Funktionalitet |  |  |
+| kritiska E2E-flöden
+ | E2E |  |  |
+| regression | regresion |  |  |
+| UAT | Acceptanstest |  |  |
 
 # 3. Genomförda tester
 
