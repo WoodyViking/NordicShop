@@ -92,10 +92,10 @@ Testningen omfattade 250 planerade tester inom områdena login, kundvagn, checko
 
 | **Avvikelse** | **Påverkan på testningen** | **Åtgärd / hantering** |
 |---|---|---|
-| Payment Provider SYS var otillgänglig en dag | Betalningstester försenades. Mindre tid för betalning och retest, vilket är ett högriskområde |  |
-| En testare var sjuk i tre dagar | Vissa lågprioriterade tester omplanerades. Troligen en del av de 10 ej körda testerna |  |
-| Testdata saknades för vissa refundscenarier | 8 tester blockerades. Refund är inte fullt verifierad |  |
-| Full regression kunde inte genomföras | 95 % genomfördes med riskbaserad prioritering. 5 % ej körd, vilket är en kvarstående risk |  |
+| Payment Provider SYS var otillgänglig en dag | Betalningstester försenades. Mindre tid för betalning och retest, vilket är ett högriskområde | Tester omplanerades och genomfördes senare |
+| En testare var sjuk i tre dagar | Vissa lågprioriterade tester omplanerades. Troligen en del av de 10 ej körda testerna | Resurser omfördelades, lågprioriterade tester sköts upp |
+| Testdata saknades för vissa refundscenarier | 8 tester blockerades. Refund är inte fullt verifierad | Manuell workaround dokumenterades, verksamheten accepterade |
+| Full regression kunde inte genomföras | 95 % genomfördes med riskbaserad prioritering. 5 % ej körd, vilket är en kvarstående risk | Riskbaserad prioritering tillämpades |
 
 # 7. Risker
 
@@ -105,8 +105,8 @@ Testningen omfattade 250 planerade tester inom områdena login, kundvagn, checko
 | --- | --- | --- | --- |
 | Payment Provider SYS otillgänglig | **Inträffade.** Betalningstester försenades en dag. |  |  |
 | Resursbortfall (sjukdom) | **Inträffade.** Lågprioriterade tester omplanerades. |  |  |
-| Saknad testdata för refund | **Inträffade.** 8 tester blockerades. |  |  |
-| Tidsbrist för full regression | **Inträffade.** 95 % genomfördes med riskbaserad prioritering. |  |  |
+| Saknad testdata för refund | **Inträffade.** 8 tester blockerades. | Manuell workaround |  |
+| Tidsbrist för full regression | **Inträffade.** 95 % genomfördes med riskbaserad prioritering. | Riskbaserad prioritering |  |
 | SYS skiljer sig från Payment Providers produktionsmiljö | **Kvarstår.** Fel kan visa sig först i produktion. |  |  |
 | Belastningsproblem | **Kvarstår.** Inget fullständigt belastningstest. |  |  |
 
@@ -116,9 +116,19 @@ Testningen omfattade 250 planerade tester inom områdena login, kundvagn, checko
 
 | **Kvarstående risk** | **Konsekvens** | **Risknivå** | **Riskägare / accepterad av** |
 | --- | --- | --- | --- |
+| # | Risk | Orsak | Konsekvens | Risknivå | Åtgärd |
+|---|---|---|---|---|---|
+| 1 | **Refundscenarier inte fullt verifierade** (8 blockerade tester) | Saknad testdata | Fel eller utebliven återbetalning till kund, tillsammans med den kända High-defekten | **Hög** | Skaffa testdata och kör testerna om möjligt före release, manuell refundprocess och daglig avstämning, övervakning |
+| 2 | **Fyra High-defekter är öppna** | Hann inte rättas | Fel i refund och andra funktioner. Hanteras med workarounds | **Medel** | Dokumenterade workarounds, supportinstruktion, rättning i nästa release |
+| 3 | **Fullständigt belastningstest genomfördes inte** | Utanför scope | Långsamt eller nere vid hög trafik | **Medel** (Hög om hög trafik väntas) | Övervakning av belastning de första dagarna, möjlighet att skala upp, belastningstest efter release |
+| 4 | **SYS skiljer sig från Payment Providers produktionsmiljö** | Testmiljön är inte identisk | Betalningsfel som bara syns i produktion | **Medel** | Smoke test med betalning direkt efter driftsättning, monitorering, rollback |
+| 5 | **5 % av regressionen ej körd** | Tidsbrist, riskbaserat urval | Fel i ej testade oförändrade områden | **Låg** | Prioriterade områden är körda, körs efter release om tid finns |
+
 | \<...> | \<...> | \<...> | \<...> |
 | \<...> | \<...> | \<...> | \<...> |
 | \<...> | \<...> | \<...> | \<...> |
+
+
 
 # 9. Slutsats
 
