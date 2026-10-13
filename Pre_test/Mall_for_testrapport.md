@@ -64,10 +64,11 @@ Testningen omfattade 250 planerade tester inom områdena login, kundvagn, checko
 *Sammanfatta identifierade och kvarstående defekter. Fokusera på allvarlighetsgrad, påverkan och status - inte enbart antal.*
 
 | **Severity** | **Totalt** | **Öppna** | **Kommentar / påverkan** |
-| --- | --- | --- | --- |
-| \<...> | \<...> | \<...> | \<...> |
-| \<...> | \<...> | \<...> | \<...> |
-| \<...> | \<...> | \<...> | \<...> |
+| --- | --- | --- |--- |
+| Critical | 2 | 0 |  |
+| High | 9 | 4 |  |
+| Medium | 17 | 6 |  |
+| Low | 12 | 7 |  |
 
 # 6. Avvikelser från plan
 
