@@ -130,6 +130,11 @@ Testningen omfattade 250 planerade tester inom områdena login, kundvagn, checko
 *Sammanfatta vad testningen visar om lösningens kvalitet och testmålen. Beskriv om Exit Criteria uppnåddes och vilka begränsningar som finns.*
 
 \<Slutsats>
+Testningen visar att NordicShop Release 4.0 är stabil i de kritiska flödena. Alla P1-tester och alla tre kritiska E2E-flöden är godkända, båda Critical-defekterna är åtgärdade och verifierade, och UAT är godkänd. Tekniskt är releasen redo, med verifierad rollback, aktiv monitorering och supportberedskap.
+
+Kvarstående risk är koncentrerad till refund (blockerade tester och en känd High-defekt) och till det som inte testats (belastning och 5 % av regressionen). Dessutom skiljer sig SYS något från Payment Providers produktionsmiljö, så betalningsfel kan visa sig först i produktion. De riskerna är kända, dokumenterade och accepterade av verksamheten, men refund är det område som bör följas noggrant.
+
+Kvaliteten är alltså god nog för release om riskerna hanteras, men inte riskfri.
 
 # 10. Rekommendation
 
@@ -137,9 +142,38 @@ Testningen omfattade 250 planerade tester inom områdena login, kundvagn, checko
 
 | **Rekommendation** | \<GO / CONDITIONAL GO / NO-GO / annan> |
 | --- | --- |
-| **Motivering** | \<Kort motivering utifrån risk> |
-| **Villkor / åtgärder** | \<Eventuella villkor eller uppföljning> |
-| **Ansvar / uppföljning** | \<Roll / datum> |
+| **Motivering** | Testningen visar god kvalitet med hög pass rate och samtliga kritiska flöden verifierade. Fyra High-defekter kvarstår dock, varav en påverkar refundscenarier. Verksamheten har accepterat riskerna och manuell workaround finns. Fullständig regression och belastningstest saknas. |
+| **Villkor / åtgärder** | 1. **Refund:** de 8 blockerade refundtesterna körs före release när testdata finns. Om det inte hinns ska den manuella refundprocessen och daglig avstämning vara på plats.
+2. **Monitorering:** larm för betalning utan order, misslyckade återbetalningar och hög belastning är aktiva, med namngiven ägare de första dagarna.
+3. **Support:** kundservice är instruerad om workarounds för de fyra High-defekterna och om den manuella refundprocessen.
+4. **Smoke test i produktion:** körs direkt efter driftsättning, inklusive en betalning, eftersom SYS skiljer sig från Payment Providers produktionsmiljö.
+5. **Rollback:** den verifierade planen är redo, med ett tydligt utlösningskriterium och en ansvarig beslutsfattare.
+6. **Efter release:** belastningstest och resterande 5 % av regressionen körs, och de fyra High-defekterna rättas i nästa release. |
+| **Ansvar / uppföljning** | Testledare / datum> |
+
+# 🟡 CONDITIONAL GO
+
+**Motivering**
+
+| Steg | Bedömning |
+|---|---|
+| **Resultat** | 96 % genomfört, 93,8 % Passed, alla P1-tester och kritiska E2E-flöden Passed, regression 95 %. |
+| **Defekter** | 0 Critical, 4 High med workarounds, och Critical-felen i betalning och debitering är rättade och retestade. |
+| **Kvarstående risk** | Refund är inte fullt verifierad (Hög), samt belastning, SYS-skillnader och High-defekter (Medel). Alla är dokumenterade och accepterade av verksamheten. |
+| **Varför inte GO** | Refund är ett område som rör kundens pengar och är inte fullt verifierat, och belastning är inte testad. En ren GO vore för säkert. |
+| **Varför inte NO-GO** | Inga Critical är öppna, de kritiska flödena fungerar, UAT är godkänd, tekniken är redo och riskerna har workarounds och är accepterade. Att stoppa skulle kosta mer än den kvarstående risken motiverar. |
+
+**Villkor**
+
+1. **Refund:** de 8 blockerade refundtesterna körs före release när testdata finns. Om det inte hinns ska den manuella refundprocessen och daglig avstämning vara på plats.
+2. **Monitorering:** larm för betalning utan order, misslyckade återbetalningar och hög belastning är aktiva, med namngiven ägare de första dagarna.
+3. **Support:** kundservice är instruerad om workarounds för de fyra High-defekterna och om den manuella refundprocessen.
+4. **Smoke test i produktion:** körs direkt efter driftsättning, inklusive en betalning, eftersom SYS skiljer sig från Payment Providers produktionsmiljö.
+5. **Rollback:** den verifierade planen är redo, med ett tydligt utlösningskriterium och en ansvarig beslutsfattare.
+6. **Efter release:** belastningstest och resterande 5 % av regressionen körs, och de fyra High-defekterna rättas i nästa release.
+
+
+
 
 # 11. Godkännande / mottagare
 
