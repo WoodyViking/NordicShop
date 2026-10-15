@@ -1,15 +1,15 @@
 # MALL FÖR TESTPLAN
 
-**\<Företagsnamn>**  
-\<Projektnamn>  
-Testplan för \<system/release/version>  
-**Version \<x.y>**
+**\<NordicFlow>**  
+\<MortgageFlow>  
+Testplan för \<bolånesystem/1/0.1>  
+**Version \<0.1>**
 
 ## Dokumenthistorik
 
 | **Version** | **Datum** | **Författare** | **Kommentar** |
 | --- | --- | --- | --- |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
+| \<0.1> | \<2026-10-15> | \<Grupp 2> | \<Dag 1 av MortgageFlow testplanering> |
 | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
 | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
 | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
