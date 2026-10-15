@@ -1,9 +1,9 @@
 # MALL FÖR TESTSTRATEGI
 
-**\<Företagsnamn>**  
-\<Projektnamn>  
-Teststrategi för \<namn på systemet eller motsvarande>  
-**Version \<x.y>**
+**\<NordFinance>**  
+\<MortgageFlow>  
+Teststrategi för \<MortgageFlow>  
+**Version \<0.1>**
 
 *[Text inom klamrar är exempel och vägledning till författaren. Ta bort vägledningstext innan dokumentet publiceras.]*
 
