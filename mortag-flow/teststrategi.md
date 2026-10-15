@@ -257,14 +257,14 @@ MortgageFlow testas på sex nivåer. Varje nivå har ett eget fokus så att vi u
 
 | **Testnivå** | **Utförs av** | **Miljö** | **Fokus** |
 | --- | --- | --- | --- |
-| Komponenttest | Utvecklare i de tre utvecklingsteamen | DEV | Logik och regler i en komponent |
+| Ehhettest | Utvecklare i de tre utvecklingsteamen | DEV | Logik och regler i en komponent |
 | SIT | Testare A + utvecklare | SYS | Att MortgageFlow och beroende system fungerar tillsammans |
 | Systemtest | Testare B (funktion), Testare D (behörighet), Testare A (API, prestanda), säkerhetsspecialist | SYS | Att hela systemet uppfyller funktionella och icke-funktionella krav |
 | E2E | Testare B och C | SYS | Hela affärsflöden från ny ansökan till beslut |
 | Acceptanstest | Verksamhetsrepresentanter med stöd av Testare C | ACC | Att systemet stödjer handläggarnas arbete |
 | Regression och omtest | Testare D med stöd av övriga | SYS | Att rättningar fungerar och inget annat har gått sönder |
 
-## 2.1  Komponenttest
+## 2.1  Enhettest
 
 **Utförs av:** Utvecklare i de tre utvecklingsteamen.
 
