@@ -1,18 +1,17 @@
 # MALL FÖR TESTPLAN
 
-**\<NordicFlow>**  
-\<MortgageFlow>  
-Testplan för \<bolånesystem/1/0.1>  
-**Version \<0.1>**
+**NordFinance**  
+Projekt MortgageFlow  
+Testplan för MortgageFlow – nytt bolånesystem, release 1.0  
+**Version 1.0**
 
 ## Dokumenthistorik
 
 | **Version** | **Datum** | **Författare** | **Kommentar** |
 | --- | --- | --- | --- |
-| \<0.1> | \<2026-10-15> | \<Grupp 2> | \<Dag 1 av MortgageFlow testplanering> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
+| 0.1 | 2026-10-15 | Grupp 2 | Dag 1 av MortgageFlow testplanering. Utkast utifrån mallen. |
+| 1.0 | 2026-10-16 | Grupp 2 | Första kompletta version (Del 2). Bygger på teststrategi version 1.0. |
+|  |  |  |  |
 
 *Använd mallen som ett styrande dokument för ett specifikt testuppdrag, en release eller en testperiod. Ersätt all text inom \<hakparenteser> och anpassa avsnitten efter projektets behov.*
 
@@ -53,15 +52,15 @@ Testplan för \<bolånesystem/1/0.1>
 
 # 1  Unik identifiering
 
-*Ange ett unikt ID för testplanen, exempelvis projekt-/systemprefix + löpnummer eller versions-ID.*
-
-\<Beskriv här>
+**TP-MF-1.0** – Testplan för MortgageFlow, release 1.0 (första produktionssättning).
+ 
+Identifieraren följer formen *TP (testplan) – MF (MortgageFlow) – versionsnummer*.
 
 # 2  Inledning
 
 *Beskriv sammanhanget för testplanen och vad dokumentet ska styra.*
 
-\<Beskriv här>
+\<Testplanen styr testarbetet inför första produktionssättningen av MortgageFlow, från testanalys i vecka 1 till Go/No-Go i vecka 12. Den kompletterar teststrategin (version 1.0) genom att ange vad som testas, hur, när, av vem och under vilka förutsättningar. Strategin beskriver hur MortgageFlow normalt testas. Denna plan beskriver det konkreta upplägget för release 1.0 och eventuella avsteg från strategin (se avsnitt 6).>
 
 ## 2.1  Kortfattad beskrivning
 
