@@ -1,4 +1,4 @@
-# MALL FÖR TESTPLAN
+# TESTPLAN
 
 **NordFinance**  
 Projekt MortgageFlow  
@@ -501,13 +501,17 @@ Tidplanen anges i projektveckor (vecka 1–12 räknat från projektets start).
 
 | **Risk** | **Konsekvens / kommentar** | **Åtgärd** | **Ägare** | **Prioritet** |
 | --- | --- | --- | --- | --- |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
+| P1: Kreditupplysningstjänsten saknar testmiljö eller är instabil | SIT och E2E kan inte köras med verkliga svar. Risk för fel som upptäcks först i produktion. | Använd stub, verifiera mot verklig tjänst före SIT-avslut. Ta upp med leverantörsrepresentanten vecka 2. | Testare A / PO | Hög |
+| P2: Öppna frågor om affärsregler (gränsvärden, riskklass) besvaras för sent | Testfall och förväntade resultat kan bli fel, omarbete. | Frågor besvaras senast vecka 1–2. Annars dokumenterade antaganden som PO godkänner. | PO | Hög |
+| P3: SYS delas av många och är instabil eller blockerad av deployments | Förseningar, blockerade testfall. | Gemensam deploymentplan, smoke test efter varje deployment, dagliga avstämningar med DevOps. | DevOps / testledare | Hög |
+| P4: Sen leverans eller många fel i leveranserna | Kort tid för testning, mer regression, risk för No-Go. | Tidig SIT, daglig triage, riskbaserad prioritering, tidiga varningar till projektledare. | Testledare / projektledare | Hög |
+| P5: Testdata saknas eller är inkonsekvent mellan beroende system | E2E-flöden fungerar inte, testning blockeras. | Testare C tar fram testdata vecka 3 med samma testperson i alla system. SQL-skript för återställning. | Testare C | Hög |
+| P6: Verksamhetsrepresentanter har inte tid för UAT | UAT försenas eller blir ofullständigt. | Boka tidigt, definiera scenarier vecka 6, eskalera till PO. | PO | Medel |
+| P7: Prestandatest kan inte göras representativt i SYS | Prestandakrav kan inte verifieras fullt ut. | Definiera normal belastning, överväg testkörning i ACC eller särskild miljö, redovisa som kvarstående risk. | DevOps / Testare A | Medel |
+| P8: Nyckelperson är sjuk eller otillgänglig | Förseningar. Specialistkunskap saknas. | Backup-ansvar mellan testare, dokumenterade testfall, korsutbildning. | Testledare | Medel |
+| P9: Verkliga persondata används av misstag i testmiljö | GDPR-incident. | Endast syntetisk data, kontroll av SQL-skript, stopp enligt 8.1. | Projektledare / testledare | Hög |
+| P10: Ändrade krav eller ny scope under testperioden | Testfall och plan blir inaktuella. | Ändringshantering via PO, konsekvensanalys, uppdaterad plan med ny version. | Testledare / PO | Medel |
+| P11: Automation hinner inte bli klar | Regression blir manuell och långsam. | Automatisera endast P1 först (inloggning, kreditregler, behörighet). | Testare D | Medel |
 
 # 16  Godkännande av testplanen
 
@@ -515,7 +519,12 @@ Tidplanen anges i projektveckor (vecka 1–12 räknat från projektets start).
 
 | **Namn / roll** | **Beslut** | **Datum** | **Kommentar** |
 | --- | --- | --- | --- |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
+| Testledare | Ej godkänd (väntar) |  | Författare av planen. |
+| Product Owner | Ej godkänd (väntar) |  | Godkänner omfattning, prioritering och slutkriterier. |
+| Projektledare | Ej godkänd (väntar) |  | Godkänner tidplan och resurser. |
+| Verksamhetsrepresentant | Ej godkänd (väntar) |  | Godkänner UAT-upplägg. |
+| Säkerhetsspecialist | Ej godkänd (väntar) |  | Godkänner säkerhetstestets omfattning. |
+
+
+
+
