@@ -1,4 +1,4 @@
-# MALL FÖR TESTPLAN
+# TESTPLAN
 
 **NordFinance**  
 Projekt MortgageFlow  
