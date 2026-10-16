@@ -66,19 +66,34 @@ Identifieraren följer formen *TP (testplan) – MF (MortgageFlow) – versionsn
 
 *Sammanfatta vilken testinsats planen avser, vilken release/version som testas, målgrupp samt vem som ansvarar för dokumentet.*
 
-\<Beskriv här>
+\<Planen avser all testning av MortgageFlow release 1.0 på nivåerna SIT, systemtest, E2E, acceptanstest samt regression och omtest. Komponenttest utförs av utvecklingsteamen i DEV och ingår inte i planens genomförande, men dess resultat är en förutsättning för teststart (se 7.1).
+ 
+Målgrupp: testteamet, Product Owner (PO), projektledare, de tre utvecklingsteamen, verksamhetsrepresentanter, säkerhetsspecialist, DevOps och representanten från kreditupplysningstjänsten.
+ 
+Dokumentansvarig är testledaren. Planen skrivs av Grupp 2.>
 
 ## 2.2  Bakgrund
 
 *Beskriv projektets eller förändringens bakgrund, verksamhetsbehovet och varför testningen genomförs.*
 
-\<Beskriv här>
+\<NordFinance lanserar det nya interna bolånesystemet MortgageFlow. Bolånehandläggare, senior handläggare och administratörer ska använda det för att ta emot bolåneansökningar, kontrollera kunduppgifter, genomföra kreditbedömningar, hantera dokument, godkänna eller avslå bolån och kommunicera beslut till kunden.
+ 
+Systemet är verksamhetskritiskt. Fel kan leda till ekonomiska förluster, felaktiga kreditbedömningar, säkerhetsproblem, GDPR-incidenter och kundmissnöje. Projektet har 12 veckor kvar till produktionssättning, och testteamet har fått uppdraget att planera, leda, följa upp och avsluta testarbetet. Testningen genomförs för att ge projektet och verksamheten ett tillförlitligt underlag för beslutet om Go/No-Go.>
 
 ## 2.3  Syfte och mål
 
 *Beskriv vad testerna ska verifiera och vilka konkreta mål som ska vara uppnådda efter avslutad testperiod.*
 
-\<Beskriv här>
+\<**Syfte:** Verifiera att MortgageFlow uppfyller de funktionella och icke-funktionella kraven och att systemet tillsammans med sina beroende system är säkert nog att produktionssättas, samt redovisa kvarstående risker på ett sätt som gör det möjligt att fatta ett välgrundat Go/No-Go-beslut.
+ 
+**Mål vid avslutad testperiod:**
+ 
+- Alla kritiska affärsflöden (E2E-1 till E2E-5, se avsnitt 4) är testade.
+- Alla högriskområden (R1–R6 i teststrategin) är testade och inga kritiska eller blockerande fel är öppna.
+- Alla integrationer mot kreditupplysningstjänst, kund-/personregister, e-posttjänst, MFA/autentisering och dokumentlagring är verifierade, inklusive felfall och timeout.
+- Verksamheten har genomfört och dokumenterat acceptanstest i ACC.
+- Regression och omtest är genomförda efter sista leveransen.
+- Kvarstående risker är dokumenterade och har en rekommendation (Go, Conditional Go eller No-Go) till PO och projektledare.>
 
 ## 2.4  Termer och förkortningar
 
@@ -86,10 +101,32 @@ Identifieraren följer formen *TP (testplan) – MF (MortgageFlow) – versionsn
 
 | **Term** | **Förklaring** |
 | --- | --- |
-| \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> |
+| Ärende | En bolåneansökan i MortgageFlow med uppgifter, dokument, status och logg. |
+| Skuldkvot | Kundens totala skulder i förhållande till årsinkomsten. Över 6 ger hög risk. |
+| Belåningsgrad | Lånebelopp i förhållande till objektvärde. Över 85 % ger varning. |
+| Riskklass | Systemets bedömning av ärendets risknivå utifrån affärsreglerna. |
+| Dubbelgodkännande | Lån över 5 MSEK godkänns av handläggare och därefter av senior handläggare. |
+| MFA | Multifaktorautentisering. |
+| SIT | Systemintegrationstest. |
+| E2E | End-to-end-test av ett helt affärsflöde. |
+| UAT | Acceptanstest som genomförs av verksamheten i ACC. |
+| DEV / SYS / ACC / PROD | Utvecklings-, system-, acceptanstest- och produktionsmiljö. |
+| Stub / mock | Simulerat system som ersätter ett riktigt beroende system. |
+| Smoke test | Kort test efter deployment som visar att miljön är redo för vidare test. |
+| Omtest | Test som visar att en rättad defekt är löst. |
+| Regressionstest | Test som visar att tidigare fungerande funktionalitet inte påverkats. |
+| Severity / Priority | Hur allvarligt ett fel är / hur snabbt det ska åtgärdas. |
+| Kritiskt fel (S1) | Felet stoppar ett affärsflöde, ger fel kreditbeslut, säkerhetsbrist eller dataexponering. Ingen workaround. |
+| Allvarligt fel (S2) | Viktig funktion fungerar fel men workaround finns. |
+| Mindre fel (S3 / S4) | Begränsad påverkan respektive kosmetiskt fel. |
+| Blockerande fel | Fel som hindrar fortsatt testning av en funktion eller ett flöde. |
+| P1 / P2 / P3 | Testprioritet. P1 = hög risk och körs alltid, P2 = medel, P3 = låg. |
+| Entry / Exit criteria | Start- respektive slutkriterier. |
+| Release Readiness | Genomgång vecka 11 av om releasen är redo för Go/No-Go. |
+| Go/No-Go | Beslutstillfälle om produktionssättning. |
+| Kvarstående risk | Risk som finns kvar efter genomförd testning. |
+| PO | Product Owner. |
+| GDPR | EU:s dataskyddsförordning. |
 
 ## 2.5  Hänvisningar till andra dokument
 
@@ -97,21 +134,38 @@ Identifieraren följer formen *TP (testplan) – MF (MortgageFlow) – versionsn
 
 | **Dokument** | **Beskrivning / sökväg / länk** |
 | --- | --- |
-| \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> |
+| Teststrategi för MortgageFlow, version 1.0 | Styrande strategi: testnivåer, testmiljö, testobjekt och riskbedömning R1–R10. teststrategi.md |
+| Kravunderlag | Slutprojekt – Teststrategi och planering, Case: MortgageFlow (funktionella och icke-funktionella krav, systemkarta, tidplan). |
+| Riskregister | Produkt- och projektrisker med bedömning och åtgärd. Produktrisker i teststrategin 1.1, projektrisker i avsnitt 15. |
+| Behörighetsmatris | Vilka roller får se och göra vad. \<Länk, tas fram vecka 1–2> |
+| Testspecifikation / testfall | Testfall per testobjekt, kopplade till krav och risk. \<Länk till testverktyg> |
+| Testdatafil | Syntetiska testpersoner, kreditupplysningssvar och testfiler. \<Länk, tas fram vecka 3> |
+| SQL-skript | Skript för att skapa och återställa testdata i SYS och ACC. \<Länk> |
+| Felhanteringsprocess | Defekters livscykel, severity, priority och triage. \<Länk> |
+| Testrapport | Slutrapport (Del 6). |
 
 ## 2.6  Öppna frågor
 
 *Lista frågor eller beslut som ännu inte är lösta och som kan påverka testplanen.*
 
+Frågorna nedan är hämtade från teststrategin 1.4 och med frågor dyker upp vid tesstplaneringen.
+
 | **Fråga** | **Ansvarig** | **Senast datum** | **Status** |
 | --- | --- | --- | --- |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
+| Gäller gränserna exakt? Är skuldkvot 6,0 hög risk, belåningsgrad 85,0 % varning och exakt 5 000 000 SEK dubbelgodkännande? | Product Owner | Vecka 1 | Öppen |
+| Hur räknas riskklass fram och hur många riskklasser finns? | Product Owner / verksamhet | Vecka 1 | Öppen |
+| Vilka beslut får senior handläggare överstyra, och ska motivering krävas och loggas? | Product Owner | Vecka 1 | Öppen |
+| Räknas fem felaktiga inloggningsförsök i följd, och nollställs räknaren efter lyckad inloggning? | Product Owner / säkerhetsspecialist | Vecka 1 | Öppen |
+| Hur ska systemet bete sig när kreditupplysningstjänsten inte svarar? | Product Owner / arkitekt | Vecka 2 | Öppen |
+| Finns testmiljö hos kreditupplysningstjänsten med styrbara testsvar, eller behövs en stub? | Representant kreditupplysningstjänsten | Vecka 2 | Öppen |
+| Hur sätts status Utbetald – manuellt eller via integration? | Product Owner | Vecka 2 | Öppen |
+| Får maskerad produktionsdata användas i ACC, eller endast syntetisk data? | Projektledare / dataskyddsansvarig | Vecka 2 | Öppen |
+| Vad menas med ”normal belastning”, och kan prestandatest göras i SYS? | Product Owner / DevOps | Vecka 2 | Öppen |
+| Vem genomför säkerhetstest och ingår penetrationstest? | Säkerhetsspecialist | Vecka 2 | Öppen |
+| Vilka versioner av Chrome, Edge och Firefox ska stödjas? | Product Owner | Vecka 2 | Öppen |
+| Vilket testverktyg används för krav-, test- och felhantering? | Projektledare / testledare | Vecka 1 | Öppen |
+| Vem deltar i Go/No-Go och vem fattar beslutet? | Projektledare | Vecka 3 | Öppen |
+| Vilka verksamhetsrepresentanter deltar i UAT och hur mycket tid har de? | Product Owner | Vecka 5 | Öppen |
 
 # 3  Testobjekt
 
@@ -119,25 +173,51 @@ Identifieraren följer formen *TP (testplan) – MF (MortgageFlow) – versionsn
 
 | **Testobjekt** | **Beskrivning** | **Version / build** |
 | --- | --- | --- |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
+| MortgageFlow – webbapplikation och backend/API | Webbgränssnitt (React/TypeScript), affärsregler, ärendehantering, kreditbedömning, beslut, dokument, notifieringar, rapporter, ärendelogg och administration. | Release 1.0. Build anges per deployment i testrapporten. |
+| Autentisering och MFA | Inloggning med användarnamn, lösenord och MFA, kontolåsning efter fem försök, automatisk utloggning efter 10 minuter. | Release 1.0 / testkonfiguration. |
+| Integration mot kreditupplysningstjänst | REST-integration för kreditvärdighet, betalningsanmärkningar, skuldsaldo och taxerad inkomst. | Enligt leverantörens testmiljö eller stub. |
+| Integration mot kund-/personregister | Hämtning av kunduppgifter via personnummer. | Testinstans. |
+| Integration mot e-posttjänst | Automatisk e-postbekräftelse till kund vid godkännande. | Testinstans. |
+| Dokumenthantering och dokumentlagring | Uppladdning av PDF, JPG och PNG (max 10 MB), virusskanning, versionshantering och loggning. | Release 1.0 / testinstans. |
+| Databas och loggning | Krypterad persondata och ärendelogg över vem som ändrat vad och när. | Testdatabas i SYS och ACC. |
+ 
+Ägare för testobjekten är de tre utvecklingsteamen. Ägare för respektive beroende system anges i avsnitt 12.
+
 
 # 4  Omfattning
 
 *Beskriv vad som ingår i testningen. Koppla gärna till krav, affärsflöden, testnivåer, testtyper och prioriterade områden.*
 
-\<Beskriv här>
+\<Testningen omfattar alla funktionella och icke-funktionella krav i kravunderlaget och är riskbaserad enligt teststrategin. Högst prioritet (P1) har kreditbedömning och affärsregler, dubbelgodkännande av lån över 5 MSEK, behörighet, säkerhet och skydd av persondata, integrationen mot kreditupplysningstjänsten, inloggning samt loggning och spårbarhet. Riskerna R1–R10 är definierade i teststrategin 1.1.
+ 
+De fem kritiska affärsflödena som körs som E2E-test:
+ 
+- **E2E-1 Standardärende:** ny ansökan → granskning → kreditkontroll → låg risk → godkänd → e-postbekräftelse.
+- **E2E-2 Komplettering:** instabil anställning och låg inkomst → komplettering krävs → dokument laddas upp → ny granskning → beslut.
+- **E2E-3 Stort lån:** lån över 5 MSEK → handläggare godkänner → senior handläggare godkänner → godkänd.
+- **E2E-4 Hög risk:** aktiv betalningsanmärkning → hög risk → senior handläggare → avslag med registrerad orsak.
+- **E2E-5 Tjänsten svarar inte:** kreditupplysning uteblir → inget beslut på ofullständiga uppgifter.>
 
 | **Område / flöde** | **Testnivå / testtyp** | **Prioritet** | **Kommentar** |
 | --- | --- | --- | --- |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
+| Kreditbedömning och affärsregler (skuldkvot, belåningsgrad, riskklass, aktiva betalningsanmärkningar, instabil anställning) | Systemtest: beslutstabeller, gränsvärdesanalys. E2E-1, E2E-2, E2E-4 | P1 (R1) | Gränsvärden under, på och över 6 och 85 %. Beror på öppna frågor om riskklass. |
+| Dubbelgodkännande, lån över 5 MSEK | Systemtest: gränsvärden, behörighet. E2E-3 | P1 (R2) | Lån på 4 999 999, 5 000 000 och 5 000 001 SEK. Ordning handläggare → senior. |
+| Behörighet per roll och ärendesynlighet | Systemtest via UI och API, behörighetstest | P1 (R3) | Alla tre roller. Direkta API-anrop utan UI. |
+| Persondata, kryptering och GDPR | Säkerhetstest tillsammans med säkerhetsspecialist | P1 (R4) | Inga persondata i loggar eller felmeddelanden. |
+| Integration kreditupplysningstjänst | SIT: korrekta svar, felaktiga svar, timeout, upprepade anrop. E2E-5 | P1 (R5) | Stub används om testmiljö saknas. Verkligt beteende verifieras före SIT-avslut. |
+| Inloggning, MFA, kontolåsning, automatisk utloggning | Systemtest, säkerhetstest | P1 (R6) | Gränsvärden 4, 5 och 6 försök, 9:59 och 10:00 min inaktivitet. |
+| Statusflöde och ärendelogg | Systemtest: tillståndsbaserad testning | P1 (R7) | Tillåtna och otillåtna övergångar. Loggning av vem och när. |
+| Registrering och validering av ansökan | Systemtest: ekvivalensklasser, gränsvärden | P2 | Personnummer, obligatoriska fält, inkomst, lånebelopp ≤ objektvärde − kontantinsats. |
+| Beslut (godkänn, avslå, begär komplettering) | Systemtest, E2E | P1 | Avslagsorsak obligatorisk. Beslut loggas. |
+| Dokumenthantering | Systemtest, SIT | P2 (R8) | Filtyper, 10 MB-gräns, virusskanning med ofarlig standardtestfil, versionshantering. |
+| E-postbekräftelse till kund | SIT, E2E | P2 (R10) | Rätt mottagare och innehåll. Hantering när e-posttjänsten inte svarar. |
+| Integration kund-/personregister, MFA, dokumentlagring | SIT | P2 | Korrekta svar, felfall och timeout. |
+| Administration (användare, roller, systeminställningar, upplåsning) | Systemtest, behörighetstest | P2 | Administratörens upplåsning av låst konto. |
+| Rapporter och statistik (senior handläggare) | Systemtest | P3 | Behörighet och rimlighet i siffror. |
+| Prestanda: 2 s svarstid, 500 samtidiga användare | Prestandatest | P2 (R9) | Förutsätter definition av normal belastning och lämplig miljö. |
+| Webbläsarkompatibilitet: Chrome, Edge, Firefox | Systemtest (kompatibilitet) | P2 | P1-flöden körs i alla tre webbläsare, övriga stickprov. |
+| Verksamhetens arbetssätt | Acceptanstest i ACC | P1 | Scenariobaserat av handläggare och senior handläggare. |
+| Regression och omtest | Regressionstest, omtest | P1 körs alltid | Automatisering av inloggning, affärsregler och behörighet först. |
 
 # 5  Avgränsning
 
@@ -145,16 +225,39 @@ Identifieraren följer formen *TP (testplan) – MF (MortgageFlow) – versionsn
 
 | **Avgränsning** | **Motivering** | **Ansvar utanför planen** |
 | --- | --- | --- |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
+| Komponent-/enhettest | Utförs löpande av utvecklarna i DEV. Resultatet följs upp men utförs inte av testteamet. | Utvecklingsteamen |
+| Beroende systems interna logik (hur kreditupplysningstjänsten räknar fram kreditvärdighet, e-posttjänstens leverans, kund-/personregistrets innehåll) | Ägs och testas av respektive leverantör. MortgageFlows hantering av svar, fel och uteblivna svar ingår. | Respektive systemägare |
+| Penetrationstest och djupare säkerhetsgranskning | Kräver särskild kompetens. Ingår endast om säkerhetsspecialisten beslutar det (öppen fråga). | Säkerhetsspecialist |
+| Infrastruktur, backup/återställning och övervakning (load balancer, Kubernetes, brandvägg, Prometheus/Grafana, ELK) | Ägs av DevOps. Testteamet verifierar bara att miljön är redo och att loggar syns. | DevOps |
+| Webbläsare och versioner utöver Chrome, Edge och Firefox, samt mobila enheter | Inte krav. Systemet är ett internt handläggarsystem. | Ej applicerbart |
+| Test med verkliga kunders persondata | GDPR-risk. Endast syntetisk data om inget annat beslutas (öppen fråga). | Projektledare / dataskyddsansvarig |
+| Migrering av befintliga ärenden och data | Inte nämnt i kravunderlaget. Ingår inte om inte annat beslutas. | Projektledare |
+| Utbildning av handläggare och driftsättningsrutiner | Ingår inte i testuppdraget. | Projektledare / verksamhet |
+| Fullständig regression av P3-fall | Prioriteras bort vid tidsbrist och redovisas som kvarstående risk. | Testledare (redovisning) |
 
 # 6  Tillvägagångssätt
 
 *Beskriv hur testningen ska genomföras, exempelvis riskbaserat, kravbaserat, utforskande eller iterativt. Beskriv prioritering, felhantering, omtest, regression, rapportering och eventuell automatisering.*
 
-\<Beskriv här>
+\<Testningen följer teststrategin (version 1.0) och är **riskbaserad, kravbaserad och iterativ**.
+ 
+**Riskbaserat.** Riskerna R1–R10 styr vad som testas först och hur djupt. P1-områden designas och testas först och körs i alla omgångar. P2 körs i den mån tiden räcker och P3 kan utelämnas. Det som inte körs redovisas som kvarstående risk.
+ 
+**Kravbaserat.** Varje krav i kravunderlaget kopplas till minst ett testfall. Kopplingen mellan krav, risk och testfall hålls i testverktyget så att testtäckningen kan följas upp.
+ 
+**Testdesign.** Gränsvärdesanalys (skuldkvot, belåningsgrad, 5 MSEK, 10 MB, fem inloggningsförsök, 10 minuter), beslutstabeller (affärsregler, riskklass), tillståndsbaserad testning (ärendestatus), ekvivalensklasser (validering) samt utforskande testning med tidsbegränsade sessioner och testcharter, särskilt i systemtest och E2E.
+ 
+**Testfall.** Skrivs i vecka 1–2 med granskning av PO och verksamhet. Testfall för P1 granskas först.
+ 
+**Beroende system.** Stubbar används om en tjänst saknar testmiljö, men det riktiga beteendet verifieras innan SIT avslutas.
+ 
+**Felhantering.** Fel registreras i testverktyget och följer New → Analysis → In Progress → Ready for Retest → Closed. Varje fel får severity (S1–S4) och priority. Testledaren leder defect triage tre gånger i veckan under SIT och systemtest, därefter dagligen under regression. Fel i beroende system rapporteras till systemets ägare.
+ 
+**Omtest och regression.** Varje rättat fel omtestas av den som hittade det eller av Testare D. Efter varje leverans körs smoke test, därefter regression av P1. Stabila affärskritiska tester (inloggning, kreditregler, behörighet) automatiseras först av Testare D.
+ 
+**Rapportering.** Testledaren följer Planned vs Executed, Passed, Failed, Blocked, Not Run, öppna defekter per severity och risktäckning. Statusrapport skickas till projektledare och PO varje vecka och dagligen under UAT och regression. Före Go/No-Go lämnar testledaren rekommendation: Go, Conditional Go eller No-Go.
+ 
+**Avsteg från strategin.** Inga avsteg i version 1.0. Eventuella avsteg dokumenteras här och i dokumenthistoriken.>
 
 ## 6.1  Iterationer
 
@@ -162,9 +265,15 @@ Identifieraren följer formen *TP (testplan) – MF (MortgageFlow) – versionsn
 
 | **Fas** | **Syfte** | **Genomförande** |
 | --- | --- | --- |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
+| Testanalys och testdesign (v1–2) | Förstå krav, bryta ner risker, skriva och granska testfall, få svar på öppna frågor. | Alla testare. Testfall granskas av PO och verksamhet. Behörighetsmatris och testdatabehov tas fram. |
+| Förberedelse (v3) | Testdata och miljö redo före teststart. | Testare C tar fram testdata. DevOps och utvecklingsteamen levererar och verifierar SYS. Smoke test av miljön. |
+| SIT – omgång 1 (v4) | Verifiera integrationer och hitta fel tidigt. | Testare A med utvecklare. Alla integrationer, både korrekta svar och felfall. |
+| SIT – omgång 2 och systemtest – omgång 1 (v5–6) | Retest av SIT-fel samt första funktionella systemtest. | Testare A, B, D. P1 först. Smoke test efter varje deployment. |
+| Systemtest – omgång 2 och E2E (v7–8) | Slutföra systemtest, köra E2E-flöden, behörighet, säkerhet och prestanda. | Testare B, C, D, A och säkerhetsspecialist. Omtest av rättade fel. |
+| UAT (v8–9) | Verksamhetens acceptans i ACC. | Verksamhetsrepresentanter med stöd av Testare C. Dokumenterat godkännande. |
+| Regression och omtest (v9–10) | Visa att rättningar fungerar och inget har gått sönder. | Testare D med övriga. P1-regression alltid, P2 om tid finns. Eventuell ny UAT-körning vid kritiska fel. |
+| Release Readiness (v11) | Bedöma om releasen är redo. | Testledare sammanställer testrapport, kvarstående risker och rekommendation. |
+| Go/No-Go och produktionssättning (v12) | Beslut och smoke test i PROD. | Beslut av PO och projektledare. Smoke test i PROD efter produktionssättning. |
 
 # 7  Start- och slutkriterier
 
@@ -172,17 +281,34 @@ Identifieraren följer formen *TP (testplan) – MF (MortgageFlow) – versionsn
 
 ## 7.1  Kriterier för att inleda testarbetet
 
-- \<Testmiljö är installerad och tillräckligt stabil>
-- \<Nödvändiga testdata finns tillgängliga>
-- \<Krav/acceptanskriterier är tillräckligt tydliga>
-- \<Överenskommen andel testfall är framtagna och granskade>
+**För SIT och systemtest (SYS):**
+ 
+- SYS är installerat med rätt version, konfiguration och anslutna integrationer (eller stubbar), och smoke test är godkänt.
+- Komponenttester är körda av utvecklingsteamen utan öppna kritiska fel.
+- Testdata för minst P1-områdena finns i SYS och kan återställas med SQL-skript.
+- Testare har konton, roller och MFA-enheter i SYS.
+- Krav och acceptanskriterier är tillräckligt tydliga, och öppna frågor som rör P1-områden (gränsvärden, riskklass, inloggningsräkning) är besvarade eller har dokumenterat antagande.
+- Minst 90 % av P1-testfallen och 70 % av övriga testfall är framtagna och granskade.
+- Testverktyg och felhanteringsprocess är på plats.
+**För UAT (ACC):**
+ 
+- Systemtest av P1 är genomfört, och inga kritiska eller blockerande fel är öppna.
+- ACC är installerat med releasekandidaten, anslutna integrationer och syntetisk (eller beslutad maskerad) data.
+- Smoke test i ACC är godkänt.
+- Verksamhetsrepresentanter är bokade och UAT-scenarier är godkända av PO.
 
 ## 7.2  Kriterier för att avsluta testarbetet
 
-- \<Planerade kritiska tester är genomförda>
-- \<Inga öppna blockerande/kritiska fel över accepterad nivå>
-- \<Överenskommen testtäckning och resultatnivå är uppnådd>
-- \<Kvarstående risker är dokumenterade och accepterade>
+- Alla planerade P1-tester är genomförda, och minst 95 % av P1-testfallen är godkända. Resterande avvikelser är analyserade.
+- Alla E2E-flöden (E2E-1 till E2E-5) är körda utan öppna S1/S2-fel.
+- Inga öppna kritiska (S1) eller allvarliga (S2) fel i P1-områdena. Öppna S3/S4-fel är redovisade och accepterade av PO.
+- Alla P1-defekter som rättats är omtestade, och regression av P1 är körd på den slutliga releasekandidaten.
+- Minst 90 % av P2-testfallen är genomförda.
+- UAT är genomfört och godkänt av verksamheten.
+- Säkerhetstest är genomfört med säkerhetsspecialist och inga kritiska säkerhetsfel återstår.
+- Prestandakraven (svarstid 2 s, 500 användare) är verifierade, eller avvikelsen är dokumenterad och accepterad.
+- Kvarstående risker är dokumenterade i testrapporten och accepterade av PO och projektledare.
+
 
 # 8  Avbrytande- och återupptagandekriterier
 
@@ -190,16 +316,22 @@ Identifieraren följer formen *TP (testplan) – MF (MortgageFlow) – versionsn
 
 ## 8.1  Kriterier för att avbryta testerna
 
-- \<Testmiljön är instabil eller otillgänglig>
-- \<För många blockerande/kritiska fel>
-- \<Nödvändiga nyckelpersoner, testdata eller beroenden saknas>
-- \<Leveransen bedöms inte vara testbar>
+- SYS eller ACC är instabil eller otillgänglig.
+- Smoke test misslyckas efter en deployment.
+- Fler än 20 % av planerade testfall i en testomgång är blockerade.
+- Fler än fem öppna kritiska fel (S1) eller ett fel som blockerar ett helt affärsflöde, till exempel inloggning eller kreditkontroll.
+- Nödvändiga nyckelpersoner (utvecklare, DevOps, säkerhetsspecialist, verksamhetsrepresentanter), testdata, kreditupplysningstjänst eller stub saknas.
+- Leveransen bedöms inte vara testbar, eller felfrekvensen är så hög att test ger lite nytt värde.
+- Verkliga persondata upptäcks i testmiljö (testet stoppas omedelbart och GDPR-ansvarig informeras).
+Beslutet om avbrott fattas av testledaren i samråd med projektledare.
 
 ## 8.2  Kriterier för att återuppta testarbetet
 
-- \<Blockerande problem är åtgärdade och verifierade>
-- \<Miljö och beroenden är åter stabila>
-- \<Beslut om återstart är fattat av ansvarig roll>
+- Blockerande problem är åtgärdade och verifierade med ett godkänt smoke test.
+- Miljö och beroenden är åter stabila, och testdata är återställda.
+- Ny version eller rättning är levererad med release notes.
+- Beslut om återstart är fattat av testledaren tillsammans med projektledare.
+- Omplanering är gjord och påverkan på tidplan och omfattning är dokumenterad.
 
 # 9  Testdokumentation
 
@@ -207,12 +339,18 @@ Identifieraren följer formen *TP (testplan) – MF (MortgageFlow) – versionsn
 
 | **Dokument / artefakt** | **Beskrivning** | **Ansvarig** |
 | --- | --- | --- |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
+| Teststrategi för MortgageFlow, version 1.0 | Övergripande strategi. | Testledare |
+| Testplan (TP-MF-1.0) | Detta dokument. | Testledare |
+| Testfall / testspecifikation | Testfall med krav- och riskkoppling, förutsättningar, steg och förväntat resultat. | Testare A–D, per område |
+| Behörighetsmatris | Roll mot funktion och data. | Testare D |
+| Testdata och SQL-skript | Syntetiska personer och skript för återställning. | Testare C |
+| Spårbarhetsmatris | Krav → risk → testfall → resultat. | Testledare |
+| Testlogg / exekveringsresultat | Resultat per testfall, miljö, build och datum. | Respektive testare |
+| Felrapporter | Defekter med severity, priority, steg, miljö och bevis. | Respektive testare |
+| Statusrapporter | Veckovis (dagligen under UAT och regression). Planned vs Executed, Passed, Failed, Blocked, defekter per severity. | Testledare |
+| UAT-scenarier och UAT-protokoll | Scenarier och dokumenterat verksamhetsgodkännande. | Testare C, verksamhetsrepresentanter |
+| Release Readiness-underlag | Sammanställning inför Go/No-Go med kvarstående risker. | Testledare |
+| Testrapport | Slutrapport med resultat, risker och rekommendation. | Testledare |
 
 # 10  Testaktiviteter
 
@@ -220,44 +358,63 @@ Identifieraren följer formen *TP (testplan) – MF (MortgageFlow) – versionsn
 
 | **ID** | **Aktivitet** | **Ägare** |
 | --- | --- | --- |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
+| A1 | Testanalys: analysera krav, risker och öppna frågor. Koppla krav till risk. | Testledare, Testare A–D |
+| A2 | Testdesign: skriva och granska testfall (P1 först). Ta fram behörighetsmatris. | Testare A–D, PO, verksamhet |
+| A3 | Ta fram testdata, SQL-skript och testfiler. | Testare C |
+| A4 | Miljöförberedelse: deployment, konfiguration, konton, MFA och smoke test av SYS. | DevOps, utvecklingsteamen, Testare A |
+| A5 | SIT: kreditupplysning, personregister, e-post, MFA och dokumentlagring (korrekta svar, felfall, timeout). | Testare A |
+| A6 | Systemtest funktionellt: inloggning, ansökan, status, kreditregler, stora lån, dokument, beslut. | Testare B |
+| A7 | Behörighets- och regressionsautomation: behörighet per roll via UI och API, automatisering av P1. | Testare D |
+| A8 | Säkerhets- och prestandatest: kryptering, kontolåsning, utloggning, 2 s, 500 användare. | Säkerhetsspecialist, Testare A |
+| A9 | E2E-test av flödena E2E-1 till E2E-5 inklusive kontroll av ärendelogg. | Testare B, Testare C |
+| A10 | Felhantering: registrera, triagera och följa upp defekter. | Testledare, Testare A–D |
+| A11 | Omtest av rättade fel och smoke test efter varje deployment. | Testare D, den som rapporterat felet |
+| A12 | UAT-förberedelse och stöd under acceptanstest i ACC. | Testare C, verksamhet |
+| A13 | Regressionstest av P1 (och P2 om tid finns) på releasekandidaten. | Testare D |
+| A14 | Statusrapportering och uppföljning av tidplan, risker och miljöbehov. | Testledare |
+| A15 | Release Readiness: sammanställa resultat, kvarstående risker och rekommendation. | Testledare |
+| A16 | Testrapport. | Testledare |
+| A17 | Stöd vid Go/No-Go och smoke test i PROD. | Testledare, Testare D |
 
 # 11  Testmiljö
 
 *Beskriv testmiljön och viktiga skillnader mot produktion. Dokumentera integrationer, beroenden, testdata, åtkomst och ansvar.*
 
+Miljökedjan är DEV → SYS → ACC → PROD enligt teststrategin avsnitt 3. En miljö är redo för test först när rätt version är installerad, konfigurationen är rätt, integrationerna är anslutna, testarna har åtkomst och rätt testdata finns. Testmiljön SYS delas av SIT, systemtest, API-test, E2E, regression och omtest. Deploymentar till SYS planeras därför gemensamt av testledare, DevOps och de tre utvecklingsteamen så att pågående test inte stör varandra.
+
 ## 11.1  Hård- och mjukvara
 
 | **Komponent** | **Version / konfiguration** | **Skillnad mot produktion** | **Ansvarig** |
 | --- | --- | --- | --- |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
+| SYS – MortgageFlow (webbapp React/TypeScript, backend/API) | Releasekandidat per deployment, build anges i testlogg. | Delas av alla tester och tre utvecklingsteam. Mindre kapacitet, vilket påverkar prestandatest. | DevOps / utvecklingsteamen |
+| ACC – MortgageFlow | Releasekandidat via releaseprocessen. | Ska likna PROD så mycket som möjligt. Endast syntetisk data om inget annat beslutas. | DevOps |
+| Kreditupplysningstjänst (REST) | Leverantörens testmiljö eller stub (öppen fråga). | Förutbestämda svar per testpersonnummer. Stub fångar inte alla verkliga felkoder och svarstider. | Representant kreditupplysningstjänst / Testare A |
+| Kund-/personregister | Testinstans med testpersoner. | Endast testpersoner. | DevOps |
+| E-posttjänst (SMTP) | Testinstans med uppfångad post. | Inga riktiga kunder nås. | DevOps |
+| Autentisering och MFA (AD/LDAP, MFA) | Testkonfiguration, testkonton och testenheter per roll. | Testkonton i stället för riktiga användare. | DevOps / säkerhetsspecialist |
+| Dokumentlagring och virusskanning | Testinstans. | Virusskanning verifieras med ofarlig standardtestfil. | DevOps |
+| Databas (PostgreSQL) | Separat testdatabas, kryptering som i PROD. Återställs med SQL-skript. | Endast testdata. | DevOps |
+| Klienter | Windows-/macOS-klient med Chrome, Edge och Firefox (versioner öppen fråga). | Testklienter. | Testare B |
+
 
 ## 11.2  Testverktyg
 
 | **Verktyg** | **Användningsområde** | **Ansvarig** |
 | --- | --- | --- |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
+| Testverktyg för krav-, test- och felhantering (val ej beslutat, öppen fråga) | Testfall, exekvering, spårbarhet, felrapporter och rapportering. | Testledare |
+| API-testverktyg (t.ex. Postman) | API- och integrationstest, behörighetstest direkt mot API. | Testare A |
+| Automationsramverk (t.ex. Playwright, Cypress eller Selenium) | Automatiserad regression och smoke test. | Testare D |
+| Prestandaverktyg (t.ex. JMeter eller k6) | Last- och svarstidstest med upp till 500 samtidiga användare. | Testare A |
+| Webbläsarnas utvecklarverktyg | Felsökning och kontroll av sessioner och nätverkstrafik. | Testare B, D |
+| ELK Stack (logg) | Kontroll av ärendelogg, kontroll att persondata inte loggas i klartext. | DevOps / Testare A |
+| Databasverktyg (SQL-klient) | Verifiera sparade data, kryptering och återställning med SQL-skript. | Testare C |
+| Uppfångad e-post i testinstans | Verifiera e-postbekräftelser. | Testare B |
 
 ## 11.3  Lokaler
 
 *Beskriv särskilda lokaler, enheter eller fysisk utrustning som krävs. Om ej relevant, ange Ej applicerbart.*
 
-\<Beskriv här>
+\<Ej applicerbart men fysiska MFA-enheter finns beskrivna i 11.1. Testningen sker via webbläsare i ordinarie arbetsmiljö och kan genomföras på distans.>
 
 # 12  Ansvar
 
@@ -265,12 +422,20 @@ Identifieraren följer formen *TP (testplan) – MF (MortgageFlow) – versionsn
 
 | **Roll** | **Ansvar / mandat** | **Namn / funktion** |
 | --- | --- | --- |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> |
+| Projektledare | Övergripande ansvar för projektet och tidplanen. Beslutar tillsammans med PO om Go/No-Go. Hanterar eskalering. | Projektledare |
+| Product Owner (PO) | Besvarar kravfrågor, godkänner testfall och accepterar kvarstående risker. Fattar Go/No-Go tillsammans med projektledare. | Product Owner |
+| Testledare | Ansvarar för testplan, strategi, planering, uppföljning, rapportering och defect triage. Beslutar om teststart, avbrott och återupptagande tillsammans med projektledare. Ger rekommendation vid Go/No-Go. | Testledare |
+| Testare A | API, integration, tekniska tester. SIT och prestandatest. | Testare A |
+| Testare B | Funktionellt systemtest och E2E. Kompatibilitet i webbläsare. | Testare B |
+| Testare C | Bankverksamhet, UAT och testdata. Stöd till verksamheten. | Testare C |
+| Testare D | Regression, automation och behörighet. Omtest och smoke test. | Testare D |
+| Utvecklingsteam 1–3 | Komponenttest, rättning av fel, deployment till SYS/ACC enligt plan, support vid SIT. | Utvecklingsteamen |
+| Verksamhetsrepresentanter | Genomför UAT, godkänner scenarier och ger verksamhetens acceptans. | Bolånehandläggare / senior handläggare |
+| Säkerhetsspecialist | Säkerhetstest, bedömning av säkerhets- och GDPR-risker. | Säkerhetsspecialist |
+| DevOps | Miljöer, deployment, konfiguration, åtkomst, loggar och återställning. | DevOps |
+| Representant kreditupplysningstjänst | Testmiljö eller testsvar, felsökning av integrationen. | Extern representant |
+
+**En möjlig Eskaleringsväg:** Testare → Testledare → Projektledare / PO. Blockerare i miljö eskaleras direkt till DevOps och därefter till projektledare om de inte åtgärdats inom en arbetsdag.
 
 # 13  Resurs- och utbildningsbehov
 
@@ -278,39 +443,57 @@ Identifieraren följer formen *TP (testplan) – MF (MortgageFlow) – versionsn
 
 | **Namn / resurs** | **Omfattning** | **Funktion** | **Organisation / team** |
 | --- | --- | --- | --- |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
+| Testledare | 100 %, vecka 1–12 | Planering, ledning, rapportering | Testteamet |
+| Testare A | 100 %, vecka 1–10, därefter stöd | API, integration, prestanda | Testteamet |
+| Testare B | 100 %, vecka 1–10, därefter stöd | Funktionellt systemtest, E2E | Testteamet |
+| Testare C | 100 %, vecka 1–10, därefter stöd | Testdata, UAT, bankverksamhet | Testteamet |
+| Testare D | 100 %, vecka 1–12 | Regression, automation, behörighet | Testteamet |
+| Utvecklare | Daglig tillgänglighet för felrättning, SIT-stöd och deployment | Rättning, support | Utvecklingsteam 1–3 |
+| Verksamhetsrepresentanter | Heltid under UAT (v8–9), samt granskning av testfall i v2 | UAT, granskning | NordFinance verksamhet |
+| Säkerhetsspecialist | Cirka 5 dagar i systemtest (v5–8) | Säkerhetstest | Projektet |
+| DevOps | Daglig tillgänglighet vid deployment, miljöproblem och SQL-återställning | Miljöer | Projektet |
+| Representant kreditupplysningstjänst | Tillgänglig under SIT (v4–5) | Testsvar, felsökning | Extern leverantör |
+ 
+**Utbildnings- och onboardingbehov:**
+ 
+- Testare B och D behöver kunskap om bolånes affärsregler från Testare C och verksamheten (workshop i vecka 1).
+- Alla testare behöver introduktion i testverktyget, felhanteringsprocessen och severity-/priority-skalan.
+- Verksamhetsrepresentanter behöver kort introduktion i ACC, testscenarier och hur fel rapporteras innan UAT.
+- Testare D behöver tillgång till och eventuell utbildning i valt automationsramverk.
 
 # 14  Tidplan
 
 *Beskriv testperioden, viktiga milstolpar och planerade testomgångar. Anpassa efter projektets leveransmodell.*
 
+Tidplanen anges i projektveckor (vecka 1–12 räknat från projektets start).
+
 | **Aktivitet / milstolpe** | **Start** | **Slut** | **Ansvarig** | **Kommentar** |
 | --- | --- | --- | --- | --- |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> | \<Fyll i> |
-
+| Testanalys och testdesign | Vecka 1 | Vecka 2 | Testledare / Testare A–D | Besvara öppna frågor, skriva och granska testfall. |
+| Testdata och miljöförberedelser | Vecka 3 | Vecka 3 | Testare C / DevOps | Startkriterier för SIT ska vara uppfyllda i slutet av veckan. |
+| SIT | Vecka 4 | Vecka 5 | Testare A | Alla integrationer inklusive felfall. |
+| Systemtest (inkl. behörighet, säkerhet, prestanda) | Vecka 5 | Vecka 8 | Testare B, D, A, säkerhetsspecialist | Börjar parallellt med slutet av SIT. |
+| E2E-test | Vecka 7 | Vecka 8 | Testare B, C | Efter avslutat SIT. |
+| UAT | Vecka 8 | Vecka 9 | Testare C / verksamhet | I ACC. |
+| Regression och retest | Vecka 9 | Vecka 10 | Testare D | Efter sista leveransen av rättningar. |
+| Release Readiness | Vecka 11 | Vecka 11 | Testledare | Testrapport och kvarstående risker. |
+| Go/No-Go och produktionssättning | Vecka 12 | Vecka 12 | PO / projektledare | Smoke test i PROD. |
+ 
 ## 14.1  Första testomgången
 
 | **Fas** | **Varaktighet / datum** |
 | --- | --- |
-| \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> |
-| \<Fyll i> | \<Fyll i> |
+| Förberedelse: miljö, testdata, smoke test | Vecka 3 |
+| SIT omgång 1: alla integrationer | Vecka 4 (5 arbetsdagar) |
+| Systemtest omgång 1: P1-funktioner (inloggning, kreditregler, stora lån, behörighet) | Start vecka 5, cirka 1,5 vecka |
+| Defect triage och rättning | Löpande, 3 gånger per vecka |
+| Statusrapport efter omgång 1 | Slutet av vecka 5 |
 
 ## 14.2  Påföljande testomgångar
 
 *Beskriv hur efterföljande testomgångar planeras, vad som återanvänds och hur omfattningen styrs av felutfall och risk.*
 
-\<Beskriv här>
+\<Påföljande omgångar genomförs vid varje ny leverans från utvecklingsteamen. Varje omgång inleds med smoke test och omtest av rättade fel, därefter körs regression av P1 och nya eller ändrade funktioner. Omfattningen styrs av felutfall och risk: områden med många eller allvarliga fel får utökad testning (fler testfall, utforskande sessioner), medan stabila områden endast körs som regression. Testfall, testdata och automatiserade tester från första omgången återanvänds. P2 körs när P1 är klart, och P3 körs bara om tid finns. Vid ändrade krav eller förseningar uppdaterar testledaren planen och dokumenterar ändringen i dokumenthistoriken.>
 
 # 15  Risker och oförutsedda händelser
 
