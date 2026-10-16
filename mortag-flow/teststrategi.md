@@ -325,7 +325,7 @@ Testobjekten beskrivs på övergripande nivå. Prioriteten (Hög/Medel/Låg) sty
 | Hämtning av kreditupplysning | Kreditvärdighet, betalningsanmärkningar, skuldsaldo och taxerad inkomst hämtas och visas korrekt. | Hög (R5) |
 | Beräkningar | Skuldkvot, belåningsgrad och riskklass beräknas korrekt. | Hög (R1) |
 | Affärsregler | Skuldkvot över 6 → hög risk. Aktiv betalningsanmärkning → hög risk och senior handläggare. Belåningsgrad över 85 % → varning. Instabil anställning och låg inkomst → kompletterande dokumentation. | Hög (R1). Beslutstabeller och gränsvärden. |
-| Stora lån | Lån över 5 MSEK kräver godkännande av både handläggare och senior handläggare, i den ordningen. | Hög (R2) |
+| Stora lån | Lån över 5 MSEK kräver godkännande av både bolånehandläggare och senior handläggare, i den ordningen. | Hög (R2) |
 
 ## 4.4  Dokument, beslut och kundkommunikation
 
