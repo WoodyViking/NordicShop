@@ -483,12 +483,12 @@ Tidplanen anges i projektveckor (vecka 1–12 räknat från projektets start).
 
 | **Vecka** | **1** | **2** | **3** | **4** | **5** | **6** | **7** | **8** | **9** | **10** | **11** | **12** |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Testanalys och testdesign | TL+A-D | TL+A-D | | | | | | | | | | |
-| Testdata och miljöförberedelser | | | TC+DevOps | | | | | | | | | |
+| Testanalys och testdesign | TL+ A-D | TL+ A-D | | | | | | | | | | |
+| Testdata och miljöförberedelser | | | TC+ DevOps | | | | | | | | | |
 | SIT | | | | TA | TA | | | | | | | |
 | Systemtest (inkl. behörighet, säkerhet, prestanda) | | | | | TBDA+ SÄKspec | TBDA+ SÄKspec | TBDA+ SÄKspec | TBDA+ SÄKspec | | | | |
 | E2E-test | | | | | | | TBC | TBC | | | | |
-| UAT | | | | | | | | TC/verksamhet | TC/verksamhet | | | |
+| UAT | | | | | | | | TC/ verksamhet | TC/ verksamhet | | | |
 | Regression och retest | | | | | | | | | TD | TD | | |
 | Release Readiness | | | | | | | | | | | TL | |
 | Go/No-Go och produktionssättning | | | | | | | | | | | | PO +PL |
