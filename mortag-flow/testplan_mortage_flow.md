@@ -437,6 +437,31 @@ Uppgift(tas bort innan inlämning): *Tydliggör ansvar, mandat, eskaleringsväga
 
 **En möjlig Eskaleringsväg:** Testare → Testledare → Projektledare / PO. Blockerare i miljö eskaleras direkt till DevOps och därefter till projektledare om de inte åtgärdats inom en arbetsdag.
 
+## 12.1 RACI
+
+| Aktivitet | Testledare | Testare | Utvecklings-team | DevOps | Product Owner | Verksamhet | Säkerhets-specialist | Projektledare |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Teststrategi och testplan | A / R | C | C | C | C | I | C | C |
+| Testanalys (krav, risker, öppna frågor) | A | R | C | I | C | C | C | I |
+| Testdesign (testfall, behörighetsmatris) | A | R | I | I | C | C | C | I |
+| Testdata och SQL-skript | A | R | C | C | I | C | I | I |
+| Miljöförberedelse och deployment (SYS/ACC) | C | C | R | A / R | I | I | I | I |
+| SIT | A | R | C | C | I | I | I | I |
+| Systemtest och E2E | A | R | C | C | I | C | I | I |
+| Säkerhetstest | C | R | C | C | I | I | A | I |
+| Prestandatest | A | R | C | R | C | I | I | I |
+| Defect triage | A / R | R | R | C | C | C | I | I |
+| Felrättning | I | I | A / R | C | I | I | I | I |
+| Omtest | A | R | I | I | I | I | I | I |
+| Regression | A | R | I | I | I | I | I | I |
+| Acceptanstest (UAT) | C | R (stöd) | I | C | A | R | I | I |
+| Teststatus och rapportering | A / R | C | I | I | I | I | I | I |
+| Release Readiness och testrapport | A / R | C | C | C | C | C | C | I |
+| Rekommendation inför Go/No-Go | A / R | C | C | C | C | C | C | C |
+| Beslut Go/No-Go | C | I | I | C | A / R | C | C | R |
+| Produktionssättning och smoke test i PROD | C | R | C | A / R | I | I | I | I |
+
+
 # 13  Resurs- och utbildningsbehov
 
 Uppgift(tas bort innan inlämning): *Ange resurser, omfattning/tillgänglighet, funktion och eventuella utbildnings- eller onboardingbehov.*
