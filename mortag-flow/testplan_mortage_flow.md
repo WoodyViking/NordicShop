@@ -439,6 +439,8 @@ Uppgift(tas bort innan inlämning): *Tydliggör ansvar, mandat, eskaleringsväga
 
 ## 12.1 RACI
 
+**R** = Responsible (utför arbetet), **A** = Accountable (ansvarig och godkänner, en per rad), **C** = Consulted (rådfrågas före beslut), **I** = Informed (informeras efter).
+
 | Aktivitet | Testledare | Testare | Utvecklings-team | DevOps | Product Owner | Verksamhet | Säkerhets-specialist | Projektledare |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Teststrategi och testplan | A / R | C | C | C | C | I | C | C |
