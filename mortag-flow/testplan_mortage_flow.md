@@ -479,6 +479,22 @@ Tidplanen anges i projektveckor (vecka 1–12 räknat från projektets start).
 | Release Readiness | Vecka 11 | Vecka 11 | Testledare | Testrapport och kvarstående risker. |
 | Go/No-Go och produktionssättning | Vecka 12 | Vecka 12 | PO / projektledare | Smoke test i PROD. |
  
+**Tidplan per vecka**
+
+| **Vecka** | **1** | **2** | **3** | **4** | **5** | **6** | **7** | **8** | **9** | **10** | **11** | **12** |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Testanalys och testdesign | TL+A-D | TL+A-D | | | | | | | | | | |
+| Testdata och miljöförberedelser | | | TC+DevOps | | | | | | | | | |
+| SIT | | | | TA | TA | | | | | | | |
+| Systemtest (inkl. behörighet, säkerhet, prestanda) | | | | | TBDA+ SÄKspec | TBDA+ SÄKspec | TBDA+ SÄKspec | TBDA+ SÄKspec | | | | |
+| E2E-test | | | | | | | TBC | TBC | | | | |
+| UAT | | | | | | | | TC/verksamhet | TC/verksamhet | | | |
+| Regression och retest | | | | | | | | | TD | TD | | |
+| Release Readiness | | | | | | | | | | | TL | |
+| Go/No-Go och produktionssättning | | | | | | | | | | | | PO +PL |
+
+*Förkortningar: TL = testledare, A-D = testare A–D, TA/TC/TD = testare A/C/D, TBDA = testare B, D och A, TBC = testare B och C, SÄKspec = säkerhetsspecialist, PO = Product Owner, PL = projektledare.*
+
 ## 14.1  Första testomgången
 
 | **Fas** | **Varaktighet / datum** |
