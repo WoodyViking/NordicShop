@@ -61,7 +61,7 @@ Identifieraren följer formen *TP (testplan) – MF (MortgageFlow) – versionsn
 
 *Beskriv sammanhanget för testplanen och vad dokumentet ska styra.*
 
-\<Testplanen styr testarbetet inför första produktionssättningen av MortgageFlow, från testanalys i vecka 1 till Go/No-Go i vecka 12. Den kompletterar teststrategin (version 1.0) genom att ange vad som testas, hur, när, av vem och under vilka förutsättningar. Strategin beskriver hur MortgageFlow normalt testas. Denna plan beskriver det konkreta upplägget för release 1.0 och eventuella avsteg från strategin (se avsnitt 6).>
+Testplanen styr testarbetet inför första produktionssättningen av MortgageFlow, från testanalys i vecka 1 till Go/No-Go i vecka 12. Den kompletterar teststrategin (version 1.0) genom att ange vad som testas, hur, när, av vem och under vilka förutsättningar. Strategin beskriver hur MortgageFlow normalt testas. Denna plan beskriver det konkreta upplägget för release 1.0 och eventuella avsteg från strategin (se avsnitt 6).
 
 ## 2.1  Kortfattad beskrivning
 
@@ -149,7 +149,7 @@ Uppgift(tas bort innan inlämning): *Lista relevanta styrande eller stödjande d
 
 Uppgift(tas bort innan inlämning): *Lista frågor eller beslut som ännu inte är lösta och som kan påverka testplanen.*
 
-Frågorna nedan är hämtade från teststrategin 1.4 och med frågor dyker upp vid tesstplaneringen.
+Frågorna nedan är hämtade från teststrategin 1.4 och med frågor dyker upp vid testplaneringen.
 
 | **Fråga** | **Ansvarig** | **Senast datum** | **Status** |
 | --- | --- | --- | --- |
