@@ -43,6 +43,7 @@ Testplan för MortgageFlow – nytt bolånesystem, release 1.0
   - [11.2 Testverktyg](#112--testverktyg)
   - [11.3 Lokaler](#113--lokaler)
 - [12 Ansvar](#12--ansvar)
+  - [12.1 RACI](#121--raci)
 - [13 Resurs- och utbildningsbehov](#13--resurs--och-utbildningsbehov)
 - [14 Tidplan](#14--tidplan)
   - [14.1 Första testomgången](#141--första-testomgången)
@@ -437,7 +438,7 @@ Uppgift(tas bort innan inlämning): *Tydliggör ansvar, mandat, eskaleringsväga
 
 **En möjlig Eskaleringsväg:** Testare → Testledare → Projektledare / PO. Blockerare i miljö eskaleras direkt till DevOps och därefter till projektledare om de inte åtgärdats inom en arbetsdag.
 
-## 12.1 RACI
+## 12.1  RACI
 
 **R** = Responsible, **A** = Accountable, **C** = Consulted, **I** = Informed.
 
