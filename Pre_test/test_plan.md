@@ -381,6 +381,28 @@ Ej applicerbart (inga särskilda lokaler, enheter eller fysisk utrustning har id
 
 **Utbildning/onboarding:** Deltagare i acceptanstest får en introduktion på högst en timme om testmanus och felrapportering. Eventuell ersättare behöver introduktion (full effekt efter ca en vecka). Gruppen har uppgett att de är oerfarna testare, vilket ingår i bufferten.
 
+| Aktivitet | Testledare | Testare | Utvecklings-team | DevOps | Product Owner | Verksamhet | Säkerhets-specialist | Projektledare |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Teststrategi och testplan | A / R | C | C | C | C | I | C | C |
+| Testanalys (krav, risker, öppna frågor) | A | R | C | I | C | C | C | I |
+| Testdesign (testfall, behörighetsmatris) | A | R | I | I | C | C | C | I |
+| Testdata och SQL-skript | A | R | C | C | I | C | I | I |
+| Miljöförberedelse och deployment (SYS/ACC) | C | C | R | A / R | I | I | I | I |
+| SIT | A | R | C | C | I | I | I | I |
+| Systemtest och E2E | A | R | C | C | I | C | I | I |
+| Säkerhetstest | C | R | C | C | I | I | A | I |
+| Prestandatest | A | R | C | R | C | I | I | I |
+| Defect triage | A / R | R | R | C | C | C | I | I |
+| Felrättning | I | I | A / R | C | I | I | I | I |
+| Omtest | A | R | I | I | I | I | I | I |
+| Regression | A | R | I | I | I | I | I | I |
+| Acceptanstest (UAT) | C | R (stöd) | I | C | A | R | I | I |
+| Teststatus och rapportering | A / R | C | I | I | I | I | I | I |
+| Release Readiness och testrapport | A / R | C | C | C | C | C | C | I |
+| Rekommendation inför Go/No-Go | A / R | C | C | C | C | C | C | C |
+| Beslut Go/No-Go | C | I | I | C | A / R | C | C | R |
+| Produktionssättning och smoke test i PROD | C | R | C | A / R | I | I | I | I |
+
 # 15  Tidplan
 
 > **OBS:** Tidplanen nedan kommer från `testplan_12_veckor.md` och bygger på **fyra testare**. Omplaneringen efter att en testare försvann (Uppgift 9 i den filen) är inte gjord. Veckor är relativa (V1–V12). Kalenderdatum **[SAKNAS]**.
