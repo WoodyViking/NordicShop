@@ -64,7 +64,7 @@ Identifieraren följer formen *TP (testplan) – MF (MortgageFlow) – versionsn
 
 ## 2.1  Kortfattad beskrivning
 
-*Sammanfatta vilken testinsats planen avser, vilken release/version som testas, målgrupp samt vem som ansvarar för dokumentet.*
+Uppgift(tas bort innan inlämning): *Sammanfatta vilken testinsats planen avser, vilken release/version som testas, målgrupp samt vem som ansvarar för dokumentet.*
 
 Planen avser all testning av MortgageFlow release 1.0 på nivåerna SIT, systemtest, E2E, acceptanstest samt regression och omtest. Komponenttest utförs av utvecklingsteamen i DEV och ingår inte i planens genomförande, men dess resultat är en förutsättning för teststart (se 7.1).
  
@@ -74,7 +74,7 @@ Dokumentansvarig är testledaren. Planen skrivs av Grupp 2.
 
 ## 2.2  Bakgrund
 
-*Beskriv projektets eller förändringens bakgrund, verksamhetsbehovet och varför testningen genomförs.*
+Uppgift(tas bort innan inlämning): *Beskriv projektets eller förändringens bakgrund, verksamhetsbehovet och varför testningen genomförs.*
 
 NordFinance lanserar det nya interna bolånesystemet MortgageFlow. Bolånehandläggare, senior handläggare och administratörer ska använda det för att ta emot bolåneansökningar, kontrollera kunduppgifter, genomföra kreditbedömningar, hantera dokument, godkänna eller avslå bolån och kommunicera beslut till kunden.
  
@@ -82,7 +82,7 @@ Systemet är verksamhetskritiskt. Fel kan leda till ekonomiska förluster, felak
 
 ## 2.3  Syfte och mål
 
-Uppgift: *Beskriv vad testerna ska verifiera och vilka konkreta mål som ska vara uppnådda efter avslutad testperiod.*
+Uppgift(tas bort innan inlämning): *Beskriv vad testerna ska verifiera och vilka konkreta mål som ska vara uppnådda efter avslutad testperiod.*
 
 **Syfte:** Verifiera att MortgageFlow uppfyller de funktionella och icke-funktionella kraven och att systemet tillsammans med sina beroende system är säkert nog att produktionssättas, samt redovisa kvarstående risker på ett sätt som gör det möjligt att fatta ett välgrundat Go/No-Go-beslut.
  
@@ -97,7 +97,7 @@ Uppgift: *Beskriv vad testerna ska verifiera och vilka konkreta mål som ska var
 
 ## 2.4  Termer och förkortningar
 
-*Förklara projektspecifika termer, förkortningar, verktygsnamn och begrepp som behövs för att förstå testplanen.*
+Uppgift(tas bort innan inlämning): *Förklara projektspecifika termer, förkortningar, verktygsnamn och begrepp som behövs för att förstå testplanen.*
 
 | **Term** | **Förklaring** |
 | --- | --- |
@@ -130,7 +130,7 @@ Uppgift: *Beskriv vad testerna ska verifiera och vilka konkreta mål som ska var
 
 ## 2.5  Hänvisningar till andra dokument
 
-*Lista relevanta styrande eller stödjande dokument, till exempel kravspecifikation, projektplan, teststrategi, felhanteringsprocess och testspecifikationer.*
+Uppgift(tas bort innan inlämning): *Lista relevanta styrande eller stödjande dokument, till exempel kravspecifikation, projektplan, teststrategi, felhanteringsprocess och testspecifikationer.*
 
 | **Dokument** | **Beskrivning / sökväg / länk** |
 | --- | --- |
@@ -146,7 +146,7 @@ Uppgift: *Beskriv vad testerna ska verifiera och vilka konkreta mål som ska var
 
 ## 2.6  Öppna frågor
 
-*Lista frågor eller beslut som ännu inte är lösta och som kan påverka testplanen.*
+Uppgift(tas bort innan inlämning): *Lista frågor eller beslut som ännu inte är lösta och som kan påverka testplanen.*
 
 Frågorna nedan är hämtade från teststrategin 1.4 och med frågor dyker upp vid tesstplaneringen.
 
@@ -169,7 +169,7 @@ Frågorna nedan är hämtade från teststrategin 1.4 och med frågor dyker upp v
 
 # 3  Testobjekt
 
-*Beskriv vad som ska testas: system, delsystem, funktioner, integrationer, API:er, batchjobb, rapporter eller andra komponenter. Ange gärna version/build och ägare.*
+Uppgift(tas bort innan inlämning): *Beskriv vad som ska testas: system, delsystem, funktioner, integrationer, API:er, batchjobb, rapporter eller andra komponenter. Ange gärna version/build och ägare.*
 
 | **Testobjekt** | **Beskrivning** | **Version / build** |
 | --- | --- | --- |
@@ -186,9 +186,9 @@ Frågorna nedan är hämtade från teststrategin 1.4 och med frågor dyker upp v
 
 # 4  Omfattning
 
-*Beskriv vad som ingår i testningen. Koppla gärna till krav, affärsflöden, testnivåer, testtyper och prioriterade områden.*
+Uppgift(tas bort innan inlämning): *Beskriv vad som ingår i testningen. Koppla gärna till krav, affärsflöden, testnivåer, testtyper och prioriterade områden.*
 
-\<Testningen omfattar alla funktionella och icke-funktionella krav i kravunderlaget och är riskbaserad enligt teststrategin. Högst prioritet (P1) har kreditbedömning och affärsregler, dubbelgodkännande av lån över 5 MSEK, behörighet, säkerhet och skydd av persondata, integrationen mot kreditupplysningstjänsten, inloggning samt loggning och spårbarhet. Riskerna R1–R10 är definierade i teststrategin 1.1.
+Testningen omfattar alla funktionella och icke-funktionella krav i kravunderlaget och är riskbaserad enligt teststrategin. Högst prioritet (P1) har kreditbedömning och affärsregler, dubbelgodkännande av lån över 5 MSEK, behörighet, säkerhet och skydd av persondata, integrationen mot kreditupplysningstjänsten, inloggning samt loggning och spårbarhet. Riskerna R1–R10 är definierade i teststrategin 1.1.
  
 De fem kritiska affärsflödena som körs som E2E-test:
  
@@ -196,7 +196,7 @@ De fem kritiska affärsflödena som körs som E2E-test:
 - **E2E-2 Komplettering:** instabil anställning och låg inkomst → komplettering krävs → dokument laddas upp → ny granskning → beslut.
 - **E2E-3 Stort lån:** lån över 5 MSEK → handläggare godkänner → senior handläggare godkänner → godkänd.
 - **E2E-4 Hög risk:** aktiv betalningsanmärkning → hög risk → senior handläggare → avslag med registrerad orsak.
-- **E2E-5 Tjänsten svarar inte:** kreditupplysning uteblir → inget beslut på ofullständiga uppgifter.>
+- **E2E-5 Tjänsten svarar inte:** kreditupplysning uteblir → inget beslut på ofullständiga uppgifter.
 
 | **Område / flöde** | **Testnivå / testtyp** | **Prioritet** | **Kommentar** |
 | --- | --- | --- | --- |
@@ -221,7 +221,7 @@ De fem kritiska affärsflödena som körs som E2E-test:
 
 # 5  Avgränsning
 
-*Beskriv uttryckligen vad som inte ska testas i denna testinsats och varför. Ange vid behov vem som ansvarar för testningen utanför denna plan.*
+Uppgift(tas bort innan inlämning): *Beskriv uttryckligen vad som inte ska testas i denna testinsats och varför. Ange vid behov vem som ansvarar för testningen utanför denna plan.*
 
 | **Avgränsning** | **Motivering** | **Ansvar utanför planen** |
 | --- | --- | --- |
@@ -237,9 +237,9 @@ De fem kritiska affärsflödena som körs som E2E-test:
 
 # 6  Tillvägagångssätt
 
-*Beskriv hur testningen ska genomföras, exempelvis riskbaserat, kravbaserat, utforskande eller iterativt. Beskriv prioritering, felhantering, omtest, regression, rapportering och eventuell automatisering.*
+Uppgift(tas bort innan inlämning): *Beskriv hur testningen ska genomföras, exempelvis riskbaserat, kravbaserat, utforskande eller iterativt. Beskriv prioritering, felhantering, omtest, regression, rapportering och eventuell automatisering.*
 
-\<Testningen följer teststrategin (version 1.0) och är **riskbaserad, kravbaserad och iterativ**.
+Testningen följer teststrategin (version 1.0) och är **riskbaserad, kravbaserad och iterativ**.
  
 **Riskbaserat.** Riskerna R1–R10 styr vad som testas först och hur djupt. P1-områden designas och testas först och körs i alla omgångar. P2 körs i den mån tiden räcker och P3 kan utelämnas. Det som inte körs redovisas som kvarstående risk.
  
@@ -257,18 +257,18 @@ De fem kritiska affärsflödena som körs som E2E-test:
  
 **Rapportering.** Testledaren följer Planned vs Executed, Passed, Failed, Blocked, Not Run, öppna defekter per severity och risktäckning. Statusrapport skickas till projektledare och PO varje vecka och dagligen under UAT och regression. Före Go/No-Go lämnar testledaren rekommendation: Go, Conditional Go eller No-Go.
  
-**Avsteg från strategin.** Inga avsteg i version 1.0. Eventuella avsteg dokumenteras här och i dokumenthistoriken.>
+**Avsteg från strategin.** Inga avsteg i version 1.0. Eventuella avsteg dokumenteras här och i dokumenthistoriken.
 
 ## 6.1  Iterationer
 
-*Beskriv testcykler/testomgångar och vad som sker i varje cykel, till exempel test, omtest och regression.*
+Uppgift(tas bort innan inlämning): *Beskriv testcykler/testomgångar och vad som sker i varje cykel, till exempel test, omtest och regression.*
 
 | **Fas** | **Syfte** | **Genomförande** |
 | --- | --- | --- |
 | Testanalys och testdesign (v1–2) | Förstå krav, bryta ner risker, skriva och granska testfall, få svar på öppna frågor. | Alla testare. Testfall granskas av PO och verksamhet. Behörighetsmatris och testdatabehov tas fram. |
 | Förberedelse (v3) | Testdata och miljö redo före teststart. | Testare C tar fram testdata. DevOps och utvecklingsteamen levererar och verifierar SYS. Smoke test av miljön. |
 | SIT – omgång 1 (v4) | Verifiera integrationer och hitta fel tidigt. | Testare A med utvecklare. Alla integrationer, både korrekta svar och felfall. |
-| SIT – omgång 2 och systemtest – omgång 1 (v5–6) | Retest av SIT-fel samt första funktionella systemtest. | Testare A, B, D. P1 först. Smoke test efter varje deployment. |
+| SIT – omgång 2 och systemtest – omgång 1 (v5–6) | Retest av SIT-fel samt första funktionella systemtestet. | Testare A, B, D. P1 först. Smoke test efter varje deployment. |
 | Systemtest – omgång 2 och E2E (v7–8) | Slutföra systemtest, köra E2E-flöden, behörighet, säkerhet och prestanda. | Testare B, C, D, A och säkerhetsspecialist. Omtest av rättade fel. |
 | UAT (v8–9) | Verksamhetens acceptans i ACC. | Verksamhetsrepresentanter med stöd av Testare C. Dokumenterat godkännande. |
 | Regression och omtest (v9–10) | Visa att rättningar fungerar och inget har gått sönder. | Testare D med övriga. P1-regression alltid, P2 om tid finns. Eventuell ny UAT-körning vid kritiska fel. |
@@ -277,7 +277,7 @@ De fem kritiska affärsflödena som körs som E2E-test:
 
 # 7  Start- och slutkriterier
 
-*Definiera objektiva kriterier för när testningen får starta och när den kan betraktas som avslutad.*
+Uppgift(tas bort innan inlämning): *Definiera objektiva kriterier för när testningen får starta och när den kan betraktas som avslutad.*
 
 ## 7.1  Kriterier för att inleda testarbetet
 
@@ -305,37 +305,37 @@ De fem kritiska affärsflödena som körs som E2E-test:
 - Alla P1-defekter som rättats är omtestade, och regression av P1 är körd på den slutliga releasekandidaten.
 - Minst 90 % av P2-testfallen är genomförda.
 - UAT är genomfört och godkänt av verksamheten.
-- Säkerhetstest är genomfört med säkerhetsspecialist och inga kritiska säkerhetsfel återstår.
+- Säkerhetstestet är genomfört med en säkerhetsspecialist och inga kritiska säkerhetsfel återstår.
 - Prestandakraven (svarstid 2 s, 500 användare) är verifierade, eller avvikelsen är dokumenterad och accepterad.
 - Kvarstående risker är dokumenterade i testrapporten och accepterade av PO och projektledare.
 
 
 # 8  Avbrytande- och återupptagandekriterier
 
-*Definiera när testningen ska pausas eftersom fortsatt testning inte är meningsfull, samt vad som krävs för att återuppta den.*
+Uppgift(tas bort innan inlämning): *Definiera när testningen ska pausas eftersom fortsatt testning inte är meningsfull, samt vad som krävs för att återuppta den.*
 
 ## 8.1  Kriterier för att avbryta testerna
 
 - SYS eller ACC är instabil eller otillgänglig.
 - Smoke test misslyckas efter en deployment.
-- Fler än 20 % av planerade testfall i en testomgång är blockerade.
+- Fler än 20 % av planerade testfallen i en testomgång är blockerade.
 - Fler än fem öppna kritiska fel (S1) eller ett fel som blockerar ett helt affärsflöde, till exempel inloggning eller kreditkontroll.
 - Nödvändiga nyckelpersoner (utvecklare, DevOps, säkerhetsspecialist, verksamhetsrepresentanter), testdata, kreditupplysningstjänst eller stub saknas.
 - Leveransen bedöms inte vara testbar, eller felfrekvensen är så hög att test ger lite nytt värde.
 - Verkliga persondata upptäcks i testmiljö (testet stoppas omedelbart och GDPR-ansvarig informeras).
-Beslutet om avbrott fattas av testledaren i samråd med projektledare.
+Beslutet om avbrott fattas av testledaren i samråd med projektledaren.
 
 ## 8.2  Kriterier för att återuppta testarbetet
 
 - Blockerande problem är åtgärdade och verifierade med ett godkänt smoke test.
 - Miljö och beroenden är åter stabila, och testdata är återställda.
 - Ny version eller rättning är levererad med release notes.
-- Beslut om återstart är fattat av testledaren tillsammans med projektledare.
+- Beslut om återstart är fattat av testledaren tillsammans med projektledaren.
 - Omplanering är gjord och påverkan på tidplan och omfattning är dokumenterad.
 
 # 9  Testdokumentation
 
-*Beskriv vilka testartefakter som ska tas fram, var de lagras och vem som ansvarar för dem.*
+Uppgift(tas bort innan inlämning): *Beskriv vilka testartefakter som ska tas fram, var de lagras och vem som ansvarar för dem.*
 
 | **Dokument / artefakt** | **Beskrivning** | **Ansvarig** |
 | --- | --- | --- |
@@ -347,19 +347,19 @@ Beslutet om avbrott fattas av testledaren i samråd med projektledare.
 | Spårbarhetsmatris | Krav → risk → testfall → resultat. | Testledare |
 | Testlogg / exekveringsresultat | Resultat per testfall, miljö, build och datum. | Respektive testare |
 | Felrapporter | Defekter med severity, priority, steg, miljö och bevis. | Respektive testare |
-| Statusrapporter | Veckovis (dagligen under UAT och regression). Planned vs Executed, Passed, Failed, Blocked, defekter per severity. | Testledare |
+| Statusrapporter | veckovis (dagligen under UAT och regression). Planned vs Executed, Passed, Failed, Blocked, defekter per severity. | Testledare |
 | UAT-scenarier och UAT-protokoll | Scenarier och dokumenterat verksamhetsgodkännande. | Testare C, verksamhetsrepresentanter |
 | Release Readiness-underlag | Sammanställning inför Go/No-Go med kvarstående risker. | Testledare |
 | Testrapport | Slutrapport med resultat, risker och rekommendation. | Testledare |
 
 # 10  Testaktiviteter
 
-*Lista de viktigaste aktiviteterna från testanalys och planering till genomförande, felhantering, uppföljning och testrapport.*
+Uppgift(tas bort innan inlämning): *Lista de viktigaste aktiviteterna från testanalys och planering till genomförande, felhantering, uppföljning och testrapport.*
 
 | **ID** | **Aktivitet** | **Ägare** |
 | --- | --- | --- |
 | A1 | Testanalys: analysera krav, risker och öppna frågor. Koppla krav till risk. | Testledare, Testare A–D |
-| A2 | Testdesign: skriva och granska testfall (P1 först). Ta fram behörighetsmatris. | Testare A–D, PO, verksamhet |
+| A2 | Testdesign: skriva och granska testfall (P1 först). Ta fram behörighetsmatrisen. | Testare A–D, PO, verksamhet |
 | A3 | Ta fram testdata, SQL-skript och testfiler. | Testare C |
 | A4 | Miljöförberedelse: deployment, konfiguration, konton, MFA och smoke test av SYS. | DevOps, utvecklingsteamen, Testare A |
 | A5 | SIT: kreditupplysning, personregister, e-post, MFA och dokumentlagring (korrekta svar, felfall, timeout). | Testare A |
@@ -378,23 +378,23 @@ Beslutet om avbrott fattas av testledaren i samråd med projektledare.
 
 # 11  Testmiljö
 
-*Beskriv testmiljön och viktiga skillnader mot produktion. Dokumentera integrationer, beroenden, testdata, åtkomst och ansvar.*
+Uppgift(tas bort innan inlämning): *Beskriv testmiljön och viktiga skillnader mot produktion. Dokumentera integrationer, beroenden, testdata, åtkomst och ansvar.*
 
-Miljökedjan är DEV → SYS → ACC → PROD enligt teststrategin avsnitt 3. En miljö är redo för test först när rätt version är installerad, konfigurationen är rätt, integrationerna är anslutna, testarna har åtkomst och rätt testdata finns. Testmiljön SYS delas av SIT, systemtest, API-test, E2E, regression och omtest. Deploymentar till SYS planeras därför gemensamt av testledare, DevOps och de tre utvecklingsteamen så att pågående test inte stör varandra.
+Miljökedjan är DEV → SYS → ACC → PROD enligt teststrategins avsnitt 3. En miljö är redo för test först när rätt version är installerad, konfigurationen är rätt, integrationerna är anslutna, testarna har åtkomst och rätt testdata finns. Testmiljön SYS delas av SIT, systemtest, API-test, E2E, regression och omtest. Deploymentar till SYS planeras därför gemensamt av testledare, DevOps och de tre utvecklingsteamen så att pågående test inte stör varandra.
 
 ## 11.1  Hård- och mjukvara
 
 | **Komponent** | **Version / konfiguration** | **Skillnad mot produktion** | **Ansvarig** |
 | --- | --- | --- | --- |
 | SYS – MortgageFlow (webbapp React/TypeScript, backend/API) | Releasekandidat per deployment, build anges i testlogg. | Delas av alla tester och tre utvecklingsteam. Mindre kapacitet, vilket påverkar prestandatest. | DevOps / utvecklingsteamen |
-| ACC – MortgageFlow | Releasekandidat via releaseprocessen. | Ska likna PROD så mycket som möjligt. Endast syntetisk data om inget annat beslutas. | DevOps |
+| ACC – MortgageFlow | Releasekandidat via releaseprocessen. | Ska likna PROD så mycket som möjligt. Endast syntetiska data om inget annat beslutas. | DevOps |
 | Kreditupplysningstjänst (REST) | Leverantörens testmiljö eller stub (öppen fråga). | Förutbestämda svar per testpersonnummer. Stub fångar inte alla verkliga felkoder och svarstider. | Representant kreditupplysningstjänst / Testare A |
 | Kund-/personregister | Testinstans med testpersoner. | Endast testpersoner. | DevOps |
 | E-posttjänst (SMTP) | Testinstans med uppfångad post. | Inga riktiga kunder nås. | DevOps |
 | Autentisering och MFA (AD/LDAP, MFA) | Testkonfiguration, testkonton och testenheter per roll. | Testkonton i stället för riktiga användare. | DevOps / säkerhetsspecialist |
 | Dokumentlagring och virusskanning | Testinstans. | Virusskanning verifieras med ofarlig standardtestfil. | DevOps |
 | Databas (PostgreSQL) | Separat testdatabas, kryptering som i PROD. Återställs med SQL-skript. | Endast testdata. | DevOps |
-| Klienter | Windows-/macOS-klient med Chrome, Edge och Firefox (versioner öppen fråga). | Testklienter. | Testare B |
+| Klienter | Windows-/macOS-klient med Chrome, Edge och Firefox (versioner: öppen fråga). | Testklienter. | Testare B |
 
 
 ## 11.2  Testverktyg
@@ -412,13 +412,13 @@ Miljökedjan är DEV → SYS → ACC → PROD enligt teststrategin avsnitt 3. En
 
 ## 11.3  Lokaler
 
-*Beskriv särskilda lokaler, enheter eller fysisk utrustning som krävs. Om ej relevant, ange Ej applicerbart.*
+Uppgift(tas bort innan inlämning): *Beskriv särskilda lokaler, enheter eller fysisk utrustning som krävs. Om ej relevant, ange Ej applicerbart.*
 
-\<Ej applicerbart men fysiska MFA-enheter finns beskrivna i 11.1. Testningen sker via webbläsare i ordinarie arbetsmiljö och kan genomföras på distans.>
+Ej applicerbart, men fysiska MFA-enheter finns beskrivna i 11.1. Testningen sker via webbläsare i ordinarie arbetsmiljö och kan genomföras på distans.
 
 # 12  Ansvar
 
-*Tydliggör ansvar, mandat, eskaleringsvägar och vem som fattar beslut om exempelvis teststart, avbrott och Go/No-Go.*
+Uppgift(tas bort innan inlämning): *Tydliggör ansvar, mandat, eskaleringsvägar och vem som fattar beslut om exempelvis teststart, avbrott och Go/No-Go.*
 
 | **Roll** | **Ansvar / mandat** | **Namn / funktion** |
 | --- | --- | --- |
@@ -439,7 +439,7 @@ Miljökedjan är DEV → SYS → ACC → PROD enligt teststrategin avsnitt 3. En
 
 # 13  Resurs- och utbildningsbehov
 
-*Ange resurser, omfattning/tillgänglighet, funktion och eventuella utbildnings- eller onboardingbehov.*
+Uppgift(tas bort innan inlämning): *Ange resurser, omfattning/tillgänglighet, funktion och eventuella utbildnings- eller onboardingbehov.*
 
 | **Namn / resurs** | **Omfattning** | **Funktion** | **Organisation / team** |
 | --- | --- | --- | --- |
@@ -463,7 +463,7 @@ Miljökedjan är DEV → SYS → ACC → PROD enligt teststrategin avsnitt 3. En
 
 # 14  Tidplan
 
-*Beskriv testperioden, viktiga milstolpar och planerade testomgångar. Anpassa efter projektets leveransmodell.*
+Uppgift(tas bort innan inlämning): *Beskriv testperioden, viktiga milstolpar och planerade testomgångar. Anpassa efter projektets leveransmodell.*
 
 Tidplanen anges i projektveckor (vecka 1–12 räknat från projektets start).
 
@@ -491,13 +491,13 @@ Tidplanen anges i projektveckor (vecka 1–12 räknat från projektets start).
 
 ## 14.2  Påföljande testomgångar
 
-*Beskriv hur efterföljande testomgångar planeras, vad som återanvänds och hur omfattningen styrs av felutfall och risk.*
+Uppgift(tas bort innan inlämning): *Beskriv hur efterföljande testomgångar planeras, vad som återanvänds och hur omfattningen styrs av felutfall och risk.*
 
-\<Påföljande omgångar genomförs vid varje ny leverans från utvecklingsteamen. Varje omgång inleds med smoke test och omtest av rättade fel, därefter körs regression av P1 och nya eller ändrade funktioner. Omfattningen styrs av felutfall och risk: områden med många eller allvarliga fel får utökad testning (fler testfall, utforskande sessioner), medan stabila områden endast körs som regression. Testfall, testdata och automatiserade tester från första omgången återanvänds. P2 körs när P1 är klart, och P3 körs bara om tid finns. Vid ändrade krav eller förseningar uppdaterar testledaren planen och dokumenterar ändringen i dokumenthistoriken.>
+Påföljande omgångar genomförs vid varje ny leverans från utvecklingsteamen. Varje omgång inleds med smoke test och omtest av rättade fel, därefter körs regression av P1 och nya eller ändrade funktioner. Omfattningen styrs av felutfall och risk: områden med många eller allvarliga fel får utökad testning (fler testfall, utforskande sessioner), medan stabila områden endast körs som regression. Testfall, testdata och automatiserade tester från första omgången återanvänds. P2 körs när P1 är klart, och P3 körs bara om tid finns. Vid ändrade krav eller förseningar uppdaterar testledaren planen och dokumenterar ändringen i dokumenthistoriken.
 
 # 15  Risker och oförutsedda händelser
 
-*Dokumentera risker som kan påverka testningen eller leveransen. Ange konsekvens/kommentar, förebyggande eller korrigerande åtgärd, ägare och prioritet.*
+Uppgift(tas bort innan inlämning): *Dokumentera risker som kan påverka testningen eller leveransen. Ange konsekvens/kommentar, förebyggande eller korrigerande åtgärd, ägare och prioritet.*
 
 | **Risk** | **Konsekvens / kommentar** | **Åtgärd** | **Ägare** | **Prioritet** |
 | --- | --- | --- | --- | --- |
@@ -515,7 +515,7 @@ Tidplanen anges i projektveckor (vecka 1–12 räknat från projektets start).
 
 # 16  Godkännande av testplanen
 
-*Ange vilka roller/personer som ska godkänna testplanen och när godkännandet skedde.*
+Uppgift(tas bort innan inlämning): *Ange vilka roller/personer som ska godkänna testplanen och när godkännandet skedde.*
 
 | **Namn / roll** | **Beslut** | **Datum** | **Kommentar** |
 | --- | --- | --- | --- |
