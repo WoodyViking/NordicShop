@@ -66,25 +66,25 @@ Identifieraren följer formen *TP (testplan) – MF (MortgageFlow) – versionsn
 
 *Sammanfatta vilken testinsats planen avser, vilken release/version som testas, målgrupp samt vem som ansvarar för dokumentet.*
 
-\<Planen avser all testning av MortgageFlow release 1.0 på nivåerna SIT, systemtest, E2E, acceptanstest samt regression och omtest. Komponenttest utförs av utvecklingsteamen i DEV och ingår inte i planens genomförande, men dess resultat är en förutsättning för teststart (se 7.1).
+Planen avser all testning av MortgageFlow release 1.0 på nivåerna SIT, systemtest, E2E, acceptanstest samt regression och omtest. Komponenttest utförs av utvecklingsteamen i DEV och ingår inte i planens genomförande, men dess resultat är en förutsättning för teststart (se 7.1).
  
 Målgrupp: testteamet, Product Owner (PO), projektledare, de tre utvecklingsteamen, verksamhetsrepresentanter, säkerhetsspecialist, DevOps och representanten från kreditupplysningstjänsten.
  
-Dokumentansvarig är testledaren. Planen skrivs av Grupp 2.>
+Dokumentansvarig är testledaren. Planen skrivs av Grupp 2.
 
 ## 2.2  Bakgrund
 
 *Beskriv projektets eller förändringens bakgrund, verksamhetsbehovet och varför testningen genomförs.*
 
-\<NordFinance lanserar det nya interna bolånesystemet MortgageFlow. Bolånehandläggare, senior handläggare och administratörer ska använda det för att ta emot bolåneansökningar, kontrollera kunduppgifter, genomföra kreditbedömningar, hantera dokument, godkänna eller avslå bolån och kommunicera beslut till kunden.
+NordFinance lanserar det nya interna bolånesystemet MortgageFlow. Bolånehandläggare, senior handläggare och administratörer ska använda det för att ta emot bolåneansökningar, kontrollera kunduppgifter, genomföra kreditbedömningar, hantera dokument, godkänna eller avslå bolån och kommunicera beslut till kunden.
  
-Systemet är verksamhetskritiskt. Fel kan leda till ekonomiska förluster, felaktiga kreditbedömningar, säkerhetsproblem, GDPR-incidenter och kundmissnöje. Projektet har 12 veckor kvar till produktionssättning, och testteamet har fått uppdraget att planera, leda, följa upp och avsluta testarbetet. Testningen genomförs för att ge projektet och verksamheten ett tillförlitligt underlag för beslutet om Go/No-Go.>
+Systemet är verksamhetskritiskt. Fel kan leda till ekonomiska förluster, felaktiga kreditbedömningar, säkerhetsproblem, GDPR-incidenter och kundmissnöje. Projektet har 12 veckor kvar till produktionssättning, och testteamet har fått uppdraget att planera, leda, följa upp och avsluta testarbetet. Testningen genomförs för att ge projektet och verksamheten ett tillförlitligt underlag för beslutet om Go/No-Go.
 
 ## 2.3  Syfte och mål
 
-*Beskriv vad testerna ska verifiera och vilka konkreta mål som ska vara uppnådda efter avslutad testperiod.*
+Uppgift: *Beskriv vad testerna ska verifiera och vilka konkreta mål som ska vara uppnådda efter avslutad testperiod.*
 
-\<**Syfte:** Verifiera att MortgageFlow uppfyller de funktionella och icke-funktionella kraven och att systemet tillsammans med sina beroende system är säkert nog att produktionssättas, samt redovisa kvarstående risker på ett sätt som gör det möjligt att fatta ett välgrundat Go/No-Go-beslut.
+**Syfte:** Verifiera att MortgageFlow uppfyller de funktionella och icke-funktionella kraven och att systemet tillsammans med sina beroende system är säkert nog att produktionssättas, samt redovisa kvarstående risker på ett sätt som gör det möjligt att fatta ett välgrundat Go/No-Go-beslut.
  
 **Mål vid avslutad testperiod:**
  
@@ -93,7 +93,7 @@ Systemet är verksamhetskritiskt. Fel kan leda till ekonomiska förluster, felak
 - Alla integrationer mot kreditupplysningstjänst, kund-/personregister, e-posttjänst, MFA/autentisering och dokumentlagring är verifierade, inklusive felfall och timeout.
 - Verksamheten har genomfört och dokumenterat acceptanstest i ACC.
 - Regression och omtest är genomförda efter sista leveransen.
-- Kvarstående risker är dokumenterade och har en rekommendation (Go, Conditional Go eller No-Go) till PO och projektledare.>
+- Kvarstående risker är dokumenterade och har en rekommendation (Go, Conditional Go eller No-Go) till PO och projektledare.
 
 ## 2.4  Termer och förkortningar
 
