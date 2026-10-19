@@ -439,29 +439,22 @@ Uppgift(tas bort innan inlämning): *Tydliggör ansvar, mandat, eskaleringsväga
 
 ## 12.1 RACI
 
-**R** = Responsible (utför arbetet), **A** = Accountable (ansvarig och godkänner, en per rad), **C** = Consulted (rådfrågas före beslut), **I** = Informed (informeras efter).
+**R** = Responsible, **A** = Accountable, **C** = Consulted, **I** = Informed.
 
-| Aktivitet | Testledare | Testare | Utvecklings-team | DevOps | Product Owner | Verksamhet | Säkerhets-specialist | Projektledare |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Teststrategi och testplan | A / R | C | C | C | C | I | C | C |
-| Testanalys (krav, risker, öppna frågor) | A | R | C | I | C | C | C | I |
-| Testdesign (testfall, behörighetsmatris) | A | R | I | I | C | C | C | I |
-| Testdata och SQL-skript | A | R | C | C | I | C | I | I |
-| Miljöförberedelse och deployment (SYS/ACC) | C | C | R | A / R | I | I | I | I |
-| SIT | A | R | C | C | I | I | I | I |
-| Systemtest och E2E | A | R | C | C | I | C | I | I |
-| Säkerhetstest | C | R | C | C | I | I | A | I |
-| Prestandatest | A | R | C | R | C | I | I | I |
-| Defect triage | A / R | R | R | C | C | C | I | I |
-| Felrättning | I | I | A / R | C | I | I | I | I |
-| Omtest | A | R | I | I | I | I | I | I |
-| Regression | A | R | I | I | I | I | I | I |
-| Acceptanstest (UAT) | C | R (stöd) | I | C | A | R | I | I |
-| Teststatus och rapportering | A / R | C | I | I | I | I | I | I |
-| Release Readiness och testrapport | A / R | C | C | C | C | C | C | I |
-| Rekommendation inför Go/No-Go | A / R | C | C | C | C | C | C | C |
-| Beslut Go/No-Go | C | I | I | C | A / R | C | C | R |
-| Produktionssättning och smoke test i PROD | C | R | C | A / R | I | I | I | I |
+**Testare A** = API, integration, tekniska tester. **Testare B** = funktionellt systemtest och E2E. **Testare C** = bankverksamhet, UAT och testdata. **Testare D** = regression, automation och behörighet.
+
+| Aktivitet | Test-ledare | Testare A | Testare B | Testare C | Testare D | Utvecklings-team | DevOps | Product Owner | Verksam-het | Säkerhets-specialist | Projekt-ledare |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Testanalys och testdesign | A | R | R | R | R | C | I | C | C | C | I |
+| Testdata | A | C | I | R | C | C | C | I | C | I | I |
+| Miljöförberedelser | C | R | R | I | R | R | A / R | I | I | I | I |
+| SIT | A | R | R | R | R | C | C | I | I | I | I |
+| Systemtest | A | R | R | R | R | C | C | I | C | C | I |
+| UAT | C | I | R | R | I | I | C | A | R | I | I |
+| Regression och retest | A | R | R | R | R | C | I | I | I | I | I |
+| Release Readiness | A / R | C | C | C | C | C | C | C | C | C | I |
+| Go/No-Go (beslut) | C | I | I | I | I | C | C | A / R | C | C | R |
+| Produktionssättning och smoke test i PROD | C | I | I | I | R | C | A / R | I | I | I | I |
 
 
 # 13  Resurs- och utbildningsbehov
