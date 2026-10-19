@@ -381,6 +381,7 @@ Ej applicerbart (inga särskilda lokaler, enheter eller fysisk utrustning har id
 
 **Utbildning/onboarding:** Deltagare i acceptanstest får en introduktion på högst en timme om testmanus och felrapportering. Eventuell ersättare behöver introduktion (full effekt efter ca en vecka). Gruppen har uppgett att de är oerfarna testare, vilket ingår i bufferten.
 
+
 # 15  Tidplan
 
 > **OBS:** Tidplanen nedan kommer från `testplan_12_veckor.md` och bygger på **fyra testare**. Omplaneringen efter att en testare försvann (Uppgift 9 i den filen) är inte gjord. Veckor är relativa (V1–V12). Kalenderdatum **[SAKNAS]**.

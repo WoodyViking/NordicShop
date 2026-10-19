@@ -270,6 +270,7 @@ Beroende system i testmiljöerna:
 
 ```mermaid
 flowchart LR
+    K[Kund] --> B
     H[Bolånehandläggare] --> B
     S[Senior handläggare] --> B
     A[Administratör] --> B
