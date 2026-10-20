@@ -184,7 +184,7 @@ Frågorna nedan är hämtade från teststrategin 1.4 och kompletteras med frågo
 # 4  Omfattning
 
 
-Testningen omfattar alla funktionella och icke-funktionella krav i kravunderlaget och är riskbaserad enligt teststrategin. Högst prioritet (P1) har kreditbedömning och affärsregler, dubbelgodkännande av lån över 5 MSEK, behörighet, säkerhet och skydd av persondata, integrationen mot kreditupplysningstjänsten, inloggning samt loggning och spårbarhet. Riskerna R1–R10 är definierade i avsnitt 1.1 i teststrategin.
+Testningen omfattar alla funktionella och icke-funktionella krav i kravunderlaget och är riskbaserad enligt teststrategin. Högst prioritet (P1) har kreditbedömning och affärsregler, dubbelgodkännande av lån över 5 MSEK, behörighet, säkerhet och skydd av persondata, integrationen mot kreditupplysningstjänsten, inloggning samt loggning och spårbarhet. Riskerna R1–R10 är definierade i avsnitt 1.1 i teststrategin. R11 tillkom 2026-10-20 genom kravet på verifiering och loggning av rolländringar och finns därför ännu inte i strategin (se avsnitt 6).
  
 De fem kritiska affärsflödena som körs som E2E-test:
  
