@@ -427,11 +427,11 @@ Ej applicerbart, men fysiska MFA-enheter finns beskrivna i 11.1. Testningen sker
 
 | Aktivitet | Test-ledare | Testare A | Testare C | Testare D | Utvecklings-team | DevOps | Product Owner | Verksam-het | Säkerhets-specialist | Projekt-ledare |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Testanalys och testdesign | A | R | R |  R | C | I | C | C | C | I |
+| Testanalys och testdesign | A | R | R | R | C | I | C | C | C | I |
 | Testdata | A | C | I | C | C | C | I | C | I | I |
 | Miljöförberedelser | C | R | R | R | R | A / R | I | I | I | I |
 | SIT | A | R | R | R | C | C | I | I | I | I |
-| Systemtest | A | R | R |  R | C | C | I | C | C | I |
+| Systemtest | A | R | R | R | C | C | I | C | C | I |
 | UAT | C | I | R | I | I | C | A | R | I | I |
 | Regression och retest | A | R | R | R | C | I | I | I | I | I |
 | Release Readiness | A / R | C | C | C | C | C | C | C | C | I |
