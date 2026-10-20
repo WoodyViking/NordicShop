@@ -142,7 +142,7 @@ Systemet är verksamhetskritiskt. Fel kan leda till ekonomiska förluster, felak
 ## 2.6  Öppna frågor
 
 
-Frågorna nedan är hämtade från teststrategin 1.4 och frågor dyker upp vid testplaneringen.
+Frågorna nedan är hämtade från teststrategin 1.4 och kompletteras med frågor som dyker upp vid testplaneringen.
 
 | **Fråga** | **Ansvarig** | **Senast datum** | **Status** |
 | --- | --- | --- | --- |
