@@ -257,8 +257,8 @@ Testningen följer teststrategin (version 1.0) och är **riskbaserad, kravbasera
 | Testanalys och testdesign (v1–2) | Förstå krav, bryta ner risker, skriva och granska testfall, få svar på öppna frågor. | Alla testare. Testfall granskas av PO och verksamhet. Behörighetsmatris och testdatabehov tas fram. |
 | Förberedelse (v3) | Testdata och miljö redo före teststart. | Testare C tar fram testdata. DevOps och utvecklingsteamen levererar och verifierar SYS. Smoke test av miljön. |
 | SIT – omgång 1 (v4) | Verifiera integrationer och hitta fel tidigt. | Testare A med utvecklare. Alla integrationer, både korrekta svar och felfall. |
-| SIT – omgång 2 och systemtest – omgång 1 (v5–6) | Retest av SIT-fel samt första funktionella systemtestet. | Testare A, B, D. P1 först. Smoke test efter varje deployment. |
-| Systemtest – omgång 2 och E2E (v7–8) | Slutföra systemtest, köra E2E-flöden, behörighet, säkerhet och prestanda. | Testare B, C, D, A och säkerhetsspecialist. Omtest av rättade fel. |
+| SIT – omgång 2 och systemtest – omgång 1 (v5–6) | Retest av SIT-fel samt första funktionella systemtestet. | Testare A, D. P1 först. Smoke test efter varje deployment. |
+| Systemtest – omgång 2 och E2E (v7–8) | Slutföra systemtest, köra E2E-flöden, behörighet, säkerhet och prestanda. | Testare  C, D, A och säkerhetsspecialist. Omtest av rättade fel. |
 | UAT (v8–9) | Verksamhetens acceptans i ACC. | Verksamhetsrepresentanter med stöd av Testare C. Dokumenterat godkännande. |
 | Regression och omtest (v9–10) | Visa att rättningar fungerar och inget har gått sönder. | Testare D med övriga. P1-regression alltid, P2 om tid finns. Eventuell ny UAT-körning vid kritiska fel. |
 | Release Readiness (v11) | Bedöma om releasen är redo. | Testledare sammanställer testrapport, kvarstående risker och rekommendation. |
@@ -344,18 +344,18 @@ Beslutet om avbrott fattas av testledaren i samråd med projektledaren.
 
 | **ID** | **Aktivitet** | **Ägare** |
 | --- | --- | --- |
-| A1 | Testanalys: analysera krav, risker och öppna frågor. Koppla krav till risk. | Testledare, Testare A–D |
-| A2 | Testdesign: skriva och granska testfall (P1 först). Ta fram behörighetsmatrisen. | Testare A–D, PO, verksamhet |
-| A3 | Ta fram testdata, SQL-skript och testfiler. | Testare C |
-| A4 | Miljöförberedelse: deployment, konfiguration, konton, MFA och smoke test av SYS. | DevOps, utvecklingsteamen, Testare A |
-| A5 | SIT: kreditupplysning, personregister, e-post, MFA och dokumentlagring (korrekta svar, felfall, timeout). | Testare A |
-| A6 | Systemtest funktionellt: inloggning, ansökan, status, kreditregler, stora lån, dokument, beslut. | Testare B |
-| A7 | Behörighets- och regressionsautomation: behörighet per roll via UI och API, automatisering av P1. | Testare D |
-| A8 | Säkerhets- och prestandatest: kryptering, kontolåsning, utloggning, 2 s, 500 användare. | Säkerhetsspecialist, Testare A |
-| A9 | E2E-test av flödena E2E-1 till E2E-5 inklusive kontroll av ärendelogg. | Testare B, Testare C |
-| A10 | Felhantering: registrera, triagera och följa upp defekter. | Testledare, Testare A–D |
+| A1 | Testanalys: analysera krav, risker och öppna frågor. Koppla krav till risk. | Testledare, Testare A–D-C |
+| A2 | Testdesign: skriva och granska testfall (P1 först). Ta fram behörighetsmatrisen. | Testare A, C, D, PO, verksamhet  |
+| A3 | Ta fram testdata, SQL-skript och testfiler. | Testare C, devops |
+| A4 | Miljöförberedelse: deployment, konfiguration, konton, MFA och smoke test av SYS. | DevOps, utvecklingsteamen,Säkerhetsspecialist, Testare A,D  |
+| A5 | SIT: kreditupplysning, personregister, e-post, MFA och dokumentlagring (korrekta svar, felfall, timeout). | Testare A, D och (C vidbehov) |
+| A6 | Systemtest funktionellt: inloggning, ansökan, status, kreditregler, stora lån, dokument, beslut. | Testare D och säkerhetsSpecialist |
+| A7 | Behörighets- och regressionsautomation: behörighet per roll via UI och API, automatisering av P1. | Testare (vid behov A/C) Main = D |
+| A8 | Säkerhets- och prestandatest: kryptering, kontolåsning, utloggning, 2 s, 500 användare. | Säkerhetsspecialist, Testare D |
+| A9 | E2E-test av flödena E2E-1 till E2E-5 inklusive kontroll av ärendelogg. | Testare A, Testare C |
+| A10 | Felhantering: registrera, triagera och följa upp defekter. | Testledare, Testare A, C |
 | A11 | Omtest av rättade fel och smoke test efter varje deployment. | Testare D, den som rapporterat felet |
-| A12 | UAT-förberedelse och stöd under acceptanstest i ACC. | Testare C, verksamhet |
+| A12 | UAT-förberedelse och stöd under acceptanstest i ACC. | Testare C, verksamhet(VS) |
 | A13 | Regressionstest av P1 (och P2 om tid finns) på releasekandidaten. | Testare D |
 | A14 | Statusrapportering och uppföljning av tidplan, risker och miljöbehov. | Testledare |
 | A15 | Release Readiness: sammanställa resultat, kvarstående risker och rekommendation. | Testledare |
