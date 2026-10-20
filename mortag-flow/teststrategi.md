@@ -17,7 +17,6 @@ Teststrategi för MortgageFlow
 | **Datum** | **Version** | **Beskrivning** | **Författare** |
 | --- | --- | --- | --- |
 | 2026-10-15 | 1.0 | Första version av teststrategin (Del 1) | Grupp 2 |
-|  |  |  |  |
 
 # Innehållsförteckning
 
