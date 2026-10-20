@@ -494,6 +494,22 @@ Tidplanen anges i projektveckor (vecka 1–12 räknat från projektets start).
 
 *Förkortningar: TL = testledare, A-D = testare A–D, TA/TC/TD = testare A/C/D, TDA = testare D och A, TC =  C, SÄKspec = säkerhetsspecialist, PO = Product Owner, PL = projektledare.*
 
+**NY**
+
+| **Vecka** | **1** | **2** | **3** | **4** | **5** | **6** | **7** | **8** | **9** | **10** | **11** | **12** |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Testanalys och testdesign | TL+ACD | TL+AcD | | | | | | | | | | |
+| Testdata och miljöförberedelser | | C+DevO | C+DevO | | | | | | | | | |
+| SIT | | | AcD | ACd | acd | | | | | | | |
+| Systemtest (inkl. behörighet, säkerhet, prestanda) | | | | | Försenad! | DA+ SÄKspec | D+ SÄKspec | Da+ SÄKspec | Da+ SÄKspec | | | |
+| E2E-test | | | | | C | C | AC | AcD | | | | |
+| UAT | | | | | | | | C+ VS | C+ VS | | | |
+| Regression och retest | | | | | acd | acd | acd | acd | AD | ACD | ACD | |
+| Release Readiness | | | | | | | | | | TL | TL | |
+| Go/No-Go och produktionssättning | | | | | | | | | | | | PO +PL |
+
+
+
 ## 14.1  Första testomgången
 
 | **Fas** | **Varaktighet / datum** |
