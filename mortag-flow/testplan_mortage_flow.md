@@ -13,7 +13,7 @@ Testplan för MortgageFlow – nytt bolånesystem, release 1.0
 | 1.0 | 2026-10-16 | Grupp 2 | Första kompletta version (Del 2). Bygger på teststrategi version 1.0. |
 | 1.1 | 2026-10-19 | Grupp 2 | Veckoplan och RACI tillagt |
 
-*Använd mallen som ett styrande dokument för ett specifikt testuppdrag, en release eller en testperiod. Ersätt all text inom \<hakparenteser> och anpassa avsnitten efter projektets behov.*
+
 
 # Innehåll
 
@@ -65,7 +65,6 @@ Testplanen styr testarbetet inför första produktionssättningen av MortgageFlo
 
 ## 2.1  Kortfattad beskrivning
 
-Uppgift(tas bort innan inlämning): *Sammanfatta vilken testinsats planen avser, vilken release/version som testas, målgrupp samt vem som ansvarar för dokumentet.*
 
 Planen avser all testning av MortgageFlow release 1.0 på nivåerna SIT, systemtest, E2E, acceptanstest samt regression och omtest. Komponenttest utförs av utvecklingsteamen i DEV och ingår inte i planens genomförande, men dess resultat är en förutsättning för teststart (se 7.1).
  
@@ -75,7 +74,6 @@ Dokumentansvarig är testledaren. Planen skrivs av Grupp 2.
 
 ## 2.2  Bakgrund
 
-Uppgift(tas bort innan inlämning): *Beskriv projektets eller förändringens bakgrund, verksamhetsbehovet och varför testningen genomförs.*
 
 NordFinance lanserar det nya interna bolånesystemet MortgageFlow. Bolånehandläggare, senior handläggare och administratörer ska använda det för att ta emot bolåneansökningar, kontrollera kunduppgifter, genomföra kreditbedömningar, hantera dokument, godkänna eller avslå bolån och kommunicera beslut till kunden.
  
@@ -83,7 +81,6 @@ Systemet är verksamhetskritiskt. Fel kan leda till ekonomiska förluster, felak
 
 ## 2.3  Syfte och mål
 
-Uppgift(tas bort innan inlämning): *Beskriv vad testerna ska verifiera och vilka konkreta mål som ska vara uppnådda efter avslutad testperiod.*
 
 **Syfte:** Verifiera att MortgageFlow uppfyller de funktionella och icke-funktionella kraven och att systemet tillsammans med sina beroende system är säkert nog att produktionssättas, samt redovisa kvarstående risker på ett sätt som gör det möjligt att fatta ett välgrundat Go/No-Go-beslut.
  
@@ -98,7 +95,6 @@ Uppgift(tas bort innan inlämning): *Beskriv vad testerna ska verifiera och vilk
 
 ## 2.4  Termer och förkortningar
 
-Uppgift(tas bort innan inlämning): *Förklara projektspecifika termer, förkortningar, verktygsnamn och begrepp som behövs för att förstå testplanen.*
 
 | **Term** | **Förklaring** |
 | --- | --- |
@@ -131,7 +127,6 @@ Uppgift(tas bort innan inlämning): *Förklara projektspecifika termer, förkort
 
 ## 2.5  Hänvisningar till andra dokument
 
-Uppgift(tas bort innan inlämning): *Lista relevanta styrande eller stödjande dokument, till exempel kravspecifikation, projektplan, teststrategi, felhanteringsprocess och testspecifikationer.*
 
 | **Dokument** | **Beskrivning / sökväg / länk** |
 | --- | --- |
@@ -147,7 +142,6 @@ Uppgift(tas bort innan inlämning): *Lista relevanta styrande eller stödjande d
 
 ## 2.6  Öppna frågor
 
-Uppgift(tas bort innan inlämning): *Lista frågor eller beslut som ännu inte är lösta och som kan påverka testplanen.*
 
 Frågorna nedan är hämtade från teststrategin 1.4 och med frågor dyker upp vid testplaneringen.
 
@@ -170,7 +164,6 @@ Frågorna nedan är hämtade från teststrategin 1.4 och med frågor dyker upp v
 
 # 3  Testobjekt
 
-Uppgift(tas bort innan inlämning): *Beskriv vad som ska testas: system, delsystem, funktioner, integrationer, API:er, batchjobb, rapporter eller andra komponenter. Ange gärna version/build och ägare.*
 
 | **Testobjekt** | **Beskrivning** | **Version / build** |
 | --- | --- | --- |
@@ -187,7 +180,6 @@ Uppgift(tas bort innan inlämning): *Beskriv vad som ska testas: system, delsyst
 
 # 4  Omfattning
 
-Uppgift(tas bort innan inlämning): *Beskriv vad som ingår i testningen. Koppla gärna till krav, affärsflöden, testnivåer, testtyper och prioriterade områden.*
 
 Testningen omfattar alla funktionella och icke-funktionella krav i kravunderlaget och är riskbaserad enligt teststrategin. Högst prioritet (P1) har kreditbedömning och affärsregler, dubbelgodkännande av lån över 5 MSEK, behörighet, säkerhet och skydd av persondata, integrationen mot kreditupplysningstjänsten, inloggning samt loggning och spårbarhet. Riskerna R1–R10 är definierade i teststrategin 1.1.
  
@@ -222,7 +214,6 @@ De fem kritiska affärsflödena som körs som E2E-test:
 
 # 5  Avgränsning
 
-Uppgift(tas bort innan inlämning): *Beskriv uttryckligen vad som inte ska testas i denna testinsats och varför. Ange vid behov vem som ansvarar för testningen utanför denna plan.*
 
 | **Avgränsning** | **Motivering** | **Ansvar utanför planen** |
 | --- | --- | --- |
@@ -238,7 +229,6 @@ Uppgift(tas bort innan inlämning): *Beskriv uttryckligen vad som inte ska testa
 
 # 6  Tillvägagångssätt
 
-Uppgift(tas bort innan inlämning): *Beskriv hur testningen ska genomföras, exempelvis riskbaserat, kravbaserat, utforskande eller iterativt. Beskriv prioritering, felhantering, omtest, regression, rapportering och eventuell automatisering.*
 
 Testningen följer teststrategin (version 1.0) och är **riskbaserad, kravbaserad och iterativ**.
  
@@ -262,7 +252,6 @@ Testningen följer teststrategin (version 1.0) och är **riskbaserad, kravbasera
 
 ## 6.1  Iterationer
 
-Uppgift(tas bort innan inlämning): *Beskriv testcykler/testomgångar och vad som sker i varje cykel, till exempel test, omtest och regression.*
 
 | **Fas** | **Syfte** | **Genomförande** |
 | --- | --- | --- |
@@ -278,7 +267,6 @@ Uppgift(tas bort innan inlämning): *Beskriv testcykler/testomgångar och vad so
 
 # 7  Start- och slutkriterier
 
-Uppgift(tas bort innan inlämning): *Definiera objektiva kriterier för när testningen får starta och när den kan betraktas som avslutad.*
 
 ## 7.1  Kriterier för att inleda testarbetet
 
@@ -313,7 +301,6 @@ Uppgift(tas bort innan inlämning): *Definiera objektiva kriterier för när tes
 
 # 8  Avbrytande- och återupptagandekriterier
 
-Uppgift(tas bort innan inlämning): *Definiera när testningen ska pausas eftersom fortsatt testning inte är meningsfull, samt vad som krävs för att återuppta den.*
 
 ## 8.1  Kriterier för att avbryta testerna
 
@@ -336,7 +323,6 @@ Beslutet om avbrott fattas av testledaren i samråd med projektledaren.
 
 # 9  Testdokumentation
 
-Uppgift(tas bort innan inlämning): *Beskriv vilka testartefakter som ska tas fram, var de lagras och vem som ansvarar för dem.*
 
 | **Dokument / artefakt** | **Beskrivning** | **Ansvarig** |
 | --- | --- | --- |
@@ -355,7 +341,6 @@ Uppgift(tas bort innan inlämning): *Beskriv vilka testartefakter som ska tas fr
 
 # 10  Testaktiviteter
 
-Uppgift(tas bort innan inlämning): *Lista de viktigaste aktiviteterna från testanalys och planering till genomförande, felhantering, uppföljning och testrapport.*
 
 | **ID** | **Aktivitet** | **Ägare** |
 | --- | --- | --- |
@@ -379,7 +364,6 @@ Uppgift(tas bort innan inlämning): *Lista de viktigaste aktiviteterna från tes
 
 # 11  Testmiljö
 
-Uppgift(tas bort innan inlämning): *Beskriv testmiljön och viktiga skillnader mot produktion. Dokumentera integrationer, beroenden, testdata, åtkomst och ansvar.*
 
 Miljökedjan är DEV → SYS → ACC → PROD enligt teststrategins avsnitt 3. En miljö är redo för test först när rätt version är installerad, konfigurationen är rätt, integrationerna är anslutna, testarna har åtkomst och rätt testdata finns. Testmiljön SYS delas av SIT, systemtest, API-test, E2E, regression och omtest. Deploymentar till SYS planeras därför gemensamt av testledare, DevOps och de tre utvecklingsteamen så att pågående test inte stör varandra.
 
@@ -413,13 +397,11 @@ Miljökedjan är DEV → SYS → ACC → PROD enligt teststrategins avsnitt 3. E
 
 ## 11.3  Lokaler
 
-Uppgift(tas bort innan inlämning): *Beskriv särskilda lokaler, enheter eller fysisk utrustning som krävs. Om ej relevant, ange Ej applicerbart.*
 
 Ej applicerbart, men fysiska MFA-enheter finns beskrivna i 11.1. Testningen sker via webbläsare i ordinarie arbetsmiljö och kan genomföras på distans.
 
 # 12  Ansvar
 
-Uppgift(tas bort innan inlämning): *Tydliggör ansvar, mandat, eskaleringsvägar och vem som fattar beslut om exempelvis teststart, avbrott och Go/No-Go.*
 
 | **Roll** | **Ansvar / mandat** | **Namn / funktion** |
 | --- | --- | --- |
@@ -460,7 +442,6 @@ Uppgift(tas bort innan inlämning): *Tydliggör ansvar, mandat, eskaleringsväga
 
 # 13  Resurs- och utbildningsbehov
 
-Uppgift(tas bort innan inlämning): *Ange resurser, omfattning/tillgänglighet, funktion och eventuella utbildnings- eller onboardingbehov.*
 
 | **Namn / resurs** | **Omfattning** | **Funktion** | **Organisation / team** |
 | --- | --- | --- | --- |
@@ -484,7 +465,6 @@ Uppgift(tas bort innan inlämning): *Ange resurser, omfattning/tillgänglighet, 
 
 # 14  Tidplan
 
-Uppgift(tas bort innan inlämning): *Beskriv testperioden, viktiga milstolpar och planerade testomgångar. Anpassa efter projektets leveransmodell.*
 
 Tidplanen anges i projektveckor (vecka 1–12 räknat från projektets start).
 
@@ -528,13 +508,11 @@ Tidplanen anges i projektveckor (vecka 1–12 räknat från projektets start).
 
 ## 14.2  Påföljande testomgångar
 
-Uppgift(tas bort innan inlämning): *Beskriv hur efterföljande testomgångar planeras, vad som återanvänds och hur omfattningen styrs av felutfall och risk.*
 
 Påföljande omgångar genomförs vid varje ny leverans från utvecklingsteamen. Varje omgång inleds med smoke test och omtest av rättade fel, därefter körs regression av P1 och nya eller ändrade funktioner. Omfattningen styrs av felutfall och risk: områden med många eller allvarliga fel får utökad testning (fler testfall, utforskande sessioner), medan stabila områden endast körs som regression. Testfall, testdata och automatiserade tester från första omgången återanvänds. P2 körs när P1 är klart, och P3 körs bara om tid finns. Vid ändrade krav eller förseningar uppdaterar testledaren planen och dokumenterar ändringen i dokumenthistoriken.
 
 # 15  Risker och oförutsedda händelser
 
-Uppgift(tas bort innan inlämning): *Dokumentera risker som kan påverka testningen eller leveransen. Ange konsekvens/kommentar, förebyggande eller korrigerande åtgärd, ägare och prioritet.*
 
 | **Risk** | **Konsekvens / kommentar** | **Åtgärd** | **Ägare** | **Prioritet** |
 | --- | --- | --- | --- | --- |
@@ -552,7 +530,6 @@ Uppgift(tas bort innan inlämning): *Dokumentera risker som kan påverka testnin
 
 # 16  Godkännande av testplanen
 
-Uppgift(tas bort innan inlämning): *Ange vilka roller/personer som ska godkänna testplanen och när godkännandet skedde.*
 
 | **Namn / roll** | **Beslut** | **Datum** | **Kommentar** |
 | --- | --- | --- | --- |
