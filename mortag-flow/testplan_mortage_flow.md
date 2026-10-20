@@ -426,7 +426,7 @@ Ej applicerbart, men fysiska MFA-enheter finns beskrivna i 11.1. Testningen sker
 **Testare A** = API, integration, tekniska tester. **Testare XXXXXXXXXX** = funktionellt systemtest och E2E. **Testare C** = bankverksamhet, UAT och testdata. **Testare D** = regression, automation och behörighet.
 
 | Aktivitet | Test-ledare | Testare A | Testare C | Testare D | Utvecklings-team | DevOps | Product Owner | Verksam-het | Säkerhets-specialist | Projekt-ledare |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Testanalys och testdesign | A | R | R |  R | C | I | C | C | C | I |
 | Testdata | A | C | I | C | C | C | I | C | I | I |
 | Miljöförberedelser | C | R | R | R | R | A / R | I | I | I | I |
