@@ -393,7 +393,7 @@ Miljökedjan är DEV → SYS → ACC → PROD enligt teststrategins avsnitt 3. E
 | Webbläsarnas utvecklarverktyg | Felsökning och kontroll av sessioner och nätverkstrafik. | Testare D |
 | ELK Stack (logg) | Kontroll av ärendelogg, kontroll att persondata inte loggas i klartext. | DevOps / Testare A |
 | Databasverktyg (SQL-klient) | Verifiera sparade data, kryptering och återställning med SQL-skript. | Testare C |
-| Uppfångad e-post i testinstans | Verifiera e-postbekräftelser. | Testare B |
+
 
 ## 11.3  Lokaler
 
@@ -423,20 +423,20 @@ Ej applicerbart, men fysiska MFA-enheter finns beskrivna i 11.1. Testningen sker
 
 **R** = Responsible, **A** = Accountable, **C** = Consulted, **I** = Informed.
 
-**Testare A** = API, integration, tekniska tester. **Testare B** = funktionellt systemtest och E2E. **Testare C** = bankverksamhet, UAT och testdata. **Testare D** = regression, automation och behörighet.
+**Testare A** = API, integration, tekniska tester. **Testare XXXXXXXXXX** = funktionellt systemtest och E2E. **Testare C** = bankverksamhet, UAT och testdata. **Testare D** = regression, automation och behörighet.
 
-| Aktivitet | Test-ledare | Testare A | Testare B | Testare C | Testare D | Utvecklings-team | DevOps | Product Owner | Verksam-het | Säkerhets-specialist | Projekt-ledare |
+| Aktivitet | Test-ledare | Testare A | Testare C | Testare D | Utvecklings-team | DevOps | Product Owner | Verksam-het | Säkerhets-specialist | Projekt-ledare |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Testanalys och testdesign | A | R | R | R | R | C | I | C | C | C | I |
-| Testdata | A | C | I | R | C | C | C | I | C | I | I |
-| Miljöförberedelser | C | R | R | I | R | R | A / R | I | I | I | I |
-| SIT | A | R | R | R | R | C | C | I | I | I | I |
-| Systemtest | A | R | R | R | R | C | C | I | C | C | I |
-| UAT | C | I | R | R | I | I | C | A | R | I | I |
-| Regression och retest | A | R | R | R | R | C | I | I | I | I | I |
-| Release Readiness | A / R | C | C | C | C | C | C | C | C | C | I |
-| Go/No-Go (beslut) | C | I | I | I | I | C | C | A / R | C | C | R |
-| Produktionssättning och smoke test i PROD | C | I | I | I | R | C | A / R | I | I | I | I |
+| Testanalys och testdesign | A | R | R |  R | C | I | C | C | C | I |
+| Testdata | A | C | I | C | C | C | I | C | I | I |
+| Miljöförberedelser | C | R | R | R | R | A / R | I | I | I | I |
+| SIT | A | R | R | R | C | C | I | I | I | I |
+| Systemtest | A | R | R |  R | C | C | I | C | C | I |
+| UAT | C | I | R | I | I | C | A | R | I | I |
+| Regression och retest | A | R | R | R | C | I | I | I | I | I |
+| Release Readiness | A / R | C | C | C | C | C | C | C | C | I |
+| Go/No-Go (beslut) | C | I | I | I | C | C | A / R | C | C | R |
+| Produktionssättning och smoke test i PROD | C | I | I | R | C | A / R | I | I | I | I |
 
 
 # 13  Resurs- och utbildningsbehov
