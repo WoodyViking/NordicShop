@@ -494,7 +494,22 @@ Tidplanen anges i projektveckor (vecka 1–12 räknat från projektets start).
 
 *Förkortningar: TL = testledare, A-D = testare A–D, TA/TC/TD = testare A/C/D, TDA = testare D och A, TC =  C, SÄKspec = säkerhetsspecialist, PO = Product Owner, PL = projektledare.*
 
-**NY**
+**NY Tidplan**
+ 
+| **Aktivitet / milstolpe** | **Start** | **Slut** | **Ansvarig** | **Kommentar** |
+| --- | --- | --- | --- | --- |
+| Testanalys och testdesign | Vecka 1 | Vecka 2 | Testledare / Testare A, C, D | Besvara öppna frågor, skriva och granska testfall. |
+| Testdata och miljöförberedelser | Vecka 2 | Vecka 3 | Testare C / DevOps | Startkriterier för SIT ska vara uppfyllda i slutet av vecka 3. |
+| SIT | Vecka 3 | Vecka 5 | Testare A, C, D | Alla integrationer inklusive felfall. Vecka 3 mest Testare A och D (C i mindre omfattning), vecka 4 mest A och C (D i mindre omfattning), vecka 5 alla tre i mindre omfattning. |
+| Systemtest (inkl. behörighet, säkerhet, prestanda) | Vecka 4 | Vecka 7 | Testare D, A / säkerhetsspecialist | Testare D har huvudansvar. Testare A deltar i mindre omfattning vecka 4 och fullt vecka 5–6. Säkerhetsspecialisten deltar vecka 4–7. |
+| E2E-test | Vecka 5 | Vecka 8 | Testare C, A, D | Vecka 5–6 Testare C, vecka 7 Testare A och C, vecka 8 Testare A och D (C i mindre omfattning). |
+| UAT | Vecka 8 | Vecka 9 | Testare C / verksamhet | I ACC. |
+| Regression och retest | Vecka 5 | Vecka 11 | Testare A, C, D | Vecka 5–8 retest av rättade fel i mindre omfattning. Vecka 9–11 full regression (vecka 9 av Testare A och D). |
+| Release Readiness | Vecka 10 | Vecka 11 | Testledare | Testrapport och kvarstående risker. |
+| Go/No-Go och produktionssättning | Vecka 12 | Vecka 12 | PO / projektledare | Smoke test i PROD. |
+
+
+**NY Tidsplan per vecka**
 
 | **Vecka** | **1** | **2** | **3** | **4** | **5** | **6** | **7** | **8** | **9** | **10** | **11** | **12** |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -507,6 +522,8 @@ Tidplanen anges i projektveckor (vecka 1–12 räknat från projektets start).
 | Regression och retest | | | | | acd | acd | acd | acd | AD | ACD | ACD | |
 | Release Readiness | | | | | | | | | | TL | TL | |
 | Go/No-Go och produktionssättning | | | | | | | | | | | | PO +PL |
+
+*Förkortningar: TL = testledare, A/C/D = testare A, C och D, DevO = DevOps, SÄKspec = säkerhetsspecialist, VS = verksamhet, PO = Product Owner, PL = projektledare. Versal = huvudsakligt arbete och gemen = mindre del av arbetet. Testare A = API, integration, tekniska tester. Testare C = bankverksamhet, UAT, testdata. Testare D = regression, behörighet. Testare B har lämnat projektet och ingår inte.*
 
 
 
