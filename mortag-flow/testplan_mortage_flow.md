@@ -3,7 +3,7 @@
 **NordFinance**  
 Projekt MortgageFlow  
 Testplan för MortgageFlow – nytt bolånesystem, release 1.0  
-**Version 1.1**
+**Version 2.0**
 
 ## Dokumenthistorik
 
@@ -12,7 +12,7 @@ Testplan för MortgageFlow – nytt bolånesystem, release 1.0
 | 0.1 | 2026-10-15 | Grupp 2 | Dag 1 av MortgageFlow testplanering. Utkast utifrån mallen. |
 | 1.0 | 2026-10-16 | Grupp 2 | Första kompletta version (Del 2). Bygger på teststrategi version 1.0. |
 | 1.1 | 2026-10-19 | Grupp 2 | Veckoplan och RACI tillagt |
-
+| 2.0 | 2026-10-20 | Grupp 2 | Testare B borta veckoplanen har påverkas |
 
 
 # Innehåll
