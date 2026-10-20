@@ -12,11 +12,12 @@ Testplan för MortgageFlow – nytt bolånesystem, release 1.0
 | 0.1 | 2026-10-15 | Grupp 2 | Dag 1 av MortgageFlow testplanering. Utkast utifrån mallen. |
 | 1.0 | 2026-10-16 | Grupp 2 | Första kompletta version (Del 2). Bygger på teststrategi version 1.0. |
 | 1.1 | 2026-10-19 | Grupp 2 | Veckoplan och RACI tillagt |
-| 2.0 | 2026-10-20 | Grupp 2 | Testare B borta veckoplanen har påverkas |
+| 2.0 | 2026-10-20 | Grupp 2 | Testare B lämnar, SYS fem arbetsdagar försenad, nytt krav på verifiering och loggning av rolländringar, fast releasedatum. |
 
 
 # Innehåll
 
+- [Ändringar sedan version 1.1](#ändringar-sedan-version-11)
 - [1 Unik identifiering](#1--unik-identifiering)
 - [2 Inledning](#2--inledning)
   - [2.1 Kortfattad beskrivning](#21--kortfattad-beskrivning)
@@ -160,6 +161,8 @@ Frågorna nedan är hämtade från teststrategin 1.4 och kompletteras med frågo
 | Vilket testverktyg används för krav-, test- och felhantering? | Projektledare / testledare | Vecka 1 | Öppen |
 | Vem deltar i Go/No-Go och vem fattar beslutet? | Projektledare | Vecka 3 | Öppen |
 | Vilka verksamhetsrepresentanter deltar i UAT och hur mycket tid har de? | Product Owner | Vecka 5 | Öppen |
+| Vad innebär ”ytterligare verifiering” vid en rolländring – räcker det att en andra administratör godkänner, och sker det i samma gränssnitt? | Säkerhetsspecialist / Product Owner | Vecka 4 | Öppen. **Antagande:** godkännande av en andra administratör krävs och görs i samma gränssnitt. Testerna skrivs efter det antagandet och revideras om svaret blir ett annat. |
+| Påverkar SYS-förseningen även tillgången till ACC och därmed UAT-start? | DevOps / testledare | Vecka 4 | Öppen. **Antagande:** ACC påverkas inte; UAT kan starta vecka 9 enligt ny tidplan. |
 
 # 3  Testobjekt
 
@@ -173,6 +176,7 @@ Frågorna nedan är hämtade från teststrategin 1.4 och kompletteras med frågo
 | Integration mot e-posttjänst | Automatisk e-postbekräftelse till kund vid godkännande. | Testinstans. |
 | Dokumenthantering och dokumentlagring | Uppladdning av PDF, JPG och PNG (max 10 MB), virusskanning, versionshantering och loggning. | Release 1.0 / testinstans. |
 | Databas och loggning | Krypterad persondata och ärendelogg över vem som ändrat vad och när. | Testdatabas i SYS och ACC. |
+| Administration av roller – verifiering och loggning *(nytt krav 2026-10-20)* | Ändring av en användares roll kräver ytterligare verifiering och loggas med användare, tidpunkt, tidigare roll och ny roll. | Release 1.0. Kravet är nytt och verifieras i systemtest. |
  
 Ägare för testobjekten är de tre utvecklingsteamen. Ägare för respektive beroende system anges i avsnitt 12.
 
@@ -180,7 +184,7 @@ Frågorna nedan är hämtade från teststrategin 1.4 och kompletteras med frågo
 # 4  Omfattning
 
 
-Testningen omfattar alla funktionella och icke-funktionella krav i kravunderlaget och är riskbaserad enligt teststrategin. Högst prioritet (P1) har kreditbedömning och affärsregler, dubbelgodkännande av lån över 5 MSEK, behörighet, säkerhet och skydd av persondata, integrationen mot kreditupplysningstjänsten, inloggning samt loggning och spårbarhet. Riskerna R1–R10 är definierade i teststrategin 1.1.
+Testningen omfattar alla funktionella och icke-funktionella krav i kravunderlaget och är riskbaserad enligt teststrategin. Högst prioritet (P1) har kreditbedömning och affärsregler, dubbelgodkännande av lån över 5 MSEK, behörighet, säkerhet och skydd av persondata, integrationen mot kreditupplysningstjänsten, inloggning samt loggning och spårbarhet. Riskerna R1–R10 är definierade i avsnitt 1.1 i teststrategin.
  
 De fem kritiska affärsflödena som körs som E2E-test:
  
@@ -255,11 +259,11 @@ Testningen följer teststrategin (version 1.0) och är **riskbaserad, kravbasera
 | **Fas** | **Syfte** | **Genomförande** |
 | --- | --- | --- |
 | Testanalys och testdesign (v1–2) | Förstå krav, bryta ner risker, skriva och granska testfall, få svar på öppna frågor. | Alla testare. Testfall granskas av PO och verksamhet. Behörighetsmatris och testdatabehov tas fram. |
-| Förberedelse (v3) | Testdata och miljö redo före teststart. | Testare C tar fram testdata. DevOps och utvecklingsteamen levererar och verifierar SYS. Smoke test av miljön. |
-| SIT – omgång 1 (v4) | Verifiera integrationer och hitta fel tidigt. | Testare A med utvecklare. Alla integrationer, både korrekta svar och felfall. |
-| SIT – omgång 2 och systemtest – omgång 1 (v5–6) | Retest av SIT-fel samt första funktionella systemtestet. | Testare A, D. P1 först. Smoke test efter varje deployment. |
-| Systemtest – omgång 2 och E2E (v7–8) | Slutföra systemtest, köra E2E-flöden, behörighet, säkerhet och prestanda. | Testare  C, D, A och säkerhetsspecialist. Omtest av rättade fel. |
-| UAT (v8–9) | Verksamhetens acceptans i ACC. | Verksamhetsrepresentanter med stöd av Testare C. Dokumenterat godkännande. |
+| Förberedelse (v3–4) | Testdata och miljö redo före teststart. | Testare C tar fram testdata. DevOps och utvecklingsteamen levererar SYS – enligt Del 3 fem arbetsdagar försenad, vilket innebär att SYS tidigast är testbart i vecka 5. Väntetiden används till testfallsgranskning, behörighetsmatris och automation. |
+| SIT – omgång 1 (v5) | Verifiera integrationer och hitta fel tidigt. | Testare A med utvecklare. Alla integrationer, både korrekta svar och felfall. |
+| SIT – omgång 2 och systemtest – omgång 1 (v6) | Retest av SIT-fel samt första funktionella systemtestet. | Testare A och D. P1 först. Smoke test efter varje deployment. |
+| Systemtest – omgång 2 och E2E (v7–8) | Slutföra systemtest, köra E2E-flöden, behörighet, säkerhet, prestanda samt det nya kravet på rolländringar. | Testare D (funktionellt och behörighet), Testare A (API, prestanda, E2E), Testare C (E2E med verksamhetskunskap) och säkerhetsspecialist. Omtest av rättade fel. |
+| UAT (v9) | Verksamhetens acceptans i ACC. | Verksamhetsrepresentanter med stöd av Testare C. Dokumenterat godkännande. |
 | Regression och omtest (v9–10) | Visa att rättningar fungerar och inget har gått sönder. | Testare D med övriga. P1-regression alltid, P2 om tid finns. Eventuell ny UAT-körning vid kritiska fel. |
 | Release Readiness (v11) | Bedöma om releasen är redo. | Testledare sammanställer testrapport, kvarstående risker och rekommendation. |
 | Go/No-Go och produktionssättning (v12) | Beslut och smoke test i PROD. | Beslut av PO och projektledare. Smoke test i PROD efter produktionssättning. |
@@ -271,12 +275,12 @@ Testningen följer teststrategin (version 1.0) och är **riskbaserad, kravbasera
 
 **För SIT och systemtest (SYS):**
  
-- SYS är installerat med rätt version, konfiguration och anslutna integrationer (eller stubbar), och smoke test är godkänt.
+- SYS är installerat med rätt version, konfiguration och anslutna integrationer (eller stubbar), och smoke test är godkänt. Enligt Del 3 är SYS fem arbetsdagar försenad, vilket innebär att SIT tidigast kan starta i vecka 5.
 - Komponenttester är körda av utvecklingsteamen utan öppna kritiska fel.
 - Testdata för minst P1-områdena finns i SYS och kan återställas med SQL-skript.
 - Testare har konton, roller och MFA-enheter i SYS.
-- Krav och acceptanskriterier är tillräckligt tydliga, och öppna frågor som rör P1-områden (gränsvärden, riskklass, inloggningsräkning) är besvarade eller har dokumenterat antagande.
-- Minst 90 % av P1-testfallen och 70 % av övriga testfall är framtagna och granskade.
+- Krav och acceptanskriterier är tillräckligt tydliga, och öppna frågor som rör P1-områden (gränsvärden, riskklass, inloggningsräkning samt vad ”ytterligare verifiering” vid rolländring innebär) är besvarade eller har dokumenterat antagande.
+- Minst 90 % av P1-testfallen och 70 % av övriga testfall är framtagna och granskade. Testfallen för rolländring (R11) räknas som P1 och ska vara granskade före teststart.
 - Testverktyg och felhanteringsprocess är på plats.
 **För UAT (ACC):**
  
@@ -288,13 +292,14 @@ Testningen följer teststrategin (version 1.0) och är **riskbaserad, kravbasera
 ## 7.2  Kriterier för att avsluta testarbetet
 
 - Alla planerade P1-tester är genomförda, och minst 95 % av P1-testfallen är godkända. Resterande avvikelser är analyserade.
-- Alla E2E-flöden (E2E-1 till E2E-5) är körda utan öppna S1/S2-fel.
+- Alla E2E-flöden (E2E-1 till E2E-5) är körda utan öppna S1/S2-fel. E2E-2 och E2E-5 får strykas om tiden inte räcker, förutsatt att det redovisas som kvarstående risk.
 - Inga öppna kritiska (S1) eller allvarliga (S2) fel i P1-områdena. Öppna S3/S4-fel är redovisade och accepterade av PO.
 - Alla P1-defekter som rättats är omtestade, och regression av P1 är körd på den slutliga releasekandidaten.
-- Minst 90 % av P2-testfallen är genomförda.
+- Minst 80 % av P2-testfallen är genomförda. Sänkningen från 90 % är en medveten konsekvens av att testteamet gått från fyra till tre testare och att SYS är fem arbetsdagar försenad, medan releasedatumet ligger fast. Vilka P2-områden som prioriteras framgår av avsnitt 5.
 - UAT är genomfört och godkänt av verksamheten.
 - Säkerhetstestet är genomfört med en säkerhetsspecialist och inga kritiska säkerhetsfel återstår.
-- Prestandakraven (svarstid 2 s, 500 användare) är verifierade, eller avvikelsen är dokumenterad och accepterad.
+- Prestandakraven (svarstid 2 s, 500 användare) är verifierade, eller avvikelsen är dokumenterad och accepterad. Avvikelsen är sannolik eftersom SYS-förseningen komprimerar systemtestperioden.
+- Det nya kravet på rolländringar (R11) är verifierat: både att verifiering krävs och att loggposten innehåller användare, tidpunkt, tidigare roll och ny roll.
 - Kvarstående risker är dokumenterade i testrapporten och accepterade av PO och projektledare.
 
 
@@ -328,8 +333,9 @@ Beslutet om avbrott fattas av testledaren i samråd med projektledaren.
 | --- | --- | --- |
 | Teststrategi för MortgageFlow, version 1.0 | Övergripande strategi. | Testledare |
 | Testplan (TP-MF-1.0) | Detta dokument. | Testledare |
-| Testfall / testspecifikation | Testfall med krav- och riskkoppling, förutsättningar, steg och förväntat resultat. | Testare A–D, per område |
+| Testfall / testspecifikation | Testfall med krav- och riskkoppling, förutsättningar, steg och förväntat resultat. | Testare A, C, D, per område |
 | Behörighetsmatris | Roll mot funktion och data. | Testare D |
+| Loggunderlag för rolladministration | Underlag för att verifiera att rolländringar loggas med användare, tidpunkt, tidigare roll och ny roll (R11). | Testare D / säkerhetsspecialist |
 | Testdata och SQL-skript | Syntetiska personer och skript för återställning. | Testare C |
 | Spårbarhetsmatris | Krav → risk → testfall → resultat. | Testledare |
 | Testlogg / exekveringsresultat | Resultat per testfall, miljö, build och datum. | Respektive testare |
@@ -339,18 +345,19 @@ Beslutet om avbrott fattas av testledaren i samråd med projektledaren.
 | Release Readiness-underlag | Sammanställning inför Go/No-Go med kvarstående risker. | Testledare |
 | Testrapport | Slutrapport med resultat, risker och rekommendation. | Testledare |
 
+
 # 10  Testaktiviteter
 
 
 | **ID** | **Aktivitet** | **Ägare** |
 | --- | --- | --- |
-| A1 | Testanalys: analysera krav, risker och öppna frågor. Koppla krav till risk. | Testledare, Testare A–D-C |
+| A1 | Testanalys: analysera krav, risker och öppna frågor. Koppla krav till risk. | Testledare, Testare A, C, D |
 | A2 | Testdesign: skriva och granska testfall (P1 först). Ta fram behörighetsmatrisen. | Testare A, C, D, PO, verksamhet  |
-| A3 | Ta fram testdata, SQL-skript och testfiler. | Testare C, devops |
+| A3 | Ta fram testdata, SQL-skript och testfiler. | Testare C, DevOps |
 | A4 | Miljöförberedelse: deployment, konfiguration, konton, MFA och smoke test av SYS. | DevOps, utvecklingsteamen,Säkerhetsspecialist, Testare A,D  |
-| A5 | SIT: kreditupplysning, personregister, e-post, MFA och dokumentlagring (korrekta svar, felfall, timeout). | Testare A, D och (C vidbehov) |
-| A6 | Systemtest funktionellt: inloggning, ansökan, status, kreditregler, stora lån, dokument, beslut. | Testare D och säkerhetsSpecialist |
-| A7 | Behörighets- och regressionsautomation: behörighet per roll via UI och API, automatisering av P1. | Testare (vid behov A/C) Main = D |
+| A5 | SIT: kreditupplysning, personregister, e-post, MFA och dokumentlagring (korrekta svar, felfall, timeout). | Testare A och D, med Testare C vid behov |
+| A6 | Systemtest funktionellt: inloggning, ansökan, status, kreditregler, stora lån, dokument, beslut. Här ingår även det nya kravet på verifiering och loggning av rolländringar (R11). | Testare D (huvudansvar), Testare A för kreditregler, säkerhetsspecialist för säkerhetsdelen |
+| A7 | Behörighets- och regressionsautomation: behörighet per roll via UI och API, automatisering av P1. | Testare D, med stöd av A och C vid behov |
 | A8 | Säkerhets- och prestandatest: kryptering, kontolåsning, utloggning, 2 s, 500 användare. | Säkerhetsspecialist, Testare D |
 | A9 | E2E-test av flödena E2E-1 till E2E-5 inklusive kontroll av ärendelogg. | Testare A, Testare C |
 | A10 | Felhantering: registrera, triagera och följa upp defekter. | Testledare, Testare A, C |
@@ -361,6 +368,8 @@ Beslutet om avbrott fattas av testledaren i samråd med projektledaren.
 | A15 | Release Readiness: sammanställa resultat, kvarstående risker och rekommendation. | Testledare |
 | A16 | Testrapport. | Testledare |
 | A17 | Stöd vid Go/No-Go och smoke test i PROD. | Testledare, Testare D |
+| A18 | Kunskapsöverlämning efter Testare B: gå igenom B:s testfall, spårbarhetsmatris och pågående arbete så att inget tappas när ingen överlämningstid finns. | Testledare, Testare A, C, D |
+| A19 | Ta fram och granska testfall för det nya kravet på rolländringar (fem fall, varav negativa). | Testare D, säkerhetsspecialist |
 
 # 11  Testmiljö
 
@@ -379,7 +388,7 @@ Miljökedjan är DEV → SYS → ACC → PROD enligt teststrategins avsnitt 3. E
 | Autentisering och MFA (AD/LDAP, MFA) | Testkonfiguration, testkonton och testenheter per roll. | Testkonton i stället för riktiga användare. | DevOps / säkerhetsspecialist |
 | Dokumentlagring och virusskanning | Testinstans. | Virusskanning verifieras med ofarlig standardtestfil. | DevOps |
 | Databas (PostgreSQL) | Separat testdatabas, kryptering som i PROD. Återställs med SQL-skript. | Endast testdata. | DevOps |
-| Klienter | Windows-/macOS-klient med Chrome, Edge och Firefox (versioner: öppen fråga). | Testklienter. |
+| Klienter | Windows-/macOS-klient med Chrome, Edge och Firefox (versioner: öppen fråga). | Testklienter. | Testare D |
 
 
 ## 11.2  Testverktyg
@@ -393,6 +402,7 @@ Miljökedjan är DEV → SYS → ACC → PROD enligt teststrategins avsnitt 3. E
 | Webbläsarnas utvecklarverktyg | Felsökning och kontroll av sessioner och nätverkstrafik. | Testare D |
 | ELK Stack (logg) | Kontroll av ärendelogg, kontroll att persondata inte loggas i klartext. | DevOps / Testare A |
 | Databasverktyg (SQL-klient) | Verifiera sparade data, kryptering och återställning med SQL-skript. | Testare C |
+
 
 
 ## 11.3  Lokaler
@@ -558,6 +568,9 @@ Påföljande omgångar genomförs vid varje ny leverans från utvecklingsteamen.
 | PR9: Verkliga persondata används av misstag i testmiljö | GDPR-incident. | Endast syntetisk data, kontroll av SQL-skript, stopp enligt 8.1. | Projektledare / testledare | Hög |
 | PR10: Ändrade krav eller ny scope under testperioden | Testfall och plan blir inaktuella. | Ändringshantering via PO, konsekvensanalys, uppdaterad plan med ny version. | Testledare / PO | Medel |
 | PR11: Automation hinner inte bli klar | Regression blir manuell och långsam. | Automatisera endast P1 först (inloggning, kreditregler, behörighet). | Testare D | Medel |
+| PR12: Testkompetens försvinner när Testare B lämnar utan överlämning | Funktionellt systemtest och E2E tappar sin ägare. Risken att felprioritera eller missa krav ökar. | Kunskapsöverlämning via testfall och spårbarhetsmatris (A18), Testare D tar huvudansvaret, PO och Testare C granskar P1-testfallen. | Testledare | Hög |
+| PR13: SYS-förseningen äter upp testtid eftersom releasedatumet ligger fast | Systemtest komprimeras från fyra veckor till tre och UAT blir en vecka. Ökad risk för fel som upptäcks först i produktion. | Väntetiden används till testfall, testdata och automation. Prioriteringsordning i avsnitt 5 tillämpas. Kvarstående risk redovisas vid Go/No-Go. | Testledare / projektledare | Hög |
+| PR14: Det nya kravet på rolländringar kommer sent och är otydligt formulerat | Testfallen kan bli felaktiga om tolkningen av ”ytterligare verifiering” inte stämmer med säkerhetsavdelningens avsikt. | Antagande dokumenterat i 2.6, frågan ställd till säkerhetsspecialist vecka 4, testfallen granskas av säkerhetsspecialisten före körning. | Säkerhetsspecialist / Testare D | Hög |
 
 # 16  Godkännande av testplanen
 
