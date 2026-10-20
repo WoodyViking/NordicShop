@@ -149,8 +149,8 @@ MortgageFlow testas på sex nivåer. Varje nivå har ett eget fokus så att vi u
 | --- | --- | --- | --- |
 | Enhettest | Utvecklare i de tre utvecklingsteamen | DEV | Logik och regler i en komponent |
 | SIT | Testare A + utvecklare | SYS | Att MortgageFlow och beroende system fungerar tillsammans |
-| Systemtest | Testare B (funktion), Testare D (behörighet), Testare A (API, prestanda), säkerhetsspecialist | SYS | Att hela systemet uppfyller funktionella och icke-funktionella krav |
-| E2E | Testare B och C | SYS | Hela affärsflöden från ny ansökan till beslut |
+| Systemtest | Testare D (behörighet), Testare A (API, prestanda), säkerhetsspecialist | SYS | Att hela systemet uppfyller funktionella och icke-funktionella krav |
+| E2E | C | SYS | Hela affärsflöden från ny ansökan till beslut |
 | Acceptanstest | Verksamhetsrepresentanter med stöd av Testare C | ACC | Att systemet stödjer handläggarnas arbete |
 | Regression och omtest | Testare D med stöd av övriga | SYS | Att rättningar fungerar och inget annat har gått sönder |
 
@@ -187,7 +187,7 @@ MortgageFlow testas på sex nivåer. Varje nivå har ett eget fokus så att vi u
 
 ## 2.3  Systemtest
 
-**Utförs av:** Testare B (funktionellt), Testare D (behörighet), Testare A (API och prestanda) och säkerhetsspecialisten (säkerhet).
+**Utförs av:** Testare D (behörighet), Testare A (API och prestanda) och säkerhetsspecialisten (säkerhet).
 
 **Syfte och mål:** Verifiera att MortgageFlow som helhet uppfyller de funktionella och icke-funktionella kraven.
 
@@ -203,7 +203,7 @@ MortgageFlow testas på sex nivåer. Varje nivå har ett eget fokus så att vi u
 
 ## 2.4  End-to-end-test (E2E)
 
-**Utförs av:** Testare B, med verksamhetskunskap och testdata från Testare C.
+**Utförs av:** Testare C som har med verksamhetskunskap och testdata.
 
 **Syfte och mål:** Verifiera att hela affärsflöden fungerar genom MortgageFlow och alla beroende system. De kritiska flödena är:
 
