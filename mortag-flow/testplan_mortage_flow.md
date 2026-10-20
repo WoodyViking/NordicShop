@@ -379,7 +379,7 @@ Miljökedjan är DEV → SYS → ACC → PROD enligt teststrategins avsnitt 3. E
 | Autentisering och MFA (AD/LDAP, MFA) | Testkonfiguration, testkonton och testenheter per roll. | Testkonton i stället för riktiga användare. | DevOps / säkerhetsspecialist |
 | Dokumentlagring och virusskanning | Testinstans. | Virusskanning verifieras med ofarlig standardtestfil. | DevOps |
 | Databas (PostgreSQL) | Separat testdatabas, kryptering som i PROD. Återställs med SQL-skript. | Endast testdata. | DevOps |
-| Klienter | Windows-/macOS-klient med Chrome, Edge och Firefox (versioner: öppen fråga). | Testklienter. | Testare B |
+| Klienter | Windows-/macOS-klient med Chrome, Edge och Firefox (versioner: öppen fråga). | Testklienter. |
 
 
 ## 11.2  Testverktyg
@@ -390,7 +390,7 @@ Miljökedjan är DEV → SYS → ACC → PROD enligt teststrategins avsnitt 3. E
 | API-testverktyg (t.ex. Postman) | API- och integrationstest, behörighetstest direkt mot API. | Testare A |
 | Automationsramverk (t.ex. Playwright, Cypress eller Selenium) | Automatiserad regression och smoke test. | Testare D |
 | Prestandaverktyg (t.ex. JMeter eller k6) | Last- och svarstidstest med upp till 500 samtidiga användare. | Testare A |
-| Webbläsarnas utvecklarverktyg | Felsökning och kontroll av sessioner och nätverkstrafik. | Testare B, D |
+| Webbläsarnas utvecklarverktyg | Felsökning och kontroll av sessioner och nätverkstrafik. | Testare D |
 | ELK Stack (logg) | Kontroll av ärendelogg, kontroll att persondata inte loggas i klartext. | DevOps / Testare A |
 | Databasverktyg (SQL-klient) | Verifiera sparade data, kryptering och återställning med SQL-skript. | Testare C |
 | Uppfångad e-post i testinstans | Verifiera e-postbekräftelser. | Testare B |
@@ -409,7 +409,6 @@ Ej applicerbart, men fysiska MFA-enheter finns beskrivna i 11.1. Testningen sker
 | Product Owner (PO) | Besvarar kravfrågor, godkänner testfall och accepterar kvarstående risker. Fattar Go/No-Go tillsammans med projektledare. | Product Owner |
 | Testledare | Ansvarar för testplan, strategi, planering, uppföljning, rapportering och defect triage. Beslutar om teststart, avbrott och återupptagande tillsammans med projektledare. Ger rekommendation vid Go/No-Go. | Testledare |
 | Testare A | API, integration, tekniska tester. SIT och prestandatest. | Testare A |
-| Testare B | Funktionellt systemtest och E2E. Kompatibilitet i webbläsare. | Testare B |
 | Testare C | Bankverksamhet, UAT och testdata. Stöd till verksamheten. | Testare C |
 | Testare D | Regression, automation och behörighet. Omtest och smoke test. | Testare D |
 | Utvecklingsteam 1–3 | Komponenttest, rättning av fel, deployment till SYS/ACC enligt plan, support vid SIT. | Utvecklingsteamen |
@@ -447,7 +446,6 @@ Ej applicerbart, men fysiska MFA-enheter finns beskrivna i 11.1. Testningen sker
 | --- | --- | --- | --- |
 | Testledare | 100 %, vecka 1–12 | Planering, ledning, rapportering | Testteamet |
 | Testare A | 100 %, vecka 1–10, därefter stöd | API, integration, prestanda | Testteamet |
-| Testare B | 100 %, vecka 1–10, därefter stöd | Funktionellt systemtest, E2E | Testteamet |
 | Testare C | 100 %, vecka 1–10, därefter stöd | Testdata, UAT, bankverksamhet | Testteamet |
 | Testare D | 100 %, vecka 1–12 | Regression, automation, behörighet | Testteamet |
 | Utvecklare | Daglig tillgänglighet för felrättning, SIT-stöd och deployment | Rättning, support | Utvecklingsteam 1–3 |
@@ -458,7 +456,7 @@ Ej applicerbart, men fysiska MFA-enheter finns beskrivna i 11.1. Testningen sker
  
 **Utbildnings- och onboardingbehov:**
  
-- Testare B och D behöver kunskap om bolånes affärsregler från Testare C och verksamheten (workshop i vecka 1).
+- Testare D behöver kunskap om bolånes affärsregler från Testare C och verksamheten (workshop i vecka 1).
 - Alla testare behöver introduktion i testverktyget, felhanteringsprocessen och severity-/priority-skalan.
 - Verksamhetsrepresentanter behöver kort introduktion i ACC, testscenarier och hur fel rapporteras innan UAT.
 - Testare D behöver tillgång till och eventuell utbildning i valt automationsramverk.
@@ -473,8 +471,8 @@ Tidplanen anges i projektveckor (vecka 1–12 räknat från projektets start).
 | Testanalys och testdesign | Vecka 1 | Vecka 2 | Testledare / Testare A–D | Besvara öppna frågor, skriva och granska testfall. |
 | Testdata och miljöförberedelser | Vecka 3 | Vecka 3 | Testare C / DevOps | Startkriterier för SIT ska vara uppfyllda i slutet av veckan. |
 | SIT | Vecka 4 | Vecka 5 | Testare A | Alla integrationer inklusive felfall. |
-| Systemtest (inkl. behörighet, säkerhet, prestanda) | Vecka 5 | Vecka 8 | Testare B, D, A, säkerhetsspecialist | Börjar parallellt med slutet av SIT. |
-| E2E-test | Vecka 7 | Vecka 8 | Testare B, C | Efter avslutat SIT. |
+| Systemtest (inkl. behörighet, säkerhet, prestanda) | Vecka 5 | Vecka 8 | Testare  D, A, säkerhetsspecialist | Börjar parallellt med slutet av SIT. |
+| E2E-test | Vecka 7 | Vecka 8 | Testare C | Efter avslutat SIT. |
 | UAT | Vecka 8 | Vecka 9 | Testare C / verksamhet | I ACC. |
 | Regression och retest | Vecka 9 | Vecka 10 | Testare D | Efter sista leveransen av rättningar. |
 | Release Readiness | Vecka 11 | Vecka 11 | Testledare | Testrapport och kvarstående risker. |
@@ -487,14 +485,14 @@ Tidplanen anges i projektveckor (vecka 1–12 räknat från projektets start).
 | Testanalys och testdesign | TL+ A-D | TL+ A-D | | | | | | | | | | |
 | Testdata och miljöförberedelser | | | TC+ DevOps | | | | | | | | | |
 | SIT | | | | TA | TA | | | | | | | |
-| Systemtest (inkl. behörighet, säkerhet, prestanda) | | | | | TBDA+ SÄKspec | TBDA+ SÄKspec | TBDA+ SÄKspec | TBDA+ SÄKspec | | | | |
-| E2E-test | | | | | | | TBC | TBC | | | | |
+| Systemtest (inkl. behörighet, säkerhet, prestanda) | | | | | TDA+ SÄKspec | TDA+ SÄKspec | TDA+ SÄKspec | TDA+ SÄKspec | | | | |
+| E2E-test | | | | | | | TC | TC | | | | |
 | UAT | | | | | | | | TC/ verksamhet | TC/ verksamhet | | | |
 | Regression och retest | | | | | | | | | TD | TD | | |
 | Release Readiness | | | | | | | | | | | TL | |
 | Go/No-Go och produktionssättning | | | | | | | | | | | | PO +PL |
 
-*Förkortningar: TL = testledare, A-D = testare A–D, TA/TC/TD = testare A/C/D, TBDA = testare B, D och A, TBC = testare B och C, SÄKspec = säkerhetsspecialist, PO = Product Owner, PL = projektledare.*
+*Förkortningar: TL = testledare, A-D = testare A–D, TA/TC/TD = testare A/C/D, TDA = testare D och A, TC =  C, SÄKspec = säkerhetsspecialist, PO = Product Owner, PL = projektledare.*
 
 ## 14.1  Första testomgången
 
