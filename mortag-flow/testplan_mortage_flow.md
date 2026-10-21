@@ -54,7 +54,7 @@ Testplan för MortgageFlow – nytt bolånesystem, release 1.0
 
 # 1  Unik identifiering
 
-**TP-MF-2.0** – Testplan för MortgageFlow, release 2.0 (första produktionssättning).
+**TP-MF-2.0** – Testplan för MortgageFlow, release .0 (första produktionssättning).
  
 Identifieraren följer formen *TP (testplan) – MF (MortgageFlow) – versionsnummer*.
 
@@ -438,7 +438,7 @@ Ej applicerbart, men fysiska MFA-enheter finns beskrivna i 11.1. Testningen sker
 | Aktivitet | Test-ledare | Testare A | Testare C | Testare D | Utvecklings-team | DevOps | Product Owner | Verksam-het | Säkerhets-specialist | Projekt-ledare |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Testanalys och testdesign | A | R | R | R | C | I | C | C | C | I |
-| Testdata | A | C | I | C | C | C | I | C | I | I |
+| Testdata | A | C | R | C | C | C | I | C | I | I |
 | Miljöförberedelser | C | R | R | R | R | A / R | I | I | I | I |
 | SIT | A | R | R | R | C | C | I | I | I | I |
 | Systemtest | A | R | R | R | C | C | I | C | C | I |
@@ -519,7 +519,7 @@ Tidplanen anges i projektveckor (vecka 1–12 räknat från projektets start).
 | SIT omgång 1: alla integrationer | Vecka 4 (5 arbetsdagar) |
 | Systemtest omgång 1: P1-funktioner (inloggning, kreditregler, stora lån, behörighet) | Start vecka 6, cirka 1,5 vecka |
 | Defect triage och rättning | Löpande, 3 gånger per vecka |
-| Statusrapport efter omgång 1 | Slutet av vecka 5 |
+| Statusrapport efter omgång 1 | Slutet av vecka 6 |
 
 ## 14.2  Påföljande testomgångar
 
