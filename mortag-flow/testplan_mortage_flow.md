@@ -54,7 +54,7 @@ Testplan för MortgageFlow – nytt bolånesystem, release 1.0
 
 # 1  Unik identifiering
 
-**TP-MF-1.0** – Testplan för MortgageFlow, release 1.0 (första produktionssättning).
+**TP-MF-2.0** – Testplan för MortgageFlow, release 2.0 (första produktionssättning).
  
 Identifieraren följer formen *TP (testplan) – MF (MortgageFlow) – versionsnummer*.
 
