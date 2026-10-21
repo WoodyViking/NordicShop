@@ -83,6 +83,13 @@ Den instabila kreditupplysningstjänsten (1,5 arbetsdag) blockerar 14 tester.
 | Medium | 12 | Ingen specificerad påverkan. Hanteras i triage |
 | Low | 7 | Ingen specificerad påverkan. Hanteras i triage |
 
+# 5.1 Coverage
+
+**Väl testade områden:** Login/MFA 20 av 20 utan öppna fel, ärendestatus 14 av 15 (93 %), kundregistrering 22 av 25 (88 %) och dokumenthantering 13 av 15 (86 %).
+
+**Otillräckligt verifierade områden:** Kreditkontroll 18 av 30 (60 %) – lägst andel och högst affärsrisk, blockerad av extern instabilitet. Stora lån/dubbelgodkännande 9 av 15 (60 %) – DEF-112 visar att regeln kan kringgås. Behörighet 7 av 10 (70 %) – två High-defekter, varav en i loggningen. E2E 8 av 10 (80 %) – ett kritiskt flöde Failed, så hela kedjan är ännu inte bevisad. Riskregler 17 av 20 (85 %) behöver kompletteras med negativa gränsfall.
+
+
 # 6. Avvikelser från plan
 
 | **Avvikelse** | **Påverkan på testningen** | **Åtgärd / hantering** |
@@ -115,6 +122,14 @@ Den instabila kreditupplysningstjänsten (1,5 arbetsdag) blockerar 14 tester.
 | Rolländring ej verifierad (R11). DEF-121 öppen. | Nytt säkerhetskrav ej uppfyllt. | Hög | Product Owner och säkerhetsspecialist / ej accepterad |
 | Prestanda (R9), e-post (R10) och säkerhetstest har inga resultat ännu. | Okänd prestanda under last och okänd kvalitet på e-postbekräftelser. | Medel | Product Owner / ej accepterad |
 | 172 tester ej körda (57 % av paketet) och 23 failed som ska omtestas. | Okända fel kan finnas kvar. | Medel | Testledare / ej accepterad |
+
+# 8.1  Overall status
+
+🔴 RÖD
+
+Motivering: ett Critical-fel och sex High-fel är öppna, och fyra av dem ligger i P1-områden som rör kreditbeslut, dubbelgodkännande, behörighet och rolländring. 27 av de 32 tester vi ligger efter med är P1. Två P1-områden är bara testade till 60 %. Planens slutkriterium 7.2 – inga öppna S1/S2 i P1-områden – kan inte uppfyllas i nuvarande takt.
+
+Rött innebär att testningen inte kan fortsätta enligt plan utan omprioritering, och att releasedatumet är hotat om inte DEF-101 och DEF-112 är rättade och omtestade inom två arbetsdagar.
 
 # 9. Slutsats
 
