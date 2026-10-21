@@ -433,7 +433,7 @@ Ej applicerbart, men fysiska MFA-enheter finns beskrivna i 11.1. Testningen sker
 
 **R** = Responsible, **A** = Accountable, **C** = Consulted, **I** = Informed.
 
-**Testare A** = API, integration, tekniska tester. **Testare XXXXXXXXXX** = funktionellt systemtest och E2E. **Testare C** = bankverksamhet, UAT och testdata. **Testare D** = regression, automation och behörighet.
+**Testare A** = API, integration, tekniska tester. **Testare C** = bankverksamhet, UAT och testdata. **Testare D** = regression, automation och behörighet.
 
 | Aktivitet | Test-ledare | Testare A | Testare C | Testare D | Utvecklings-team | DevOps | Product Owner | Verksam-het | Säkerhets-specialist | Projekt-ledare |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -476,33 +476,7 @@ Ej applicerbart, men fysiska MFA-enheter finns beskrivna i 11.1. Testningen sker
 
 Tidplanen anges i projektveckor (vecka 1–12 räknat från projektets start).
 
-| **Aktivitet / milstolpe** | **Start** | **Slut** | **Ansvarig** | **Kommentar** |
-| --- | --- | --- | --- | --- |
-| Testanalys och testdesign | Vecka 1 | Vecka 2 | Testledare / Testare A–D | Besvara öppna frågor, skriva och granska testfall. |
-| Testdata och miljöförberedelser | Vecka 3 | Vecka 3 | Testare C / DevOps | Startkriterier för SIT ska vara uppfyllda i slutet av veckan. |
-| SIT | Vecka 4 | Vecka 5 | Testare A | Alla integrationer inklusive felfall. |
-| Systemtest (inkl. behörighet, säkerhet, prestanda) | Vecka 5 | Vecka 8 | Testare  D, A, säkerhetsspecialist | Börjar parallellt med slutet av SIT. |
-| E2E-test | Vecka 7 | Vecka 8 | Testare C | Efter avslutat SIT. |
-| UAT | Vecka 8 | Vecka 9 | Testare C / verksamhet | I ACC. |
-| Regression och retest | Vecka 9 | Vecka 10 | Testare D | Efter sista leveransen av rättningar. |
-| Release Readiness | Vecka 11 | Vecka 11 | Testledare | Testrapport och kvarstående risker. |
-| Go/No-Go och produktionssättning | Vecka 12 | Vecka 12 | PO / projektledare | Smoke test i PROD. |
- 
-**Tidplan per vecka**
 
-| **Vecka** | **1** | **2** | **3** | **4** | **5** | **6** | **7** | **8** | **9** | **10** | **11** | **12** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Testanalys och testdesign | TL+ A-D | TL+ A-D | | | | | | | | | | |
-| Testdata och miljöförberedelser | | | TC+ DevOps | | | | | | | | | |
-| SIT | | | | TA | TA | | | | | | | |
-| Systemtest (inkl. behörighet, säkerhet, prestanda) | | | | | TDA+ SÄKspec | TDA+ SÄKspec | TDA+ SÄKspec | TDA+ SÄKspec | | | | |
-| E2E-test | | | | | | | TC | TC | | | | |
-| UAT | | | | | | | | TC/ verksamhet | TC/ verksamhet | | | |
-| Regression och retest | | | | | | | | | TD | TD | | |
-| Release Readiness | | | | | | | | | | | TL | |
-| Go/No-Go och produktionssättning | | | | | | | | | | | | PO +PL |
-
-*Förkortningar: TL = testledare, A-D = testare A–D, TA/TC/TD = testare A/C/D, TDA = testare D och A, TC =  C, SÄKspec = säkerhetsspecialist, PO = Product Owner, PL = projektledare.*
 
 **NY Tidplan**
  
