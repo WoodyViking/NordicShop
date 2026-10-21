@@ -460,7 +460,7 @@ Ej applicerbart, men fysiska MFA-enheter finns beskrivna i 11.1. Testningen sker
 | Testare D | 100 %, vecka 1–12 | Regression, automation, behörighet | Testteamet |
 | Utvecklare | Daglig tillgänglighet för felrättning, SIT-stöd och deployment | Rättning, support | Utvecklingsteam 1–3 |
 | Verksamhetsrepresentanter | Heltid under UAT (v8–9), samt granskning av testfall i v2 | UAT, granskning | NordFinance verksamhet |
-| Säkerhetsspecialist | Cirka 5 dagar i systemtest (v5–8) | Säkerhetstest | Projektet |
+| Säkerhetsspecialist | Cirka 5 dagar i systemtest (v6–9) | Säkerhetstest | Projektet |
 | DevOps | Daglig tillgänglighet vid deployment, miljöproblem och SQL-återställning | Miljöer | Projektet |
 | Representant kreditupplysningstjänst | Tillgänglig under SIT (v4–5) | Testsvar, felsökning | Extern leverantör |
  
@@ -517,7 +517,7 @@ Tidplanen anges i projektveckor (vecka 1–12 räknat från projektets start).
 | --- | --- |
 | Förberedelse: miljö, testdata, smoke test | Vecka 3 |
 | SIT omgång 1: alla integrationer | Vecka 4 (5 arbetsdagar) |
-| Systemtest omgång 1: P1-funktioner (inloggning, kreditregler, stora lån, behörighet) | Start vecka 5, cirka 1,5 vecka |
+| Systemtest omgång 1: P1-funktioner (inloggning, kreditregler, stora lån, behörighet) | Start vecka 6, cirka 1,5 vecka |
 | Defect triage och rättning | Löpande, 3 gånger per vecka |
 | Statusrapport efter omgång 1 | Slutet av vecka 5 |
 
