@@ -3,7 +3,7 @@
 **NordFinance**  
 Projekt MortgageFlow  
 Testplan för MortgageFlow – nytt bolånesystem, release 1.0  
-**Version 2.0**
+**Version 2.1**
 
 ## Dokumenthistorik
 
@@ -13,7 +13,7 @@ Testplan för MortgageFlow – nytt bolånesystem, release 1.0
 | 1.0 | 2026-10-16 | Grupp 2 | Första kompletta version (Del 2). Bygger på teststrategi version 1.0. |
 | 1.1 | 2026-10-19 | Grupp 2 | Veckoplan och RACI tillagt |
 | 2.0 | 2026-10-20 | Grupp 2 | Testare B lämnar, SYS fem arbetsdagar försenad, nytt krav på verifiering och loggning av rolländringar, fast releasedatum. |
-
+| 2.1 | 2026-10-21 | Grupp 2 | Planen granskades av gruppen 2026-10-21 och fastställdes som version 2.1 |
 
 # Innehåll
 
@@ -54,7 +54,7 @@ Testplan för MortgageFlow – nytt bolånesystem, release 1.0
 
 # 1  Unik identifiering
 
-**TP-MF-2.0** – Testplan för MortgageFlow, release .0 (första produktionssättning).
+**TP-MF-2.1** – Testplan för MortgageFlow, release 1.0 (första produktionssättning).
  
 Identifieraren följer formen *TP (testplan) – MF (MortgageFlow) – versionsnummer*.
 
@@ -250,8 +250,7 @@ Testningen följer teststrategin (version 1.0) och är **riskbaserad, kravbasera
 **Omtest och regression.** Varje rättat fel omtestas av den som hittade det eller av Testare D. Efter varje leverans körs smoke test, därefter regression av P1. Stabila affärskritiska tester (inloggning, kreditregler, behörighet) automatiseras först av Testare D.
  
 **Rapportering.** Testledaren följer Planned vs Executed, Passed, Failed, Blocked, Not Run, öppna defekter per severity och risktäckning. Statusrapport skickas till projektledare och PO varje vecka och dagligen under UAT och regression. Före Go/No-Go lämnar testledaren rekommendation: Go, Conditional Go eller No-Go.
- 
-**Avsteg från strategin.** Inga avsteg i version 1.0. Eventuella avsteg dokumenteras här och i dokumenthistoriken.
+
 
 ## 6.1  Iterationer
 
@@ -332,7 +331,7 @@ Beslutet om avbrott fattas av testledaren i samråd med projektledaren.
 | **Dokument / artefakt** | **Beskrivning** | **Ansvarig** |
 | --- | --- | --- |
 | Teststrategi för MortgageFlow, version 1.0 | Övergripande strategi. | Testledare |
-| Testplan (TP-MF-1.0) | Detta dokument. | Testledare |
+| Testplan (TP-MF 2.1) | Detta dokument. | Testledare |
 | Testfall / testspecifikation | Testfall med krav- och riskkoppling, förutsättningar, steg och förväntat resultat. | Testare A, C, D, per område |
 | Behörighetsmatris | Roll mot funktion och data. | Testare D |
 | Loggunderlag för rolladministration | Underlag för att verifiera att rolländringar loggas med användare, tidpunkt, tidigare roll och ny roll (R11). | Testare D / säkerhetsspecialist |
@@ -516,7 +515,7 @@ Tidplanen anges i projektveckor (vecka 1–12 räknat från projektets start).
 | **Fas** | **Varaktighet / datum** |
 | --- | --- |
 | Förberedelse: miljö, testdata, smoke test | Vecka 3 |
-| SIT omgång 1: alla integrationer | Vecka 4 (5 arbetsdagar) |
+| SIT omgång 1: alla integrationer | Vecka 5 |
 | Systemtest omgång 1: P1-funktioner (inloggning, kreditregler, stora lån, behörighet) | Start vecka 6, cirka 1,5 vecka |
 | Defect triage och rättning | Löpande, 3 gånger per vecka |
 | Statusrapport efter omgång 1 | Slutet av vecka 6 |
@@ -551,12 +550,14 @@ Påföljande omgångar genomförs vid varje ny leverans från utvecklingsteamen.
 
 | **Namn / roll** | **Beslut** | **Datum** | **Kommentar** |
 | --- | --- | --- | --- |
-| Testledare | Ej godkänd (väntar) |  | Författare av planen. |
+| Testledare | Godkänd | 2026-10-21 | Planen granskades av gruppen 2026-10-21 och 
+fastställdes som version 2.0. |
 | Product Owner | Ej godkänd (väntar) |  | Godkänner omfattning, prioritering och slutkriterier. |
 | Projektledare | Ej godkänd (väntar) |  | Godkänner tidplan och resurser. |
 | Verksamhetsrepresentant | Ej godkänd (väntar) |  | Godkänner UAT-upplägg. |
 | Säkerhetsspecialist | Ej godkänd (väntar) |  | Godkänner säkerhetstestets omfattning. |
 
-
+Planen är granskad av gruppen 2026-10-21.   
+Externa roller godkänner i samband med att Del 4 påbörjas.
 
 
