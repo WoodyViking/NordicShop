@@ -28,6 +28,14 @@
 
 ## 2. Resultat
 
+| Status | Antal |
+|---|---|
+| Exekverade | 128 |
+| Godkända (Passed) | 91 |
+| Ej godkända (Failed) | 23 |
+| Blockerade (Blocked) | 14 |
+| Not Run | 172 |
+
 **Pass rate:** 91/128 = **71 %**
 
 *Kontroll: 91 + 23 + 14 = 128. 300 − 128 = 172 Not Run.*
@@ -40,7 +48,6 @@
 **Öppna:** 26 (1 Critical, 6 High, 12 Medium, 7 Low). Resterande 5 är rättade och stängda.
 
 ### Viktigaste problem
-VI måste skriva påverkan!!
 - **DEF-101 (Critical):** Vid belåningsgrad över 85 % visas varning, men handläggaren kan ändå godkänna utan ytterligare kontroll. inträffade i 3 av 10 testförsök.
 - **DEF-112 (High):** Lån över 5 MSEK kan i vissa situationer gå direkt från första handläggarens godkännande till Godkänd utan senior handläggares slutgodkännande. Fel kund kan få ett stort godkänt lån och det är en stor ekonomiskrisk för banken
 - **DEF-118 (High):** Kreditupplysningstjänsten returnerar ibland timeout, men ärendet visas ändå som att kreditkontrollen är genomförd. Kreditbedömningen behöver inte vara genomförd för att den ska visas som genomförd, det blir onödig press på support. Sedan kan det även göras en felbedömning och det finns därför en ekonomisk risk för banken eftersom att en dålig kund kan få låna pengar.
