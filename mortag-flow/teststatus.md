@@ -110,15 +110,13 @@
 
 ## 6. Overall Status
 
-### 🟡 GUL
+### 🔴 RÖD
 
-**Varför:** Testningen ligger 20 % efter plan (32 tester), en Critical-defekt (DEF-101) är öppen i kreditbedömningen och kreditupplysningens integration har varit instabil (14 blockerade tester). Fyra högrisker (R1, R2, R3, R5) är ännu inte verifierade.
+**Varför:** Testningen ligger 20 % efter plan (32 tester), en Critical-defekt (DEF-101) är öppen i kreditbedömningen och kreditupplysningens integration har varit instabil (14 blockerade tester). Fyra högrisker (R1, R2, R3, R5) är ännu inte verifierade och prestandarisken (R9) är helt otestad.
 
-**Påverkan:** Kritiska affärsflöden – kreditbedömning, stora lån och kreditkontroll – är delvis overifierade. Release-risken är förhöjd men bedöms hanterbar inom återstående tid.
+**Påverkan:** Kritiska affärsflöden – kreditbedömning, stora lån och kreditkontroll – kan inte verifieras som säkra. Det innebär hög release-risk: systemet kan fatta felaktiga kreditbeslut eller visa en kreditkontroll som genomförd utan svar. Release bör inte genomföras i nuvarande läge.
 
-**Åtgärd:** Prioritera miljöproblemet och de öppna Critical/High-defekterna, kör SIT/API-test på kreditintegrationen och följ upp med retest + regression. Om integrationen fortsätter vara instabil eller DEF-101 inte åtgärdas inom veckan → **eskalera till 🔴 Röd**.
-
----
+**Åtgärd:** Eskalera miljöproblemet till leverantör och DevOps, åtgärda DEF-101/112/118/121/124, kör SIT/API-test på kreditintegrationen och följ upp med retest + regression. Om inte den kritiska defekten och miljöproblemet är lösta inom veckan ska Go/No-Go omprövas.
 
 ## 7. Rekommenderade åtgärder
 
