@@ -55,6 +55,7 @@
 - **DEF-124 (High):** En handläggare kan se ett ärende som tillhör fel region. Eftersom att det är en behörighetsfråga kommer GDPR lagar att träda in och därför kan man stämma banken.
 - **Miljöproblem:** Den externa kreditupplysningstjänsten har varit instabil under 1,5 arbetsdag. 14 testfall är fortfarande blockerade på grund av detta och relaterade testdata.
 Allt som ska göras efter upplysningstjänsten kan inte testas vilket betyder att man inte kan testa kritiska affärsflöden.
+- **2 High defekter:** Defekter som inte har någon dokumentation/information om vad de är för problem och vad dem påverkar. 
 
 ---
 
@@ -104,11 +105,11 @@ Allt som ska göras efter upplysningstjänsten kan inte testas vilket betyder at
 
 ### 🔴 RÖD
 
-**Varför:** Testningen ligger 20 % efter plan (32 tester), en Critical-defekt (DEF-101) är öppen i kreditbedömningen och kreditupplysningens integration har varit instabil (14 blockerade tester). Fyra högrisker (R1, R2, R3, R5) är ännu inte verifierade och prestandarisken (R9) är helt otestad.
+**Varför:** Testningen ligger 20 % efter plan (32 tester), en Critical-defekt (DEF-101) är öppen i kreditbedömningen och kreditupplysningens integration har varit instabil (14 blockerade tester). Fyra högrisker (R1, R2, R3, R5) är ännu inte verifierade och prestandarisken (R9) är helt otestad. 2 höga defekter är upptäckta som saknar information.
 
 **Påverkan:** Kritiska affärsflöden – kreditbedömning, stora lån och kreditkontroll – kan inte verifieras som säkra. Det innebär hög release-risk: systemet kan fatta felaktiga kreditbeslut eller visa en kreditkontroll som genomförd utan svar. Release bör inte genomföras i nuvarande läge.
 
-**Åtgärd:** Eskalera miljöproblemet till leverantör och DevOps, åtgärda DEF-101/112/118/121/124, kör SIT/API-test på kreditintegrationen och följ upp med retest + regression. Om inte den kritiska defekten och miljöproblemet är lösta inom veckan ska Go/No-Go omprövas.
+**Åtgärd:** Eskalera miljöproblemet till leverantör och DevOps, åtgärda DEF-101/112/118/121/124, kör SIT/API-test på kreditintegrationen och följ upp med retest + regression. Om inte den kritiska defekten och miljöproblemet är lösta inom veckan ska Go/No-Go omprövas. Begär mer information om de 2 höga defekterna som inte hade information.
 
 ## 7. Rekommenderade åtgärder
 
@@ -122,6 +123,7 @@ Allt som ska göras efter upplysningstjänsten kan inte testas vilket betyder at
 | 2 | DEF-112 (High) – säkerställ senior slutgodkännande för lån > 5 MSEK |
 | 2 | DEF-121 (High) – logga tidigare roll vid behörighetsändring |
 | 2 | DEF-124 (High) – begränsa ärenden per region |
+| 2 | Information - 2 Höga defekter behöver få information om vad de påverkar |
 | 3 | SIT/API-test på kreditintegrationen (Testare A) |
 | 3 | Retest av åtgärdade defekter |
 | 3 | Påbörja regression av kritiska flöden |
