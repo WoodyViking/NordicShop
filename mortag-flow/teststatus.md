@@ -28,14 +28,6 @@
 
 ## 2. Resultat
 
-| Status | Antal |
-|---|---|
-| Exekverade | 128 |
-| Godkända (Passed) | 91 |
-| Ej godkända (Failed) | 23 |
-| Blockerade (Blocked) | 14 |
-| Not Run | 172 |
-
 **Pass rate:** 91/128 = **71 %**
 
 *Kontroll: 91 + 23 + 14 = 128. 300 − 128 = 172 Not Run.*
@@ -46,14 +38,6 @@
 
 **Totalt rapporterade:** 31 defekter.  
 **Öppna:** 26 (1 Critical, 6 High, 12 Medium, 7 Low). Resterande 5 är rättade och stängda.
-
-| Severity | Öppna |
-|---|---|
-| Critical | 1 |
-| High | 6 |
-| Medium | 12 |
-| Low | 7 |
-| **Summa öppna** | **26** |
 
 ### Viktigaste problem
 
