@@ -40,13 +40,14 @@
 **Öppna:** 26 (1 Critical, 6 High, 12 Medium, 7 Low). Resterande 5 är rättade och stängda.
 
 ### Viktigaste problem
-
+VI måste skriva påverkan!!
 - **DEF-101 (Critical):** Vid belåningsgrad över 85 % visas varning, men handläggaren kan ändå godkänna utan ytterligare kontroll. inträffade i 3 av 10 testförsök.
-- **DEF-112 (High):** Lån över 5 MSEK kan i vissa situationer gå direkt från första handläggarens godkännande till Godkänd utan senior handläggares slutgodkännande.
-- **DEF-118 (High):** Kreditupplysningstjänsten returnerar ibland timeout, men ärendet visas ändå som att kreditkontrollen är genomförd.
-- **DEF-121 (High):** Administratör kan tilldela en användare senior behörighet utan att tidigare roll loggas.
-- **DEF-124 (High):** En handläggare kan se ett ärende som tillhör fel region.
+- **DEF-112 (High):** Lån över 5 MSEK kan i vissa situationer gå direkt från första handläggarens godkännande till Godkänd utan senior handläggares slutgodkännande. Fel kund kan få ett stort godkänt lån och det är en stor ekonomiskrisk för banken
+- **DEF-118 (High):** Kreditupplysningstjänsten returnerar ibland timeout, men ärendet visas ändå som att kreditkontrollen är genomförd. Kreditbedömningen behöver inte vara genomförd för att den ska visas som genomförd, det blir onödig press på support. Sedan kan det även göras en felbedömning och det finns därför en ekonomisk risk för banken eftersom att en dålig kund kan få låna pengar.
+- **DEF-121 (High):** Administratör kan tilldela en användare senior behörighet utan att tidigare roll loggas.För att bli senior handläggare måste man varit handläggare överhuvudtaget här gäller behörighet och därför GDPR
+- **DEF-124 (High):** En handläggare kan se ett ärende som tillhör fel region. Eftersom att det är en behörighetsfråga kommer GDPR lagar att träda in och därför kan man stämma banken.
 - **Miljöproblem:** Den externa kreditupplysningstjänsten har varit instabil under 1,5 arbetsdag. 14 testfall är fortfarande blockerade på grund av detta och relaterade testdata.
+Allt som ska göras efter upplysningstjänsten kan inte testas vilket betyder att man inte kan testa kritiska affärsflöden.
 
 ---
 
