@@ -2,6 +2,8 @@
 
 **Underlag till:** Go/No-Go-mötet
 **Bygger på:** Testplan TP-MF-2.1, avsnitt 7.2 (slutkriterier)
+**Datum:** 2026-10-23
+**Författare:** Grupp 2
 
 ---
 
