@@ -5,22 +5,10 @@
 **Datum:** 2026-10-23
 **Författare:** Grupp 2
 
----
-
-## 1. Rekommendation
-
-> 🟡 **CONDITIONAL GO**: releasen kan gå till produktion före årsskiftet om villkoren i avsnitt 10 är uppfyllda.
-
-Det finns inga kritiska fel kvar, de två allvarligaste defekterna (DEF-101 och DEF-112) är rättade och verifierade, verksamheten har godkänt UAT och tekniken är redo. Två saker gör att vi inte kan rekommendera ett rent GO:
-
-1. **Prestanda med 500 användare är inte verifierad**, bara med 350.
-2. **High 2 strider mot slutkriteriet för rolländringar (R11)**, eftersom loggen ibland saknar tidigare roll.
-
-Ett NO-GO bedöms inte vara rimligt. Riskerna går att hantera, och att skjuta på releasen ger stora kostnader och påverkar migreringen.
 
 ---
 
-## 2. Exit Criteria
+## 1. Exit Criteria
 
 | Slutkriterium (TP 7.2) | Status | Kommentar |
 |---|---|---|
@@ -42,7 +30,7 @@ Ett NO-GO bedöms inte vara rimligt. Riskerna går att hantera, och att skjuta p
 
 ---
 
-## 3. Testresultat
+## 2. Testresultat
 
 | | Antal | Andel |
 |---|---|---|
@@ -60,7 +48,7 @@ Ett NO-GO bedöms inte vara rimligt. Riskerna går att hantera, och att skjuta p
 
 ---
 
-## 4. Kvarstående defekter
+## 3. Kvarstående defekter
 
 | Severity | Öppna | Releaseblockerande? |
 |---|---|---|
@@ -77,7 +65,7 @@ Ett NO-GO bedöms inte vara rimligt. Riskerna går att hantera, och att skjuta p
 
 ---
 
-## 5. Regression
+## 4. Regression
 
 - **Genomförd:** 108 av 120 (90 %). **Ej genomförd:** 12 tester (10 %).
 - Det som saknas gäller vissa browserkombinationer, ovanliga kombinationer av dokumentformat och lågprioriterade rapporter.
@@ -85,7 +73,7 @@ Ett NO-GO bedöms inte vara rimligt. Riskerna går att hantera, och att skjuta p
 
 ---
 
-## 6. Prestanda
+## 5. Prestanda
 
 - **Fakta:** Kravet är 500 samtidiga användare. Bara 350 kunde verifieras (inom svarstidskravet) på grund av miljöbegränsningar.
 - **Konsekvens:** Vi vet inte hur systemet beter sig mellan 350 och 500 användare.
@@ -94,7 +82,7 @@ Ett NO-GO bedöms inte vara rimligt. Riskerna går att hantera, och att skjuta p
 
 ---
 
-## 7. Business Acceptance
+## 6. Business Acceptance
 
 - UAT är **godkänt med accepterade kända avvikelser**.
 - Det betyder att verksamheten bedömer att systemet stödjer arbetet trots de kända felen. Det är ett starkt argument för GO.
@@ -102,7 +90,7 @@ Ett NO-GO bedöms inte vara rimligt. Riskerna går att hantera, och att skjuta p
 
 ---
 
-## 8. Technical Readiness
+## 7. Technical Readiness
 
 ✅ Produktionsbuild ✅ Deploymentplan ✅ Monitorering ✅ Rollbackplan verifierad ✅ Supportberedskap ✅ Databasbackup verifierad
 
@@ -110,7 +98,7 @@ Ett NO-GO bedöms inte vara rimligt. Riskerna går att hantera, och att skjuta p
 
 ---
 
-## 9. Remaining Risk
+## 8. Remaining Risk
 
 | # | Risk | Sannolikhet | Påverkan | Hantering |
 |---|---|---|---|---|
@@ -122,7 +110,20 @@ Ett NO-GO bedöms inte vara rimligt. Riskerna går att hantera, och att skjuta p
 
 ---
 
-## 10. Villkor för CONDITIONAL GO
+# 9. Rekommendation
+
+> 🟡 **CONDITIONAL GO**: releasen kan gå till produktion före årsskiftet om villkoren i avsnitt 10 är uppfyllda.
+
+Det finns inga kritiska fel kvar, de två allvarligaste defekterna (DEF-101 och DEF-112) är rättade och verifierade, verksamheten har godkänt UAT och tekniken är redo. Två saker gör att vi inte kan rekommendera ett rent GO:
+
+1. **Prestanda med 500 användare är inte verifierad**, bara med 350.
+2. **High 2 strider mot slutkriteriet för rolländringar (R11)**, eftersom loggen ibland saknar tidigare roll.
+
+Ett NO-GO bedöms inte vara rimligt. Riskerna går att hantera, och att skjuta på releasen ger stora kostnader och påverkar migreringen.
+
+---
+
+# 10. Villkor för CONDITIONAL GO
 
 1. **PO och projektledare accepterar formellt** prestandaavvikelsen och kvarstående High-defekter.
 2. **High 2:** en kompenserande kontroll (manuell loggning av tidigare roll) införs från dag 1, och en hotfix planeras med datum.
