@@ -57,15 +57,9 @@ Mall för sammanställning och avslut av testarbete
 
 | **Mätetal** | **Resultat** | **Kommentar** |
 | --- | --- | --- |
-| Test Execution | 290 av 300 (97 %) | Hög täckning. |
-| Pass rate | 264 av 290 (91 %), 88 % av alla planerade | Lägre än målet 95 % för P1, men siffror per prioritet saknas. |
-| Failed / Blocked / Not Run | 10 / 6 / 10 | Hänger ihop med kvarstående defekter. Inget gäller Critical-fel. |
-| Tester utan godkänt resultat | 36 (12 %) | 10 Failed, 6 Blocked, 10 Not Run och 10 utan registrerad status. |
-| Datagap | 10 tester | 264 + 10 + 6 = 280, inte 290 som rapporterats som executed. |
-| Regression | 90 % | Kärnflödena regressionstestade. |
-| Prestanda | 70 % av kravet verifierat | 350 av 500 samtidiga användare. |
 
-**Analys:** Resultatet visar att kärnflödena fungerar: kreditbedömning, dubbelgodkännande, behörighet och E2E har gått igenom efter rättningar. Den höga körningsgraden döljer dock att 36 tester (12 %) saknar godkänt resultat. För 10 av dem har status inte kunnat redovisas, vilket är en brist i uppföljningen. Pass rate på 91 % ligger under målet 95 % för P1-tester, men eftersom resultat per prioritet saknas kan vi inte avgöra om P1-målet uppnåddes.
+
+
 ## 5. Defekter
 
 *Sammanfatta identifierade och kvarstående defekter. Fokusera på allvarlighetsgrad, påverkan och status - inte enbart antal.*
