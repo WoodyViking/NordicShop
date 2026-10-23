@@ -25,7 +25,7 @@ Ett NO-GO bedöms inte vara rimligt. Riskerna går att hantera, och att skjuta p
 | Slutkriterium (TP 7.2) | Status | Kommentar |
 |---|---|---|
 | P1-tester genomförda, ≥ 95 % godkända | 🟡 Delvis | 97 % av alla tester genomförda, 91 % godkända. Siffror per P1 behöver redovisas. |
-| E2E-flöden utan öppna S1/S2 | 🟡 Uppfyllt* | DEF-112 rättad, E2E passed. *High 1 ligger nära E2E-5 |
+| E2E-flöden utan öppna S1/S2 | 🟡 Uppfyllt* | DEF-112 rättad, E2E passed. *High 1 ligger nära E2E-5 men enligt plan så får E2E-5 strykas om tiden inte räcker. |
 | Inga öppna S1/S2 i P1-områden | 🔴 Ej uppfyllt | 0 Critical, men 3 High öppna. |
 | Rättade P1-defekter omtestade + regression | 🟡 Delvis | Retest OK. Regression 108 av 120 (90 %). |
 | ≥ 80 % av P2 genomförda | 🟢 Troligen | Helheten ligger på 97 % genomförda. |
@@ -34,6 +34,11 @@ Ett NO-GO bedöms inte vara rimligt. Riskerna går att hantera, och att skjuta p
 | Prestanda verifierad *eller* avvikelse accepterad | 🟡 Delvis | 350 av 500 användare. Kräver formellt accepterad avvikelse. |
 | R11 rolländring verifierad (inkl. tidigare roll i logg) | 🔴 Ej uppfyllt | High 2: tidigare roll saknas ibland. |
 | Kvarstående risker accepterade av PO och PL | ⏳ Återstår | Ska beslutas på mötet. |
+
+🟢 3 uppfyllda (P2, UAT, säkerhetstest)
+🟡 4 delvis uppfyllda (P1-tester, E2E, retest och regression, prestanda)
+🔴 2 ej uppfyllda (inga öppna S1/S2 i P1-områden, R11)
+⏳ 1 som beslutas på mötet (accepterade kvarstående risker)
 
 ---
 
