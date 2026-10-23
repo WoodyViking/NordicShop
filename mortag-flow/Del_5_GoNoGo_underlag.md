@@ -35,10 +35,10 @@ Ett NO-GO bedöms inte vara rimligt. Riskerna går att hantera, och att skjuta p
 | R11 rolländring verifierad (inkl. tidigare roll i logg) | 🔴 Ej uppfyllt | High 2: tidigare roll saknas ibland. |
 | Kvarstående risker accepterade av PO och PL | ⏳ Återstår | Ska beslutas på mötet. |
 
-🟢 3 uppfyllda (P2, UAT, säkerhetstest)
-🟡 4 delvis uppfyllda (P1-tester, E2E, retest och regression, prestanda)
-🔴 2 ej uppfyllda (inga öppna S1/S2 i P1-områden, R11)
-⏳ 1 som beslutas på mötet (accepterade kvarstående risker)
+- 🟢 3 uppfyllda (P2, UAT, säkerhetstest)
+- 🟡 4 delvis uppfyllda (P1-tester, E2E, retest och regression, prestanda)
+- 🔴 2 ej uppfyllda (inga öppna S1/S2 i P1-områden, R11)
+- ⏳ 1 som beslutas på mötet (accepterade kvarstående risker)
 
 ---
 
