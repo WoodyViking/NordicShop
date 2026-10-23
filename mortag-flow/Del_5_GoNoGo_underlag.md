@@ -41,7 +41,7 @@ Ett NO-GO bedöms inte vara rimligt. Riskerna går att hantera, och att skjuta p
 |---|---|---|
 | Planerade | 300 | 100 % |
 | Genomförda | 290 | 97 % |
-| Godkända | 264 | 91 % av genomförda |
+| Godkända | 264 | 88%. 91 % av genomförda |
 | Failed | 10 | 3 % |
 | Blocked | 6 | 2 % |
 | Not Run | 10 | 3 % |
