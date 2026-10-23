@@ -114,21 +114,22 @@
 
 > 🟡 **CONDITIONAL GO**: releasen kan gå till produktion före årsskiftet om villkoren i avsnitt 10 är uppfyllda.
 
-Det finns inga kritiska fel kvar, de två allvarligaste defekterna (DEF-101 och DEF-112) är rättade och verifierade, verksamheten har godkänt UAT och tekniken är redo. Två saker gör att vi inte kan rekommendera ett rent GO:
+Det finns inga kritiska fel kvar, de allvarligaste defekterna (DEF-101, DEF-112 icg regionfelet DEF-124) är rättade och verifierade, verksamheten har godkänt UAT och tekniken är redo. Två saker gör att vi inte kan rekommendera ett rent GO:
 
-1. **Prestanda med 500 användare är inte verifierad**, bara med 350.
-2. **High 2 strider mot slutkriteriet för rolländringar (R11)**, eftersom loggen ibland saknar tidigare roll.
+1. **Prestanda med 500 användare är inte verifierad**, bara med 350. Konsekvensen är att vi inte vet hur systemet beter sig mellan 350 och 500 användare, med risk för långsamma svar vid hög belastning.
+2. **High 2 strider mot slutkriteriet för rolländringar (R11)**, eftersom loggen ibland saknar tidigare roll. Ny roll loggas rätt, men spårbarheten brister, vilket kan bli ett revisionsproblem.
 
-Ett NO-GO bedöms inte vara rimligt. Riskerna går att hantera, och att skjuta på releasen ger stora kostnader och påverkar migreringen.
+Ett NO-GO bedöms inte vara rimligt De kvarstående felen leder inte till felaktiga kreditbeslut eller exponerade persondata, rollback är verifierad och riskerna går att hantera med villkor. Att skjuta på releasen ger dessutom stora kostnader och påverkar migreringen.
 
 ---
 
 # 10. Villkor för CONDITIONAL GO
 
-1. **PO och projektledare accepterar formellt** prestandaavvikelsen och kvarstående High-defekter.
-2. **High 2:** en kompenserande kontroll (manuell loggning av tidigare roll) införs från dag 1, och en hotfix planeras med datum.
+1. **PO och projektledare accepterar formellt** prestandaavvikelsen och kvarstående High-defekter och dokumenterar vilka UAT-avvikelser som accepterats.
+2. **High 2:** en kompenserande kontroll (manuell loggning av tidigare roll) införs från dag 1, och en hotfix planeras med datum, säkerhetsspecialisten godkänner avvikelsen och en hotfix planeras med datum. (Säkerhetsspecialist och utvecklingsteamen, före produktionssättning.)
 3. **High 1:** handläggare och support informeras om rutinen vid timeout.
-4. **Prestanda:** förstärkt övervakning med tydliga tröskelvärden för rollback. Lasttest med 500 användare görs så snart en miljö finns.
-5. **Resterande 12 regressionstester** och de 10 tester som saknar status körs eller förklaras.
+4. **Prestanda:** stegvis utrullning med 350 samtidiga användare första dagarna, sedan förstärkt övervakning med tydliga tröskelvärden för rollback. Lasttest med 500 användare görs så snart en miljö finns.
+5. **Resterande 12 regressionstester** och de 10 tester som saknar status körs eller förklaras och P1-flödena bekräftas i Chrome, Edge och Firefox.
 
 **Om villkor 1 eller 2 inte kan uppfyllas blir rekommendationen NO-GO.**
+Den ändras också till NO-GO om något av de tester som saknar status eller de ej körda regressionstesterna visar ett P1-fel
