@@ -1,3 +1,15 @@
+DEL 6 – TESTRAPPORT
+Projektet har fattat beslut:
+🟡 CONDITIONAL GO
+Release genomförs med:
+● förstärkt produktionsmonitorering
+● särskild bevakning av kreditupplysningstjänsten
+● supportberedskap första veckan
+● planerad uppföljning av kvarstående High-defekter
+● separat prestandaverifiering efter release
+Uppgift
+Skriv en avslutande testrapport utifrån mallen som används i kursen.
+
 # TESTRAPPORT
 
 Mall för sammanställning och avslut av testarbete
