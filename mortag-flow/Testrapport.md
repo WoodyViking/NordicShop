@@ -59,7 +59,7 @@ Mall för sammanställning och avslut av testarbete
 | --- | --- | --- | --- |
 | Totalt testpaket (SIT, systemtest, E2E) | 300 | 290 (97 %) | 264 Passed, 10 Failed, 6 Blocked, 10 Not Run. 10 tester saknar registrerad status. |
 | Testpaket efter första testveckan | 160 | 128 (80 %) | 20 % efter plan, status RÖD. Ikapp genom prioritering av P1. |
-| Omtest av DEF-101 (Critical) | – | 15 | 15 av 15 Passed. Felet var intermittent och kördes därför många gånger. |
+| Omtest av DEF-101 (Critical) | – | 15 | 15 av 15 Passed. Felet uppstod bara ibland (3 av 10 försök) och kördes därför många gånger. |
 | Omtest av DEF-112 och DEF-124 | – | Genomfört | Passed, med E2E respektive regression. |
 | Regression | 120 | 108 (90 %) | Ej körda: vissa webbläsarkombinationer, ovanliga dokumentformat, lågprioriterade rapporter. |
 | E2E-flöden (E2E-1 till E2E-5) | 5 flöden | Genomfört | Passed. Stort lån (E2E-3) verifierat efter rättning av DEF-112. |
@@ -67,7 +67,7 @@ Mall för sammanställning och avslut av testarbete
 | Prestandatest | 500 användare | 350 användare | Svarstidskravet uppfyllt för 350. 500 kunde inte testas på grund av miljöbegränsning. |
 | Säkerhets- och behörighetstest | Enligt plan | Genomfört | Inga kända Critical-säkerhetsdefekter kvar. |
 
-Fördelningen per testområde vid testavslut har inte redovisats. Uppdelningen per område finns i statusrapporten efter vecka 1.
+Fördelningen per testområde vid testavslut fins inte i underlaget, utan bara totalsiffrorna. Uppdelningen per område finns i statusrapporten efter första veckan.
 
 ## 4. Resultat
 
