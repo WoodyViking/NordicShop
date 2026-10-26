@@ -15,12 +15,12 @@ Skriv en avslutande testrapport utifrån mallen som används i kursen.
 
 Mall för sammanställning och avslut av testarbete
 
-| **Projekt / system** | \<Namn\> |
+| **Projekt / system** | MortgageFlow – NordFinance |
 | --- | --- |
-| **Release / version** | \<Version\> |
-| **Testperiod** | \<Datum - datum\> |
-| **Dokumentägare** | \<Namn / roll\> |
-| **Datum** | \<Datum\> |
+| **Release / version** | Release 1.0 (testplan version 2.1) |
+| **Testperiod** | Projektvecka 1–11. Go/No-Go och produktionssättning vecka 12 |
+| **Dokumentägare** | Grupp 2 |
+| **Datum** | 2026-10-26 |
 | **Status** | \<Utkast / Slutlig\> |
 
 *Använd mallen för att sammanfatta genomfört testarbete, resultat, avvikelser och kvarstående risker. Ersätt text inom \<hakparenteser\> och anpassa omfattningen efter projektets behov.*
@@ -41,15 +41,16 @@ Mall för sammanställning och avslut av testarbete
 | Dubbelgodkännande för lån över 5 MSEK | Systemtest, E2E | P1 (R2) | Gränsvärden kring 5 000 000 SEK. |
 | Behörighet och ärendesynlighet | Systemtest, säkerhetstest | P1 (R3, R4) | Alla roller, via UI och API. |
 | Integration mot kreditupplysningstjänst | SIT, E2E | P1 (R5) | Inklusive timeout och felsvar. |
-| Inloggning, MFA, kontolåsning, utloggning | Systemtest | P1 (R6) | Gränsvärden för försök och inaktivitet. |
+| Inloggning, MFA, kontolåsning, utloggning | Systemtest | P1 (R6) | Gränsvärden för inloggningsförsök och inaktivitet. |
 | Ärendestatus och ärendelogg | Systemtest | P1 (R7) | Tillåtna och otillåtna övergångar. |
 | Rolländring med verifiering och loggning (nytt krav) | Systemtest, säkerhetstest | P1 (R11) | Tillkom i version 2.0. |
 | Dokumenthantering | Systemtest, SIT | P2 (R8) | Filtyper, 10 MB, versionshantering. |
-| E-postbekräftelse | SIT, E2E | P2 (R10) | |
-| Prestanda (2 s svarstid, 500 användare) | Prestandatest | P2 (R9) | Endast 350 användare kunde verifieras. |
+| E-postbekräftelse | SIT, E2E | P2 (R10) |  Rätt mottagare och innehåll, samt hantering när e-posttjänsten inte svarar. Inga e-postrelaterade defekter är redovisade. |
+| Prestanda (2 s svarstid, 500 användare) | Prestandatest | P2 (R9) | Endast 350 samtidiga användare har verifieras. |
 | Webbläsare Chrome, Edge, Firefox | Kompatibilitetstest | P2 | Edge och Firefox som stickprov enligt version 2.0. |
 | Rapporter och statistik | Systemtest | P3 | Prioriterades ned enligt version 2.0. |
 | Verksamhetens arbetsflöden | UAT i ACC | P1 | Genomfört av handläggare och senior handläggare. |
+
 ## 3. Genomförda tester
 
 *Sammanställ vilka tester och testaktiviteter som genomfördes. Redovisa relevant coverage och vad som eventuellt inte genomfördes.*
