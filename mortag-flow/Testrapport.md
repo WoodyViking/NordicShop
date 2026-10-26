@@ -196,5 +196,10 @@ Efter första veckan var 31 defekter rapporterade. Totalt antal rapporterade def
 
 | **Roll** | **Namn** | **Datum** | **Kommentar** |
 | --- | --- | --- | --- |
+| Product Owner | – | | Mottagare. Godkänner kvarstående risker. |
+| Projektledare | – | | Mottagare. Godkänner kvarstående risker. |
+| Säkerhetsspecialist / säkerhetsavdelning | – | | Mottagare. Bör godkänna High 2 formellt. |
+| Verksamhetsrepresentant | – | | Mottagare. |
+| Testledare | – | | Dokumentägare. |
 
-Testrapport - \<Projekt / system\>
+Testrapport – MortgageFlow release 1.0
