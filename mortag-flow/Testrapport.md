@@ -59,8 +59,8 @@ Mall för sammanställning och avslut av testarbete
 | --- | --- | --- | --- |
 | Totalt testpaket (SIT, systemtest, E2E) | 300 | 290 (97 %) | 264 Passed, 10 Failed, 6 Blocked, 10 Not Run. 10 tester saknar registrerad status. |
 | Testpaket efter första testveckan | 160 | 128 (80 %) | 20 % efter plan, status RÖD. Ikapp genom prioritering av P1. |
-| Omtest av DEF-101 (Critical) | – | 15 | 15 av 15 Passed. Felet uppstod bara ibland (3 av 10 försök) och kördes därför många gånger. |
-| Omtest av DEF-112 och DEF-124 | – | Genomfört | Passed, med E2E respektive regression. |
+| Omtest av DEF-101 (Critical) | N/A | 15 | 15 av 15 Passed. Felet uppstod bara ibland (3 av 10 försök) och kördes därför många gånger. |
+| Omtest av DEF-112 och DEF-124 | N/A | Genomfört | Passed, med E2E respektive regression. |
 | Regression | 120 | 108 (90 %) | Ej körda: vissa webbläsarkombinationer, ovanliga dokumentformat, lågprioriterade rapporter. |
 | E2E-flöden (E2E-1 till E2E-5) | 5 flöden | Genomfört | Passed. Stort lån (E2E-3) verifierat efter rättning av DEF-112. |
 | UAT | Enligt plan | Genomfört | Godkänt med accepterade kända avvikelser. |
@@ -164,6 +164,13 @@ Efter första veckan var 31 defekter rapporterade. Totalt antal rapporterade def
 ## 9. Slutsats
 
 *Sammanfatta vad testningen visar om lösningens kvalitet och testmålen. Beskriv om Exit Criteria uppnåddes och vilka begränsningar som finns.*
+264 Passed, 10 Failed, 6 Blocked, 10 Not Run. 10 tester saknar registrerad status.
+Med en större testcoverage har vi kunnat verifiera alla risker och ta bort kritiska och ett flertal high defekter. 
+För den kritiska defekten från vecka 1, har det genomförts restest på alla plenerade tester och allt godkändes. 
+DEF-101 är därför inte längre existerande. 
+
+Det finns kvar några high defekter och prestanda testet har inte utförts enligt krav, men dessa anses inte vara kritiska och utför inget problem på något affärsflöde. De defekter som finns nu anses inte vara
+krav och det går att lösa problemen manuelt.
 
 \<Slutsats\>
 
