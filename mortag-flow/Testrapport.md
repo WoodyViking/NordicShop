@@ -192,7 +192,7 @@ Efter första veckan var 31 defekter rapporterade. Totalt antal rapporterade def
 
 *Ge en tydlig rekommendation baserad på testresultat och kvarstående risk. Exempel: GO, CONDITIONAL GO, NO-GO eller rekommenderade åtgärder efter release.*
 
-| **Rekommendation** | **🟡 CONDITIONAL GO** (beslutad av projektet) |
+| **Rekommendation** | **🟡 CONDITIONAL GO** |
 | --- | --- |
 | **Motivering** | De fel som kunde ge felaktiga kreditbeslut, kringgå dubbelgodkännandet och exponera persondata är rättade och verifierade. Verksamheten har godkänt UAT och tekniken är redo (rollback, monitorering och backup verifierade). De kvarstående riskerna (prestanda över 350 användare, High 1–3, ej körd regression och tester utan status) ger inte felaktiga kreditbeslut och går att hantera efter release. Att flytta releasen skulle ge stora kostnader, kräva förlängt avtal för det gamla systemet och påverka migreringen. |
 | **Villkor / åtgärder** | De fem beslutade åtgärderna i tabellen nedan, samt rekommendationerna under tabellen. |
