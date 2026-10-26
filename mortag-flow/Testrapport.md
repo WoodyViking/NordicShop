@@ -27,18 +27,20 @@ Mall för sammanställning och avslut av testarbete
 
 ## 1. Sammanfattning
 
-*Ge en kort ledningssammanfattning av testperioden. Beskriv vad som testats, övergripande resultat, viktigaste avvikelserna och den samlade bedömningen.*
+Testarbetet omfattade SIT, systemtest, E2E, regression, prestanda- och säkerhetstest samt verksamhetens UAT.
+Av 300 planerade tester kördes 290 (97 %): 264 Passed, 10 Failed, 6 Blocked och 10 Not Run.
+Dessutom saknar 10 tester registrerad status.
+Den kritiska defekten från vecka 1 (DEF-101) är rättad och verifierad med omtest (15 av 15 godkända) och regression, och även DEF-112 och DEF-124 är rättade.
+Inga Critical-fel är öppna.
 
-264 Passed, 10 Failed, 6 Blocked, 10 Not Run. 10 tester saknar registrerad status.
-Med en större testcoverage har vi kunnat verifiera alla risker och ta bort kritiska och ett flertal high defekter.
-För den kritiska defekten från vecka 1, har det genomförts restest på alla plenerade tester och allt godkändes.
-DEF-101 är därför inte längre existerande.
+Det finns kvar 3 High, 8 Medium och 11 Low defekter.
+Ingen av dem ger felaktiga kreditbeslut.
+High 1 kräver att handläggaren uppdaterar ärendet manuellt, och i High 2 saknas tidigare roll ibland i rolländringsloggen (R11).
+Prestanda är bara verifierad för 350 av 500 användare.
 
-Det finns kvar några high defekter och prestanda testet har inte utförts enligt krav, men dessa anses inte vara kritiska och utför inget problem på något affärsflöde. De defekter som finns nu anses inte vara
-krav och det går att lösa problemen manuelt.
+Testningen påverkades av att Testare B lämnade projektet, att SYS försenades och att ett nytt säkerhetskrav tillkom.
+Projektet har beslutat 🟡 CONDITIONAL GO med förstärkt produktionsmonitorering, särskild bevakning av kreditupplysningstjänsten, supportberedskap första veckan, planerad uppföljning av High-defekterna och separat prestandaverifiering efter release.
 
-
-\<Sammanfattning\>
 
 ## 2. Scope
 
