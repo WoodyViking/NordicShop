@@ -200,7 +200,7 @@ Efter första veckan var 31 defekter rapporterade. Totalt antal rapporterade def
  
 **Beslutade åtgärder vid release:**
  
-| **#** | **Åtgärd** | **Kopplad risk** | **Ansvarig (förslag)** | **När** |
+| **#** | **Åtgärd** | **Kopplad risk** | **Ansvarig** | **När** |
 | --- | --- | --- | --- | --- |
 | 1 | Förstärkt produktionsmonitorering, med tydliga tröskelvärden för rollback | R9 prestanda, driftstörning | DevOps | Från produktionssättning |
 | 2 | Särskild bevakning av kreditupplysningstjänsten | R5, High 1 (timeout) | DevOps, support | Löpande, särskilt första veckorna |
