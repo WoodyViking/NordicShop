@@ -177,18 +177,43 @@ Efter första veckan var 31 defekter rapporterade. Totalt antal rapporterade def
 
 *Sammanfatta vad testningen visar om lösningens kvalitet och testmålen. Beskriv om Exit Criteria uppnåddes och vilka begränsningar som finns.*
 
-
-\<Slutsats\>
+**Kvalitet.** Testningen visar att kärnflödena fungerar: kreditbedömning, dubbelgodkännande, behörighet och E2E har gått igenom efter rättningar, och de fel som kunde ge felaktiga kreditbeslut, kringgå dubbelgodkännandet eller visa ärenden för fel region är åtgärdade. Kvarstående fel leder inte till felaktiga kreditbeslut, men de påverkar handläggarnas arbete (High 1), spårbarheten (High 2) och dokumentvisning i ovanliga fall (High 3).
+ 
+**Exit Criteria.** Av testplanens 10 slutkriterier (7.2) var 3 uppfyllda, 4 delvis uppfyllda och 2 ej uppfyllda vid Go/No-Go. Det tionde kriteriet, att kvarstående risker accepteras, hanterades i Go/No-Go-beslutet.
+ 
+- *Ej uppfyllda:* inga öppna S1/S2 i P1-områden (3 High är öppna) och R11 (tidigare roll saknas ibland i loggen).
+- *Delvis uppfyllda:* P1-andel godkända (siffror per prioritet saknas), E2E (High 1 ligger nära E2E-5), regression (90 %) och prestanda (350 av 500 användare).
+- *Uppfyllda:* P2-genomförande, UAT och säkerhetstest.
+**Begränsningar.** Resultat per prioritet saknas. 10 tester saknar registrerad status. 12 regressionstester är inte körda. Prestanda är bara verifierad till 70 % av kravet. Verifieringen av att ytterligare verifiering krävs vid rolländring är inte redovisad.
+ 
+**Bedömning.** Testmålen uppnåddes i huvudsak men inte fullt ut. Kvaliteten är tillräcklig för en villkorad release, förutsatt att de kvarstående riskerna följs upp med de åtgärder som projektet beslutat om (se avsnitt 10).
 
 ## 10. Rekommendation
 
 *Ge en tydlig rekommendation baserad på testresultat och kvarstående risk. Exempel: GO, CONDITIONAL GO, NO-GO eller rekommenderade åtgärder efter release.*
 
-| **Rekommendation** | \<GO / CONDITIONAL GO / NO-GO / annan\> |
+| **Rekommendation** | **🟡 CONDITIONAL GO** (beslutad av projektet) |
 | --- | --- |
-| **Motivering** | \<Kort motivering utifrån risk\> |
-| **Villkor / åtgärder** | \<Eventuella villkor eller uppföljning\> |
-| **Ansvar / uppföljning** | \<Roll / datum\> |
+| **Motivering** | De fel som kunde ge felaktiga kreditbeslut, kringgå dubbelgodkännandet och exponera persondata är rättade och verifierade. Verksamheten har godkänt UAT och tekniken är redo (rollback, monitorering och backup verifierade). De kvarstående riskerna (prestanda över 350 användare, High 1–3, ej körd regression och tester utan status) ger inte felaktiga kreditbeslut och går att hantera efter release. Att flytta releasen skulle ge stora kostnader, kräva förlängt avtal för det gamla systemet och påverka migreringen. |
+| **Villkor / åtgärder** | De fem beslutade åtgärderna i tabellen nedan, samt rekommendationerna under tabellen. |
+| **Ansvar / uppföljning** | Projektledare har det samlade ansvaret. Övriga ansvariga och tidpunkter anges i tabellen. Testledaren redovisar uppföljningen av de kvarstående riskerna. |
+ 
+**Beslutade åtgärder vid release:**
+ 
+| **#** | **Åtgärd** | **Kopplad risk** | **Ansvarig (förslag)** | **När** |
+| --- | --- | --- | --- | --- |
+| 1 | Förstärkt produktionsmonitorering, med tydliga tröskelvärden för rollback | R9 prestanda, driftstörning | DevOps | Från produktionssättning |
+| 2 | Särskild bevakning av kreditupplysningstjänsten | R5, High 1 (timeout) | DevOps, support | Löpande, särskilt första veckorna |
+| 3 | Supportberedskap första veckan, med rutin för handläggare vid timeout | High 1, allmän driftsäkerhet | Support, PO | Första veckan efter release |
+| 4 | Planerad uppföljning av kvarstående High-defekter (High 1–3), med hotfix och datum | High 1–3, R11 | Utvecklingsteamen, PO, säkerhetsspecialist | Datum fastställs. Inom fyra veckor (förslag) |
+| 5 | Separat prestandaverifiering med 500 samtidiga användare efter release | R9 prestanda | DevOps, Testare A | Så snart en lämplig miljö finns. Inom fyra veckor (förslag) |
+ 
+**Rekommenderas utöver beslutet** (från Go/No-Go-underlaget):
+ 
+- Kompenserande kontroll för High 2 (manuell loggning av tidigare roll) från dag 1, och formellt godkännande av avvikelsen från säkerhetsavdelningen och PO.
+- Stegvis utrullning, med högst 350 samtidiga användare tills 500 är verifierade.
+- Utred de 10 tester som saknar status, och kör de 12 ej körda regressionstesterna efter release.
+- Bekräfta att ytterligare verifiering vid rolländring är testad och fungerar.
 
 ## 11. Godkännande / mottagare
 
