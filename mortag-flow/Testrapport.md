@@ -29,6 +29,15 @@ Mall för sammanställning och avslut av testarbete
 
 *Ge en kort ledningssammanfattning av testperioden. Beskriv vad som testats, övergripande resultat, viktigaste avvikelserna och den samlade bedömningen.*
 
+264 Passed, 10 Failed, 6 Blocked, 10 Not Run. 10 tester saknar registrerad status.
+Med en större testcoverage har vi kunnat verifiera alla risker och ta bort kritiska och ett flertal high defekter.
+För den kritiska defekten från vecka 1, har det genomförts restest på alla plenerade tester och allt godkändes.
+DEF-101 är därför inte längre existerande.
+
+Det finns kvar några high defekter och prestanda testet har inte utförts enligt krav, men dessa anses inte vara kritiska och utför inget problem på något affärsflöde. De defekter som finns nu anses inte vara
+krav och det går att lösa problemen manuelt.
+
+
 \<Sammanfattning\>
 
 ## 2. Scope
@@ -165,13 +174,7 @@ Efter första veckan var 31 defekter rapporterade. Totalt antal rapporterade def
 ## 9. Slutsats
 
 *Sammanfatta vad testningen visar om lösningens kvalitet och testmålen. Beskriv om Exit Criteria uppnåddes och vilka begränsningar som finns.*
-264 Passed, 10 Failed, 6 Blocked, 10 Not Run. 10 tester saknar registrerad status.
-Med en större testcoverage har vi kunnat verifiera alla risker och ta bort kritiska och ett flertal high defekter. 
-För den kritiska defekten från vecka 1, har det genomförts restest på alla plenerade tester och allt godkändes. 
-DEF-101 är därför inte längre existerande. 
 
-Det finns kvar några high defekter och prestanda testet har inte utförts enligt krav, men dessa anses inte vara kritiska och utför inget problem på något affärsflöde. De defekter som finns nu anses inte vara
-krav och det går att lösa problemen manuelt.
 
 \<Slutsats\>
 
