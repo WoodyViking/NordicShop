@@ -84,6 +84,7 @@ Fördelningen per testområde vid testavslut fins inte i underlaget, utan bara t
 | Prestanda | 70 % av kravet verifierat | 350 av 500 samtidiga användare. |
 
 **Analys:** Resultatet visar att kärnflödena fungerar: kreditbedömning, dubbelgodkännande, behörighet och E2E har gått igenom efter rättningar. Den höga körningsgraden döljer dock att 36 tester (12 %) saknar godkänt resultat. För 10 av dem har status inte kunnat redovisas, vilket är en brist i uppföljningen. Pass rate på 91 % ligger under målet 95 % för P1-tester, men eftersom resultat per prioritet saknas kan vi inte avgöra om P1-målet uppnåddes.
+
 ## 5. Defekter
 
 *Sammanfatta identifierade och kvarstående defekter. Fokusera på allvarlighetsgrad, påverkan och status - inte enbart antal.*
