@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" width="900" height="460" font-family="Calibri, 'Segoe UI', Arial, sans-serif">
+  <title>Återstående tester – 12 regressionstester och 10 tester utan status körs eller förklaras, P1-flöden bekräftas i Chrome, Edge och Firefox</title>
+  <defs>
+    <g id="bock">
+      <circle cx="0" cy="0" r="12" fill="#2E7D5B" stroke="#FBFBF8" stroke-width="2.5"/>
+      <path d="M-5.5 0 l4 4 l7 -8" fill="none" stroke="#FBFBF8" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g id="glob">
+      <circle cx="0" cy="0" r="17" fill="none" stroke="#2F6690" stroke-width="3"/>
+      <ellipse cx="0" cy="0" rx="7.5" ry="17" fill="none" stroke="#2F6690" stroke-width="2.5"/>
+      <line x1="-17" y1="0" x2="17" y2="0" stroke="#2F6690" stroke-width="2.5"/>
+      <path d="M-14 -9 Q0 -4 14 -9 M-14 9 Q0 4 14 9" fill="none" stroke="#2F6690" stroke-width="2"/>
+    </g>
+  </defs>
+
+  <!-- bakgrund -->
+  <rect x="0" y="0" width="900" height="460" rx="24" fill="#F3F5F8"/>
+  <circle cx="230" cy="250" r="190" fill="#E3EAF2"/>
+
+  <!-- skrivplatta -->
+  <rect x="126" y="56" width="220" height="262" rx="14" fill="#1E2A38" opacity="0.12"/>
+  <rect x="120" y="50" width="220" height="262" rx="14" fill="#2C4A6E" stroke="#1E2A38" stroke-width="4"/>
+  <rect x="134" y="74" width="192" height="226" rx="6" fill="#FFFFFF" stroke="#1E2A38" stroke-width="2"/>
+  <rect x="190" y="36" width="80" height="28" rx="8" fill="#8A97A8" stroke="#1E2A38" stroke-width="3"/>
+  <circle cx="230" cy="44" r="5" fill="#1E2A38"/>
+
+  <text x="150" y="104" font-size="17" font-weight="700" fill="#1E2A38" letter-spacing="1">ÅTERSTÅR</text>
+  <line x1="150" y1="114" x2="310" y2="114" stroke="#D5DBE3" stroke-width="2"/>
+
+  <!-- rad 1 -->
+  <rect x="150" y="128" width="20" height="20" rx="4" fill="none" stroke="#2F6690" stroke-width="2.5"/>
+  <text x="180" y="142" font-size="16" font-weight="700" fill="#1E2A38">Regression</text>
+  <text x="180" y="160" font-size="13" fill="#4A5568">kör / förklara</text>
+  <circle cx="298" cy="144" r="18" fill="#C8692A"/>
+  <text x="298" y="151" text-anchor="middle" font-size="18" font-weight="700" fill="#FBFBF8">12</text>
+
+  <!-- rad 2 -->
+  <rect x="150" y="184" width="20" height="20" rx="4" fill="none" stroke="#2F6690" stroke-width="2.5"/>
+  <text x="180" y="198" font-size="16" font-weight="700" fill="#1E2A38">Utan status</text>
+  <text x="180" y="216" font-size="13" fill="#4A5568">kör / förklara</text>
+  <circle cx="298" cy="200" r="18" fill="#C8692A"/>
+  <text x="298" y="207" text-anchor="middle" font-size="18" font-weight="700" fill="#FBFBF8">10</text>
+
+  <!-- rad 3 -->
+  <rect x="150" y="240" width="20" height="20" rx="4" fill="none" stroke="#2F6690" stroke-width="2.5"/>
+  <text x="180" y="254" font-size="16" font-weight="700" fill="#1E2A38">P1-flöden</text>
+  <text x="180" y="272" font-size="13" fill="#4A5568">3 webbläsare</text>
+  <circle cx="298" cy="256" r="18" fill="#2F6690"/>
+  <text x="298" y="263" text-anchor="middle" font-size="16" font-weight="700" fill="#FBFBF8">P1</text>
+
+
+  <!-- webbläsarfönster -->
+  <g transform="translate(70 330)">
+    <rect width="100" height="88" rx="8" fill="#FFFFFF" stroke="#1E2A38" stroke-width="3"/>
+    <path d="M0 8 a8 8 0 0 1 8 -8 h84 a8 8 0 0 1 8 8 v12 h-100 z" fill="#1E2A38"/>
+    <circle cx="12" cy="10" r="3" fill="#FBFBF8"/><circle cx="22" cy="10" r="3" fill="#FBFBF8"/><circle cx="32" cy="10" r="3" fill="#FBFBF8"/>
+    <use href="#glob" x="50" y="46"/>
+    <text x="50" y="81" text-anchor="middle" font-size="14" font-weight="700" fill="#1E2A38">Chrome</text>
+    <use href="#bock" x="94" y="2"/>
+  </g>
+  <g transform="translate(180 330)">
+    <rect width="100" height="88" rx="8" fill="#FFFFFF" stroke="#1E2A38" stroke-width="3"/>
+    <path d="M0 8 a8 8 0 0 1 8 -8 h84 a8 8 0 0 1 8 8 v12 h-100 z" fill="#1E2A38"/>
+    <circle cx="12" cy="10" r="3" fill="#FBFBF8"/><circle cx="22" cy="10" r="3" fill="#FBFBF8"/><circle cx="32" cy="10" r="3" fill="#FBFBF8"/>
+    <use href="#glob" x="50" y="46"/>
+    <text x="50" y="81" text-anchor="middle" font-size="14" font-weight="700" fill="#1E2A38">Edge</text>
+    <use href="#bock" x="94" y="2"/>
+  </g>
+  <g transform="translate(290 330)">
+    <rect width="100" height="88" rx="8" fill="#FFFFFF" stroke="#1E2A38" stroke-width="3"/>
+    <path d="M0 8 a8 8 0 0 1 8 -8 h84 a8 8 0 0 1 8 8 v12 h-100 z" fill="#1E2A38"/>
+    <circle cx="12" cy="10" r="3" fill="#FBFBF8"/><circle cx="22" cy="10" r="3" fill="#FBFBF8"/><circle cx="32" cy="10" r="3" fill="#FBFBF8"/>
+    <use href="#glob" x="50" y="46"/>
+    <text x="50" y="81" text-anchor="middle" font-size="14" font-weight="700" fill="#1E2A38">Firefox</text>
+    <use href="#bock" x="94" y="2"/>
+  </g>
+
+  <!-- pratbubbla -->
+  <path d="M420 40 h196 a16 16 0 0 1 16 16 v42 a16 16 0 0 1 -16 16 h-158 l-56 22 l20 -22 h-2 a16 16 0 0 1 -16 -16 v-42 a16 16 0 0 1 16 -16 z" fill="#2F6690"/>
+  <text x="518" y="87" text-anchor="middle" font-size="28" font-weight="700" fill="#FBFBF8">Inga lösa trådar!</text>
+
+  <!-- infokort -->
+  <rect x="420" y="140" width="446" height="300" rx="18" fill="#FFFFFF" stroke="#D5DBE3" stroke-width="2"/>
+  <g transform="translate(0 -10)">
+  <rect x="444" y="172" width="132" height="32" rx="16" fill="#1E2A38"/>
+  <text x="510" y="194" text-anchor="middle" font-size="18" font-weight="700" fill="#FBFBF8">TESTSTATUS</text>
+  <text x="590" y="195" font-size="20" font-weight="700" fill="#1E2A38">Återstående tester</text>
+
+  <circle cx="462" cy="238" r="16" fill="#2F6690"/>
+  <text x="462" y="245" text-anchor="middle" font-size="18" font-weight="700" fill="#FBFBF8">1</text>
+  <text x="492" y="236" font-size="19" font-weight="700" fill="#1E2A38">Resterande 12 regressionstester</text>
+  <text x="492" y="258" font-size="16" fill="#4A5568">körs eller förklaras</text>
+
+  <circle cx="462" cy="292" r="16" fill="#2F6690"/>
+  <text x="462" y="299" text-anchor="middle" font-size="18" font-weight="700" fill="#FBFBF8">2</text>
+  <text x="492" y="290" font-size="19" font-weight="700" fill="#1E2A38">10 tester som saknar status</text>
+  <text x="492" y="312" font-size="16" fill="#4A5568">körs eller förklaras</text>
+
+  <circle cx="462" cy="346" r="16" fill="#2F6690"/>
+  <text x="462" y="353" text-anchor="middle" font-size="18" font-weight="700" fill="#FBFBF8">3</text>
+  <text x="492" y="344" font-size="19" font-weight="700" fill="#1E2A38">P1-flödena bekräftas</text>
+  <text x="492" y="366" font-size="16" fill="#4A5568">i Chrome, Edge och Firefox</text>
+
+  <line x1="444" y1="388" x2="842" y2="388" stroke="#E3E8EE" stroke-width="2"/>
+  <text x="444" y="412" font-size="16" fill="#1E2A38"><tspan font-weight="700">Mål:</tspan> alla tester har en känd status</text>
+  <text x="444" y="432" font-size="16" fill="#1E2A38"><tspan font-weight="700">Webbläsare:</tspan> Chrome · Edge · Firefox</text>
+  </g>
+</svg>

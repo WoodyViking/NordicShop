@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" width="900" height="460" font-family="Calibri, 'Segoe UI', Arial, sans-serif">
+  <title>Formell riskacceptans – PO och projektledare signerar accepterade avvikelser</title>
+
+  <!-- bakgrund -->
+  <rect x="0" y="0" width="900" height="460" rx="24" fill="#F3F5F8"/>
+  <circle cx="230" cy="250" r="190" fill="#E3EAF2"/>
+
+  <!-- dokument -->
+  <g transform="rotate(-4 230 245)">
+    <rect x="128" y="68" width="220" height="360" rx="12" fill="#1E2A38" opacity="0.12" transform="translate(6 8)"/>
+    <rect x="120" y="60" width="220" height="360" rx="12" fill="#FFFFFF" stroke="#1E2A38" stroke-width="4"/>
+    <text x="140" y="98" font-size="19" font-weight="700" fill="#1E2A38" letter-spacing="1">RISKACCEPTANS</text>
+    <line x1="140" y1="110" x2="320" y2="110" stroke="#D5DBE3" stroke-width="2"/>
+
+    <!-- checklista -->
+    <rect x="140" y="126" width="20" height="20" rx="4" fill="#2E7D5B"/>
+    <path d="M144 136 l5 5 l8 -10" fill="none" stroke="#FBFBF8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="170" y="142" font-size="16" fill="#1E2A38">Prestandaavvikelse</text>
+
+    <rect x="140" y="160" width="20" height="20" rx="4" fill="#2E7D5B"/>
+    <path d="M144 170 l5 5 l8 -10" fill="none" stroke="#FBFBF8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="170" y="176" font-size="16" fill="#1E2A38">High-defekter</text>
+
+    <rect x="140" y="194" width="20" height="20" rx="4" fill="#2E7D5B"/>
+    <path d="M144 204 l5 5 l8 -10" fill="none" stroke="#FBFBF8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="170" y="210" font-size="16" fill="#1E2A38">UAT-avvikelser</text>
+
+    <!-- stämpel -->
+    <g transform="rotate(-12 255 254)">
+      <rect x="182" y="232" width="146" height="44" rx="8" fill="none" stroke="#2E7D5B" stroke-width="4"/>
+      <text x="255" y="262" text-anchor="middle" font-size="21" font-weight="700" fill="#2E7D5B" letter-spacing="2">ACCEPTERAD</text>
+    </g>
+
+    <!-- signaturer -->
+    <path d="M146 312 q8 -18 16 -2 t14 -4 q6 -12 12 2 t18 -6" fill="none" stroke="#2F6690" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="140" y1="320" x2="320" y2="320" stroke="#8A97A8" stroke-width="2"/>
+    <text x="140" y="338" font-size="14" fill="#4A5568">Product Owner</text>
+
+    <path d="M146 380 q10 -20 18 -4 t16 0 q8 -14 14 0 t20 -4 q6 -8 14 0" fill="none" stroke="#2F6690" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="140" y1="388" x2="320" y2="388" stroke="#8A97A8" stroke-width="2"/>
+    <text x="140" y="406" font-size="14" fill="#4A5568">Projektledare</text>
+  </g>
+
+  <!-- penna -->
+  <g transform="rotate(35 300 360)">
+    <rect x="292" y="300" width="16" height="96" rx="4" fill="#1E2A38"/>
+    <rect x="292" y="300" width="16" height="16" rx="4" fill="#C8692A"/>
+    <path d="M292 396 L308 396 L300 414 Z" fill="#E0B341" stroke="#1E2A38" stroke-width="2" stroke-linejoin="round"/>
+  </g>
+
+  <!-- pratbubbla -->
+  <path d="M370 40 h150 a16 16 0 0 1 16 16 v42 a16 16 0 0 1 -16 16 h-108 l-36 22 l12 -22 h-18 a16 16 0 0 1 -16 -16 v-42 a16 16 0 0 1 16 -16 z" fill="#2E7D5B"/>
+  <text x="445" y="87" text-anchor="middle" font-size="32" font-weight="700" fill="#FBFBF8" letter-spacing="1">Signerat!</text>
+
+  <!-- infokort -->
+  <rect x="420" y="140" width="446" height="300" rx="18" fill="#FFFFFF" stroke="#D5DBE3" stroke-width="2"/>
+  <g transform="translate(0 -10)">
+  <rect x="444" y="172" width="166" height="32" rx="16" fill="#FFD43B" stroke="#E8A100" stroke-width="2"/>
+  <text x="527" y="194" text-anchor="middle" font-size="18" font-weight="700" fill="#1E2A38">CONDITIONAL GO</text>
+  <text x="624" y="195" font-size="20" font-weight="700" fill="#1E2A38">Formell riskacceptans</text>
+
+  <circle cx="462" cy="238" r="16" fill="#2E7D5B"/>
+  <path d="M454 238 l5 5 l9 -11" fill="none" stroke="#FBFBF8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="492" y="236" font-size="19" font-weight="700" fill="#1E2A38">Prestandaavvikelsen</text>
+  <text x="492" y="258" font-size="16" fill="#4A5568">accepteras formellt</text>
+
+  <circle cx="462" cy="292" r="16" fill="#2E7D5B"/>
+  <path d="M454 292 l5 5 l9 -11" fill="none" stroke="#FBFBF8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="492" y="290" font-size="19" font-weight="700" fill="#1E2A38">Kvarstående High-defekter</text>
+  <text x="492" y="312" font-size="16" fill="#4A5568">accepteras formellt</text>
+
+  <circle cx="462" cy="346" r="16" fill="#2E7D5B"/>
+  <path d="M454 346 l5 5 l9 -11" fill="none" stroke="#FBFBF8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="492" y="344" font-size="19" font-weight="700" fill="#1E2A38">Accepterade UAT-avvikelser</text>
+  <text x="492" y="366" font-size="16" fill="#4A5568">dokumenteras</text>
+
+  <line x1="444" y1="388" x2="842" y2="388" stroke="#E3E8EE" stroke-width="2"/>
+  <text x="444" y="412" font-size="16" fill="#1E2A38"><tspan font-weight="700">Ansvar:</tspan> Product Owner (PO) och projektledare</text>
+  <text x="444" y="432" font-size="16" fill="#1E2A38"><tspan font-weight="700">Resultat:</tspan> ett dokumenterat och signerat beslut</text>
+  </g>
+</svg>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" width="900" height="460" font-family="Calibri, 'Segoe UI', Arial, sans-serif">
+  <title>Domare visar timeout – High 1: handläggare och support informeras om rutinen vid timeout</title>
+  <defs>
+    <pattern id="stripes" width="24" height="24" patternUnits="userSpaceOnUse">
+      <rect width="24" height="24" fill="#FBFBF8"/>
+      <rect width="12" height="24" fill="#1E2A38"/>
+    </pattern>
+  </defs>
+
+  <!-- bakgrund -->
+  <rect x="0" y="0" width="900" height="460" rx="24" fill="#F3F5F8"/>
+  <circle cx="230" cy="250" r="190" fill="#E3EAF2"/>
+
+  <!-- domare: kropp -->
+  <path d="M150 300 Q150 228 230 222 Q310 228 310 300 L310 420 L150 420 Z" fill="url(#stripes)" stroke="#1E2A38" stroke-width="4"/>
+  <!-- krage -->
+  <path d="M205 224 L230 252 L255 224" fill="#FBFBF8" stroke="#1E2A38" stroke-width="4" stroke-linejoin="round"/>
+  <!-- hals -->
+  <rect x="216" y="196" width="28" height="30" fill="#E9B98F"/>
+  <!-- huvud -->
+  <circle cx="230" cy="160" r="46" fill="#F2C9A0" stroke="#1E2A38" stroke-width="4"/>
+  <!-- keps -->
+  <path d="M184 154 Q186 106 230 104 Q274 106 276 154 Z" fill="#1E2A38"/>
+  <path d="M184 150 L150 158 Q160 166 186 162 Z" fill="#1E2A38"/>
+  <!-- ansikte -->
+  <circle cx="214" cy="168" r="4.5" fill="#1E2A38"/>
+  <circle cx="248" cy="168" r="4.5" fill="#1E2A38"/>
+  <path d="M216 188 Q230 194 244 188" fill="none" stroke="#1E2A38" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- visselpipa i snöre -->
+  <path d="M212 226 Q222 262 238 270" fill="none" stroke="#C8692A" stroke-width="3"/>
+  <rect x="236" y="262" width="26" height="14" rx="6" fill="#C8692A" stroke="#1E2A38" stroke-width="3"/>
+
+  <!-- vänster arm (ur betraktarens synvinkel): överarm + underarm som blir T:ets tvärslå -->
+  <path d="M160 262 L120 196 L176 110" fill="none" stroke="#1E2A38" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M160 262 L120 196 L176 110" fill="none" stroke="#FBFBF8" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- höger arm: överarm upp mot T:ets stam -->
+  <path d="M300 262 L344 200 L344 150" fill="none" stroke="#1E2A38" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M300 262 L344 200 L344 150" fill="none" stroke="#FBFBF8" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- T-tecknet: vågrät hand ovanpå lodrät hand, till höger om huvudet -->
+  <rect x="296" y="62" width="100" height="26" rx="13" fill="#F2C9A0" stroke="#1E2A38" stroke-width="4"/>
+  <rect x="331" y="86" width="26" height="72" rx="13" fill="#F2C9A0" stroke="#1E2A38" stroke-width="4"/>
+  <!-- koppla vänster arm till tvärslån -->
+  <path d="M176 110 Q236 70 300 75" fill="none" stroke="#1E2A38" stroke-width="30" stroke-linecap="round"/>
+  <path d="M176 110 Q236 70 300 75" fill="none" stroke="#FBFBF8" stroke-width="22" stroke-linecap="round"/>
+  <rect x="296" y="62" width="100" height="26" rx="13" fill="#F2C9A0" stroke="#1E2A38" stroke-width="4"/>
+
+  <!-- pratbubbla -->
+  <path d="M420 58 h150 a16 16 0 0 1 16 16 v42 a16 16 0 0 1 -16 16 h-112 l-22 20 l4 -20 h-20 a16 16 0 0 1 -16 -16 v-42 a16 16 0 0 1 16 -16 z" fill="#C8692A"/>
+  <text x="495" y="105" text-anchor="middle" font-size="34" font-weight="700" fill="#FBFBF8" letter-spacing="2">TIMEOUT!</text>
+
+  <!-- infokort -->
+  <rect x="420" y="178" width="446" height="240" rx="18" fill="#FFFFFF" stroke="#D5DBE3" stroke-width="2"/>
+  <rect x="444" y="200" width="78" height="32" rx="16" fill="#1E2A38"/>
+  <text x="483" y="222" text-anchor="middle" font-size="18" font-weight="700" fill="#FBFBF8">HIGH 1</text>
+  <text x="536" y="223" font-size="20" font-weight="700" fill="#1E2A38">Rutin vid timeout</text>
+
+  <!-- två målgrupper -->
+  <g transform="translate(470 274)">
+    <circle cx="0" cy="0" r="30" fill="#2F6690"/>
+    <circle cx="0" cy="-8" r="9" fill="#FBFBF8"/>
+    <path d="M-15 16 Q-15 2 0 2 Q15 2 15 16 Z" fill="#FBFBF8"/>
+  </g>
+  <text x="512" y="270" font-size="21" font-weight="700" fill="#1E2A38">Handläggare</text>
+  <text x="512" y="294" font-size="16" fill="#4A5568">vet vad de ska göra</text>
+
+  <g transform="translate(696 274)">
+    <circle cx="0" cy="0" r="30" fill="#C8692A"/>
+    <path d="M-14 2 Q-14 -15 0 -15 Q14 -15 14 2" fill="none" stroke="#FBFBF8" stroke-width="4"/>
+    <rect x="-18" y="-2" width="8" height="14" rx="3" fill="#FBFBF8"/>
+    <rect x="10" y="-2" width="8" height="14" rx="3" fill="#FBFBF8"/>
+  </g>
+  <text x="738" y="270" font-size="21" font-weight="700" fill="#1E2A38">Support</text>
+  <text x="738" y="294" font-size="16" fill="#4A5568">kan hjälpa till</text>
+
+  <line x1="444" y1="324" x2="842" y2="324" stroke="#E3E8EE" stroke-width="2"/>
+  <text x="444" y="356" font-size="20" fill="#1E2A38">
+    <tspan x="444" dy="0">Handläggare och support informeras</tspan>
+    <tspan x="444" dy="28">om rutinen vid timeout.</tspan>
+  </text>
+  <text x="444" y="404" font-size="15" fill="#6B7380">MortgageFlow · kvarstående risk med åtgärd</text>
+</svg>

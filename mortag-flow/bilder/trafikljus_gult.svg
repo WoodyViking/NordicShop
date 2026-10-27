@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 560" width="260" height="560">
+  <title>Trafikljus som lyser gult</title>
+  <defs>
+    <radialGradient id="gul" cx="40%" cy="38%" r="65%">
+      <stop offset="0%" stop-color="#FFF6C2"/>
+      <stop offset="45%" stop-color="#FFD43B"/>
+      <stop offset="100%" stop-color="#E8A100"/>
+    </radialGradient>
+    <radialGradient id="glod" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD43B" stop-opacity="0.55"/>
+      <stop offset="60%" stop-color="#FFD43B" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#FFD43B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- stolpe -->
+  <rect x="116" y="440" width="28" height="112" rx="6" fill="#3A4656"/>
+  <rect x="88" y="540" width="84" height="16" rx="8" fill="#2A3442"/>
+
+  <!-- låda -->
+  <rect x="50" y="20" width="160" height="430" rx="34" fill="#1E2A38"/>
+  <rect x="62" y="32" width="136" height="406" rx="26" fill="#26364A"/>
+
+
+  <!-- röd, släckt -->
+  <circle cx="130" cy="110" r="46" fill="#4A1F24" stroke="#141D28" stroke-width="5"/>
+  <ellipse cx="116" cy="94" rx="14" ry="9" fill="#FFFFFF" opacity="0.08"/>
+
+  <!-- gul, tänd -->
+  <circle cx="130" cy="240" r="110" fill="url(#glod)"/>
+  <circle cx="130" cy="240" r="46" fill="url(#gul)" stroke="#141D28" stroke-width="5"/>
+  <ellipse cx="114" cy="222" rx="16" ry="10" fill="#FFFFFF" opacity="0.55"/>
+
+  <!-- grön, släckt -->
+  <circle cx="130" cy="370" r="46" fill="#1C3A2A" stroke="#141D28" stroke-width="5"/>
+  <ellipse cx="116" cy="354" rx="14" ry="9" fill="#FFFFFF" opacity="0.08"/>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" width="960" height="460" font-family="Calibri, 'Segoe UI', Arial, sans-serif">
+  <title>Testresultat vid testavslut – 300 planerade tester, nyckeltal och öppna defekter</title>
+
+  <!-- bakgrund -->
+  <rect x="0" y="0" width="960" height="460" rx="24" fill="#F3F5F8"/>
+  <rect x="20" y="20" width="920" height="420" rx="18" fill="#FFFFFF" stroke="#D5DBE3" stroke-width="2"/>
+
+  <!-- rubrik -->
+  <rect x="44" y="38" width="148" height="32" rx="16" fill="#1E2A38"/>
+  <text x="118" y="60" text-anchor="middle" font-size="18" font-weight="700" fill="#FBFBF8">TESTRAPPORT</text>
+  <text x="206" y="61" font-size="22" font-weight="700" fill="#1E2A38">Vad blev slutresultatet?</text>
+
+  <!-- ring: omkrets 2*pi*110 = 691.15 -->
+  <g transform="translate(180 262) rotate(-90)" fill="none" stroke-width="40">
+    <circle r="110" stroke="#2E7D5B" stroke-dasharray="608.2 691.15"/>
+    <circle r="110" stroke="#C0392B" stroke-dasharray="23.0 691.15" stroke-dashoffset="-608.2"/>
+    <circle r="110" stroke="#C8692A" stroke-dasharray="13.8 691.15" stroke-dashoffset="-631.2"/>
+    <circle r="110" stroke="#E0B341" stroke-dasharray="23.0 691.15" stroke-dashoffset="-645.0"/>
+    <circle r="110" stroke="#8A97A8" stroke-dasharray="23.15 691.15" stroke-dashoffset="-668.0"/>
+  </g>
+  <text x="180" y="262" text-anchor="middle" font-size="46" font-weight="700" fill="#1E2A38">264</text>
+  <text x="180" y="288" text-anchor="middle" font-size="16" fill="#4A5568">av 300 godkända</text>
+
+  <!-- förklaring -->
+  <g font-size="16" fill="#1E2A38">
+    <rect x="336" y="170" width="16" height="16" rx="4" fill="#2E7D5B"/>
+    <text x="360" y="184"><tspan font-weight="700">264</tspan> Passed</text>
+    <rect x="336" y="202" width="16" height="16" rx="4" fill="#C0392B"/>
+    <text x="360" y="216"><tspan font-weight="700">10</tspan> Failed</text>
+    <rect x="336" y="234" width="16" height="16" rx="4" fill="#C8692A"/>
+    <text x="360" y="248"><tspan font-weight="700">6</tspan> Blocked</text>
+    <rect x="336" y="266" width="16" height="16" rx="4" fill="#E0B341"/>
+    <text x="360" y="280"><tspan font-weight="700">10</tspan> Not Run</text>
+    <rect x="336" y="298" width="16" height="16" rx="4" fill="#8A97A8"/>
+    <text x="360" y="312"><tspan font-weight="700">10</tspan> utan status</text>
+  </g>
+
+  <!-- nyckeltal -->
+  <g>
+    <rect x="512" y="92" width="196" height="112" rx="14" fill="#EAF4EF"/>
+    <text x="532" y="142" font-size="40" font-weight="700" fill="#2E7D5B">97 %</text>
+    <text x="532" y="168" font-size="17" font-weight="700" fill="#1E2A38">körda tester</text>
+    <text x="532" y="189" font-size="15" fill="#4A5568">290 av 300</text>
+
+    <rect x="720" y="92" width="196" height="112" rx="14" fill="#FBEFE6"/>
+    <text x="740" y="142" font-size="40" font-weight="700" fill="#C8692A">91 %</text>
+    <text x="740" y="168" font-size="17" font-weight="700" fill="#1E2A38">pass rate</text>
+    <text x="740" y="189" font-size="15" fill="#4A5568">målet var 95 % för P1</text>
+
+    <rect x="512" y="216" width="196" height="112" rx="14" fill="#EAF4EF"/>
+    <text x="532" y="266" font-size="40" font-weight="700" fill="#2E7D5B">90 %</text>
+    <text x="532" y="292" font-size="17" font-weight="700" fill="#1E2A38">regression</text>
+    <text x="532" y="313" font-size="15" fill="#4A5568">108 av 120, kärnflöden klara</text>
+
+    <rect x="720" y="216" width="196" height="112" rx="14" fill="#FBEFE6"/>
+    <text x="740" y="266" font-size="40" font-weight="700" fill="#C8692A">350<tspan font-size="24" fill="#8A97A8"> / 500</tspan></text>
+    <text x="740" y="292" font-size="17" font-weight="700" fill="#1E2A38">prestanda</text>
+    <text x="740" y="313" font-size="15" fill="#4A5568">70 % av kravet verifierat</text>
+  </g>
+
+  <!-- öppna defekter -->
+  <text x="512" y="364" font-size="16" font-weight="700" fill="#1E2A38">Öppna defekter vid testavslut</text>
+  <g font-size="16" font-weight="700" text-anchor="middle">
+    <rect x="512" y="376" width="96" height="36" rx="18" fill="#2E7D5B"/>
+    <text x="560" y="400" fill="#FBFBF8">Critical 0</text>
+    <rect x="616" y="376" width="96" height="36" rx="18" fill="#C0392B"/>
+    <text x="664" y="400" fill="#FBFBF8">High 3</text>
+    <rect x="720" y="376" width="96" height="36" rx="18" fill="#E0B341"/>
+    <text x="768" y="400" fill="#1E2A38">Medium 8</text>
+    <rect x="824" y="376" width="92" height="36" rx="18" fill="#D5DBE3"/>
+    <text x="870" y="400" fill="#1E2A38">Low 11</text>
+  </g>
+
+  <!-- fotnot under ringen -->
+  <text x="44" y="420" font-size="15" fill="#1E2A38"><tspan font-weight="700">Rättat och verifierat:</tspan> DEF-101 (Critical), DEF-112, DEF-124</text>
+</svg>
