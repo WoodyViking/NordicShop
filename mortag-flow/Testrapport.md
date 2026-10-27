@@ -1,19 +1,4 @@
-DEL 6 – TESTRAPPORT
-Projektet har fattat beslut:
-🟡 CONDITIONAL GO
-Release genomförs med:
-- förstärkt produktionsmonitorering
-- särskild bevakning av kreditupplysningstjänsten
-- supportberedskap första veckan
-- planerad uppföljning av kvarstående High-defekter
-- separat prestandaverifiering efter release
-
-Uppgift
-Skriv en avslutande testrapport utifrån mallen som används i kursen.
-
 # TESTRAPPORT
-
-Mall för sammanställning och avslut av testarbete
 
 | **Projekt / system** | MortgageFlow – NordFinance |
 | --- | --- |
@@ -22,8 +7,6 @@ Mall för sammanställning och avslut av testarbete
 | **Dokumentägare** | Grupp 2 |
 | **Datum** | 2026-10-26 |
 | **Status** | \<Utkast / Slutlig\> |
-
-*Använd mallen för att sammanfatta genomfört testarbete, resultat, avvikelser och kvarstående risker. Ersätt text inom \<hakparenteser\> och anpassa omfattningen efter projektets behov.*
 
 ## 1. Sammanfattning
 
@@ -44,8 +27,6 @@ Projektet har beslutat 🟡 CONDITIONAL GO med förstärkt produktionsmonitoreri
 
 ## 2. Scope
 
-*Beskriv vad som ingick i testarbetet och eventuella avgränsningar. Koppla gärna till kritiska affärsflöden, testnivåer och testtyper.*
-
 | **Område / flöde** | **Testnivå / testtyp** | **Prioritet** | **Kommentar** |
 | --- | --- | --- | --- |
 | Kreditbedömning och affärsregler | Systemtest, E2E, regression | P1 (R1) | Beslutstabeller och gränsvärden för skuldkvot och belåningsgrad. |
@@ -64,8 +45,6 @@ Projektet har beslutat 🟡 CONDITIONAL GO med förstärkt produktionsmonitoreri
 
 ## 3. Genomförda tester
 
-*Sammanställ vilka tester och testaktiviteter som genomfördes. Redovisa relevant coverage och vad som eventuellt inte genomfördes.*
-
 | **Testområde** | **Planerat** | **Genomfört** | **Status / kommentar** |
 | --- | --- | --- | --- |
 | Totalt testpaket (SIT, systemtest, E2E) | 300 | 290 (97 %) | 264 Passed, 10 Failed, 6 Blocked, 10 Not Run. 10 tester saknar registrerad status. |
@@ -82,8 +61,6 @@ Fördelningen per testområde vid testavslut fins inte i underlaget, utan bara t
 
 ## 4. Resultat
 
-*Sammanfatta testresultatet. Siffror ska kompletteras med en kort analys av vad resultatet innebär.*
-
 | **Mätetal** | **Resultat** | **Kommentar** |
 | --- | --- | --- |
 | Test Execution | 290 av 300 (97 %) | Hög täckning. |
@@ -97,8 +74,6 @@ Fördelningen per testområde vid testavslut fins inte i underlaget, utan bara t
 **Analys:** Resultatet visar att kärnflödena fungerar: kreditbedömning, dubbelgodkännande, behörighet och E2E har gått igenom efter rättningar. Den höga körningsgraden döljer dock att 36 tester (12 %) saknar godkänt resultat. För 10 av dem har status inte kunnat redovisas, vilket är en brist i uppföljningen. Pass rate på 91 % ligger under målet 95 % för P1-tester, men eftersom resultat per prioritet saknas kan vi inte avgöra om P1-målet uppnåddes.
 
 ## 5. Defekter
-
-*Sammanfatta identifierade och kvarstående defekter. Fokusera på allvarlighetsgrad, påverkan och status - inte enbart antal.*
 
 | **Severity** | **Totalt** | **Öppna** | **Kommentar / påverkan** |
 | --- | --- | --- | --- |
@@ -126,8 +101,6 @@ Efter första veckan var 31 defekter rapporterade. Totalt antal rapporterade def
 
 ## 6. Avvikelser från plan
 
-*Beskriv betydande avvikelser från testplanen, exempelvis ändrat scope, försenad miljö, saknad testdata, resursförändringar eller reducerad regression.*
-
 | **Avvikelse** | **Påverkan på testningen** | **Åtgärd / hantering** |
 | --- | --- | --- |
 | Testare B lämnade projektet (Del 3) | En fjärdedel mindre testkapacitet. Funktionellt systemtest och E2E saknade ägare. | Ansvar omfördelat till Testare A, C och D. P2-målet sänkt till 80 %, webbläsartest som stickprov. Testplan version 2.0. |
@@ -144,8 +117,6 @@ Efter första veckan var 31 defekter rapporterade. Totalt antal rapporterade def
 
 ## 7. Risker
 
-*Beskriv viktiga risker som identifierades under testarbetet och hur de hanterades.*
-
 | **Risk** | **Konsekvens** | **Åtgärd** | **Status** |
 | --- | --- | --- | --- |
 | R1 Felaktig kreditbedömning (DEF-101) | Lån beviljas trots för hög belåningsgrad. | Rättning, omtest 15 gånger, regression av riskregler. | Hanterad |
@@ -158,8 +129,6 @@ Efter första veckan var 31 defekter rapporterade. Totalt antal rapporterade def
 
 
 ## 8. Kvarstående risk
-
-*Beskriv de risker och osäkerheter som fortfarande finns efter avslutad testning. Ta med exempelvis otestade områden, öppna fel, begränsad coverage eller skillnader mellan test och produktion.*
 
 | **Kvarstående risk** | **Konsekvens** | **Risknivå** | **Riskägare / accepterad av** |
 | --- | --- | --- | --- |
@@ -175,8 +144,6 @@ Efter första veckan var 31 defekter rapporterade. Totalt antal rapporterade def
 
 ## 9. Slutsats
 
-*Sammanfatta vad testningen visar om lösningens kvalitet och testmålen. Beskriv om Exit Criteria uppnåddes och vilka begränsningar som finns.*
-
 **Kvalitet.** Testningen visar att kärnflödena fungerar: kreditbedömning, dubbelgodkännande, behörighet och E2E har gått igenom efter rättningar, och de fel som kunde ge felaktiga kreditbeslut, kringgå dubbelgodkännandet eller visa ärenden för fel region är åtgärdade. Kvarstående fel leder inte till felaktiga kreditbeslut, men de påverkar handläggarnas arbete (High 1), spårbarheten (High 2) och dokumentvisning i ovanliga fall (High 3).
  
 **Exit Criteria.** Av testplanens 10 slutkriterier (7.2) var 3 uppfyllda, 4 delvis uppfyllda och 2 ej uppfyllda vid Go/No-Go. Det tionde kriteriet, att kvarstående risker accepteras, hanterades i Go/No-Go-beslutet.
@@ -189,8 +156,6 @@ Efter första veckan var 31 defekter rapporterade. Totalt antal rapporterade def
 **Bedömning.** Testmålen uppnåddes i huvudsak men inte fullt ut. Kvaliteten är tillräcklig för en villkorad release, förutsatt att de kvarstående riskerna följs upp med de åtgärder som projektet beslutat om (se avsnitt 10).
 
 ## 10. Rekommendation
-
-*Ge en tydlig rekommendation baserad på testresultat och kvarstående risk. Exempel: GO, CONDITIONAL GO, NO-GO eller rekommenderade åtgärder efter release.*
 
 | **Rekommendation** | **🟡 CONDITIONAL GO** |
 | --- | --- |
@@ -216,8 +181,6 @@ Efter första veckan var 31 defekter rapporterade. Totalt antal rapporterade def
 - Bekräfta att ytterligare verifiering vid rolländring är testad och fungerar.
 
 ## 11. Godkännande / mottagare
-
-*Dokumentera vid behov vilka roller som har tagit del av eller godkänt testrapporten.*
 
 | **Roll** | **Namn** | **Datum** | **Kommentar** |
 | --- | --- | --- | --- |
