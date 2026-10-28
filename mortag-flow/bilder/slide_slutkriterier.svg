@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family="Lato, Calibri, 'Segoe UI', Arial, sans-serif">
+  <title>Fyra slutkriterier som avgjorde releasen</title>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=block');</style>
+
+  <!-- bakgrund som övriga slides -->
+  <rect width="1280" height="720" fill="#4169E1"/>
+  <path d="M0 690 L1280 652 L1280 720 L0 720 Z" fill="#2F55C4"/>
+  <path d="M0 676 L620 702 L1280 720 L0 720 Z" fill="#483D8B"/>
+
+  <!-- rubrik -->
+  <text x="78" y="126" font-size="46" font-weight="700" fill="#FFFFFF">Fyra slutkriterier</text>
+  <text x="80" y="170" font-size="22" fill="#DCE6FF">Planen hade tio, och de här är de fyra som senare avgjorde om vi fick släppa.</text>
+
+  <!-- kort -->
+  <g fill="#EEF3FD">
+    <rect x="64" y="204" width="279" height="262" rx="24"/>
+    <rect x="355" y="204" width="279" height="262" rx="24"/>
+    <rect x="646" y="204" width="279" height="262" rx="24"/>
+    <rect x="937" y="204" width="279" height="262" rx="24"/>
+  </g>
+  <g font-size="16" font-weight="700" fill="#483D8B" letter-spacing="1">
+    <text x="88" y="244">KRITERIUM 3</text>
+    <text x="379" y="244">KRITERIUM 9</text>
+    <text x="670" y="244">KRITERIUM 4</text>
+    <text x="961" y="244">KRITERIUM 6–7</text>
+  </g>
+  <g font-size="24" font-weight="700" fill="#1E3A8A">
+    <text x="88" y="284">Inga öppna</text><text x="88" y="314">S1/S2 i P1</text>
+    <text x="379" y="284">R11-loggen</text><text x="379" y="314">komplett</text>
+    <text x="670" y="284">P1-regression på</text><text x="670" y="314">slutlig version</text>
+    <text x="961" y="284">UAT godkänt och</text><text x="961" y="314">tekniskt redo</text>
+  </g>
+  <g font-size="19" fill="#4A5568">
+    <text x="88" y="360">Säkerhet och kreditbeslut</text><text x="88" y="386">får inte ha kända</text><text x="88" y="412">allvarliga fel kvar</text>
+    <text x="379" y="360">Användare, tidpunkt,</text><text x="379" y="386">tidigare roll och ny roll</text>
+    <text x="670" y="360">Det som rättats sent</text><text x="670" y="386">måste vara omtestat</text><text x="670" y="412">på det som släpps</text>
+    <text x="961" y="360">Verksamheten har prövat</text><text x="961" y="386">sitt arbetssätt och</text><text x="961" y="412">tekniken är redo</text>
+  </g>
+
+  <!-- nyckeltal -->
+  <line x1="64" y1="500" x2="1216" y2="500" stroke="#7E9BEF" stroke-width="2"/>
+  <g font-size="54" font-weight="700" fill="#FFFFFF">
+    <text x="64" y="572">4 → 3</text>
+    <text x="355" y="572">12 v</text>
+    <text x="646" y="572">300</text>
+    <text x="937" y="572">120</text>
+  </g>
+  <g font-size="20" fill="#DCE6FF">
+    <text x="66" y="606">testare efter Testare B</text>
+    <text x="357" y="606">projektets längd</text>
+    <text x="648" y="606">planerade testfall</text>
+    <text x="939" y="606">regressionstester</text>
+  </g>
+</svg>

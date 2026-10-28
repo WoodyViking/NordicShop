@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family="Lato, Calibri, 'Segoe UI', Arial, sans-serif">
+  <title>Vad vi testar – och vad vi medvetet inte testar</title>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=block');</style>
+
+  <!-- bakgrund som övriga slides -->
+  <rect width="1280" height="720" fill="#4169E1"/>
+  <path d="M0 690 L1280 652 L1280 720 L0 720 Z" fill="#2F55C4"/>
+  <path d="M0 676 L620 702 L1280 720 L0 720 Z" fill="#483D8B"/>
+
+  <!-- rubrik -->
+  <text x="78" y="126" font-size="46" font-weight="700" fill="#FFFFFF">Vad vi testar – och vad vi medvetet inte testar</text>
+  <text x="80" y="170" font-size="22" fill="#DCE6FF">Testplan TP-MF-2.1</text>
+
+  <!-- i scope -->
+  <rect x="64" y="204" width="562" height="350" rx="28" fill="#EEF3FD"/>
+  <rect x="92" y="228" width="128" height="38" rx="19" fill="#2E7D5B"/>
+  <text x="156" y="254" text-anchor="middle" font-size="19" font-weight="700" fill="#FFFFFF">I SCOPE</text>
+  <g font-size="20" fill="#1E2A38">
+    <text x="92" y="310"><tspan font-weight="700" fill="#1E3A8A">P1:</tspan> kreditbedömning, dubbelgodkännande,</text>
+    <text x="92" y="338">behörighet, persondata, kreditupplysning,</text>
+    <text x="92" y="366">inloggning/MFA, statusflöde</text>
+    <text x="92" y="410"><tspan font-weight="700" fill="#1E3A8A">P2:</tspan> ansökan och validering, dokument,</text>
+    <text x="92" y="438">e-postbekräftelse, prestanda, webbläsare</text>
+    <text x="92" y="482"><tspan font-weight="700" fill="#1E3A8A">Genomgående:</tspan> fem E2E-flöden,</text>
+    <text x="92" y="510">120 regressionstester, UAT, säkerhetstest</text>
+  </g>
+
+  <!-- utanför scope -->
+  <rect x="654" y="204" width="562" height="350" rx="28" fill="#EEF3FD"/>
+  <rect x="682" y="228" width="210" height="38" rx="19" fill="#C0392B"/>
+  <text x="787" y="254" text-anchor="middle" font-size="19" font-weight="700" fill="#FFFFFF">UTANFÖR SCOPE</text>
+  <g font-size="20" fill="#1E2A38">
+    <text x="682" y="310"><tspan font-weight="700" fill="#1E3A8A">Utvecklingens ansvar:</tspan> komponent-</text>
+    <text x="682" y="338">och enhetstest</text>
+    <text x="682" y="382"><tspan font-weight="700" fill="#1E3A8A">Annans ansvar:</tspan> penetrationstest,</text>
+    <text x="682" y="410">infrastruktur, övervakning, migrering</text>
+    <text x="682" y="454"><tspan font-weight="700" fill="#1E3A8A">Ej tillåtet:</tspan> test med verkliga kunders</text>
+    <text x="682" y="482">persondata</text>
+    <text x="682" y="526"><tspan font-weight="700" fill="#1E3A8A">Struket i 1.0:</tspan> P3 rapporter och statistik</text>
+  </g>
+
+  <!-- budskap -->
+  <text x="80" y="612" font-size="23" fill="#FFFFFF"><tspan font-weight="700">Avgränsningen är ett beslut:</tspan> allt utanför scope är någon annans ansvar eller en dokumenterad risk.</text>
+</svg>
